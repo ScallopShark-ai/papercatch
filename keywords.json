@@ -1,0 +1,31 @@
+{
+    "keywords_taxonomy": {
+        "强化学习": [
+            "RLHF",
+            "RLAIF",
+            "PbRL",
+            "DPO",
+            "Reward Modeling",
+            "Reward Hacking",
+            "Actor-Critic",
+            "Multi-Task RL",
+            "Multi-Task Reinforcement Learning",
+            "Offline RL",
+            "Weak-to-Strong Generalization",
+            "IRL",
+            "Meta-Reinforcement Learning",
+            "Meta-RL"
+        ],
+        "多模态大模型":[
+            "VLA",
+            "VLM",
+            "Embodied AI",
+            "Sim-to-Real",
+            "Embodied Foundation Models",
+            "Action Tokenization",
+            "Action Chunking",
+            "Visuomotor Policy",
+            "Affordance Prediction"
+        ]
+    }
+}

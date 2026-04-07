@@ -1,0 +1,29 @@
+{
+    "arxiv": {
+        "search_queries": [
+            "cat:cs.AI",
+            "cat:cs.CL",
+            "cat:cs.LG"
+        ],
+        "keywords": [
+            "large language model",
+            "LLM",
+            "transformer",
+            "retrieval augmented generation",
+            "RAG"
+        ],
+        "max_results": 50,
+        "sort_by": "submittedDate",
+        "sort_order": "descending"
+    },
+    "llm": {
+        "provider": "bltcy",
+        "api_key": "sk-OZKTlHsLWPVUjd0DdDs8trkxZQC1KcTtiSuHc7aAIPA7vvFB",
+        "base_url": "https://api.bltcy.ai/v1",
+        "model": "gpt-4o",
+        "max_output_tokens": 4096,
+        "temperature": 0.3
+    },
+    "output_dir": "./output",
+    "log_level": "INFO"
+}
