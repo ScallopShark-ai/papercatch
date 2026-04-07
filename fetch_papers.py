@@ -10,6 +10,7 @@ import json
 import os
 import sys
 import logging
+import time
 from datetime import datetime, timedelta
 
 def load_config(config_path="config.json"):
@@ -80,50 +81,72 @@ def build_query(config, start_date, end_date):
     return search_query
 
 def fetch_papers(config):
-    """
-    主抓取函数：调用 arXiv API 获取论文列表
-    """
     today = datetime.now()
     date_range = get_search_date_range(today)
-    
+
     if date_range is None:
         return None, 0
-    
+
     start_date, end_date = date_range
     logging.info(f"检索日期范围: {start_date.strftime('%Y-%m-%d')} ~ {end_date.strftime('%Y-%m-%d')}")
-    
-    query = build_query(config, start_date, end_date)
-    logging.info(f"查询语句: {query}")
-    
+
+    date_start = start_date.strftime("%Y%m%d") + "0000"
+    date_end = end_date.strftime("%Y%m%d") + "2359"
+
+    categories = config["arxiv"]["search_queries"]
+    cat_query = " OR ".join(categories)
+
+    keywords = config["arxiv"].get("keywords", [])
     max_results = config["arxiv"].get("max_results", 100)
-    
-    # 使用 arxiv.py 库进行检索
+
     client = arxiv.Client(
         page_size=100,
-        delay_seconds=3.0,
-        num_retries=3
+        delay_seconds=5.0,
+        num_retries=5
     )
-    
-    search = arxiv.Search(
-        query=query,
-        max_results=max_results,
-        sort_by=arxiv.SortCriterion.SubmittedDate,
-        sort_order=arxiv.SortOrder.Descending
-    )
-    
+
+    # 用论文链接做去重
+    seen_ids = set()
     papers = []
-    for result in client.results(search):
-        paper = {
-            "title": result.title,
-            "summary": result.summary,
-            "authors": ", ".join([author.name for author in result.authors]),
-            "published": result.published.strftime("%Y-%m-%d %H:%M:%S"),
-            "link": result.entry_id
-        }
-        papers.append(paper)
-    
-    logging.info(f"共检索到 {len(papers)} 篇论文")
+
+    for kw in keywords:
+        query = f'({cat_query}) AND all:"{kw}" AND submittedDate:[{date_start} TO {date_end}]'
+        logging.info(f"正在检索关键词: {kw}")
+
+        search = arxiv.Search(
+            query=query,
+            max_results=max_results,
+            sort_by=arxiv.SortCriterion.SubmittedDate,
+            sort_order=arxiv.SortOrder.Descending
+        )
+
+        try:
+            for result in client.results(search):
+                # 用论文ID去重，避免同一篇被多个关键词重复抓到
+                if result.entry_id in seen_ids:
+                    continue
+                seen_ids.add(result.entry_id)
+
+                paper = {
+                    "title": result.title,
+                    "summary": result.summary,
+                    "authors": ", ".join([author.name for author in result.authors]),
+                    "published": result.published.strftime("%Y-%m-%d %H:%M:%S"),
+                    "link": result.entry_id
+                }
+                papers.append(paper)
+        except Exception as e:
+            logging.warning(f"关键词 '{kw}' 检索失败: {e}，跳过继续...")
+            time.sleep(10)
+            continue
+
+        logging.info(f"关键词 '{kw}' 完成，当前累计 {len(papers)} 篇")
+        # 每个关键词查完等 3 秒，避免触发 arxiv 速率限制
+        time.sleep(3)
+
+    logging.info(f"共检索到 {len(papers)} 篇论文（去重后）")
     return papers, len(papers)
+
 
 def save_papers_to_txt(papers, config, paper_count):
     """
