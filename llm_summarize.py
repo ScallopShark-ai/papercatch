@@ -188,8 +188,9 @@ def main():
         format="%(asctime)s [%(levelname)s] %(message)s",
         datefmt="%Y-%m-%d %H:%M:%S"
     )
-    
-    logging.info("===== 开始 Gemini 论文总结 =====")
+    model_name = config["llm"]["model"]
+
+    logging.info(f"===== 开始 {model_name} 论文总结 =====")
     
     # 周日不分析
     if datetime.now().weekday() == 6:

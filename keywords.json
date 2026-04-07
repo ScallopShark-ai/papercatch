@@ -26,6 +26,14 @@
             "Action Chunking",
             "Visuomotor Policy",
             "Affordance Prediction"
+        ],
+        "机器人控制":[
+            "Robot Control",
+            "Trajectory Tracking",
+            "Path Planning",
+            "Robust Control",
+            "Motion Planning",
+            "Optimal Control"
         ]
     }
 }
