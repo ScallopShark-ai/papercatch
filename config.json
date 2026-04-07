@@ -42,7 +42,7 @@
     },
     "llm": {
         "provider": "bltcy",
-        "api_key": "sk-oQD5y7UgIhmWsgF67vX7HZTLKN86D7sSPNzJZp6FX7axJYee",
+        "api_key": "BALALALA",
         "base_url": "https://api.bltcy.ai/v1",
         "model": "gpt-4o",
         "max_output_tokens": 4096,

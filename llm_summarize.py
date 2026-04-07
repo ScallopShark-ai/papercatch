@@ -98,9 +98,9 @@ def create_client(config):
     return client
 
 def summarize_paper(client, model, paper, keywords_prompt, max_tokens, temperature, max_retries=5):
-    system_instruction = f"""你是一位资深的AI/NLP领域研究助手。你的任务是阅读英文论文摘要，并用中文进行专业、简洁的总结。
+    system_instruction = f"""你是一位资深的AI/机器人/强化学习领域研究助手。你的任务是阅读英文论文摘要，并用中文进行专业、简洁的总结。
 
-请按以下格式输出：
+请严格按以下格式输出：
 
 【工作概述】
 用2-4句话概括这篇论文做了什么工作，提出了什么方法/框架/模型。
@@ -112,10 +112,17 @@ def summarize_paper(client, model, paper, keywords_prompt, max_tokens, temperatu
 列出1-3个核心贡献点。
 
 【关键词归类】
-根据以下关键词分类体系，为这篇文章匹配最相关的1-3个关键词类别：
+这篇论文属于以下哪个研究方向？请从下面三个类别中选择：
+
 {keywords_prompt}
 
-请只输出匹配的类别名称，用顿号分隔。如果都不匹配，请写"其他"。"""
+分类规则：
+1. 如果论文同时涉及多个方向，请全部列出，用顿号分隔
+2. 如果论文明确只属于其中一个方向，只输出那一个
+3. 如果论文与以上三个方向都不相关，请写"其他"并简要说明实际方向
+4. 判断依据是论文摘要中出现的关键术语是否与各类别的关键词匹配
+
+请只输出类别名称（强化学习、多模态大模型、机器人控制），不需要解释原因。"""
 
     user_prompt = f"""请分析以下论文：
 
