@@ -23,7 +23,8 @@
             "Trajectory Tracking",
             "Path Planning",
             "Motion Planning",
-            "Optimal Control"
+            "Optimal Control",
+            "Harness Engineering"
         ],
         "max_results": 50,
         "sort_by": "submittedDate",
