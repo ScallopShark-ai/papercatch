@@ -1,0 +1,363 @@
+论文名称: OOM-RL: Out-of-Money Reinforcement Learning Market-Driven Alignment for LLM-Based Multi-Agent Systems
+
+论文摘要: The alignment of Multi-Agent Systems (MAS) for autonomous software engineering is constrained by evaluator epistemic uncertainty. Current paradigms, such as Reinforcement Learning from Human Feedback (RLHF) and AI Feedback (RLAIF), frequently induce model sycophancy, while execution-based environments suffer from adversarial "Test Evasion" by unconstrained agents. In this paper, we introduce an objective alignment paradigm: \textbf{Out-of-Money Reinforcement Learning (OOM-RL)}. By deploying agents into the non-stationary, high-friction reality of live financial markets, we utilize critical capital depletion as an un-hackable negative gradient. Our longitudinal 20-month empirical study (July 2024 -- February 2026) chronicles the system's evolution from a high-turnover, sycophantic baseline to a robust, liquidity-aware architecture. We demonstrate that the undeniable ontological consequences of financial loss forced the MAS to abandon overfitted hallucinations in favor of the \textbf{Strict Test-Driven Agentic Workflow (STDAW)}, which enforces a Byzantine-inspired uni-directional state lock (RO-Lock) anchored to a deterministically verified $\geq 95\%$ code coverage constraint matrix. Our results show that while early iterations suffered severe execution decay, the final OOM-RL-aligned system achieved a stable equilibrium with an annualized Sharpe ratio of 2.06 in its mature phase. We conclude that substituting subjective human preference with rigorous economic penalties provides a robust methodology for aligning autonomous agents in high-stakes, real-world environments, laying the groundwork for generalized paradigms where computational billing acts as an objective physical constraint
+
+论文作者: Kun Liu, Liqun Chen
+
+提交时间: 2026-04-13 13:45:42
+
+论文链接: http://arxiv.org/abs/2604.11477v1
+
+==================================================
+==================================================
+
+论文名称: Shared Emotion Geometry Across Small Language Models: A Cross-Architecture Study of Representation, Behavior, and Methodological Confounds
+
+论文摘要: We extract 21-emotion vector sets from twelve small language models (six architectures x base/instruct, 1B-8B parameters) under a unified comprehension-mode pipeline at fp16 precision, and compare the resulting geometries via representational similarity analysis on raw cosine RDMs. The five mature architectures (Qwen 2.5 1.5B, SmolLM2 1.7B, Llama 3.2 3B, Mistral 7B v0.3, Llama 3.1 8B) share nearly identical 21-emotion geometry, with pairwise RDM Spearman correlations of 0.74-0.92. This universality persists across diametrically opposed behavioral profiles: Qwen 2.5 and Llama 3.2 occupy opposite poles of MTI Compliance facets yet produce nearly identical emotion RDMs (rho = 0.81), so behavioral facet differences arise above the shared emotion representation. Gemma-3 1B base, the one immature case in our dataset, exhibits extreme residual-stream anisotropy (0.997) and is restructured by RLHF across all geometric descriptors, whereas the five already-mature families show within-family base x instruct RDM correlations of rho >= 0.92 (Mistral 7B v0.3 at rho = 0.985), suggesting RLHF restructures only representations that are not yet organized. Methodologically, we show that what prior work has read as a single comprehension-vs-generation method effect in fact decomposes into four distinct layers -- a coarse method-dependent dissociation, robust sub-parameter sensitivity within generation, a true precision (fp16 vs INT8) effect, and a conflated cross-experiment bias that distorts in opposite directions for different models -- so that a single rho between two prior emotion-vector studies is not a safe basis for interpretation without the layered decomposition.
+
+论文作者: Jihoon Jeong
+
+提交时间: 2026-04-13 06:27:40
+
+论文链接: http://arxiv.org/abs/2604.11050v1
+
+==================================================
+==================================================
+
+论文名称: BITS Pilani at SemEval-2026 Task 9: Structured Supervised Fine-Tuning with DPO Refinement for Polarization Detection
+
+论文摘要: The POLAR SemEval-2026 Shared Task aims to detect online polarization and focuses on the classification and identification of multilingual, multicultural, and multi-event polarization.
+  Accurate computational detection of online polarization is challenging due to nuanced rhetoric, implicit framing, and the high cost of human-in-the-loop annotation. Building on recent findings that contextual prompting enables large language models to function as strong polarization detectors, we present a two-stage approach for detecting political polarization in social media text that combines structured supervised fine-tuning with Direct Preference Optimization (DPO) refinement.
+  We fine-tune Qwen 2.5-7B-Instruct with LoRA using an interpretable slot-filling template (target, claim type, manifestation checklist, and justification). We then apply DPO with automatically generated preference pairs to reduce costly false negatives. Experiments on the SemEval 2026 POLAR shared task dataset show that preference-based refinement improves both accuracy and decreases false negatives without extra annotation. On the English development set, DPO increases recall from 0.5085 to 0.7797 and improves macro-F1 by ~5 points.
+
+论文作者: Atharva Gupta, Dhruv Kumar, Yash Sinha
+
+提交时间: 2026-04-13 07:35:17
+
+论文链接: http://arxiv.org/abs/2604.11121v1
+
+==================================================
+==================================================
+
+论文名称: DDO-RM for LLM Preference Optimization: A Minimal Held-Out Benchmark against DPO
+
+论文摘要: This paper reorganizes the current manuscript around the DPO versus DDO-RM preference-optimization project and focuses on two parts: the algorithmic view and the preliminary held-out benchmark. The benchmark asks a narrow question: even in a minimal pairwise chosen-versus-rejected setting, can a reward-guided decision-distribution update outperform a direct pairwise objective? We compare Direct Preference Optimization (DPO) against DDO-RM on EleutherAI/pythia-410m using HuggingFaceH4/ultrafeedback\_binarized, evaluate on the held-out test\_prefs split, and report results for seeds 42, 13, and 3407.
+  Algorithmically, DDO-RM treats each prompt as a finite decision problem over candidate responses. Instead of optimizing only a binary chosen-rejected relation, it forms a policy distribution over candidates, centers reward-model scores under that distribution, and distills a reward-guided target distribution back into the policy. In the current public benchmark, DDO-RM improves mean pair accuracy from 0.5238 to 0.5602, AUC from 0.5315 to 0.5382, and mean margin from 0.1377 to 0.5353 relative to DPO. These are encouraging but still preliminary results: the study covers one model family, one dataset, one held-out evaluation split, and three seeds.
+
+论文作者: Tiantian Zhang, Jierui Zuo, Wenping Wang
+
+提交时间: 2026-04-13 07:33:06
+
+论文链接: http://arxiv.org/abs/2604.11119v1
+
+==================================================
+==================================================
+
+论文名称: ClawGUI: A Unified Framework for Training, Evaluating, and Deploying GUI Agents
+
+论文摘要: GUI agents drive applications through their visual interfaces instead of programmatic APIs, interacting with arbitrary software via taps, swipes, and keystrokes, reaching a long tail of applications that CLI-based agents cannot. Yet progress in this area is bottlenecked less by modeling capacity than by the absence of a coherent full-stack infrastructure: online RL training suffers from environment instability and closed pipelines, evaluation protocols drift silently across works, and trained agents rarely reach real users on real devices. We present \textbf{ClawGUI}, an open-source framework addressing these three gaps within a single harness. \textbf{ClawGUI-RL} provides the first open-source GUI agent RL infrastructure with validated support for both parallel virtual environments and real physical devices, integrating GiGPO with a Process Reward Model for dense step-level supervision. \textbf{ClawGUI-Eval} enforces a fully standardized evaluation pipeline across 6 benchmarks and 11+ models, achieving 95.8\% reproduction against official baselines. \textbf{ClawGUI-Agent} brings trained agents to Android, HarmonyOS, and iOS through 12+ chat platforms with hybrid CLI-GUI control and persistent personalized memory. Trained end to end within this pipeline, \textbf{ClawGUI-2B} achieves 17.1\% Success Rate on MobileWorld GUI-Only, outperforming the same-scale MAI-UI-2B baseline by 6.0\%.
+
+论文作者: Fei Tang, Zhiqiong Lu, Boxuan Zhang, Weiming Lu, Jun Xiao, Yueting Zhuang, Yongliang Shen
+
+提交时间: 2026-04-13 17:52:04
+
+论文链接: http://arxiv.org/abs/2604.11784v1
+
+==================================================
+==================================================
+
+论文名称: RationalRewards: Reasoning Rewards Scale Visual Generation Both Training and Test Time
+
+论文摘要: Most reward models for visual generation reduce rich human judgments to a single unexplained score, discarding the reasoning that underlies preference. We show that teaching reward models to produce explicit, multi-dimensional critiques before scoring transforms them from passive evaluators into active optimization tools, improving generators in two complementary ways: at training time, structured rationales provide interpretable, fine-grained rewards for reinforcement learning; at test time, a Generate-Critique-Refine loop turns critiques into targeted prompt revisions that improve outputs without any parameter updates. To train such a reward model without costly rationale annotations, we introduce Preference-Anchored Rationalization (PARROT), a principled framework that recovers high-quality rationales from readily available preference data through anchored generation, consistency filtering, and distillation. The resulting model, RationalRewards (8B), achieves state-of-the-art preference prediction among open-source reward models, competitive with Gemini-2.5-Pro, while using 10-20x less training data than comparable baselines. As an RL reward, it consistently improves text-to-image and image-editing generators beyond scalar alternatives. Most strikingly, its test-time critique-and-refine loop matches or exceeds RL-based fine-tuning on several benchmarks, suggesting that structured reasoning can unlock latent capabilities in existing generators that suboptimal prompts fail to elicit.
+
+论文作者: Haozhe Wang, Cong Wei, Weiming Ren, Jiaming Liu, Fangzhen Lin, Wenhu Chen
+
+提交时间: 2026-04-13 15:38:09
+
+论文链接: http://arxiv.org/abs/2604.11626v1
+
+==================================================
+==================================================
+
+论文名称: You Only Judge Once: Multi-response Reward Modeling in a Single Forward Pass
+
+论文摘要: We present a discriminative multimodal reward model that scores all candidate responses in a single forward pass. Conventional discriminative reward models evaluate each response independently, requiring multiple forward passes, one for each potential response. Our approach concatenates multiple responses with separator tokens and applies cross-entropy over their scalar scores, enabling direct comparative reasoning and efficient $N$-way preference learning. The multi-response design also yields up to $N\times$ wall-clock speedup and FLOPs reduction over conventional single-response scoring. To enable $N$-way reward evaluation beyond existing pairwise benchmarks, we construct two new benchmarks: (1) MR$^2$Bench-Image contains human-annotated rankings over responses from 8 diverse models; (2) MR$^2$Bench-Video is a large-scale video-based reward benchmark derived from 94K crowdsourced pairwise human judgments over video question-answering spanning 19 models, denoised via preference graph ensemble. Both benchmarks provide 4-response evaluation variants sampled from the full rankings. Built on a 4B vision-language backbone with LoRA fine-tuning and a lightweight MLP value head, our model achieves state-of-the-art results on six multimodal reward benchmarks, including MR$^2$Bench-Image, MR$^2$Bench-Video, and four other existing benchmarks. Our model outperforms existing larger generative and discriminative reward models. We further demonstrate that our reward model, when used in reinforcement learning with GRPO, produces improved policy models that maintain performance across standard multimodal benchmarks while substantially improving open-ended generation quality, outperforming a single-response discriminative reward model (RM) baseline by a large margin in both training stability and open-ended generation quality.
+
+论文作者: Yinuo Yang, Zixian Ma, Manasi Ganti, Jieyu Zhang, Ranjay Krishna
+
+提交时间: 2026-04-13 04:02:03
+
+论文链接: http://arxiv.org/abs/2604.10966v1
+
+==================================================
+==================================================
+
+论文名称: StarVLA-$α$: Reducing Complexity in Vision-Language-Action Systems
+
+论文摘要: Vision-Language-Action (VLA) models have recently emerged as a promising paradigm for building general-purpose robotic agents. However, the VLA landscape remains highly fragmented and complex: as existing approaches vary substantially in architectures, training data, embodiment configurations, and benchmark-specific engineering. In this work, we introduce StarVLA-$α$, a simple yet strong baseline designed to study VLA design choices under controlled conditions. StarVLA-$α$ deliberately minimizes architectural and pipeline complexity to reduce experimental confounders and enable systematic analysis. Specifically, we re-evaluate several key design axes, including action modeling strategies, robot-specific pretraining, and interface engineering. Across unified multi-benchmark training on LIBERO, SimplerEnv, RoboTwin, and RoboCasa, the same simple baseline remains highly competitive, indicating that a strong VLM backbone combined with minimal design is already sufficient to achieve strong performance without relying on additional architectural complexity or engineering tricks. Notably, our single generalist model outperforms $π_{0.5}$ by 20\% on the public real-world RoboChallenge benchmark. We expect StarVLA-$α$ to serve as a solid starting point for future research in the VLA regime. Code will be released at https://github.com/starVLA/starVLA.
+
+论文作者: Jinhui Ye, Ning Gao, Senqiao Yang, Jinliang Zheng, Zixuan Wang, Yuxin Chen, Pengguang Chen, Yilun Chen, Shu Liu, Jiaya Jia
+
+提交时间: 2026-04-13 17:30:01
+
+论文链接: http://arxiv.org/abs/2604.11757v1
+
+==================================================
+==================================================
+
+论文名称: Grounded World Model for Semantically Generalizable Planning
+
+论文摘要: In Model Predictive Control (MPC), world models predict the future outcomes of various action proposals, which are then scored to guide the selection of the optimal action. For visuomotor MPC, the score function is a distance metric between a predicted image and a goal image, measured in the latent space of a pretrained vision encoder like DINO and JEPA. However, it is challenging to obtain the goal image in advance of the task execution, particularly in new environments. Additionally, conveying the goal through an image offers limited interactivity compared with natural language. In this work, we propose to learn a Grounded World Model (GWM) in a vision-language-aligned latent space. As a result, each proposed action is scored based on how close its future outcome is to the task instruction, reflected by the similarity of embeddings. This approach transforms the visuomotor MPC to a VLA that surpasses VLM-based VLAs in semantic generalization. On the proposed WISER benchmark, GWM-MPC achieves a 87% success rate on the test set comprising 288 tasks that feature unseen visual signals and referring expressions, yet remain solvable with motions demonstrated during training. In contrast, traditional VLAs achieve an average success rate of 22%, even though they overfit the training set with a 90% success rate.
+
+论文作者: Quanyi Li, Lan Feng, Haonan Zhang, Wuyang Li, Letian Wang, Alexandre Alahi, Harold Soh
+
+提交时间: 2026-04-13 17:25:41
+
+论文链接: http://arxiv.org/abs/2604.11751v1
+
+==================================================
+==================================================
+
+论文名称: Collaborative Multi-Agent Scripts Generation for Enhancing Imperfect-Information Reasoning in Murder Mystery Games
+
+论文摘要: Vision-language models (VLMs) have shown impressive capabilities in perceptual tasks, yet they degrade in complex multi-hop reasoning under multiplayer game settings with imperfect and deceptive information. In this paper, we study a representative multiplayer task, Murder Mystery Games, which require inferring hidden truths based on partial clues provided by roles with different intentions. To address this challenge, we propose a collaborative multi-agent framework for evaluating and synthesizing high-quality, role-driven multiplayer game scripts, enabling fine-grained interaction patterns tailored to character identities (i.e., murderer vs. innocent). Our system generates rich multimodal contexts, including character backstories, visual and textual clues, and multi-hop reasoning chains, through coordinated agent interactions. We design a two-stage agent-monitored training strategy to enhance the reasoning ability of VLMs: (1) chain-of-thought based fine-tuning on curated and synthetic datasets that model uncertainty and deception; (2) GRPO-based reinforcement learning with agent-monitored reward shaping, encouraging the model to develop character-specific reasoning behaviors and effective multimodal multi-hop inference. Extensive experiments demonstrate that our method significantly boosts the performance of VLMs in narrative reasoning, hidden fact extraction, and deception-resilient understanding. Our contributions offer a scalable solution for training and evaluating VLMs under uncertain, adversarial, and socially complex conditions, laying the groundwork for future benchmarks in multimodal multi-hop reasoning under imperfect information.
+
+论文作者: Keyang Zhong, Junlin Xie, Hefeng Wu, Haofeng Li, Guanbin Li
+
+提交时间: 2026-04-13 17:16:23
+
+论文链接: http://arxiv.org/abs/2604.11741v1
+
+==================================================
+==================================================
+
+论文名称: AffordSim: A Scalable Data Generator and Benchmark for Affordance-Aware Robotic Manipulation
+
+论文摘要: Simulation-based data generation has become a dominant paradigm for training robotic manipulation policies, yet existing platforms do not incorporate object affordance information into trajectory generation. As a result, tasks requiring precise interaction with specific functional regions--grasping a mug by its handle, pouring from a cup's rim, or hanging a mug on a hook--cannot be automatically generated with semantically correct trajectories. We introduce AffordSim, the first simulation framework that integrates open-vocabulary 3D affordance prediction into the manipulation data generation pipeline. AffordSim uses our VoxAfford model, an open-vocabulary 3D affordance detector that enhances MLLM output tokens with multi-scale geometric features, to predict affordance maps on object point clouds, guiding grasp pose estimation toward task-relevant functional regions. Built on NVIDIA Isaac Sim with cross-embodiment support (Franka FR3, Panda, UR5e, Kinova), VLM-powered task generation, and novel domain randomization using DA3-based 3D Gaussian reconstruction from real photographs, AffordSim enables automated, scalable generation of affordance-aware manipulation data. We establish a benchmark of 50 tasks across 7 categories (grasping, placing, stacking, pushing/pulling, pouring, mug hanging, long-horizon composite) and evaluate 4 imitation learning baselines (BC, Diffusion Policy, ACT, Pi 0.5). Our results reveal that while grasping is largely solved (53-93% success), affordance-demanding tasks such as pouring into narrow containers (1-43%) and mug hanging (0-47%) remain significantly more challenging for current imitation learning methods, highlighting the need for affordance-aware data generation. Zero-shot sim-to-real experiments on a real Franka FR3 validate the transferability of the generated data.
+
+论文作者: Mingyang Li, Haofan Xu, Haowen Sun, Xinzhe Chen, Sihua Ren, Liqi Huang, Xinyang Sui, Chenyang Miao, Qiongjie Cui, Zeyang Liu, Xingyu Chen, Xuguang Lan
+
+提交时间: 2026-04-13 16:21:44
+
+论文链接: http://arxiv.org/abs/2604.11674v1
+
+==================================================
+==================================================
+
+论文名称: CArtBench: Evaluating Vision-Language Models on Chinese Art Understanding, Interpretation, and Authenticity
+
+论文摘要: We introduce CARTBENCH, a museum-grounded benchmark for evaluating vision-language models (VLMs) on Chinese artworks beyond short-form recognition and QA. CARTBENCH comprises four subtasks: CURATORQA for evidence-grounded recognition and reasoning, CATALOGCAPTION for structured four-section expert-style appreciation, REINTERPRET for defensible reinterpretation with expert ratings, and CONNOISSEURPAIRS for diagnostic authenticity discrimination under visually similar confounds. CARTBENCH is built by aligning image-bearing Palace Museum objects from Wikidata with authoritative catalog pages, spanning five art categories across multiple dynasties. Across nine representative VLMs, we find that high overall CURATORQA accuracy can mask sharp drops on hard evidence linking and style-to-period inference; long-form appreciation remains far from expert references; and authenticity-oriented diagnostic discrimination stays near chance, underscoring the difficulty of connoisseur-level reasoning for current models.
+
+论文作者: Xuefeng Wei, Zhixuan Wang, Xuan Zhou, Zhi Qu, Hongyao Li, Yusuke Sakai, Hidetaka Kamigaito, Taro Watanabe
+
+提交时间: 2026-04-13 15:44:02
+
+论文链接: http://arxiv.org/abs/2604.11632v1
+
+==================================================
+==================================================
+
+论文名称: CLAY: Conditional Visual Similarity Modulation in Vision-Language Embedding Space
+
+论文摘要: Human perception of visual similarity is inherently adaptive and subjective, depending on the users' interests and focus. However, most image retrieval systems fail to reflect this flexibility, relying on a fixed, monolithic metric that cannot incorporate multiple conditions simultaneously. To address this, we propose CLAY, an adaptive similarity computation method that reframes the embedding space of pretrained Vision-Language Models (VLMs) as a text-conditional similarity space without additional training. This design separates the textual conditioning process and visual feature extraction, allowing highly efficient and multi-conditioned retrieval with fixed visual embeddings. We also construct a synthetic evaluation dataset CLAY-EVAL, for comprehensive assessment under diverse conditioned retrieval settings. Experiments on standard datasets and our proposed dataset show that CLAY achieves high retrieval accuracy and notable computational efficiency compared to previous works.
+
+论文作者: Sohwi Lim, Lee Hyoseok, Jungjoon Park, Tae-Hyun Oh
+
+提交时间: 2026-04-13 14:33:13
+
+论文链接: http://arxiv.org/abs/2604.11539v1
+
+==================================================
+==================================================
+
+论文名称: SVD-Prune: Training-Free Token Pruning For Efficient Vision-Language Models
+
+论文摘要: Vision-Language Models (VLM) have revolutionized multimodal learning by jointly processing visual and textual information. Yet, they face significant challenges due to the high computational and memory demands of processing long sequences of vision tokens. Many existing methods rely on local heuristics, such as attention scores or token norms. However, these criteria suffer from positional bias and information dispersion, limiting their ability to preserve essential content at high pruning ratios and leading to performance degradation on visually detailed images. To address these issues, we propose SVD-Prune, a trainingfree, plug-and-play token pruning method based on Singular Value Decomposition. It decomposes the vision token feature matrix and selects the top-K tokens using statistical leverage scores, ensuring only tokens contributing most to the dominant global variance are preserved. Experiments show that SVD-Prune consistently outperforms prior pruning methods under extreme vision token budgets, maintaining strong performance even with 32 and 16 vision tokens.
+
+论文作者: Yvon Apedo, Martyna Poreba, Michal Szczepanski, Samia Bouchafa
+
+提交时间: 2026-04-13 14:30:13
+
+论文链接: http://arxiv.org/abs/2604.11530v1
+
+==================================================
+==================================================
+
+论文名称: Revisiting Compositionality in Dual-Encoder Vision-Language Models: The Role of Inference
+
+论文摘要: Dual-encoder Vision-Language Models (VLMs) such as CLIP are often characterized as bag-of-words systems due to their poor performance on compositional benchmarks. We argue that this limitation may stem less from deficient representations than from the standard inference protocol based on global cosine similarity. First, through controlled diagnostic experiments, we show that explicitly enforcing fine-grained region-segment alignment at inference dramatically improves compositional performance without updating pretrained encoders. We then introduce a lightweight transformer that learns such alignments directly from frozen patch and token embeddings. Comparing against full fine-tuning and prior end-to-end compositional training methods, we find that although these approaches improve in-domain retrieval, their gains do not consistently transfer under distribution shift. In contrast, learning localized alignment over frozen representations matches full fine-tuning on in-domain retrieval while yielding substantial improvements on controlled out-of-domain compositional benchmarks. These results identify global embedding matching as a key bottleneck in dual-encoder VLMs and highlight the importance of alignment mechanisms for robust compositional generalization.
+
+论文作者: Imanol Miranda, Ander Salaberria, Eneko Agirre, Gorka Azkune
+
+提交时间: 2026-04-13 14:03:18
+
+论文链接: http://arxiv.org/abs/2604.11496v1
+
+==================================================
+==================================================
+
+论文名称: Reasoning Resides in Layers: Restoring Temporal Reasoning in Video-Language Models with Layer-Selective Merging
+
+论文摘要: Multimodal adaptation equips large language models (LLMs) with perceptual capabilities, but often weakens the reasoning ability inherited from language-only pretraining. This trade-off is especially pronounced in video-language models (VLMs), where visual alignment can impair temporal reasoning (TR) over sequential events. We propose MERIT, a training-free, task-driven model merging framework for restoring TR in VLMs. MERIT searches over layer-wise self-attention merging recipes between a VLM and its paired text-only backbone using an objective that improves TR while penalizing degradation in temporal perception (TP). Across three representative VLMs and multiple challenging video benchmarks, MERIT consistently improves TR, preserves or improves TP, and generalizes beyond the search set to four distinct benchmarks. It also outperforms uniform full-model merging and random layer selection, showing that effective recovery depends on selecting the right layers. Interventional masking and frame-level attribution further show that the selected layers are disproportionately important for reasoning and shift model decisions toward temporally and causally relevant evidence. These results show that targeted, perception-aware model merging can effectively restore TR in VLMs without retraining.
+
+论文作者: Zihang Fu, Haonan Wang, Jian Kang, Kenji Kawaguchi, Jiaying Wu
+
+提交时间: 2026-04-13 12:41:50
+
+论文链接: http://arxiv.org/abs/2604.11399v1
+
+==================================================
+==================================================
+
+论文名称: What Do Vision-Language Models Encode for Personalized Image Aesthetics Assessment?
+
+论文摘要: Personalized image aesthetics assessment (PIAA) is an important research problem with practical real-world applications. While methods based on vision-language models (VLMs) are promising candidates for PIAA, it remains unclear whether they internally encode rich, multi-level aesthetic attributes required for effective personalization. In this paper, we first analyze the internal representations of VLMs to examine the presence and distribution of such aesthetic attributes, and then leverage them for lightweight, individual-level personalization without model fine-tuning. Our analysis reveals that VLMs encode diverse aesthetic attributes that propagate into the language decoder layers. Building on these representations, we demonstrate that simple linear models can perform PIAA effectively. We further analyze how aesthetic information is transferred across layers in different VLM architectures and across image domains. Our findings provide insights into how VLMs can be utilized for modeling subjective, individual aesthetic preferences. Our code is available at https://github.com/ynklab/vlm-latent-piaa.
+
+论文作者: Koki Ryu, Hitomi Yanaka
+
+提交时间: 2026-04-13 12:15:24
+
+论文链接: http://arxiv.org/abs/2604.11374v1
+
+==================================================
+==================================================
+
+论文名称: Sign Language Recognition in the Age of LLMs
+
+论文摘要: Recent Vision Language Models (VLMs) have demonstrated strong performance across a wide range of multimodal reasoning tasks. This raises the question of whether such general-purpose models can also address specialized visual recognition problems such as isolated sign language recognition (ISLR) without task-specific training. In this work, we investigate the capability of modern VLMs to perform ISLR in a zero-shot setting. We evaluate several open-source and proprietary VLMs on the WLASL300 benchmark. Our experiments show that, under prompt-only zero-shot inference, current open-source VLMs remain far behind classic supervised ISLR classifiers by a wide margin. However, follow-up experiments reveal that these models capture partial visual-semantic alignment between signs and text descriptions. Larger proprietary models achieve substantially higher accuracy, highlighting the importance of model scale and training data diversity. All our code is publicly available on GitHub.
+
+论文作者: Vaclav Javorek, Jakub Honzik, Ivan Gruber, Tomas Zelezny, Marek Hruz
+
+提交时间: 2026-04-13 09:26:16
+
+论文链接: http://arxiv.org/abs/2604.11225v1
+
+==================================================
+==================================================
+
+论文名称: Back to the Barn with LLAMAs: Evolving Pretrained LLM Backbones in Finetuning Vision Language Models
+
+论文摘要: Vision-Language Models (VLMs) have rapidly advanced by leveraging powerful pre-trained Large Language Models (LLMs) as core reasoning backbones. As new and more capable LLMs emerge with improved reasoning, instruction-following, and generalization, there is a pressing need to efficiently update existing VLMs to incorporate these advancements. However, the integration of new LLMs into VLMs, particularly how the evolving LLMs contribute to multimodal reasoning, alignment, and task-specific performance remains underexplored. Addressing this gap is important for VLM development, given the rapid evolution of pretrained LLM backbones. This study presents a controlled and systematic investigation of how changes in the pretrained LLM backbone affect downstream VLM task performance. By having the vision encoder, training data, and post-training algorithm remain same across LLAMA-1, LLAMA-2, and LLAMA-3 based VLMs, we find that newer LLM backbones do not always lead to better VLMs, but the performance depends on the downstream VLM task. For example, in visual question and answering tasks, newer LLM backbones tend to solve different questions rather than just more questions, and our analysis shows this is driven by differences in how the models process information, including better calibrated confidence and more stable internal representations. We also find that some VLM capabilities appear only in the newest LLM generation, while tasks that depend mainly on visual understanding see little benefit from a newer LLM backbone.
+
+论文作者: Sameera Horawalavithana, Lauren Phillips, Ian Stewart, Sai Munikoti, Karl Pazdernik
+
+提交时间: 2026-04-13 04:44:42
+
+论文链接: http://arxiv.org/abs/2604.10985v1
+
+==================================================
+==================================================
+
+论文名称: ReXSonoVQA: A Video QA Benchmark for Procedure-Centric Ultrasound Understanding
+
+论文摘要: Ultrasound acquisition requires skilled probe manipulation and real-time adjustments. Vision-language models (VLMs) could enable autonomous ultrasound systems, but existing benchmarks evaluate only static images, not dynamic procedural understanding. We introduce ReXSonoVQA, a video QA benchmark with 514 video clips and 514 questions (249 MCQ, 265 free-response) targeting three competencies: Action-Goal Reasoning, Artifact Resolution & Optimization, and Procedure Context & Planning. Zero-shot evaluation of Gemini 3 Pro, Qwen3.5-397B, LLaVA-Video-72B, and Seed 2.0 Pro shows VLMs can extract some procedural information, but troubleshooting questions remain challenging with minimal gains over text-only baselines, exposing limitations in causal reasoning. ReXSonoVQA enables developing perception systems for ultrasound training, guidance, and robotic automation.
+
+论文作者: Xucheng Wang, Xiaoman Zhang, Sung Eun Kim, Ankit Pal, Pranav Rajpurkar
+
+提交时间: 2026-04-13 02:32:51
+
+论文链接: http://arxiv.org/abs/2604.10916v1
+
+==================================================
+==================================================
+
+论文名称: Solving Physics Olympiad via Reinforcement Learning on Physics Simulators
+
+论文摘要: We have witnessed remarkable advances in LLM reasoning capabilities with the advent of DeepSeek-R1. However, much of this progress has been fueled by the abundance of internet question-answer (QA) pairs, a major bottleneck going forward, since such data is limited in scale and concentrated mainly in domains like mathematics. In contrast, other sciences such as physics lack large-scale QA datasets to effectively train reasoning-capable models. In this work, we show that physics simulators can serve as a powerful alternative source of supervision for training LLMs for physical reasoning. We generate random scenes in physics engines, create synthetic question-answer pairs from simulated interactions, and train LLMs using reinforcement learning on this synthetic data. Our models exhibit zero-shot sim-to-real transfer to real-world physics benchmarks: for example, training solely on synthetic simulated data improves performance on IPhO (International Physics Olympiad) problems by 5-10 percentage points across model sizes. These results demonstrate that physics simulators can act as scalable data generators, enabling LLMs to acquire deep physical reasoning skills beyond the limitations of internet-scale QA data. Code available at: https://sim2reason.github.io/.
+
+论文作者: Mihir Prabhudesai, Aryan Satpathy, Yangmin Li, Zheyang Qin, Nikash Bhardwaj, Amir Zadeh, Chuan Li, Katerina Fragkiadaki, Deepak Pathak
+
+提交时间: 2026-04-13 17:59:40
+
+论文链接: http://arxiv.org/abs/2604.11805v1
+
+==================================================
+==================================================
+
+论文名称: Efficient Emotion-Aware Iconic Gesture Prediction for Robot Co-Speech
+
+论文摘要: Co-speech gestures increase engagement and improve speech understanding. Most data-driven robot systems generate rhythmic beat-like motion, yet few integrate semantic emphasis. To address this, we propose a lightweight transformer that derives iconic gesture placement and intensity from text and emotion alone, requiring no audio input at inference time. The model outperforms GPT-4o in both semantic gesture placement classification and intensity regression on the BEAT2 dataset, while remaining computationally compact and suitable for real-time deployment on embodied agents.
+
+论文作者: Edwin C. Montiel-Vazquez, Christian Arzate Cruz, Stefanos Gkikas, Thomas Kassiotis, Giorgos Giannakakis, Randy Gomez
+
+提交时间: 2026-04-13 13:02:02
+
+论文链接: http://arxiv.org/abs/2604.11417v1
+
+==================================================
+==================================================
+
+论文名称: Minimal Embodiment Enables Efficient Learning of Number Concepts in Robot
+
+论文摘要: Robots are increasingly entering human-interactive scenarios that require understanding of quantity. How intelligent systems acquire abstract numerical concepts from sensorimotor experience remains a fundamental challenge in cognitive science and artificial intelligence. Here we investigate embodied numerical learning using a neural network model trained to perform sequential counting through naturalistic robotic interaction with a Franka Panda manipulator. We demonstrate that embodied models achieve 96.8\% counting accuracy with only 10\% of training data, compared to 60.6\% for vision-only baselines. This advantage persists when visual-motor correspondences are randomized, indicating that embodiment functions as a structural prior that regularizes learning rather than as an information source. The model spontaneously develops biologically plausible representations: number-selective units with logarithmic tuning, mental number line organization, Weber-law scaling, and rotational dynamics encoding numerical magnitude ($r = 0.97$, slope $= 30.6°$/count). The learning trajectory parallels children's developmental progression from subset-knowers to cardinal-principle knowers. These findings demonstrate that minimal embodiment can ground abstract concepts, improve data efficiency, and yield interpretable representations aligned with biological cognition, which may contribute to embodied mathematics tutoring and safety-critical industrial applications.
+
+论文作者: Zhegong Shangguan, Alessandro Di Nuovo, Angelo Cangelosi
+
+提交时间: 2026-04-13 12:14:58
+
+论文链接: http://arxiv.org/abs/2604.11373v1
+
+==================================================
+==================================================
+
+论文名称: EmbodiedGovBench: A Benchmark for Governance, Recovery, and Upgrade Safety in Embodied Agent Systems
+
+论文摘要: Recent progress in embodied AI has produced a growing ecosystem of robot policies, foundation models, and modular runtimes. However, current evaluation remains dominated by task success metrics such as completion rate or manipulation accuracy. These metrics leave a critical gap: they do not measure whether embodied systems are governable -- whether they respect capability boundaries, enforce policies, recover safely, maintain audit trails, and respond to human oversight. We present EmbodiedGovBench, a benchmark for governance-oriented evaluation of embodied agent systems. Rather than asking only whether a robot can complete a task, EmbodiedGovBench evaluates whether the system remains controllable, policy-bounded, recoverable, auditable, and evolution-safe under realistic perturbations. The benchmark covers seven governance dimensions: unauthorized capability invocation, runtime drift robustness, recovery success, policy portability, version upgrade safety, human override responsiveness, and audit completeness. We define a benchmark structure spanning single-robot and fleet settings, with scenario templates, perturbation operators, governance metrics, and baseline evaluation protocols. We describe how the benchmark can be instantiated over embodied capability runtimes with modular interfaces and contract-aware upgrade workflows. Our analysis suggests that embodied governance should become a first-class evaluation target. EmbodiedGovBench provides the initial measurement framework for that shift.
+
+论文作者: Xue Qin, Simin Luan, John See, Cong Yang, Zhijun Li
+
+提交时间: 2026-04-13 08:34:04
+
+论文链接: http://arxiv.org/abs/2604.11174v1
+
+==================================================
+==================================================
+
+论文名称: Federated Single-Agent Robotics: Multi-Robot Coordination Without Intra-Robot Multi-Agent Fragmentation
+
+论文摘要: As embodied robots move toward fleet-scale operation, multi-robot coordination is becoming a central systems challenge. Existing approaches often treat this as motivation for increasing internal multi-agent decomposition within each robot. We argue for a different principle: multi-robot coordination does not require intra-robot multi-agent fragmentation. Each robot should remain a single embodied agent with its own persistent runtime, local policy scope, capability state, and recovery authority, while coordination emerges through federation across robots at the fleet level. We present Federated Single-Agent Robotics (FSAR), a runtime architecture for multi-robot coordination built on single-agent robot runtimes. Each robot exposes a governed capability surface rather than an internally fragmented agent society. Fleet coordination is achieved through shared capability registries, cross-robot task delegation, policy-aware authority assignment, trust-scoped interaction, and layered recovery protocols. We formalize key coordination relations including authority delegation, inter-robot capability requests, local-versus-fleet recovery boundaries, and hierarchical human supervision, and describe a fleet runtime architecture supporting shared Embodied Capability Module (ECM) discovery, contract-aware cross-robot coordination, and fleet-level governance. We evaluate FSAR on representative multi-robot coordination scenarios against decomposition-heavy baselines. Results show statistically significant gains in governance locality (d=2.91, p<.001 vs. centralized control) and recovery containment (d=4.88, p<.001 vs. decomposition-heavy), while reducing authority conflicts and policy violations across all scenarios. Our results support the view that the path from embodied agents to embodied fleets is better served by federation across coherent robot runtimes than by fragmentation within them.
+
+论文作者: Xue Qin, Simin Luan, John See, Cong Yang, Zhijun Li
+
+提交时间: 2026-04-13 05:51:13
+
+论文链接: http://arxiv.org/abs/2604.11028v1
+
+==================================================
+==================================================
+
+论文名称: AIM: Intent-Aware Unified world action Modeling with Spatial Value Maps
+
+论文摘要: Pretrained video generation models provide strong priors for robot control, but existing unified world action models still struggle to decode reliable actions without substantial robot-specific training. We attribute this limitation to a structural mismatch: while video models capture how scenes evolve, action generation requires explicit reasoning about where to interact and the underlying manipulation intent. We introduce AIM, an intent-aware unified world action model that bridges this gap via an explicit spatial interface. Instead of decoding actions directly from future visual representations, AIM predicts an aligned spatial value map that encodes task-relevant interaction structure, enabling a control-oriented abstraction of future dynamics. Built on a pretrained video generation model, AIM jointly models future observations and value maps within a shared mixture-of-transformers architecture. It employs intent-causal attention to route future information to the action branch exclusively through the value representation. We further propose a self-distillation reinforcement learning stage that freezes the video and value branches and optimizes only the action head using dense rewards derived from projected value-map responses together with sparse task-level signals. To support training and evaluation, we construct a simulation dataset of 30K manipulation trajectories with synchronized multi-view observations, actions, and value-map annotations. Experiments on RoboTwin 2.0 benchmark show that AIM achieves a 94.0% average success rate, significantly outperforming prior unified world action baselines. Notably, the improvement is more pronounced in long-horizon and contact-sensitive manipulation tasks, demonstrating the effectiveness of explicit spatial-intent modeling as a bridge between visual world modeling and robot control.
+
+论文作者: Liaoyuan Fan, Zetian Xu, Chen Cao, Wenyao Zhang, Mingqi Yuan, Jiayu Chen
+
+提交时间: 2026-04-13 07:48:58
+
+论文链接: http://arxiv.org/abs/2604.11135v1
+
+==================================================
+==================================================
+
+论文名称: SemaClaw: A Step Towards General-Purpose Personal AI Agents through Harness Engineering
+
+论文摘要: The rise of OpenClaw in early 2026 marks the moment when millions of users began deploying personal AI agents into their daily lives, delegating tasks ranging from travel planning to multi-step research. This scale of adoption signals that two parallel arcs of development have reached an inflection point. First is a paradigm shift in AI engineering, evolving from prompt and context engineering to harness engineering-designing the complete infrastructure necessary to transform unconstrained agents into controllable, auditable, and production-reliable systems. As model capabilities converge, this harness layer is becoming the primary site of architectural differentiation. Second is the evolution of human-agent interaction from discrete tasks toward a persistent, contextually aware collaborative relationship, which demands open, trustworthy and extensible harness infrastructure. We present SemaClaw, an open-source multi-agent application framework that addresses these shifts by taking a step towards general-purpose personal AI agents through harness engineering. Our primary contributions include a DAG-based two-phase hybrid agent team orchestration method, a PermissionBridge behavioral safety system, a three-tier context management architecture, and an agentic wiki skill for automated personal knowledge base construction.
+
+论文作者: Ningyan Zhu, Huacan Wang, Jie Zhou, Feiyu Chen, Shuo Zhang, Ge Chen, Chen Liu, Jiarou Wu, Wangyi Chen, Xiaofeng Mou, Yi Xu
+
+提交时间: 2026-04-13 14:37:53
+
+论文链接: http://arxiv.org/abs/2604.11548v1
+
+==================================================
+==================================================
+
+论文名称: Problem Reductions at Scale: Agentic Integration of Computationally Hard Problems
+
+论文摘要: Solving an NP-hard optimization problem often requires reformulating it for a specific solver -- quantum hardware, a commercial optimizer, or a domain heuristic. A tool for polynomial-time reductions between hard problems would let practitioners route any supported problem to any supported solver through a single interface. Building such a library at scale, however, has remained out of reach. We show that harness engineering, the practice of designing constraints, verification systems, and feedback loops that channel AI coding agents, can overcome this barrier. Our harness combines a no-code contribution route for domain experts, a multilayer verification stack ranging from type-level checks to agentic feature tests (AI agents role-playing as end users), and a fully automated implementation-review-integration pipeline. In about three months, we built a command-line tool backed by a library of 100+ problem types and 200+~reduction rules in over 170k lines of Rust. The result suggests that a well-engineered harness lets agents build well-tested software at a scale and pace beyond prior reduction-library efforts. Because the reduction graph composes transitively, a new solver registered for any single problem type instantly becomes available to every problem connected by a reduction path. The source code is available at https://github.com/CodingThrust/problem-reductions.
+
+论文作者: Xi-Wei Pan, Shi-Wen An, Jin-Guo Liu
+
+提交时间: 2026-04-13 14:32:08
+
+论文链接: http://arxiv.org/abs/2604.11535v1
