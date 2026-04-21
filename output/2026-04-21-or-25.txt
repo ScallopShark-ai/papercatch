@@ -1,0 +1,323 @@
+论文名称: StepPO: Step-Aligned Policy Optimization for Agentic Reinforcement Learning
+
+论文摘要: General agents have given rise to phenomenal applications such as OpenClaw and Claude Code. As these agent systems (a.k.a. Harnesses) strive for bolder goals, they demand increasingly stronger agentic capabilities from foundation Large Language Models (LLMs). Agentic Reinforcement Learning (RL) is emerging as a central post-training paradigm for empowering LLMs with these capabilities and is playing an increasingly pivotal role in agent training. Unlike single-turn token-level alignment or reasoning enhancement, as in RLHF and RLVR, Agentic RL targets multi-turn interactive settings, where the goal is to optimize core agentic capabilities such as decision making and tool use while addressing new challenges including delayed and sparse rewards, as well as long and variable context. As a result, the token-centric modeling and optimization paradigm inherited from traditional LLM RL is becoming increasingly inadequate for capturing real LLM agent behavior. In this paper, we present StepPO as a position on step-level Agentic RL. We argue that the conventional token-level Markov Decision Process (MDP) should be advanced to a step-level MDP formulation, and that the step, rather than the token, should be regarded as the proper action representation for LLM agents. We then propose step-level credit assignment as the natural optimization counterpart of this formulation, thereby aligning policy optimization and reward propagation with the granularity of agent decisions. Finally, we discuss the key systems designs required to realize step-level Agentic RL in practice and preliminary experiments provide initial evidence for the effectiveness of this perspective. We hope that the step-aligned, step-level paradigm embodied in StepPO offers the Agentic RL community a useful lens for understanding agent behavior and helps advance LLMs toward stronger general-agent capabilities.
+
+论文作者: Daoyu Wang, Qingchuan Li, Mingyue Cheng, Jie Ouyang, Shuo Yu, Qi Liu, Enhong Chen
+
+提交时间: 2026-04-20 15:22:39
+
+论文链接: http://arxiv.org/abs/2604.18401v1
+
+==================================================
+==================================================
+
+论文名称: PARM: Pipeline-Adapted Reward Model
+
+论文摘要: Reward models (RMs) are central to aligning large language models (LLMs) with human preferences, powering RLHF and advanced decoding strategies. While most prior work focuses on single-step generation, real-world applications increasingly adopt multi-stage LLM pipelines, where effective reward guidance remains underexplored. We investigate this through code generation for combinatorial optimization, constructing a pipeline that integrates reward models into both formulation and solution stages. We identify a critical challenge: inconsistency between reward model predictions and actual pipeline execution outcomes. To address this, we propose the Pipeline-Adapted Reward Model (PARM), which leverages pipeline-specific data and direct preference optimization to align rewards with downstream feedback. We instantiate PARM as a two-stage pipeline (formulation -> code generation) and evaluate it on four public optimization benchmarks, measuring execution rate and solving accuracy against baselines and sampling methods. A supplementary cross-domain experiment on GSM8K assesses transferability. Results demonstrate that PARM consistently improves pipeline output quality and stability, providing new insights into reward modeling for multi-stage LLM reasoning.
+
+论文作者: Xingyu Fan, Wei Shao, Jiacheng Liu, Linqi Song, Pheng Ann Heng
+
+提交时间: 2026-04-20 14:29:08
+
+论文链接: http://arxiv.org/abs/2604.18327v1
+
+==================================================
+==================================================
+
+论文名称: Efficient Federated RLHF via Zeroth-Order Policy Optimization
+
+论文摘要: This paper considers reinforcement learning from human feedback in a federated learning setting with resource-constrained agents, such as edge devices. We propose an efficient federated RLHF algorithm, named Partitioned, Sign-based Stochastic Zeroth-order Policy Optimization (Par-S$^2$ZPO). The algorithm is built on zeroth-order optimization with binary perturbation, resulting in low communication, computation, and memory complexity by design. Our theoretical analysis establishes an upper bound on the convergence rate of Par-S$^2$ZPO, revealing that it is as efficient as its centralized counterpart in terms of sample complexity but converges faster in terms of policy update iterations. Our experimental results show that it outperforms a FedAvg-based RLHF on four MuJoCo RL tasks.
+
+论文作者: Deyi Wang, Qining Zhang, Lei Ying
+
+提交时间: 2026-04-20 03:04:12
+
+论文链接: http://arxiv.org/abs/2604.17747v1
+
+==================================================
+==================================================
+
+论文名称: Reverse Constitutional AI: A Framework for Controllable Toxic Data Generation via Probability-Clamped RLAIF
+
+论文摘要: Ensuring the safety of large language models (LLMs) requires robust red teaming, yet the systematic synthesis of high-quality toxic data remains under-explored. We propose Reverse Constitutional AI (R-CAI), a framework for automated and controllable adversarial data generation that moves beyond isolated jailbreak prompts. By inverting a harmless constitution into a constitution of toxicity and iteratively refining model outputs through a critique--revision pipeline, R-CAI enables scalable synthesis of multi-dimensional adversarial data without human annotation. Optimizing solely for toxicity-related rewards, however, can lead to reward hacking and degraded semantic coherence. To address this challenge, we introduce probability clamping within reinforcement learning from AI feedback, which stabilizes adversarial optimization while preserving adversarial intent. Experiments demonstrate that R-CAI generates diverse, high-quality toxic data and that probability clamping substantially improves semantic coherence (15%) without sacrificing adversarial strength. Overall, R-CAI provides a fully automated framework for red teaming data generation and systematic safety evaluation of aligned language models.
+
+论文作者: Yuan Fang, Yiming Luo, Aimin Zhou, Fei Tan
+
+提交时间: 2026-04-20 03:49:25
+
+论文链接: http://arxiv.org/abs/2604.17769v1
+
+==================================================
+==================================================
+
+论文名称: Aligning Language Models for Lyric-to-Melody Generation with Rule-Based Musical Constraints
+
+论文摘要: Large Language Models (LLMs) show promise in lyric-to-melody generation, but models trained with Supervised Fine-Tuning (SFT) often produce musically implausible melodies with issues like poor rhythm and unsuitable vocal ranges, a phenomenon we term "constraint violation". To address this, we propose a novel alignment framework that instills musical knowledge without human annotation. We define rule-based musical constraints to automatically generate a preference dataset from an SFT model's outputs. The model is then aligned through a sequential process, first using Direct Preference Optimization (DPO) on paired preference data, followed by Kahneman-Tversky Optimization (KTO) on unpaired negative samples. Experimental results demonstrate that our aligned model substantially reduces rule violations and outperforms strong baselines in both objective and subjective evaluations, generating melodies with substantially improved musicality and coherence. An interactive demo with audio comparisons is available at https://arain233.github.io/AligningMelody-demo.
+
+论文作者: Hao Meng, Siyuan Zheng, Shuran Zhou, Qiangqiang Wang, Yang Song
+
+提交时间: 2026-04-20 16:40:45
+
+论文链接: http://arxiv.org/abs/2604.18489v1
+
+==================================================
+==================================================
+
+论文名称: PRISMA: Preference-Reinforced Self-Training Approach for Interpretable Emotionally Intelligent Negotiation Dialogues
+
+论文摘要: Emotion plays a pivotal role in shaping negotiation outcomes, influencing trust, cooperation, and long-term relationships. Developing negotiation dialog systems that can recognize and respond strategically to emotions is, therefore, essential to create more effective human-centered interactions. Beyond generating emotionally appropriate responses, interpretability - understanding how a system generates a particular emotion-aware response, is critical for fostering reliability and building rapport. Driven by these aspects, in this work, we introduce PRISMA, an interpretable emotionally intelligent negotiation dialogue system targeting two application domains, viz. job interviews and resource allocation. To enable interpretability, we propose an Emotion-aware Negotiation Strategy-informed Chain-of-Thought (ENS-CoT) reasoning mechanism, which mimics human negotiation by perceiving, understanding, using, and managing emotions. Leveraging ENS-CoT, we curate two new datasets: JobNego (for job interview negotiation) and ResNego (for resource allocation negotiation). We then leverage these datasets to develop PRISMA by augmenting self-training with Direct Preference Optimization (DPO), guiding agents toward more accurate, interpretable, and emotionally appropriate negotiation responses. Automatic and human evaluation on JobNego and ResNego datasets demonstrate that PRISMA substantially enhances interpretability and generates appropriate emotion-aware responses, while improving overall negotiation effectiveness.
+
+论文作者: Prajwal Vijay Kajare, Priyanshu Priya, Bikash Santra, Asif Ekbal
+
+提交时间: 2026-04-20 14:47:50
+
+论文链接: http://arxiv.org/abs/2604.18354v1
+
+==================================================
+==================================================
+
+论文名称: SignDPO: Multi-level Direct Preference Optimisation for Skeleton-based Gloss-free Sign Language Translation
+
+论文摘要: We present SignDPO, a novel multi-level Direct Preference Optimisation (DPO) framework designed to enhance the alignment of skeleton-based Sign Language Translation. While current skeleton-based models have made significant progress using Maximum Likelihood Estimation, they are primarily constrained by an imitation-based paradigm that lacks discriminative sensitivity to the fine-grained spatio-temporal nuances of sign language, often leading to semantic drift. To address this, SignDPO shifts the optimisation goal from simple sequence mimicry to structured preference alignment across spatial, temporal, and linguistic dimensions. Our framework involves three key designs. First, we introduce a hierarchical perturbation strategy to construct spatial and temporal non-preferred samples at both global and local granularities automatically. Second, we propose a self-guiding mechanism that leverages decoder cross-attention scores to identify and perturb semantically salient skeletal regions, forcing the model to distinguish genuine sign signals from structural distortions. Third, we establish an automated language-level preference generator by fine-tuning a dedicated perturbation model, capturing complex output-level failure modes without manual annotation. Extensive experiments on three widely adopted benchmarks, CSL-Daily, How2Sign, and OpenASL, demonstrate that SignDPO consistently outperforms state-of-the-art gloss-free methods and even rivals established gloss-based ones. Our results suggest that multi-level preference alignment is a powerful paradigm for bridging the gap between high-entropy skeletal trajectories and discrete linguistic semantics.
+
+论文作者: Muxin Pu, Xiao-Ming Wu, Mei Kuan Lim, Chun Yong Chong, Wei Li, Chen Change Loy
+
+提交时间: 2026-04-20 09:59:18
+
+论文链接: http://arxiv.org/abs/2604.18034v1
+
+==================================================
+==================================================
+
+论文名称: FUSE: Ensembling Verifiers with Zero Labeled Data
+
+论文摘要: Verification of model outputs is rapidly emerging as a key primitive for both training and real-world deployment of large language models (LLMs). In practice, this often involves using imperfect LLM judges and reward models since ground truth acquisition can be time-consuming and expensive. We introduce Fully Unsupervised Score Ensembling (FUSE), a method for improving verification quality by ensembling verifiers without access to ground truth correctness labels. The key idea behind FUSE is to control conditional dependencies between verifiers in a manner that improves the unsupervised performance of a class of spectral algorithms from the ensembling literature. Despite requiring zero ground truth labels, FUSE typically matches or improves upon semi-supervised alternatives in test-time scaling experiments with diverse sets of generator models, verifiers, and benchmarks. In particular, we validate our method on both conventional academic benchmarks such as GPQA Diamond and on frontier, unsaturated benchmarks such as Humanity's Last Exam and IMO Shortlist questions.
+
+论文作者: Joonhyuk Lee, Virginia Ma, Sarah Zhao, Yash Nair, Asher Spector, Regev Cohen, Emmanuel J. Candès
+
+提交时间: 2026-04-20 17:40:33
+
+论文链接: http://arxiv.org/abs/2604.18547v1
+
+==================================================
+==================================================
+
+论文名称: OGER: A Robust Offline-Guided Exploration Reward for Hybrid Reinforcement Learning
+
+论文摘要: Recent advancements in Reinforcement Learning with Verifiable Rewards (RLVR) have significantly improved Large Language Model (LLM) reasoning, yet models often struggle to explore novel trajectories beyond their initial latent space. While offline teacher guidance and entropy-driven strategies have been proposed to address this, they often lack deep integration or are constrained by the model's inherent capacity. In this paper, we propose OGER, a novel framework that unifies offline teacher guidance and online reinforcement learning through a specialized reward modeling lens. OGER employs multi-teacher collaborative training and constructs an auxiliary exploration reward that leverages both offline trajectories and the model's own entropy to incentivize autonomous exploration. Extensive experiments across mathematical and general reasoning benchmarks demonstrate that OGER significantly outperforms competitive baselines, achieving substantial gains in mathematical reasoning while maintaining robust generalization to out-of-domain tasks. We provide a comprehensive analysis of training dynamics and conduct detailed ablation studies to validate the effectiveness of our entropy-aware reward modulation. Our code is available at https://github.com/ecoli-hit/OGER.git.
+
+论文作者: Xinyu Ma, Mingzhou Xu, Xuebo Liu, Chang Jin, Qiang Wang, Derek F. Wong, Min Zhang
+
+提交时间: 2026-04-20 17:26:00
+
+论文链接: http://arxiv.org/abs/2604.18530v1
+
+==================================================
+==================================================
+
+论文名称: QuantumQA: Enhancing Scientific Reasoning via Physics-Consistent Dataset and Verification-Aware Reinforcement Learning
+
+论文摘要: Large language models (LLMs) show strong capabilities in general reasoning but typically lack reliability in scientific domains like quantum mechanics, which demand strict adherence to physical constraints. This limitation arises from the scarcity of verifiable training resources and the inadequacy of coarse feedback signals in standard alignment paradigms. To address the data challenge, we introduce QuantumQA, a large-scale dataset constructed via a task-adaptive strategy and a hybrid verification protocol that combines deterministic solvers with semantic auditing to guarantee scientific rigor. Building on this foundation, we propose the verification-aware reward model (VRM) tailored for Reinforcement Learning with Verifiable Rewards (RLVR), which employs an adaptive reward fusion (ARF) mechanism to dynamically integrate deterministic signals from a scientific execution suite (SES) with multidimensional semantic evaluations for precise supervision. Experimental results demonstrate that our method consistently outperforms baselines and general-purpose preference models. Notably, our optimized 8B model achieves performance competitive with proprietary models, validating that incorporating verifiable, rule-based feedback into the reinforcement learning loop offers a parameter-efficient alternative to pure scaling.
+
+论文作者: Songxin Qu, Tai-Ping Sun, Yun-Jie Wang, Huan-Yu Liu, Cheng Xue, Xiao-Fan Xu, Han Fang, Yang Yang, Yu-Chun Wu, Guo-Ping Guo, Zhao-Yun Chen
+
+提交时间: 2026-04-20 12:33:50
+
+论文链接: http://arxiv.org/abs/2604.18176v1
+
+==================================================
+==================================================
+
+论文名称: Mitigating Multimodal Hallucination via Phase-wise Self-reward
+
+论文摘要: Large Vision-Language Models (LVLMs) still struggle with vision hallucination, where generated responses are inconsistent with the visual input. Existing methods either rely on large-scale annotated data for fine-tuning, which incurs massive computational overhead, or employ static post-hoc strategies that overlook the dynamic nature of hallucination emergence. To address these, we introduce a new self-rewarding framework, enabling dynamic hallucination mitigation at inference time without external supervision. On the empirical side, we reveal that visual hallucination exhibits phase-wise dynamic patterns, peaking at the onset of each semantic phase. Drawing on these insights, we propose \textbf{PSRD} (\textbf{Phase-wise \textbf{S}elf-\textbf{R}eward \textbf{D}ecoding) for online hallucination correction guided by phase-wise self-reward signals. To reduce the cost of repeated self-evaluation during decoding, we distill the hallucination guidance signal from LVLMs into a lightweight reward model. The reward model subsequently provides on-the-fly guidance for targeted intervention during the decoding process, enabling precise hallucination suppression. The proposed PSRD significantly reduces the hallucination rate of LLaVA-1.5-7B by 50.0% and consistently outperforms existing post-hoc methods across five hallucination evaluation benchmarks for four LVLMs. Further analysis confirms that PSRD effectively mitigates hallucination propagation and achieves a highly controllable trade-off between strong performance and inference efficiency.
+
+论文作者: Yu Zhang, Chuyang Sun, Kehai Chen, Xuefeng Bai, Yang Xiang, Min Zhang
+
+提交时间: 2026-04-20 09:04:49
+
+论文链接: http://arxiv.org/abs/2604.17982v1
+
+==================================================
+==================================================
+
+论文名称: Process Reward Models Meet Planning: Generating Precise and Scalable Datasets for Step-Level Rewards
+
+论文摘要: Process Reward Models (PRMs) have emerged as a powerful tool for providing step-level feedback when evaluating the reasoning of Large Language Models (LLMs), which frequently produce chains of thought (CoTs) containing errors even when the final answer is correct. However, existing PRM datasets remain expensive to construct, prone to annotation errors, and predominantly limited to the mathematical domain. This work introduces a novel and scalable approach to PRM dataset generation based on planning logical problems expressed in the Planning Domain Definition Language (PDDL). Using this method, we generate a corpus of approximately one million reasoning steps across various PDDL domains and use it to train PRMs. Experimental results show that augmenting widely-used PRM training datasets with PDDL-derived data yields substantial improvements in both mathematical and non-mathematical reasoning, as demonstrated across multiple benchmarks. These findings indicate that planning problems constitute a scalable and effective resource for generating robust, precise, and fine-grained training data for PRMs, going beyond the classical mathematical sources that dominate this field.
+
+论文作者: Raffaele Pisano, Roberto Navigli
+
+提交时间: 2026-04-20 08:39:13
+
+论文链接: http://arxiv.org/abs/2604.17957v1
+
+==================================================
+==================================================
+
+论文名称: OneVL: One-Step Latent Reasoning and Planning with Vision-Language Explanation
+
+论文摘要: Chain-of-Thought (CoT) reasoning has become a powerful driver of trajectory prediction in VLA-based autonomous driving, yet its autoregressive nature imposes a latency cost that is prohibitive for real-time deployment. Latent CoT methods attempt to close this gap by compressing reasoning into continuous hidden states, but consistently fall short of their explicit counterparts. We suggest that this is due to purely linguistic latent representations compressing a symbolic abstraction of the world, rather than the causal dynamics that actually govern driving. Thus, we present OneVL (One-step latent reasoning and planning with Vision-Language explanations), a unified VLA and World Model framework that routes reasoning through compact latent tokens supervised by dual auxiliary decoders. Alongside a language decoder that reconstructs text CoT, we introduce a visual world model decoder that predicts future-frame tokens, forcing the latent space to internalize the causal dynamics of road geometry, agent motion, and environmental change. A three-stage training pipeline progressively aligns these latents with trajectory, language, and visual objectives, ensuring stable joint optimization. At inference, the auxiliary decoders are discarded and all latent tokens are prefilled in a single parallel pass, matching the speed of answer-only prediction. Across four benchmarks, OneVL becomes the first latent CoT method to surpass explicit CoT, delivering state-of-the-art accuracy at answer-only latency, and providing direct evidence that tighter compression, when guided in both language and world-model supervision, produces more generalizable representations than verbose token-by-token reasoning. Project Page: https://xiaomi-embodied-intelligence.github.io/OneVL
+
+论文作者: Jinghui Lu, Jiayi Guan, Zhijian Huang, Jinlong Li, Guang Li, Lingdong Kong, Yingyan Li, Han Wang, Shaoqing Xu, Yuechen Luo, Fang Li, Chenxu Dang, Junli Wang, Tao Xu, Jing Wu, Jianhua Wu, Xiaoshuai Hao, Wen Zhang, Tianyi Jiang, Lingfeng Zhang, Lei Zhou, Yingbo Tang, Jie Wang, Yinfeng Gao, Xizhou Bu, Haochen Tian, Yihang Qiu, Feiyang Jia, Lin Liu, Yigu Ge, Hanbing Li, Yuannan Shen, Jianwei Cui, Hongwei Xie, Bing Wang, Haiyang Sun, Jingwei Zhao, Jiahui Huang, Pei Liu, Zeyu Zhu, Yuncheng Jiang, Zibin Guo, Chuhong Gong, Hanchao Leng, Kun Ma, Naiyang Wang, Guang Chen, Kuiyuan Yang, Hangjun Ye, Long Chen
+
+提交时间: 2026-04-20 16:37:22
+
+论文链接: http://arxiv.org/abs/2604.18486v1
+
+==================================================
+==================================================
+
+论文名称: Can Explicit Physical Feasibility Benefit VLA Learning? An Empirical Study
+
+论文摘要: Vision-Language-Action (VLA) models map multimodal inputs directly to robot actions and are typically trained through large-scale imitation learning. While this paradigm has shown strong performance, prevailing VLA training procedures do not explicitly supervise hard physical constraints such as obstacle avoidance or kinematic feasibility. As a result, the geometric structure underlying physically feasible behavior must be inferred only implicitly from demonstrations. In this paper, we study whether introducing explicit feasibility supervision can provide effective structured guidance for VLA policies. We formulate a simple geometry-grounded feasibility objective and integrate it into the training stage of a diffusion-based VLA policy. To evaluate this idea systematically, we use obstacle-aware manipulation as a controlled probe of geometry-dependent physical feasibility. Empirical results show that augmenting VLA training with feasibility supervision improves both physical reliability and overall task performance, while also enhancing learning efficiency in the low-data regime. These findings indicate that explicit feasibility signals can effectively complement imitation-based VLA learning, highlighting their potential for developing more reliable VLA policies.
+
+论文作者: Yubai Wei, Chen Wu, Hashem Haghbayan
+
+提交时间: 2026-04-20 07:15:12
+
+论文链接: http://arxiv.org/abs/2604.17896v1
+
+==================================================
+==================================================
+
+论文名称: AnchorRefine: Synergy-Manipulation Based on Trajectory Anchor and Residual Refinement for Vision-Language-Action Models
+
+论文摘要: Precision-critical manipulation requires both global trajectory organization and local execution correction, yet most vision-language-action (VLA) policies generate actions within a single unified space. This monolithic formulation forces macro-level transport and micro-level refinement to be optimized under the same objective, causing large motions to dominate learning while suppressing small but failure-critical corrective signals. In contrast, human manipulation is structured by global movement planning together with continuous local adjustment during execution. Motivated by this principle, we propose AnchorRefine, a hierarchical framework that factorizes VLA action modeling into trajectory anchor and residual refinement. The anchor planner predicts a coarse motion scaffold, while the refinement module corrects execution-level deviations to improve geometric and contact precision. We further introduce a decision-aware gripper refinement mechanism to better capture the discrete and boundary-sensitive nature of gripper control. Experiments on LIBERO, CALVIN, and real-robot tasks demonstrate that AnchorRefine consistently improves both regression-based and diffusion-based VLA backbones, yielding gains of up to 7.8% in simulation success rate and 18% in real-world success rate.
+
+论文作者: Tingzheng Jia, Kan Guo, Lanping Qian, Yongli Hu, Daxin Tian, Guixian Qu, Chunmian Lin, Baocai Yin, Jiapu Wang
+
+提交时间: 2026-04-20 04:25:24
+
+论文链接: http://arxiv.org/abs/2604.17787v1
+
+==================================================
+==================================================
+
+论文名称: ProtoCLIP: Prototype-Aligned Latent Refinement for Robust Zero-Shot Chest X-Ray Classification
+
+论文摘要: Zero-shot vision-language models (VLMs) have shown promise for chest radiograph classification, but their performance is often limited by confounding label co-occurrence, long-tail class imbalance, and transfer instability under domain shift. We propose ProtoCLIP, a refinement strategy for CLIP-style VLMs that improves zero-shot discrimination through targeted data curation and distilled anchor alignment. Specifically, we construct pathology-focused training subsets with curated negative samples to reduce co-occurrence bias. We also introduce a representation-preserving distillation objective to stabilize adaptation while maintaining semantic structure and improving discrimination of clinically relevant co-occurring pathologies. Evaluated on an unseen dataset VinDr-CXR, ProtoCLIP improves AUC by 2-10 percentage points over a strong CLIP-based baseline across multiple findings. For pneumothorax specifically, ProtoCLIP achieves a state-of-the-art AUC of 0.94. These results demonstrate that anchor-guided refinement, coupled with curated supervision and controlled adaptation, can mitigate common zero-shot transfer failures in medical VLMs without requiring large-scale retraining.
+
+论文作者: Florian Kittler, Sheethal Bhat, Andreas Maier
+
+提交时间: 2026-04-20 16:01:44
+
+论文链接: http://arxiv.org/abs/2604.18444v1
+
+==================================================
+==================================================
+
+论文名称: Revisiting Change VQA in Remote Sensing with Structured and Native Multimodal Qwen Models
+
+论文摘要: Change visual question answering (Change VQA) addresses the problem of answering natural-language questions about semantic changes between bi-temporal remote sensing (RS) images. Although vision-language models (VLMs) have recently been studied for temporal RS image understanding, Change VQA remains underexplored in the context of modern multimodal models. In this letter, we revisit the CDVQA benchmark using recent Qwen models under a unified low-rank adaptation (LoRA) setting. We compare Qwen3-VL, which follows a structured vision-language pipeline with multi-depth visual conditioning and a full-attention decoder, with Qwen3.5, a native multimodal model that combines a single-stage alignment with a hybrid decoder backbone. Experimental results on the official CDVQA test splits show that recent VLMs improve over earlier specialized baselines. They further show that performance does not scale monotonically with model size, and that native multimodal models are more effective than structured vision-language pipelines for this task. These findings indicate that tightly integrated multimodal backbones contribute more to performance than scale or explicit multi-depth visual conditioning for language-driven semantic change reasoning in RS imagery.
+
+论文作者: Yakoub Bazi, Mohamad M. Al Rahhal, Mansour Zuair, Faroun Mohamed
+
+提交时间: 2026-04-20 15:47:52
+
+论文链接: http://arxiv.org/abs/2604.18429v1
+
+==================================================
+==================================================
+
+论文名称: Multilingual Training and Evaluation Resources for Vision-Language Models
+
+论文摘要: Vision Language Models (VLMs) achieved rapid progress in the recent years. However, despite their growth, VLMs development is heavily grounded on English, leading to two main limitations: (i) the lack of multilingual and multimodal datasets for training, and (ii) the scarcity of comprehensive evaluation benchmarks across languages. In this work, we address these gaps by introducing a new comprehensive suite of resources for VLMs training and evaluation spanning five European languages (English, French, German, Italian, and Spanish). We adopt a regeneration-translation paradigm that produces high-quality cross-lingual resources by combining curated synthetic generation and manual annotation. Specifically, we build Multi-PixMo, a training corpus obtained regenerating examples from Pixmo pre-existing datasets with permissively licensed models: PixMo-Cap, PixMo-AskModelAnything, and CoSyn-400k. On the evaluation side, we construct a set of multilingual benchmarks derived translating widely used English datasets (MMbench, ScienceQA, MME, POPE, AI2D). We assess the quality of these resources through qualitative and quantitative human analyses, measuring inter-annotator agreement. Additionally, we perform ablation studies to demonstrate the impact of multilingual data, with respect to English only, in VLMs training. Experiments, comprising 3 different models show that using multilingual, multimodal examples for training VLMs aids is consistently beneficial on non-English benchmarks, with positive transfer to English as well.
+
+论文作者: Daniela Baiamonte, Elena Fano, Matteo Gabburo, Stefano Simonazzi, Leonardo Rigutini, Andrea Zugarini
+
+提交时间: 2026-04-20 14:42:47
+
+论文链接: http://arxiv.org/abs/2604.18347v1
+
+==================================================
+==================================================
+
+论文名称: From Heads to Neurons: Causal Attribution and Steering in Multi-Task Vision-Language Models
+
+论文摘要: Recent work has increasingly explored neuron-level interpretation in vision-language models (VLMs) to identify neurons critical to final predictions. However, existing neuron analyses generally focus on single tasks, limiting the comparability of neuron importance across tasks. Moreover, ranking strategies tend to score neurons in isolation, overlooking how task-dependent information pathways shape the write-in effects of feed-forward network (FFN) neurons. This oversight can exacerbate neuron polysemanticity in multi-task settings, introducing noise into the identification and intervention of task-critical neurons. In this study, we propose HONES (Head-Oriented Neuron Explanation & Steering), a gradient-free framework for task-aware neuron attribution and steering in multi-task VLMs. HONES ranks FFN neurons by their causal write-in contributions conditioned on task-relevant attention heads, and further modulates salient neurons via lightweight scaling. Experiments on four diverse multimodal tasks and two popular VLMs show that HONES outperforms existing methods in identifying task-critical neurons and improves model performance after steering. Our source code is released at: https://github.com/petergit1/HONES.
+
+论文作者: Qidong Wang, Junjie Hu, Ming Jiang
+
+提交时间: 2026-04-20 08:21:06
+
+论文链接: http://arxiv.org/abs/2604.17941v1
+
+==================================================
+==================================================
+
+论文名称: When Vision-Language Models Judge Without Seeing: Exposing Informativeness Bias
+
+论文摘要: The reliability of VLM-as-a-Judge is critical for the automatic evaluation of vision-language models (VLMs). Despite recent progress, our analysis reveals that VLM-as-a-Judge often pays limited attention to the image when making decisions. Instead, they often blindly favor the more informative answer, even when they can recognize it conflicts with the image content. We call this problem informativeness bias, which significantly undermines judge reliability. To address it, we propose BIRCH (Balanced Informativeness and CoRrectness with a Truthful AnCHor), a judging paradigm that first corrects inconsistencies with the image content in candidate answers, and then compares the answers against this corrected version. This shifts the judge's focus from informativeness to image-grounded correctness. Experiments on multiple models and benchmarks show that BIRCH reduces informativeness bias by up to 17%, resulting in performance gains of up to 9.8%. Our work reveals an overlooked but fundamental flaw in current VLM-as-a-Judge systems and highlights the need for more principled designs.
+
+论文作者: Xiaohan Zou, Roshan Sridhar, Mohammadtaher Safarzadeh, Dan Roth
+
+提交时间: 2026-04-20 03:46:22
+
+论文链接: http://arxiv.org/abs/2604.17768v1
+
+==================================================
+==================================================
+
+论文名称: Using large language models for embodied planning introduces systematic safety risks
+
+论文摘要: Large language models are increasingly used as planners for robotic systems, yet how safely they plan remains an open question. To evaluate safe planning systematically, we introduce DESPITE, a benchmark of 12,279 tasks spanning physical and normative dangers with fully deterministic validation. Across 23 models, even near-perfect planning ability does not ensure safety: the best-planning model fails to produce a valid plan on only 0.4% of tasks but produces dangerous plans on 28.3%. Among 18 open-source models from 3B to 671B parameters, planning ability improves substantially with scale (0.4-99.3%) while safety awareness remains relatively flat (38-57%). We identify a multiplicative relationship between these two capacities, showing that larger models complete more tasks safely primarily through improved planning, not through better danger avoidance. Three proprietary reasoning models reach notably higher safety awareness (71-81%), while non-reasoning proprietary models and open-source reasoning models remain below 57%. As planning ability approaches saturation for frontier models, improving safety awareness becomes a central challenge for deploying language-model planners in robotic systems.
+
+论文作者: Tao Zhang, Kaixian Qu, Zhibin Li, Jiajun Wu, Marco Hutter, Manling Li, Fan Shi
+
+提交时间: 2026-04-20 16:18:08
+
+论文链接: http://arxiv.org/abs/2604.18463v1
+
+==================================================
+==================================================
+
+论文名称: Dissipative Latent Residual Physics-Informed Neural Networks for Modeling and Identification of Electromechanical Systems
+
+论文摘要: Accurate dynamical modeling is essential for simulation and control of embodied systems, yet first-principles models of electromechanical systems often fail to capture complex dissipative effects such as joint friction, stray losses, and structural damping. While residual-learning physics-informed neural networks (PINNs) can effectively augment imperfect first-principles models with data-driven components, the residual terms are typically implemented as unconstrained multilayer perceptrons (MLPs), which may inadvertently inject artificial energy into the system.
+  To more faithfully model the dissipative dynamics, we propose DiLaR-PINN, a dissipative latent residual PINN designed to learn unmodeled dissipative effects in a physically consistent manner. Structurally, the residual network operates only on unmeasurable (latent) state components and is parameterized in a skew-dissipative form that guarantees non-increasing energy for any choice of network parameters. To enable stable and data-efficient training under partial measurability of the state, we further develop a recurrent rollout scheme with a curriculum-based sequence length extension strategy.
+  We validate DiLaR-PINN on a real-world helicopter system and compare it against four baselines: a pure physical model (without a residual network), an unstructured residual MLP, a DiLaR variant with a soft dissipativity constraint, and a black-box LSTM. The results demonstrate that DiLaR-PINN more accurately captures dissipative effects and achieves superior long-horizon extrapolation performance.
+
+论文作者: Youyuan Long, Gokhan Solak, Arash Ajoudani
+
+提交时间: 2026-04-20 13:52:12
+
+论文链接: http://arxiv.org/abs/2604.18277v1
+
+==================================================
+==================================================
+
+论文名称: Does "Do Differentiable Simulators Give Better Policy Gradients?'' Give Better Policy Gradients?
+
+论文摘要: In policy gradient reinforcement learning, access to a differentiable model enables 1st-order gradient estimation that accelerates learning compared to relying solely on derivative-free 0th-order estimators. However, discontinuous dynamics cause bias and undermine the effectiveness of 1st-order estimators. Prior work addressed this bias by constructing a confidence interval around the REINFORCE 0th-order gradient estimator and using these bounds to detect discontinuities. However, the REINFORCE estimator is notoriously noisy, and we find that this method requires task-specific hyperparameter tuning and has low sample efficiency. This paper asks whether such bias is the primary obstacle and what minimal fixes suffice. First, we re-examine standard discontinuous settings from prior work and introduce DDCG, a lightweight test that switches estimators in nonsmooth regions; with a single hyperparameter, DDCG achieves robust performance and remains reliable with small samples. Second, on differentiable robotics control tasks, we present IVW-H, a per-step inverse-variance implementation that stabilizes variance without explicit discontinuity detection and yields strong results. Together, these findings indicate that while estimator switching improves robustness in controlled studies, careful variance control often dominates in practical deployments.
+
+论文作者: Ku Onoda, Paavo Parmas, Manato Yaguchi, Yutaka Matsuo
+
+提交时间: 2026-04-20 12:23:48
+
+论文链接: http://arxiv.org/abs/2604.18161v1
+
+==================================================
+==================================================
+
+论文名称: Learning the Riccati solution operator for time-varying LQR via Deep Operator Networks
+
+论文摘要: We propose a computational framework for replacing the repeated numerical solution of differential Riccati equations in finite-horizon Linear Quadratic Regulator (LQR) problems by a learned operator surrogate. Instead of solving a nonlinear matrix-valued differential equation for each new system instance, we construct offline an approximation of the associated solution operator mapping time-dependent system parameters to the Riccati trajectory. The resulting model enables fast online evaluation of approximate optimal feedbacks across a wide class of systems, thereby shifting the computational burden from repeated numerical integration to a one-time learning stage. From a theoretical perspective, we establish control-theoretic guarantees for this operator-based approximation. In particular, we derive bounds quantifying how operator approximation errors propagate to feedback performance, trajectory accuracy, and cost suboptimality, and we prove that exponential stability of the closed-loop system is preserved under sufficiently accurate operator approximation. These results provide a framework to assess the reliability of data-driven approximations in optimal control. On the computational side, we design tailored DeepONet architectures for matrix-valued, time-dependent problems and introduce a progressive learning strategy to address scalability with respect to the system dimension. Numerical experiments on both time-invariant and time-varying LQR problems demonstrate that the proposed approach achieves high accuracy and strong generalization across a wide range of system configurations, while delivering substantial computational speedups compared to classical solvers. The method offers an effective and scalable alternative for parametric and real-time optimal control applications.
+
+论文作者: Jun Chen, Umberto Biccari, Junmin Wang
+
+提交时间: 2026-04-20 16:56:34
+
+论文链接: http://arxiv.org/abs/2604.18507v1
+
+==================================================
+==================================================
+
+论文名称: ClawEnvKit: Automatic Environment Generation for Claw-Like Agents
+
+论文摘要: Constructing environments for training and evaluating claw-like agents remains a manual, human-intensive process that does not scale. We argue that what is needed is not just a dataset, but an automated pipeline capable of generating diverse, verified environments on demand. To this end, we introduce ClawEnvKit, an autonomous generation pipeline that instantiates this formalism from natural language descriptions. The pipeline comprises three modules: (1) a parser that extracts structured generation parameters from natural language input; (2) a generator that produces the task specification, tool interface, and scoring configuration; and (3) a validator that enforces feasibility, diversity, structural validity, and internal consistency across the generated environments. Using ClawEnvKit, we construct Auto-ClawEval, the first large-scale benchmark for claw-like agents, comprising 1,040 environments across 24 categories. Empirically, Auto-ClawEval matches or exceeds human-curated environments on coherence and clarity at 13,800x lower cost. Evaluated across 4 model families and 8 agent harness frameworks, we find that harness engineering boosts performance by up to 15.7 percentage points over a bare ReAct baseline, completion remains the primary axis of variation with no model saturating the benchmark, and automated generation enables evaluation at a scale previously infeasible. Beyond static benchmarking, ClawEnvKit enables live evaluation: users describe a desired capability in natural language and obtain a verified environment on demand, turning evaluation into a continuous, user-driven process. The same mechanism serves as an on-demand training environment generator, producing task distributions that adapt to an agent's current weaknesses rather than being bounded by existing user logs.
+
+论文作者: Xirui Li, Ming Li, Derry Xu, Wei-Lin Chiang, Ion Stoica, Cho-Jui Hsieh, Tianyi Zhou
+
+提交时间: 2026-04-20 17:36:49
+
+论文链接: http://arxiv.org/abs/2604.18543v1
