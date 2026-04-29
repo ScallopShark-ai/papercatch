@@ -1,0 +1,179 @@
+论文名称: Three Models of RLHF Annotation: Extension, Evidence, and Authority
+
+论文摘要: Preference-based alignment methods, most prominently Reinforcement Learning with Human Feedback (RLHF), use the judgments of human annotators to shape large language model behaviour. However, the normative role of these judgments is rarely made explicit. I distinguish three conceptual models of that role. The first is extension: annotators extend the system designers' own judgments about what outputs should be. The second is evidence: annotators provide independent evidence about some facts, whether moral, social or otherwise. The third is authority: annotators have some independent authority (as representatives of the broader population) to determine system outputs. I argue that these models have implications for how RLHF pipelines should solicit, validate and aggregate annotations. I survey landmark papers in the literature on RLHF and related methods to illustrate how they implicitly draw on these models, describe failure modes that come from unintentionally or intentionally conflating them, and offer normative criteria for choosing among them. My central recommendation is that RLHF pipeline designers should decompose annotation into separable dimensions and tailor each pipeline to the model most appropriate for that dimension, rather than seeking a single unified pipeline.
+
+论文作者: Steve Coyne
+
+提交时间: 2026-04-28 17:39:14
+
+论文链接: http://arxiv.org/abs/2604.25895v1
+
+==================================================
+==================================================
+
+论文名称: When Errors Can Be Beneficial: A Categorization of Imperfect Rewards for Policy Gradient
+
+论文摘要: Training language models via reinforcement learning often relies on imperfect proxy rewards, since ground truth rewards that precisely define the intended behavior are rarely available. Standard metrics for assessing the quality of proxy rewards, such as ranking accuracy, treat incorrect rewards as strictly harmful. In this work, however, we highlight that not all deviations from the ground truth are equal. By theoretically analyzing which outputs attract probability during policy gradient optimization, we categorize reward errors according to their effect on the increase in ground truth reward. The analysis establishes that reward errors, though conventionally viewed as harmful, can also be benign or even beneficial by preventing the policy from stalling around outputs with mediocre ground truth reward. We then present two practical implications of our theory. First, for reinforcement learning from human feedback (RLHF), we develop reward model evaluation metrics that account for the harmfulness of reward errors. Compared to standard ranking accuracy, these metrics typically correlate better with the performance of a language model after RLHF, yet gaps remain in robustly evaluating reward models. Second, we provide insights for reward design in settings with verifiable rewards. A key theme underlying our results is that the effectiveness of a proxy reward function depends heavily on its interaction with the initial policy and learning algorithm.
+
+论文作者: Shuning Shang, Hubert Strauss, Stanley Wei, Sanjeev Arora, Noam Razin
+
+提交时间: 2026-04-28 17:10:15
+
+论文链接: http://arxiv.org/abs/2604.25872v1
+
+==================================================
+==================================================
+
+论文名称: TrialCalibre: A Fully Automated Causal Engine for RCT Benchmarking and Observational Trial Calibration
+
+论文摘要: Real-world evidence (RWE) studies that emulate target trials increasingly inform regulatory and clinical decisions, yet residual, hard-to-quantify biases still limit their credibility. The recently proposed BenchExCal framework addresses this challenge via a two-stage Benchmark, Expand, Calibrate process, which first compares an observational emulation against an existing randomized controlled trial (RCT), then uses observed divergence to calibrate a second emulation for a new indication causal effect estimation. While methodologically powerful, BenchExCal is resource intensive and difficult to scale. We introduce TrialCalibre, a conceptualized multiagent system designed to automate and scale the BenchExCal workflow. Our framework features specialized agents such as the Orchestrator, Protocol Design, Data Synthesis, Clinical Validation, and Quantitative Calibration Agents that coordi-nate the the overall process. TrialCalibre incorpo-rates agent learning (e.g., RLHF) and knowledge blackboards to support adaptive, auditable, and transparent causal effect estimation.
+
+论文作者: Amir Habibdoust, Xing Song
+
+提交时间: 2026-04-28 16:39:13
+
+论文链接: http://arxiv.org/abs/2604.25832v1
+
+==================================================
+==================================================
+
+论文名称: Evaluating Risks in Weak-to-Strong Alignment: A Bias-Variance Perspective
+
+论文摘要: Weak-to-strong alignment offers a promising route to scalable supervision, but it can fail when a strong model becomes confidently wrong on examples that lie in the weak teacher's blind spots. Understanding such failures requires going beyond aggregate accuracy, since weak-to-strong errors depend not only on whether the strong model disagrees with its teacher, but also on how confidence and uncertainty are distributed across examples. In this work, we analyze weak-to-strong alignment through a bias-variance-covariance lens that connects misfit theory to practical post-training pipelines. We derive a misfit-based upper bound on weak-to-strong population risk and study its empirical components using continuous confidence scores. We evaluate four weak-to-strong pipelines spanning supervised fine-tuning (SFT), reinforcement learning from human feedback (RLHF), and reinforcement learning from AI feedback (RLAIF) on the PKU-SafeRLHF and HH-RLHF datasets. Using a blind-spot deception metric that isolates cases where the strong model is confidently wrong while the weak model is uncertain, we find that strong-model variance is the strongest empirical predictor of deception across our settings. Covariance provides additional but weaker information, indicating that weak-strong dependence matters, but does not by itself explain the observed failures. These results suggest that strong-model variance can serve as an early-warning signal for weak-to-strong deception, while blind-spot evaluation helps distinguish whether failures are inherited from weak supervision or arise in regions of weak-model uncertainty.
+
+论文作者: Hamid Osooli, Kareema Batool, Rick Gentry, Tiasa Singha Roy, Ashwin Gupta, Anirudha Ramesh
+
+提交时间: 2026-04-28 00:15:23
+
+论文链接: http://arxiv.org/abs/2604.25077v1
+
+==================================================
+==================================================
+
+论文名称: Backtranslation Augmented Direct Preference Optimization for Neural Machine Translation
+
+论文摘要: Contemporary neural machine translation (NMT) systems are almost exclusively built by training on supervised parallel data. Despite the tremendous progress achieved, these systems still exhibit persistent translation errors. This paper proposes that a post-training paradigm based on reinforcement learning (RL) can effectively rectify such mistakes. We introduce a novel framework that requires only a general text corpus and an expert translator which can be either human or an AI system to provide iterative feedback. In our experiments, we focus specifically on English-to-German translation as a representative high-resource language pair. Crucially, we implement this RL-based post-training using Direct Preference Optimization (DPO). Applying our DPO-driven framework to the gemma3-1b model yields a significant improvement in translation quality, elevating it's COMET score from 0.703 to 0.747 on the English to German task. The results demonstrate that DPO offers an efficient and stable pathway for enhancing pre-trained NMT models through preference-based post-training.
+
+论文作者: Mehrdad Ghassabi, Spehr Rajabi, Hamidreza Baradaran Kashani, Sadra Hakim, Mahshid Keivandarian
+
+提交时间: 2026-04-28 14:29:06
+
+论文链接: http://arxiv.org/abs/2604.25702v1
+
+==================================================
+==================================================
+
+论文名称: How Can Reinforcement Learning Achieve Expert-level Placement?
+
+论文摘要: Chip placement is a critical step in physical design. While reinforcement learning (RL)-based methods have recently emerged, their training primarily focuses on wirelength optimization, and therefore often fail to achieve expert-quality layouts. We identify the reward design as the primary cause for the performance gap with experts, and instead of formalizing intricate processes, we circumvent this by directly learning from expert layouts to derive a reward model. Our approach starts from the final expert layouts to infer step-by-step expert trajectories. Using these trajectories as demonstrations or preferences, we train a model that captures the latent implicit rewards in expert results. Experiments show that our framework can efficiently learn from even a single design and generalize well to unseen cases.
+
+论文作者: Ruo-Tong Chen, Ke Xue, Chengrui Gao, Yunqi Shi, Tian Xu, Peng Xie, Siyuan Xu, Mingxuan Yuan, Chao Qian, Zhi-Hua Zhou
+
+提交时间: 2026-04-28 03:55:03
+
+论文链接: http://arxiv.org/abs/2604.25191v1
+
+==================================================
+==================================================
+
+论文名称: Multi-action Tangled Program Graphs for Multi-task Reinforcement Learning with Continuous Control
+
+论文摘要: Over the past few decades, machine learning has been widely used to learn complex tasks. Reinforcement Learning (RL), inspired by human behavior, is a great example, as it involves developing specific behaviours for specific tasks. To further challenge algorithms, Multi-Task RL (MTRL) environments have been introduced, requiring a single model to learn multiple behaviors. The Tangled Program Graph (TPG) algorithm is a Genetic Programming (GP) algorithm designed for discrete MTRL environments. Recently, the MAPLE algorithm has been proposed, as another GP algorithm that achieves high results in single task continuous RL environments. A variation of the TPG is proposed alongside MAPLE, named Multi-Action TPG (MATPG) that aggregates MAPLE agents, and creates a control flow to activate them. Initially tested on single task RL environments only, MATPG achieved similar results to MAPLE. In this work, we present a new benchmark based on the MuJoCo Half Cheetah from Gymnasium. This benchmark features five distinct obstacles that are randomly positioned in front of the agent, each of which demands a unique behavior. This benchmark serves as a use case for MATPG, to prove its ability as a GP solution for continuous MTRL environments. Our experiments demonstrate its superiority in this multi-task use case when combined with lexicase selection. Furthermore, we examine the interpretability of the evolved graph, revealing that the decision flow of the model is fully interpretable.
+
+论文作者: Quentin Vacher, Nicolas Beuve, Mickaël Dardaillon, Karol Desnos
+
+提交时间: 2026-04-28 08:34:52
+
+论文链接: http://arxiv.org/abs/2604.25369v1
+
+==================================================
+==================================================
+
+论文名称: SnapGuard: Lightweight Prompt Injection Detection for Screenshot-Based Web Agents
+
+论文摘要: Web agents have emerged as an effective paradigm for automating interactions with complex web environments, yet remain vulnerable to prompt injection attacks that embed malicious instructions into webpage content to induce unintended actions. This threat is further amplified for screenshot-based web agents, which operate on rendered visual webpages rather than structured textual representations, making predominant text-centric defenses ineffective. Although multimodal detection methods have been explored, they often rely on large vision-language models (VLMs), incurring significant computational overhead. The bottleneck lies in the complexity of modern webpages: VLMs must comprehend the global semantics of an entire page, resulting in substantial inference time and GPU memory usage. This raises a critical question: can we detect prompt injection attacks from screenshots in a lightweight manner? In this paper, we observe that injected webpages exhibit distinct characteristics compared to benign ones from both visual and textual perspectives. Building on this insight, we propose SnapGuard, a lightweight yet accurate method that reformulates prompt injection detection as multimodal representation analysis over webpage screenshots. SnapGuard leverages two complementary signals: a visual stability indicator that identifies abnormally smooth gradient distributions induced by malicious content, and action-oriented textual signals recovered via contrast-polarity reversal. Extensive evaluations across eight attacks and two benign settings demonstrate that SnapGuard achieves an F1 score of 0.75, outperforming GPT-4o-prompt while being 8x faster (1.81s vs. 14.50s) and introducing no additional memory overhead.
+
+论文作者: Mengyao Du, Han Fang, Haokai Ma, Jiahao Chen, Kai Xu, Quanjun Yin, Ee-Chien Chang
+
+提交时间: 2026-04-28 12:32:21
+
+论文链接: http://arxiv.org/abs/2604.25562v1
+
+==================================================
+==================================================
+
+论文名称: VLM Judges Can Rank but Cannot Score: Task-Dependent Uncertainty in Multimodal Evaluation
+
+论文摘要: Vision-language models (VLMs) are increasingly used as automated judges for multimodal systems, yet their scores provide no indication of reliability. We study this problem through conformal prediction, a distribution-free framework that converts a judge's point score into a calibrated prediction interval using only score-token log-probabilities, with no retraining. We present the first systematic analysis of conformal prediction for VLM-as-a-Judge across 3 judges and 14 visual task categories. Our results show that evaluation uncertainty is strongly task-dependent: intervals cover ~40% of the score range for aesthetics and natural images but expand to ~70% for chart and mathematical reasoning, yielding a quantitative reliability map for multimodal evaluation. We further identify a failure mode not captured by standard evaluation metrics, ranking-scoring decoupling, where judges achieve high ranking correlation while producing wide, uninformative intervals, correctly ordering responses but failing to assign reliable absolute scores. Finally, we show that interval width is driven primarily by task difficulty and annotation quality, i.e., the same judge and method yield 4.5x narrower intervals on a clean, multi-annotator captioning benchmark. Code: https://github.com/divake/VLM-Judge-Uncertainty
+
+论文作者: Divake Kumar, Sina Tayebati, Devashri Naik, Ranganath Krishnan, Amit Ranjan Trivedi
+
+提交时间: 2026-04-28 05:30:18
+
+论文链接: http://arxiv.org/abs/2604.25235v1
+
+==================================================
+==================================================
+
+论文名称: DRAGON: A Benchmark for Evidence-Grounded Visual Reasoning over Diagrams
+
+论文摘要: Diagram question answering (DQA) requires models to interpret structured visual representations such as charts, maps, infographics, circuit schematics, and scientific diagrams. Recent vision-language models (VLMs) often achieve high answer accuracy on these tasks, yet correct answers do not guarantee that models ground their reasoning in the diagram regions that support the prediction. Models may instead rely on textual correlations or dataset artifacts without identifying the visual evidence required to verify the answer. This limitation prevents reliable evaluation of diagram reasoning and reduces interpretability. We introduce DRAGON, a benchmark for evaluating evidence-grounded visual reasoning in diagrams. Given a diagram, a question, and the correct answer, a model must predict bounding boxes that correspond to the visual elements required to justify the answer. These evidence regions may include answer-bearing components, textual labels, legends, axes, connectors, and other supporting structures involved in the reasoning process. The DRAGON dataset contains 11,664 annotated question instances collected from six diagram QA datasets: ChartQA, Circuit-VQA, InfographicsVQA, MapIQ, MapWise, and AI2D. We release a 2,445-instance benchmark test set with human-verified reasoning evidence annotations and a standardized evaluation framework. We evaluate eight recent VLMs and analyze their ability to localize reasoning evidence across diverse diagram domains. DRAGON enables systematic evaluation of diagram reasoning and supports future research on models that ground their predictions in visual evidence.
+
+论文作者: Anirudh Iyengar Kaniyar Narayana Iyengar, Tampu Ravi Kumar, Gaurav Najpande, Manan Suri, Dinesh Manocha, Puneet Mathur, Vivek Gupta
+
+提交时间: 2026-04-28 05:24:05
+
+论文链接: http://arxiv.org/abs/2604.25231v1
+
+==================================================
+==================================================
+
+论文名称: Do LLMs Capture Embodied Cognition and Cultural Variation? Cross-Linguistic Evidence from Demonstratives
+
+论文摘要: Do large language models (LLMs) truly acquire embodied cognition and cultural conventions from text? We introduce demonstratives, fundamental spatial expressions like "this/that" in English and "zhè/nà" in Chinese, as a novel probe for grounded knowledge. Using 6,400 responses from 320 native speakers, we establish a human baseline: English speakers reliably distinguish proximal-distal referents but struggle with perspective-taking, while Chinese speakers switch perspectives fluently but tolerate distal ambiguity. In contrast, five state-of-the-art LLMs fail to inherently understand the proximal-distal contrast and show no cultural differences, defaulting to English-centric reasoning. Our study contributes (i) a new task, based on demonstratives, as a new lens for evaluating embodied cognition and cultural conventions; (ii) empirical evidence of cross-cultural asymmetries in human interpretation; (iii) a new perspective on the egocentric-sociocentric debate, showing both orientations coexist but vary across languages; and (iv) a call to address individual variation in future model design.
+
+论文作者: Yu Wang, Emmanuele Chersoni, Chu-Ren Huang
+
+提交时间: 2026-04-28 09:30:12
+
+论文链接: http://arxiv.org/abs/2604.25423v1
+
+==================================================
+==================================================
+
+论文名称: Where Did It Go Wrong? Capability-Oriented Failure Attribution for Vision-and-Language Navigation Agents
+
+论文摘要: Embodied agents in safety-critical applications such as Vision-Language Navigation (VLN) rely on multiple interdependent capabilities (e.g., perception, memory, planning, decision), making failures difficult to localize and attribute. Existing testing methods are largely system-level and provide limited insight into which capability deficiencies cause task failures. We propose a capability-oriented testing approach that enables failure detection and attribution by combining (1) adaptive test case generation via seed selection and mutation, (2) capability oracles for identifying capability-specific errors, and (3) a feedback mechanism that attributes failures to capabilities and guides further test generation. Experiments show that our method discovers more failure cases and more accurately pinpoints capability-level deficiencies than state-of-the-art baselines, providing more interpretable and actionable guidance for improving embodied agents.
+
+论文作者: Jianming Chen, Yawen Wang, Junjie Wang, Xiaofei Xie, Shoubin Li, Qing Wang, Fanjiang Xu
+
+提交时间: 2026-04-28 03:08:48
+
+论文链接: http://arxiv.org/abs/2604.25161v1
+
+==================================================
+==================================================
+
+论文名称: Dynamic UGV-UAV Cooperative Path Planning in Uncertain Environments
+
+论文摘要: This paper addresses the Dynamic UGV-UAV Cooperative Path Planning (DUCPP) problem involving one unmanned ground vehicle (UGV) assisted by one or more unmanned aerial vehicles (UAVs) operating on an uncertain road network with potentially impassable edges. DUCPP is particularly relevant for scenarios such as disaster response, emergency supply transport, and rescue operations, where a UGV must reach a specified destination in the presence of partially unknown road conditions. To enable the UGV to travel safely and efficiently to its destination, the UAV(s) dynamically inspect edges in the environment to identify and prune damaged or impassable edges from consideration.
+  We present multiple strategies, including a bidirectional approach, to optimize UGV-UAV cooperation for finding a safe path in an uncertain road network. Furthermore, we explore the impact of using multiple UAVs on reducing the UGV's travel time, and evaluate the associated computation time. The proposed strategies are implemented and evaluated on 100 urban road networks. The results demonstrate that the bidirectional strategy achieves the best performance in most instances, and using multiple UAVs further reduces UGV travel time at the expense of increased computation time. This paper presents a robust framework for DUCPP to achieve efficient UGV-UAV cooperation for path planning and inspection, offering practical solutions for navigation in challenging and uncertain conditions.
+
+论文作者: Ninh Nguyen, Srinivas Akella
+
+提交时间: 2026-04-28 06:26:43
+
+论文链接: http://arxiv.org/abs/2604.25267v1
+
+==================================================
+==================================================
+
+论文名称: Agentic Harness Engineering: Observability-Driven Automatic Evolution of Coding-Agent Harnesses
+
+论文摘要: Harnesses have become a central determinant of coding-agent performance, shaping how models interact with repositories, tools, and execution environments. Yet automating harness engineering is hard: a heterogeneous action space, sparse and noisy evaluation signal, multi-million-token trajectories, and edits whose effect is hard to attribute to the next round's outcomes. We introduce Agentic Harness Engineering (AHE), a framework that automates harness-level evolution by instrumenting the three stages of any engineering loop (component editing, trajectory inspection, and decision making) with matched observability pillars: (1) component observability gives every editable harness component a file-level representation so the action space is explicit and revertible; (2) experience observability distills millions of raw trajectory tokens into a layered, drill-down evidence corpus that an evolving agent can actually consume; and (3) decision observability pairs every edit with a self-declared prediction, later verified against the next round's task-level outcomes. Together, these pillars turn every edit into a falsifiable contract, so harness evolution proceeds autonomously without collapsing into trial-and-error. Empirically, ten AHE iterations lift pass@1 on Terminal-Bench 2 from 69.7% to 77.0%, surpassing the human-designed harness Codex-CLI (71.9%) and the self-evolving baselines ACE and TF-GRPO. The frozen harness transfers without re-evolution: on SWE-bench-verified it tops aggregate success at 12% fewer tokens than the seed, and on Terminal-Bench 2 it yields +5.1 to +10.1pp cross-family gains across three alternate model families, indicating the evolved components encode general engineering experience rather than benchmark-specific tuning. These results position observability-driven evolution as a practical pathway to keep coding-agent harnesses continually improving.
+
+论文作者: Jiahang Lin, Shichun Liu, Chengjun Pan, Lizhi Lin, Shihan Dou, Xuanjing Huang, Hang Yan, Zhenhua Han, Tao Gui
+
+提交时间: 2026-04-28 16:55:02
+
+论文链接: http://arxiv.org/abs/2604.25850v1
