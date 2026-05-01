@@ -1,0 +1,217 @@
+论文名称: Exponential families from a single KL identity
+
+论文摘要: Exponential families encompass the distributions central to modern machine learning -- softmax, Gaussians, and Boltzmann distributions -- and underlie the theory of variational inference, entropy-regularized reinforcement learning, and RLHF. We isolate a simple identity for exponential families that expresses the KL difference $\mathrm{KL}(q \| p_{λ_2}) - \mathrm{KL}(q \| p_{λ_1})$ in terms of the log-partition function $A(λ)$ and the moment $μ_q$. Remarkably, this identity together with the single fact that $\mathrm{KL} \geq 0$ (with equality iff $p = q$) suffices, by direct substitution and rearrangement, to derive a cluster of results that are classically obtained by separate, heavier arguments: a generalized three-point identity for arbitrary reference distributions, Pythagorean theorems for I-projections and reverse I-projections, convexity of the log-partition function, identification of its Legendre dual in KL terms, the Gibbs variational principle, and the explicit optimizer in KL-regularized reward maximization, including the exponential tilting formula underlying entropy-regularized control and RLHF. Beyond these purely algebraic consequences, standard analytic arguments recover the gradient formula for the log-partition function, the Bregman representation of within-family KL divergence, and the surjectivity of the moment map. The note is self-contained.
+
+论文作者: Marc Dymetman
+
+提交时间: 2026-04-30 15:48:03
+
+论文链接: http://arxiv.org/abs/2604.28036v1
+
+==================================================
+==================================================
+
+论文名称: Learning from Disagreement: Clinician Overrides as Implicit Preference Signals for Clinical AI in Value-Based Care
+
+论文摘要: We reframe clinician overrides of clinical AI recommendations as implicit preference data - the same signal structure exploited by reinforcement learning from human feedback (RLHF), but richer: the annotator is a domain expert, the alternatives carry real consequences, and downstream outcomes are observable. We present a formal framework extending standard preference learning with three contributions: a five-category override taxonomy mapping override types to distinct model update targets; a preference formulation conditioned on patient state s, organizational context c, and clinician capability kappa, where kappa decomposes into execution capability kappa-exec and alignment capability kappa-align; and a dual learning architecture that jointly trains a reward model and a capability model via alternating optimization, preventing a failure mode we term suppression bias-the systematic suppression of correct-but-difficult recommendations when clinician capability falls below the execution threshold. We argue that chronic disease management under outcome-based payment contracts produces override data with uniquely favorable properties-longitudinal density, concentrated decision space, outcome labels, and natural capability variation-and that training environments combining longitudinal outcome measurement with aligned financial incentives are a necessary condition for learning a reward model aligned with patient trajectory rather than with encounter economics. This framework emerged from operational work to improve clinician capability in a live value-based care deployment.
+
+论文作者: Prabhjot Singh, Abhishek Gupta, Chris Betz, Abe Flansburg, Brett Ives, Sudeep Lama, Jung Hoon Son
+
+提交时间: 2026-04-30 15:30:47
+
+论文链接: http://arxiv.org/abs/2604.28010v1
+
+==================================================
+==================================================
+
+论文名称: Perturbation Probing: A Two-Pass-per-Prompt Diagnostic for FFN Behavioral Circuits in Aligned LLMs
+
+论文摘要: Perturbation probing generates task-specific causal hypotheses for FFN neurons in large language models using two forward passes per prompt and no backpropagation, followed by a one-time intervention sweep of about 150 passes amortized across all identified neurons. Across eight behavioral circuits, 13 models, and four architecture families, we identify two circuit structures that organize LLM behavior. Opposition circuits appear when RLHF suppresses a pre-training tendency. In safety refusal, about 50 neurons, or 0.014 percent of all neurons, control the refusal template; ablating them changes 80 percent of response formats on 520 AdvBench prompts while producing near-zero harmful compliance, 3 of 520 cases, all with disclaimers. Routing circuits appear for pre-training behaviors distributed through attention. For language selection, residual-stream direction injection switches English to Chinese output on 99.1 percent of 580 benchmark prompts in the 3 of 19 tested models that satisfy three observed conditions: bilingual training, FFN-to-skip signal ratio between 0.3 and 1.1, and linear representability. The same intervention fails on the other 16 models and on math, code, and factual circuits, defining the limits of directional steering. The FFN-to-skip signal ratio, computed from the same two forward passes, distinguishes the two structures and predicts the appropriate intervention. Circuit topology varies by architecture, from Qwen's concentrated FFN bottleneck to Gemma's normalization-shielded circuit. In Qwen3.5-2B, ablating 20 neurons eliminates multi-turn sycophantic capitulation, while amplifying 10 related neurons improves factual correction from 52 percent to 88 percent on 200 TruthfulQA prompts. These results show that perturbation probing offers mechanistic insight into RLHF-organized behavior and a practical toolkit for precision template-layer editing.
+
+论文作者: Hongliang Liu, Tung-Ling Li, Yuhao Wu
+
+提交时间: 2026-04-30 04:13:33
+
+论文链接: http://arxiv.org/abs/2604.27401v1
+
+==================================================
+==================================================
+
+论文名称: Mind the Gap: Structure-Aware Consistency in Preference Learning
+
+论文摘要: Preference learning has become the foundation of aligning Large Language Models (LLMs) with human intent. Popular methods, such as Direct Preference Optimization (DPO), minimize surrogate losses as proxies for the intractable pairwise ranking loss. However, we demonstrate that for the equicontinuous hypothesis sets typical of neural networks, these standard surrogates are theoretically inconsistent, yielding vacuous generalization guarantees. To resolve this, we formulate LLM alignment within a margin-shifted ranking framework. We derive rigorous $H$-consistency bounds that depend on enforcing a separation margin $γ$. Crucially, we extend this to Structure-Aware $H$-consistency, introducing a novel objective (SA-DPO) that adapts the margin based on the semantic distance between responses to handle synonyms and hard pairs. Finally, we analyze the trade-off between consistency and model limitations via the Margin-Capacity Profile, proving that heavy-tailed surrogates (such as the Polynomial Hinge family) offer superior consistency guarantees for capacity-bounded models compared to the standard logistic loss used in DPO.
+
+论文作者: Mehryar Mohri, Yutao Zhong
+
+提交时间: 2026-04-30 11:24:04
+
+论文链接: http://arxiv.org/abs/2604.27733v1
+
+==================================================
+==================================================
+
+论文名称: Debiasing Reward Models via Causally Motivated Inference-Time Intervention
+
+论文摘要: Reward models (RMs) play a central role in aligning large language models (LLMs) with human preferences. However, RMs are often sensitive to spurious features such as response length. Existing inference-time approaches for mitigating these biases typically focus exclusively on response length, resulting in performance trade-offs. In this paper, we propose causally motivated intervention for mitigating multiple types of biases in RMs at inference time. Our method first identifies neurons whose activations are strongly correlated with predefined bias attributes, and applies neuron-level intervention that suppresses these signals. We evaluate our method on RM benchmarks and observe reductions in sensitivity to spurious features across diverse bias types, without inducing performance trade-offs. Moreover, when used for preference annotation, small RMs (2B and 7B) with our method, which edits less than 2% of all the neurons in RMs, enable LLMs to improve alignment, achieving performance comparable to that of a state-of-the-art 70B RM on AlpacaEval and MT-Bench. Further analysis reveals that bias signals are primarily encoded by neurons in early layers, shedding light on the internal mechanisms of bias exploitation in RMs.
+
+论文作者: Kazutoshi Shinoda, Kosuke Nishida, Kyosuke Nishida
+
+提交时间: 2026-04-30 06:49:17
+
+论文链接: http://arxiv.org/abs/2604.27495v1
+
+==================================================
+==================================================
+
+论文名称: From Coarse to Fine: Benchmarking and Reward Modeling for Writing-Centric Generation Tasks
+
+论文摘要: Large language models have achieved remarkable progress in text generation but still struggle with generative writing tasks. In terms of evaluation, existing benchmarks evaluate writing reward models coarsely and fail to measure performance from the perspective of specific requirements. In terms of training, existing training methods either use LLM-as-a-judge approaches or train coarse-grained reward models, lacking fine-grained requirement-adherence reward modeling. To address these issues, we propose a fine-grained evaluation pipeline WEval for writing reward models and a fine-grained reinforcement learning training framework WRL. The evaluation data of WEval covers multiple task categories and requirement types, enabling systematic evaluation of writing reward models by measuring the correlation between the rankings of the reward model and gold rankings. WRL constructs positive and negative samples by selectively dropping instruction requirements, allowing for more precise reward model training. Experiments show that our models achieve substantial improvements across various writing benchmarks and exhibit strong generalization. The code and data are publicly available at \href{https://github.com/Rainier-rq1/From_Coarse_to_Fine}{https://github.com/Rainier-rq1/From\_Coarse\_to\_Fine}.
+
+论文作者: Qingyu Ren, Tianjun Pan, Xingzhou Chen, Xuhong Wang
+
+提交时间: 2026-04-30 05:49:29
+
+论文链接: http://arxiv.org/abs/2604.27453v1
+
+==================================================
+==================================================
+
+论文名称: A Pattern Language for Resilient Visual Agents
+
+论文摘要: Integrating multimodal foundation models into enterprise ecosystems presents a fundamental software architecture challenge. Architects must balance competing quality attributes: the high latency and non-determinism of vision language action (VLA) models versus the strict determinism and real-time performance required by enterprise control loops. In this study, we propose an architectural pattern language for visual agents that separates fast, deterministic reflexes from slow, probabilistic supervision. It consists of four architectural design patterns: (1) Hybrid Affordance Integration, (2) Adaptive Visual Anchoring, (3) Visual Hierarchy Synthesis, and (4) Semantic Scene Graph.
+
+论文作者: Habtom Kahsay Gidey, Alexander Lenz, Alois Knoll
+
+提交时间: 2026-04-30 15:24:26
+
+论文链接: http://arxiv.org/abs/2604.28001v1
+
+==================================================
+==================================================
+
+论文名称: PRTS: A Primitive Reasoning and Tasking System via Contrastive Representations
+
+论文摘要: Vision-Language-Action (VLA) models advance robotic control via strong visual-linguistic priors. However, existing VLAs predominantly frame pretraining as supervised behavior cloning, overlooking the fundamental nature of robot learning as a goal-reaching process that requires understanding temporal task progress. We present \textbf{PRTS} (\textbf{P}rimitive \textbf{R}easoning and \textbf{T}asking \textbf{S}ystem), a VLA foundation model that reformulates pretraining through Goal-Conditioned Reinforcement Learning. By treating language instructions as goals and employing contrastive reinforcement learning, PRTS learns a unified embedding space where the inner product of state-action and goal embeddings approximates the log-discounted goal occupancy, the probability of reaching the language-specified goal from the current state-action, quantitatively assessing physical feasibility beyond static semantic matching. PRTS draws this dense goal-reachability supervision directly from offline trajectories without reward annotations, and folds it into the VLM backbone via a role-aware causal mask, incurring negligible overhead over vanilla behavior cloning. This paradigm endows the high-level reasoning system with intrinsic goal reachability awareness, bridging semantic reasoning and temporal task progress, and further benefits goal-conditioned action prediction. Pretrained on 167B tokens of diverse manipulation and embodied-reasoning data, PRTS reaches state-of-the-art performance on LIBERO, LIBERO-Pro, LIBERO-Plus, SimplerEnv, and a real-world suite of 14 complex tasks, with particularly substantial gains on long-horizon, contact-rich, and zero-shot novel-instruction settings, confirming that injecting goal-reachability awareness significantly improves both execution success and long-horizon planning of general-purpose robotic foundation policies.
+
+论文作者: Yang Zhang, Jiangyuan Zhao, Chenyou Fan, Fangzheng Yan, Tian Li, Haitong Tang, Sen Fu, Xuan'er Wu, Qizhen Weng, Weinan Zhang, Xiu Li, Chi Zhang, Chenjia Bai, Xuelong Li
+
+提交时间: 2026-04-30 06:14:02
+
+论文链接: http://arxiv.org/abs/2604.27472v1
+
+==================================================
+==================================================
+
+论文名称: PhyCo: Learning Controllable Physical Priors for Generative Motion
+
+论文摘要: Modern video diffusion models excel at appearance synthesis but still struggle with physical consistency: objects drift, collisions lack realistic rebound, and material responses seldom match their underlying properties. We present PhyCo, a framework that introduces continuous, interpretable, and physically grounded control into video generation. Our approach integrates three key components: (i) a large-scale dataset of over 100K photorealistic simulation videos where friction, restitution, deformation, and force are systematically varied across diverse scenarios; (ii) physics-supervised fine-tuning of a pretrained diffusion model using a ControlNet conditioned on pixel-aligned physical property maps; and (iii) VLM-guided reward optimization, where a fine-tuned vision-language model evaluates generated videos with targeted physics queries and provides differentiable feedback. This combination enables a generative model to produce physically consistent and controllable outputs through variations in physical attributes-without any simulator or geometry reconstruction at inference. On the Physics-IQ benchmark, PhyCo significantly improves physical realism over strong baselines, and human studies confirm clearer and more faithful control over physical attributes. Our results demonstrate a scalable path toward physically consistent, controllable generative video models that generalize beyond synthetic training environments.
+
+论文作者: Sriram Narayanan, Ziyu Jiang, Srinivasa Narasimhan, Manmohan Chandraker
+
+提交时间: 2026-04-30 17:53:03
+
+论文链接: http://arxiv.org/abs/2604.28169v1
+
+==================================================
+==================================================
+
+论文名称: TransVLM: A Vision-Language Framework and Benchmark for Detecting Any Shot Transitions
+
+论文摘要: Traditional Shot Boundary Detection (SBD) inherently struggles with complex transitions by formulating the task around isolated cut points, frequently yielding corrupted video shots. We address this fundamental limitation by formalizing the Shot Transition Detection (STD) task. Rather than searching for ambiguous points, STD explicitly detects the continuous temporal segments of transitions. To tackle this, we propose TransVLM, a Vision-Language Model (VLM) framework for STD. Unlike regular VLMs that predominantly rely on spatial semantics and struggle with fine-grained inter-shot dynamics, our method explicitly injects optical flow as a critical motion prior at the input stage. Through a simple yet effective feature-fusion strategy, TransVLM directly processes concatenated color and motion representations, significantly enhancing its temporal awareness without incurring any additional visual token overhead on the language backbone. To overcome the severe class imbalance in public data, we design a scalable data engine to synthesize diverse transition videos for robust training, alongside a comprehensive benchmark for STD. Extensive experiments demonstrate that TransVLM achieves superior overall performance, outperforming traditional heuristic methods, specialized spatiotemporal networks, and top-tier VLMs. This work has been deployed to production. For more related research, please visit HeyGen Research (https://www.heygen.com/research) and HeyGen Avatar-V (https://www.heygen.com/research/avatar-v-model). Project page: https://chence17.github.io/TransVLM/
+
+论文作者: Ce Chen, Yi Ren, Yuanming Li, Viktor Goriachko, Zhenhui Ye, Zujin Guo, Zhibin Hong, Mingming Gong
+
+提交时间: 2026-04-30 15:05:06
+
+论文链接: http://arxiv.org/abs/2604.27975v1
+
+==================================================
+==================================================
+
+论文名称: The Effects of Visual Priming on Cooperative Behavior in Vision-Language Models
+
+论文摘要: As Vision-Language Models (VLMs) become increasingly integrated into decision-making systems, it is essential to understand how visual inputs influence their behavior. This paper investigates the effects of visual priming on VLMs' cooperative behavior using the Iterated Prisoner's Dilemma (IPD) as a test scenario. We examine whether exposure to images depicting behavioral concepts (kindness/helpfulness vs. aggressiveness/selfishness) and color-coded reward matrices alters VLM decision patterns. Experiments were conducted across multiple state-of-the-art VLMs. We further explore mitigation strategies including prompt modifications, Chain of Thought (CoT) reasoning, and visual token reduction. Results show that VLM behavior can be influenced by both image content and color cues, with varying susceptibility and mitigation effectiveness across models. These findings not only underscore the importance of robust evaluation frameworks for VLM deployment in visually rich and safety-critical environments, but also highlight how architectural and training differences among models may lead to distinct behavioral responses-an area worthy of further investigation.
+
+论文作者: Kenneth J. K. Ong
+
+提交时间: 2026-04-30 14:50:48
+
+论文链接: http://arxiv.org/abs/2604.27953v1
+
+==================================================
+==================================================
+
+论文名称: Iterative Multimodal Retrieval-Augmented Generation for Medical Question Answering
+
+论文摘要: Medical retrieval-augmented generation (RAG) systems typically operate on text chunks extracted from biomedical literature, discarding the rich visual content (tables, figures, structured layouts) of original document pages. We propose MED-VRAG, an iterative multimodal RAG framework that retrieves and reasons over PMC document page images instead of OCR'd text. The system pairs ColQwen2.5 patch-level page embeddings with a sharded MapReduce LLM filter, scaling to ~350K pages while keeping Stage-1 retrieval under 30 ms via an offline coarse-to-fine index (C=8 centroids per page, ANN over centroids, exact two-way scoring on the top-R shortlist). A vision-language model (VLM) then iteratively refines its query and accumulates evidence in a memory bank across up to 3 reasoning rounds, with a single iteration costing ~15.9 s and the full three-round pipeline ~47.8 s on 4xA100. Across four medical QA benchmarks (MedQA, MedMCQA, PubMedQA, MMLU-Med), MEDVRAG reaches 78.6% average accuracy. Under controlled comparison with the same Qwen2.5-VL-32B backbone, retrieval contributes a +5.8 point gain over the no-retrieval baseline; we also note a +1.8 point edge over MedRAG + GPT-4 (76.8%), with the caveat that this is a cross-paper rather than head-to-head comparison. Ablations isolate +1.0 from page-image vs text-chunk retrieval, +1.5 from iteration, and +1.0 from the memory bank.
+
+论文作者: Xupeng Chen, Binbin Shi, Chenqian Le, Jiaqi Zhang, Kewen Wang, Ran Gong, Jinhan Zhang, Chihang Wang
+
+提交时间: 2026-04-30 11:16:07
+
+论文链接: http://arxiv.org/abs/2604.27724v1
+
+==================================================
+==================================================
+
+论文名称: Auditing Frontier Vision-Language Models for Trustworthy Medical VQA: Grounding Failures, Format Collapse, and Domain Adaptation
+
+论文摘要: Deploying vision-language models (VLMs) in clinical settings demands auditable behavior under realistic failure conditions, yet the failure landscape of frontier VLMs on specialized medical inputs is poorly characterized. We audit five recent frontier and grounding-aware VLMs (Gemini~2.5~Pro, GPT-5, o3, GLM-4.5V, Qwen~2.5~VL) on Medical VQA along two trust-relevant axes. Perception: all models localize anatomical and pathological targets poorly -- the best model reaches only 0.23 mean IoU and 19.1% Acc@0.5 -- and exhibit clinically dangerous laterality confusion. Pipeline integration: a self-grounding pipeline, where the same model localizes then answers, degrades VQA accuracy for every model -- driven by both inaccurate localization and format-compliance failures under the two-step prompt (parse failure rises to 70%--99% for Gemini and GPT-5 on VQA-RAD). Replacing predicted boxes with ground-truth annotations recovers and improves VQA accuracy, consistent with the failure residing in the perception module rather than in the decomposition itself. These observational findings identify grounding quality as a primary trustworthiness bottleneck in our SLAKE bounding-box setting. As a complementary fine-tuning follow-up, supervised fine-tuning of Qwen~2.5~VL on combined Med-VQA training data attains the highest reported SLAKE open-ended recall (85.5%) among comparable methods, suggesting that the VQA-level gap is tractable with domain adaptation; whether this also closes the perception/trustworthiness bottleneck is left to future work.
+
+论文作者: Xupeng Chen, Binbin Shi, Chenqian Le, Qifu Yin, Lang Lin, Haowei Ni, Ran Gong, Panfeng Li
+
+提交时间: 2026-04-30 11:11:47
+
+论文链接: http://arxiv.org/abs/2604.27720v1
+
+==================================================
+==================================================
+
+论文名称: Understanding Adversarial Transferability in Vision-Language Models for Autonomous Driving: A Cross-Architecture Analysis
+
+论文摘要: Vision-language models (VLMs) are increasingly used in autonomous driving because they combine visual perception with language-based reasoning, supporting more interpretable decision-making, yet their robustness to physical adversarial attacks, especially whether such attacks transfer across different VLM architectures, is not well understood and poses a practical risk when attackers do not know which model a vehicle uses. We address this gap with a systematic cross-architecture study of adversarial transferability in VLM-based driving, evaluating three representative architectures (Dolphins, OmniDrive, and LeapVAD) using physically realizable patches placed on roadside infrastructure in both crosswalk and highway scenarios. Our transfer-matrix evaluation shows high cross-architecture effectiveness, with transfer rates of 73-91% (mean TR = 0.815 for crosswalk and 0.833 for highway) and sustained frame-level manipulation over 64.7-79.4% of the critical decision window even when patches are not optimized for the target model.
+
+论文作者: David Fernandez, Pedram MohajerAnsari, Amir Salarpour, Mert D. Pese
+
+提交时间: 2026-04-30 04:33:38
+
+论文链接: http://arxiv.org/abs/2604.27414v1
+
+==================================================
+==================================================
+
+论文名称: FlexiTac: A Low-Cost, Open-Source, Scalable Tactile Sensing Solution for Robotic Systems
+
+论文摘要: We present FlexiTac, a low-cost, open-source, and scalable piezoresistive tactile sensing solution designed for robotic end-effectors. FlexiTac is a practical "plug-in" module consisting of (i) thin, flexible tactile sensor pads that provide dense tactile signals and (ii) a compact multi-channel readout board that streams synchronized measurements for real-time control and large-scale data collection. FlexiTac pads adopt a sealed three-layer laminate stack (FPC-Velostat-FPC) with electrode patterns directly integrated into flexible printed circuits, substantially improving fabrication throughput and repeatability while maintaining mechanical compliance for deployment on both rigid and soft grippers. The readout electronics use widely available, low-cost components and stream tactile signals to a host computer at 100 Hz via serial communication. Across multiple configurations, including fingertip pads and larger tactile mats, FlexiTac can be mounted on diverse platforms without major mechanical redesign. We further show that FlexiTac supports modern tactile learning pipelines, including 3D visuo-tactile fusion for contact-aware decision making, cross-embodiment skill transfer, and real-to-sim-to-real fine-tuning with GPU-parallel tactile simulation. Our project page is available at https://flexitac.github.io/.
+
+论文作者: Binghao Huang, Yunzhu Li
+
+提交时间: 2026-04-30 17:43:07
+
+论文链接: http://arxiv.org/abs/2604.28156v1
+
+==================================================
+==================================================
+
+论文名称: Bridging Values and Behavior: A Hierarchical Framework for Proactive Embodied Agents
+
+论文摘要: Current embodied agents are often limited to passive instruction-following or reactive need-satisfaction, lacking a stable, high-order value framework essential for long-term, self-directed behavior and resolving motivational conflicts. We introduce \textit{ValuePlanner}, a hierarchical cognitive architecture that decouples high-level value scheduling from low-level action execution. \textit{ValuePlanner} employs an LLM-based cognitive module to generate symbolic subgoals by reasoning through abstract value trade-offs, which are then translated into executable action plans by a classical PDDL planner. This process is refined via a closed-loop feedback mechanism. Evaluating such autonomy requires methods beyond task-success rates, and we therefore propose a value-centric evaluation suite measuring cumulative value gain, preference alignment, and behavioral diversity. Experiments in the TongSim household environment demonstrate that \textit{ValuePlanner} arbitrates competing values to generate coherent, long-horizon, self-directed behavior absent from instruction-following and needs-driven baselines. Our work offers a structured approach to bridging intrinsic values and grounded behavior for autonomous agents.
+
+论文作者: Chunhui Zhang, Yuxuan Wang, Aoyang Qin, Yi-Long Lu, Kunlun Wu, Yizhou Wang, Wei Wang
+
+提交时间: 2026-04-30 10:43:55
+
+论文链接: http://arxiv.org/abs/2604.27699v1
+
+==================================================
+==================================================
+
+论文名称: SpatialGrammar: A Domain-Specific Language for LLM-Based 3D Indoor Scene Generation
+
+论文摘要: Automatically generating interactive 3D indoor scenes from natural language is crucial for virtual reality, gaming, and embodied AI. However, existing LLM-based approaches often suffer from spatial errors and collisions, in part because common scene representations-raw coordinates or verbose code-are difficult for models to reason about 3D spatial relationships and physical constraints. We propose SpatialGrammar, a domain-specific language that represents gravity-aligned indoor layouts as BEV grid placements with deterministic compilation to valid 3D geometry, enabling verifiable constraint checking. Building on this representation, we develop (1) SG-Agent, a closed-loop system that uses compiler feedback to iteratively refine scenes and enforce collision constraints, and (2) SG-Mini, a 104M-parameter model trained entirely on compiler-validated synthetic data. Across 159 test scenes spanning five scenarios of different complexity, SG-Agent improves spatial fidelity and physical plausibility over prior methods, while SG-Mini performs competitively against larger LLM-based baselines on single-shot generation scenarios.
+
+论文作者: Song Tang, Kaiyong Zhao, Yuliang Li, Qingsong Yan, Penglei Sun, Junyi Zou, Qiang Wang, Xiaowen Chu
+
+提交时间: 2026-04-30 08:04:42
+
+论文链接: http://arxiv.org/abs/2604.27555v1
