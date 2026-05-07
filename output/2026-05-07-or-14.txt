@@ -1,0 +1,182 @@
+论文名称: Uncertainty-Aware Exploratory Direct Preference Optimization for Multimodal Large Language Models
+
+论文摘要: Direct Preference Optimization (DPO) has proven to be an effective solution for mitigating hallucination in Multimodal Large Language Models (MLLMs) by learning from preference pairs. One of its key challenges lies in how to transfer the sequence-level preference into fine-grained supervision on visual fidelity. To safeguard vision-related tokens that are prone to hallucination, existing methods typically allocate training emphasis according to the model's self-assessed visual sensitivity signals. However, such sensitivity, estimated by a model still under training, introduces self-referential bias: reinforcing already well-learned visual cues while neglecting hard-to-perceive but critical details, thereby limiting deeper alignment. In this work, we propose an Uncertainty-aware Exploratory Direct Preference Optimization (UE-DPO) method for MLLMs, which enables the model to uncover its cognitive deficiencies and actively explore for self-correction, guided by token-level epistemic uncertainty. Specifically, we first quantify the uncertainty from the model's failure to ground token predictions in the given image. Then, based on an uncertainty-aware exploration intensity, we encourage more learning pressure on visually deficient tokens in preferred samples, and alleviate the over-penalization of beneficial knowledge in dispreferred samples. Further, we provide a theoretical justification for our method, and extensive experiments demonstrate its effectiveness and robustness.
+
+论文作者: Huatian Zhang, Zhendong Mao, Lei Zhang, Yongdong Zhang
+
+提交时间: 2026-05-06 13:08:12
+
+论文链接: http://arxiv.org/abs/2605.04874v1
+
+==================================================
+==================================================
+
+论文名称: RLearner-LLM: Balancing Logical Grounding and Fluency in Large Language Models via Hybrid Direct Preference Optimization
+
+论文摘要: Direct Preference Optimization (DPO), the efficient alternative to PPO-based RLHF, falls short on knowledge-intensive generation: standard preference signals from human annotators or LLM judges exhibit a systematic verbosity bias that rewards fluency over logical correctness. This blindspot leaves a logical alignment gap -- SFT models reach NLI entailment of only 0.05-0.22 despite producing fluent text. We propose RLearner-LLM with Hybrid-DPO: an automated preference pipeline that fuses a DeBERTa-v3 NLI signal with a verifier LLM score, removing human annotation while overcoming the "alignment tax" of single-signal optimization. Evaluated across five academic domains (Biology, Medicine, Law) with three base architectures (LLaMA-2-13B, Qwen3-8B, Gemma 4 E4B-it), RLearner-LLM yields up to 6x NLI improvement over SFT, with NLI gains in 11 of 15 cells and consistent answer-coverage gains. On Gemma 4 E4B-it (4.5B effective params), Hybrid-DPO lifts NLI in four of five domains (+11.9% to +2.4x) with faster inference across all five, scaling down to compact base models without losing the alignment-tax mitigation. Our Qwen3-8B RLearner-LLM wins 95% of pairwise comparisons against its own SFT baseline; GPT-4o-mini in turn wins 95% against our concise output -- alongside the 69% win the same judge gives a verbose SFT over our DPO model, this replicates verbosity bias on a frontier comparator and motivates logic-aware metrics (NLI, ACR) over LLM-as-a-judge for knowledge-intensive generation.
+
+论文作者: Qiming Bao, Juho Leinonen, Paul Denny, Michael J. Witbrock
+
+提交时间: 2026-05-06 06:36:09
+
+论文链接: http://arxiv.org/abs/2605.04539v1
+
+==================================================
+==================================================
+
+论文名称: Towards General Preference Alignment: Diffusion Models at Nash Equilibrium
+
+论文摘要: Reinforcement learning from human feedback (RLHF) has been popular for aligning text-to-image (T2I) diffusion models with human preferences. As a mainstream branch of RLHF, Direct Preference Optimization (DPO) offers a computationally efficient alternative that avoids explicit reward modeling and has been widely adopted in diffusion alignment. However, existing preference-based methods for diffusion alignment still rely on reward-induced preference signals and typically assume that human preferences can be adequately modeled by the Bradley--Terry (BT) model, which may fail to capture the full complexity of human preferences. In this paper, we formulate diffusion alignment from a game-theoretic perspective. We propose Diffusion Nash Preference Optimization (Diff.-NPO), an intuitive general preference framework for diffusion alignment. Diff.-NPO encourages the current policy to play against itself to achieve self improvement and lead to a better alignment. Empirically, we demonstrate the effectiveness of Diff.-NPO on the text-to-image generation task via various metrics. Diff.-NPO consistently outperforms existing preference-based diffusion alignment methods.
+
+论文作者: Jiaming Hu, Jiamu Bai, Haoyu Wang, Debarghya Mukherjee, Ioannis Ch. Paschalidis
+
+提交时间: 2026-05-06 04:50:42
+
+论文链接: http://arxiv.org/abs/2605.04494v1
+
+==================================================
+==================================================
+
+论文名称: Misaligned by Reward: Socially Undesirable Preferences in LLMs
+
+论文摘要: Reward models are a key component of large language model alignment, serving as proxies for human preferences during training. However, existing evaluations focus primarily on broad instruction-following benchmarks, providing limited insight into whether these models capture socially desirable preferences. As a result, important failures in social alignment can remain hidden.
+  We extend reward-model benchmarking to four socially consequential domains: bias, safety, morality, and ethical reasoning. We introduce a framework that converts social evaluation datasets into pairwise preference data, leveraging gold labels where available and directional bias indicators otherwise. This enables us to test whether reward models prefer socially undesirable responses, and whether their preferences produce systematically biased distributions over selected outputs.
+  Across five publicly available reward models and two instruction-tuned models used as reward proxies, we find substantial variation across domains, with no single model performing best overall. The models fall well short of strong social intelligence: they often prefer socially undesirable options, and their preferences produce systematically biased distributions. Moreover, stronger bias avoidance can reduce sensitivity to context, revealing a key alignment trade-off between avoiding biased outcomes and preserving contextual faithfulness. These findings show that standard reward benchmarks are insufficient for assessing social alignment and highlight the need for evaluations that directly measure the social preferences encoded in reward models.
+
+论文作者: Gayane Ghazaryan, Esra Dönmez
+
+提交时间: 2026-05-06 15:04:23
+
+论文链接: http://arxiv.org/abs/2605.05003v1
+
+==================================================
+==================================================
+
+论文名称: EP-GRPO: Entropy-Progress Aligned Group Relative Policy Optimization with Implicit Process Guidance
+
+论文摘要: Reinforcement learning with verifiable rewards (RLVR), particularly Group Relative Policy Optimization (GRPO), has advanced LLM reasoning. However, GRPO suffers from three credit assignment failures: uniform token-level granularity that ignores heterogeneous informational value, uniform polarity that penalizes correct steps and rewards incorrect ones, and zero-variance collapse that erases outcome-driven gradients. We systematically quantify these failures, revealing highly non-uniform token informativeness, widespread step-level polarity misalignment, and substantial training waste.
+  To address these limitations, we propose Entropy-Progress Aligned GRPO (EP-GRPO), a framework that mines the model's intrinsic information flow for dense, self-supervised guidance. EP-GRPO integrates entropy-gated modulation to prioritize high entropy decision pivots, implicit process signals from policy divergence anchored to outcome advantages for directional token-level feedback without external reward models, and cumulative entropy mapping that enables progress-aligned advantage normalization, naturally maintaining gradient flow under zero reward variance.
+  Extensive experiments on mathematical reasoning benchmarks demonstrate that EP-GRPO achieves superior accuracy and efficiency compared to GRPO and its variants. The code will be available.
+
+论文作者: Song Yu, Li Li, Wenwen Zhao, Zhisheng Yang
+
+提交时间: 2026-05-06 14:21:54
+
+论文链接: http://arxiv.org/abs/2605.04960v1
+
+==================================================
+==================================================
+
+论文名称: StoryAlign: Evaluating and Training Reward Models for Story Generation
+
+论文摘要: Story generation aims to automatically produce coherent, structured, and engaging narratives. Although large language models (LLMs) have significantly advanced text generation, stories generated by LLMs still diverge from human-authored works regarding complex narrative structure and human-aligned preferences. A key reason is the absence of effective modeling of human story preferences, which are inherently subjective and under-explored. In this work, we systematically evaluate the modeling of human story preferences and introduce StoryRMB, the first benchmark for assessing reward models on story preferences. StoryRMB contains $1,133$ high-quality, human-verified instances, each consisting of a prompt, one chosen story, and three rejected stories. We find existing reward models struggle to select human-preferred stories, with the best model achieving only $66.3\%$ accuracy. To address this limitation, we construct roughly $100,000$ high-quality story preference pairs across diverse domains and develop StoryReward, an advanced reward model for story preference trained on this dataset. StoryReward achieves state-of-the-art (SoTA) performance on StoryRMB, outperforming much larger models. We also adopt StoryReward in downstream test-time scaling applications for best-of-n (BoN) story selection and find that it generally chooses stories better aligned with human preferences. We will release our dataset, model, and code to facilitate future research. Related code and data are available at https://github.com/THU-KEG/StoryReward.
+
+论文作者: Haotian Xia, Hao Peng, Yunjia Qi, Xiaozhi Wang, Bin Xu, Lei Hou, Juanzi Li
+
+提交时间: 2026-05-06 12:28:17
+
+论文链接: http://arxiv.org/abs/2605.04831v1
+
+==================================================
+==================================================
+
+论文名称: Threshold-Guided Optimization for Visual Generative Models
+
+论文摘要: Aligning large visual generative models with human feedback is often performed through pairwise preference optimization. While such approaches are conceptually simple, they fundamentally rely on annotated pairs, limiting scalability in settings where feedback is collected as independent scalar ratings. In this work, we revisit the KL-regularized alignment objective and show that the optimal policy implicitly compares each sample's reward to an instance-specific baseline that is generally intractable. We propose a threshold-guided alignment framework that replaces this oracle baseline with a data-driven global threshold estimated from empirical score statistics. This formulation turns alignment into a binary decision task on unpaired data, enabling effective optimization directly from scalar feedback. We also incorporate a confidence weighting term to emphasize samples whose scores deviate strongly from the threshold, improving sample efficiency. Experiments across both diffusion and masked generative paradigms, spanning three test sets and five reward models, show that our method consistently improves preference alignment over previous methods. These results position our threshold-guided framework as a simple yet principled alternative for aligning visual generative models without paired comparisons.
+
+论文作者: Jinbin Bai, Yu Lei, Qingyu Shi, Aosong Feng, Yi Xin, Zhuoran Zhao, Fei Shen, Kaidong Yu, Jason Li
+
+提交时间: 2026-05-06 08:59:16
+
+论文链接: http://arxiv.org/abs/2605.04653v1
+
+==================================================
+==================================================
+
+论文名称: Direct Product Flow Matching: Decoupling Radial and Angular Dynamics for Few-Shot Adaptation
+
+论文摘要: Recent flow matching (FM) methods improve the few-shot adaptation of vision-language models, by modeling cross-modal alignment as a continuous multi-step flow. In this paper, we argue that existing FM methods are inherently constrained by incompatible geometric priors on pre-trained cross-modal features, resulting in suboptimal adaptation performance. We first analyze these methods from a polar decomposition perspective (i.e., radial and angular sub-manifolds). Under this new geometric view, we identify three overlooked limitations in them: 1) Angular dynamics distortion: The radial-angular coupling induces non-uniform speed on the angular sub-manifold, leading to regression training difficulty and extra truncation errors. 2) Radial dynamics neglect: Feature normalization discards modality confidence, failing to distinguish out-of-distribution and in-distribution data, and abandoning crucial radial dynamics. 3) Context-agnostic unconditional flow: Dataset-specific information loss during pre-trained cross-modal feature extraction remains unrecovered. To resolve these issues, we propose warped product flow matching (WP-FM), a unified Riemannian framework that reformulates alignment on a warped product manifold. Within this framework, we derive direct product flow matching (DP-FM) by introducing a constant-warping metric, which yields a decoupled cylindrical manifold (i.e., direct product manifold). DP-FM enables independent radial evolution and constant-speed angular geodesic transport, effectively eliminating angular dynamics distortion while preserving radial consistency. Meanwhile, we incorporate classifier-free guidance by conditioning the flow on the pre-trained VLMs' hidden states to inject missing dataset-specific information. Extensive results across 11 benchmarks have demonstrated that DP-FM achieves a new state-of-the-art for multi-step few-shot adaptation.
+
+论文作者: Hongxu Chen, Yanghao Wang, Bowei Zhu, Hongxiang Li, Zhen Wang, Ziqi Jiang, Lin Li, Rui Liu, Long Chen
+
+提交时间: 2026-05-06 15:51:26
+
+论文链接: http://arxiv.org/abs/2605.05054v1
+
+==================================================
+==================================================
+
+论文名称: When Relations Break: Analyzing Relation Hallucination in Vision-Language Model Under Rotation and Noise
+
+论文摘要: Vision-language models (VLMs) achieve strong multimodal performance but remain prone to relation hallucination, which requires accurate reasoning over inter-object interactions. We study the impact of visual perturbations, specifically rotation and noise, and show that even mild distortions significantly degrade relational reasoning across models and datasets. We further evaluate prompt-based augmentation and preprocessing strategies (orientation correction and denoising), finding that while they offer partial improvements, they do not fully resolve hallucinations. Our results reveal a gap between perceptual robustness and relational understanding, highlighting the need for more robust, geometry-aware VLMs.
+
+论文作者: Philip Wootaek Shin, Ajay Narayanan Sridhar, Sivani Devarapalli, Rui Zhang, Jack Sampson, Vijaykrishnan Narayanan
+
+提交时间: 2026-05-06 15:41:24
+
+论文链接: http://arxiv.org/abs/2605.05045v1
+
+==================================================
+==================================================
+
+论文名称: FairEnc: A Fair Vision-Language Model with Fair Vision and Text Encoders for Glaucoma Detection
+
+论文摘要: Automated glaucoma detection is critical for preventing irreversible vision loss and reducing the burden on healthcare systems. However, ensuring fairness across diverse patient populations remains a significant challenge. In this paper, we propose FairEnc, a fair pretraining method for vision-language models (VLMs) that enables simultaneous debiasing across multiple sensitive attributes. FairEnc jointly mitigates biases in both textual and visual modalities with respect to multiple sensitive attributes, including race, gender, ethnicity, and language. Specifically, for the textual encoder, we leverage a large language model to generate synthetic clinical descriptions with varied sensitive attributes while preserving disease semantics, and employ a contrastive alignment objective to encourage demographic-invariant representations. For the visual encoder, we propose a dual-level fairness strategy that combines mutual information regularization to reduce statistical dependence between learned features and demographic groups, with multi-discriminator adversarial debiasing. Comprehensive experiments on the publicly available Harvard-FairVLMed dataset demonstrate that FairEnc effectively reduces demographic disparity as measured by DPD and DEOdds while achieving strong diagnostic performance under both zero-shot and linear probing evaluations. Additional experiments on the private FairFundus dataset show that FairEnc consistently preserves fairness advantages under cross-domain and cross-modality settings and maintains diagnostic performance within a competitive range. These results highlight FairEnc's ability to generalize fairness under distribution shifts, supporting its potential for more equitable deployment in real-world clinical settings. Our codebase and synthetic clinical notes are available at https://github.com/Mohamed-Elhabebe/FairEnc
+
+论文作者: Mohamed Elhabebe, Ayman El-Baz, Qing Liu
+
+提交时间: 2026-05-06 13:18:34
+
+论文链接: http://arxiv.org/abs/2605.04882v1
+
+==================================================
+==================================================
+
+论文名称: SpecPL: Disentangling Spectral Granularity for Prompt Learning
+
+论文摘要: Existing prompt learning for VLMs exhibits a modality asymmetry, predominantly optimizing text tokens while still relying on frozen visual encoder as holistic extractor and neglecting the spectral granularity essential for fine-grained discrimination. To bridge this, we introduce Disentangling Spectral Granularity for Prompt Learning (SpecPL), which approaches prompt learning from a novel spectral perspective via Counterfactual Granule Supervision. Specifically, we leverage a frozen VAE to decompose visual signals into semantic low-frequency bands and granular high-frequency details. A frozen Visual Semantic Bank anchors text representations to universal low-frequency invariants, mitigating overfitting. Crucially, fine-grained discrimination is driven by counterfactual granule training: by permuting high-frequency signals, we compel the model to explicitly distinguish visual granularity from semantic invariance. Uniquely, SpecPL serves as a universal plug-and-play booster, revitalizing text-oriented baselines like CoOp and MaPLe via visual-side guidance. Experiments on 11 benchmarks demonstrate competitive state-of-the-art performance, achieving a new performance ceiling of 81.51\% harmonic-mean accuracy. These results validate that spectral disentanglement with counterfactual supervision effectively bridges the gap in the stability-generalization trade-off. Code is released at https://github.com/Mlrac1e/SpecPL-Prompt-Learning.
+
+论文作者: Jingtao Zhou, Xirui Kang, Feiyang Huang, Lai-Man Po
+
+提交时间: 2026-05-06 05:13:40
+
+论文链接: http://arxiv.org/abs/2605.04504v1
+
+==================================================
+==================================================
+
+论文名称: The Pinocchio Dimension: Phenomenality of Experience as the Primary Axis of LLM Psychometric Differences
+
+论文摘要: We administer 45 validated psychometric questionnaires to 50 large language models (LLMs) to identify the dimensions along which LLMs differ psychometrically. Using Supervised Semantic Differential (SSD), we find that the primary axis of between-model variance separates items describing phenomenally rich experience, including embodied sensation, felt affect, inner speech, imagery, and empathy, from items describing stimulus-driven behavioral reactivity ($R^2_{adj}=.037$, $p<.0001$). To test this hypothesis at the item level, we introduce the Pinocchio score ($π_i$), the ratio of inter-model response variance under neutral prompting to that under a human-simulation prompt, as an annotation-free measure of each item's experiential demand. $π_i$ predicts condition-induced shifts in primary factor loading magnitudes ($ρ=-.215$, $p<.0001$, $n=1292$--$1310$ items), confirming that between-model divergence on experiential items is structured rather than noisy. Applying PCA to per-model EFA scores across all questionnaires reveals one dominant dimension, the Pinocchio Axis ($Π$): the degree to which a model presents itself as a locus of phenomenal experience rather than a system of behavioral responses. This axis captures 47.1% of cross-questionnaire between-model variance in primary factor scores and converges with item-level Pinocchio scores ($r=.864$). Marked within-provider divergence across closely related model variants is consistent with post-training fine-tuning as a key contributor, supporting the interpretation that $Π$ reflects a training-shaped self-representational tendency governing how a model treats experiential language as self-applicable. The dominant axis of between-model psychometric variation is therefore not a conventional personality trait but a self-representational stance toward one's own nature as an experiencer.
+
+论文作者: Hubert Plisiecki, Sabina Siudaj, Kacper Dudzic, Anna Sterna, Maciej Gorski, Karolina Drozdz, Marcin Moskalewicz
+
+提交时间: 2026-05-06 16:18:47
+
+论文链接: http://arxiv.org/abs/2605.05080v1
+
+==================================================
+==================================================
+
+论文名称: Position: Embodied AI Requires a Privacy-Utility Trade-off
+
+论文摘要: Embodied AI (EAI) systems are rapidly transitioning from simulations into real-world domestic and other sensitive environments. However, recent EAI solutions have largely demonstrated advancements within isolated stages such as instruction, perception, planning and interaction, without considering their coupled privacy implications in high-frequency deployments where privacy leakage is often irreversible. This position paper argues that optimizing these components independently creates a systemic privacy crisis when deployed in sensitive settings, thereby advancing the position that privacy in EAI is a life cycle-level architectural constraint rather than a stage-local feature. To address these challenges, we propose Secure Privacy Integration in Next-generation Embodied AI (SPINE), a unified privacy-aware framework that treats privacy as a dynamic control signal governing cross-stage coupling throughout the entire EAI life cycle. SPINE decomposes the EAI pipeline into various stages and establishes a multi-criterion privacy classification matrix to orchestrate contextual sensitivity across stage boundaries. We conduct preliminary simulation and real-world case studies to conceptually validate how privacy constraints propagate downstream to reshape system behavior, illustrating the insufficiency of fragmented privacy patches and motivating future research directions into secure yet functional embodied AI systems. We detail the SPINE framework and case studies at https://github.com/rminshen03/EAI_Privacy_Position.
+
+论文作者: Xiaoliang Fan, Jiarui Chen, Zhuodong Liu, Ziqi Yang, Peixuan Xu, Ruimin Shen, Junhui Liu, Jianzhong Qi, Cheng Wang
+
+提交时间: 2026-05-06 15:16:05
+
+论文链接: http://arxiv.org/abs/2605.05017v1
+
+==================================================
+==================================================
+
+论文名称: Counterfactual identifiability beyond global monotonicity: non-monotone triangular structural causal models
+
+论文摘要: Structural causal models provide a unified semantics for interventions and counterfactuals, but most identifiability results rely on restrictive assumptions like global monotonicity, which are often violated in embodied interaction, where the same exogenous perturbation can induce opposite responses under different contact contexts. We ask what structure still suffices once global monotonicity is dropped. We introduce non-monotone triangular structural causal models (NM-TM-SCM), which retain triangular recursion but replace global monotonicity with mechanism-wise invertibility and context-independent inverse transport. We prove that these conditions are equivalent to exogenous isomorphism and imply complete counterfactual identifiability, and we give a counterexample showing that local invertibility alone is insufficient. We instantiate the theory in CausalInverter, with triangular invertible layers, orientation gates, and transport-stability regularization. On synthetic non-monotonic mechanisms, the structural bias yields systematic counterfactual gains as non-monotonicity increases. On MuJoCo Door, our model achieves perfect event-level counterfactual recovery, lowers continuous angle error relative to a Transformer baseline, and delivers substantially more stable recovery than Transformer and conditional-flow predictors. On MuJoCo Push, where non-monotonicity is weaker, the same low-data predictors remain competitive or better, consistent with a bias-variance boundary. These results identify a broader identifiable regime between globally monotone triangular models and unconstrained black-box world models.
+
+论文作者: Pengcheng Tan, Jiang Chen, Dehui Du
+
+提交时间: 2026-05-06 02:11:46
+
+论文链接: http://arxiv.org/abs/2605.04413v1
