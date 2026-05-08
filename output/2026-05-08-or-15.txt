@@ -1,0 +1,191 @@
+论文名称: Operator-Guided Invariance Learning for Continuous Reinforcement Learning
+
+论文摘要: Reinforcement learning (RL) with continuous time and state/action spaces is often data-intensive and brittle under nuisance variability and shift, motivating methods that exploit value-preserving structures to stabilize and improve learning. Most existing approaches focus on special cases, such as prescribed symmetries and exact equivariance, without addressing how to discover more general structures that require nonlinear operators to transform and map between continuous state/action systems with isomorphic value functions. We propose \textbf{VPSD-RL} (Value-Preserving Structure Discovery for Reinforcement Learning). It models continuous RL as a controlled diffusion with value-preserving mappings defined through Lie-group actions and associated pullback operators. We show that a value-preserving structure exists exactly when pulling back the value function and pushing forward actions commute with the controlled generator and reward functional. Further, approximate value-preserving structures with rigorous guarantees can be found when the Hamilton--Jacobi--Bellman mismatch is small. This framework discovers exact and approximate value-preserving structures by searching for the associated Lie group operators. VPSD-RL fits differentiable drift, diffusion, and reward models; learns infinitesimal generators via determining-equation residual minimization; exponentiates them with ODE flows to obtain finite transformations; and integrates them into continuous RL through transition augmentation and transformation-consistency regularization. We show that bounded generator/reward mismatch implies quantitative stability of the optimal value function along approximate orbits, with sensitivity governed by the effective horizon, and observe improved data efficiency and robustness on continuous-control benchmarks.
+
+论文作者: Zuyuan Zhang, Fei Xu Yu, Tian Lan
+
+提交时间: 2026-05-07 16:18:37
+
+论文链接: http://arxiv.org/abs/2605.06500v1
+
+==================================================
+==================================================
+
+论文名称: Continuous-Time Distribution Matching for Few-Step Diffusion Distillation
+
+论文摘要: Step distillation has become a leading technique for accelerating diffusion models, among which Distribution Matching Distillation (DMD) and Consistency Distillation are two representative paradigms. While consistency methods enforce self-consistency along the full PF-ODE trajectory to steer it toward the clean data manifold, vanilla DMD relies on sparse supervision at a few predefined discrete timesteps. This restricted discrete-time formulation and mode-seeking nature of the reverse KL divergence tends to exhibit visual artifacts and over-smoothed outputs, often necessitating complex auxiliary modules -- such as GANs or reward models -- to restore visual fidelity. In this work, we introduce Continuous-Time Distribution Matching (CDM), migrating the DMD framework from discrete anchoring to continuous optimization for the first time. CDM achieves this through two continuous-time designs. First, we replace the fixed discrete schedule with a dynamic continuous schedule of random length, so that distribution matching is enforced at arbitrary points along sampling trajectories rather than only at a few fixed anchors. Second, we propose a continuous-time alignment objective that performs active off-trajectory matching on latents extrapolated via the student's velocity field, improving generalization and preserving fine visual details. Extensive experiments on different architectures, including SD3-Medium and Longcat-Image, demonstrate that CDM provides highly competitive visual fidelity for few-step image generation without relying on complex auxiliary objectives. Code is available at https://github.com/byliutao/cdm.
+
+论文作者: Tao Liu, Hao Yan, Mengting Chen, Taihang Hu, Zhengrong Yue, Zihao Pan, Jinsong Lan, Xiaoyong Zhu, Ming-Ming Cheng, Bo Zheng, Yaxing Wang
+
+提交时间: 2026-05-07 14:56:39
+
+论文链接: http://arxiv.org/abs/2605.06376v1
+
+==================================================
+==================================================
+
+论文名称: A$^2$TGPO: Agentic Turn-Group Policy Optimization with Adaptive Turn-level Clipping
+
+论文摘要: Reinforcement learning for agentic large language models (LLMs) typically relies on a sparse, trajectory-level outcome reward, making it difficult to evaluate the contribution of individual tool-calls within multi-turn interactions. Existing approaches to such process credit assignment either depend on separate external process reward models that introduce additional consumption, or tree-based structural rollout that merely redistributes the outcome signal while constraining trajectory diversity. A promising alternative leverages the per-turn change in the policy's predicted probability of the ground-truth, termed Information Gain (IG), as an intrinsic process signal without an external evaluator. However, prior work on leveraging IG signals within the RL training loop faces three systematic challenges: normalizing across turns that face heterogeneous positional contexts can distort the relative standing of individual turns, accumulating a variable number of terms causes advantage magnitudes to drift with trajectory depth, and a fixed clipping range governs policy updates identically for turns with vastly different IG signals. In this paper, we propose A$^2$TGPO (Agentic Turn-Group Policy Optimization with Adaptive Turn-level Clipping), which retains IG as the intrinsic signal but re-designs how it is normalized, accumulated, and consumed: (i) turn-group normalization: normalizes IG within each (prompt, turn-index) group so that each turn is compared only against peers at the same interaction depth; (ii) variance-rescaled discounted accumulation: divides cumulative normalized IG by square root of accumulated terms to keep advantage magnitudes comparable across turn positions; and (iii) adaptive turn-level clipping: modulates each turn's clipping range based on its normalized IG, widening the update region for informative turns and narrowing it for uninformative ones.
+
+论文作者: Dingwei Chen, Zefang Zong, Zhipeng Ma, Leo Luo, Yang Li, Chengming Li, Peng Chen, Jie Jiang
+
+提交时间: 2026-05-07 13:09:31
+
+论文链接: http://arxiv.org/abs/2605.06200v1
+
+==================================================
+==================================================
+
+论文名称: Policy-Guided Stepwise Model Routing for Cost-Effective Reasoning
+
+论文摘要: Inference-time computation has greatly enhanced the performance of large language models (LLMs) on challenging reasoning tasks, but this strategy can incur high inference costs. One solution is to route intermediate chain-of-thought (CoT) states to language models of different sizes; however, existing approaches rely on handcrafted routing strategies that limit performance, or on training large process reward models that may be infeasible in many applications. We formulate stepwise model routing as a constrained decision-making problem, which we solve by training a small control policy using reinforcement learning in conjunction with threshold calibration to tune the performance-efficiency tradeoff. We validate our method on three math benchmarks (GSM8K, MATH500, and OmniMath) on both open and closed models. Our method consistently improves the accuracy-cost tradeoff compared to handcrafted approaches, while achieving a comparable tradeoff to methods that require training large process reward models.
+
+论文作者: Wenwen Si, Insup Lee, Osbert Bastani
+
+提交时间: 2026-05-07 12:26:56
+
+论文链接: http://arxiv.org/abs/2605.06116v1
+
+==================================================
+==================================================
+
+论文名称: Optimal Transport for LLM Reward Modeling from Noisy Preference
+
+论文摘要: Reward models are fundamental to Reinforcement Learning from Human Feedback (RLHF), yet real-world datasets are inevitably corrupted by noisy preference. Conventional training objectives tend to overfit these errors, while existing denoising approaches often rely on homogeneous noise assumptions that fail to capture the complexity of linguistic preferences. To handle these challenges, we propose SelectiveRM, a framework grounded in optimal transport. We first devise a Joint Consistency Discrepancy to align the distribution of model predictions with preference data. Furthermore, to address the limitation of strict mass conservation which compels the model to fit outliers, we incorporate a Mass Relaxation mechanism via partial transport. This enables the autonomous exclusion of samples with noisy preference that contradict semantic consistency. Theoretically, we demonstrate that SelectiveRM optimizes a tighter upper bound on the unobserved clean risk. Extensive experiments validate that our approach significantly outperforms state-of-the-art baselines across diverse benchmarks.
+
+论文作者: Licheng Pan, Haochen Yang, Haoxuan Li, Yunsheng Lu, Yongqi Tong, Yinuo Wang, Shijian Wang, Zhixuan Chu, Lei Shen, Yuan Lu, Hao Wang
+
+提交时间: 2026-05-07 11:26:04
+
+论文链接: http://arxiv.org/abs/2605.06036v1
+
+==================================================
+==================================================
+
+论文名称: Schedule-and-Calibrate: Utility-Guided Multi-Task Reinforcement Learning for Code LLMs
+
+论文摘要: Reinforcement learning (RL) with verifiable rewards has proven effective at post-training LLMs for coding, yet deploying separate task-specific specialists incurs costs that scale with the number of tasks, motivating a unified multi-task RL (MTRL) approach. However, existing MTRL methods treat all coding tasks uniformly, relying on fixed data curricula under a shared optimization strategy, ultimately limiting the effectiveness of multi-task training. To address these limitations, we propose ASTOR, a multi-tASk code reinforcement learning framework via uTility-driven coORdination. Centered on task utility, a signal capturing each task learning potential and cross-task synergy, ASTOR comprises two coupled modules: 1) Hierarchical Utility-Routed Data Scheduling module hierarchically allocates training budget and prioritizes informative prompts, steering training toward the most valuable data and 2) Adaptive Utility-Calibrated Policy Optimization module dynamically scales per-task KL regularization, matching update constraints to each tasks current training state. Experiments on two widely-used LLMs across four representative coding tasks demonstrate that ASTOR consistently improves a single model across all tasks, outperforming the best task-specific specialist by 9.0%-9.5% and surpassing the strongest MTRL baseline by 7.5%-12.8%.
+
+论文作者: Yujia Chen, Yang Ye, Xiao Chu, Yuchi Ma, Cuiyun Gao
+
+提交时间: 2026-05-07 12:24:53
+
+论文链接: http://arxiv.org/abs/2605.06111v1
+
+==================================================
+==================================================
+
+论文名称: Weak-to-Strong Generalization is Nearly Inevitable (in Linear Models)
+
+论文摘要: Weak-to-strong generalization is a phenomenon in post-training whereby a strong student model, when finetuned solely with feedback from a weaker teacher, can not only surpass the teacher, but can improve upon its own capabilities. Recent work of Burns et al. (2023) demonstrated that this can occur in the setting of frontier language models, and subsequently there has been a flurry of both empirical work trying to exploit this phenomenon, as well as theoretical work attempting to understand it. In this work, we demonstrate that weak-to-strong generalization occurs in standard linear logistic regression, under mild distributional assumptions on the data. In fact, we show that this happens for most student-teacher pairs, suggesting that weak-to-strong generalization is in fact \emph{almost inevitable}, even in this basic setting. Notably, our setting does not require the student to be more expressive or have more model capacity in any way compared to the teacher, which runs contrary to the prevailing theoretical belief that a mismatch in model capacity is a central mechanism to weak-to-strong generalization.
+
+论文作者: Scott Geng, Dutch Hansen, Jerry Li
+
+提交时间: 2026-05-07 06:33:25
+
+论文链接: http://arxiv.org/abs/2605.05742v1
+
+==================================================
+==================================================
+
+论文名称: On the Blessing of Pre-training in Weak-to-Strong Generalization
+
+论文摘要: The paradigm of Weak-to-Strong Generalization (W2SG) suggests that a pre-trained strong model can surpass its weak supervisor, yet the decisive role of pre-training remains theoretically and empirically under-explored. In this work, we identify pre-training as the essential prerequisite for the emergence of W2SG. Theoretically, we formalize the W2SG problem within a high-dimensional single-index model framework using spiked Gaussian data, modeling pre-training as a spectral initialization step. Building upon prior impossibility results regarding the failure of learning under random initialization, we prove that W2SG is achievable when pre-training provides a geometric warm start that places the model within an "effective region" characterized by a perturbed strong-convexity geometry. Within this region, we derive a rigorous generalization bound that naturally captures the optimization dynamics: an initial performance improvement followed by a saturation bottleneck dictated by the weak supervisor's bias. Empirically, we first validate all our assumptions and theoretical insights through controlled synthetic simulations. Finally, through a massive-scale evaluation of hundreds of intermediate pre-training checkpoints from large language models, we demonstrate that W2SG is not an innate capability but emerges via a phase transition tightly coupled with the progression of pre-training.
+
+论文作者: Wei Yao, Wang Zhaoyang, Gengze Xu, Chen Qian, Dongrui Liu, Ziqiao Wang, Yong Liu, Yunbei Xu
+
+提交时间: 2026-05-07 05:55:10
+
+论文链接: http://arxiv.org/abs/2605.05710v1
+
+==================================================
+==================================================
+
+论文名称: MobileEgo Anywhere: Open Infrastructure for long horizon egocentric data on commodity hardware
+
+论文摘要: The recent advancement of Vision Language Action (VLA) models has driven a critical demand for large scale egocentric datasets. However, existing datasets are often limited by short episode durations, typically spanning only a few minutes, which fails to capture the long horizon temporal dependencies necessary for complex robotic task execution. To bridge this gap, we present MobileEgo Anywhere, a framework designed to facilitate the collection of robust, hour plus egocentric trajectories using commodity mobile hardware. We leverage the ubiquitous sensor suites of modern smartphones to provide high fidelity, long term camera pose tracking, effectively removing the high hardware barriers associated with traditional robotics data collection. Our contributions are three fold: (1) we release a novel dataset comprising 200 hours of diverse, long form egocentric data with persistent state tracking; (2) we open source a mobile application that enables any user to record egocentric data, and (3) we provide a comprehensive processing pipeline to convert raw mobile captures into standardized, training ready formats for Vision Language Action model and foundation model research. By democratizing the data collection process, this work enables the massive scale acquisition of long horizon data across varied global environments, accelerating the development of generalizable robotic policies.
+
+论文作者: Senthil Palanisamy, Abhishek Anand, Satpal Singh Rathor, Pratyush Patnaik, Shubhanshu Khatana
+
+提交时间: 2026-05-07 09:55:20
+
+论文链接: http://arxiv.org/abs/2605.05945v1
+
+==================================================
+==================================================
+
+论文名称: Adaptive Q-Chunking for Offline-to-Online Reinforcement Learning
+
+论文摘要: Offline-to-online reinforcement learning with action chunking eliminates multi-step off-policy bias and enables temporally coherent exploration, but all existing methods use a fixed chunk size across every state. This is suboptimal: near contact events the agent needs short chunks for reactive control, while during free-space motion long chunks provide better credit assignment. The natural solution is to train critics for several chunk sizes and select the best one at each state, but naive comparison of learned critic values systematically collapses to the shortest chunk due to discount-scale mismatch, and degrades to noise in low-value states. We propose Adaptive Q-Chunking (AQC), which resolves both failures by comparing the advantage of each chunk size relative to a per-horizon baseline, normalized by the discount factor. This criterion converts biased wrong answers into unbiased near-random choices when no genuine signal exists, and becomes discriminative when a particular scale enables better planning. We prove theoretical bounds on the advantage selector's noise immunity and on the value dominance of adaptive chunking over any fixed chunk size. We demonstrate that AQC achieves state-of-the-art offline and online success rates on OGBench and Robomimic, and can be applied to enhance the performance of large-scale VLA models that predict action sequences, significantly boosting performance on RoboCasa-GR1 tasks.
+
+论文作者: Nandiraju Gireesh, Yuanliang Ju, He Wang
+
+提交时间: 2026-05-07 00:48:25
+
+论文链接: http://arxiv.org/abs/2605.05544v1
+
+==================================================
+==================================================
+
+论文名称: Cross-Modal Navigation with Multi-Agent Reinforcement Learning
+
+论文摘要: Robust embodied navigation relies on complementary sensory cues. However, high-quality and well-aligned multi-modal data is often difficult to obtain in practice. Training a monolithic model is also challenging as rich multi-modal inputs induce complex representations and substantially enlarge the policy space. Cross-modal collaboration among lightweight modality-specialized agents offers a scalable paradigm. It enables flexible deployment and parallel execution, while preserving the strength of each modality. In this paper, we propose \textbf{CRONA}, a Multi-Agent Reinforcement Learning (MARL) framework for \textbf{Cro}ss-Modal \textbf{Na}vigation. CRONA improves collaboration by leveraging control-relevant auxiliary beliefs and a centralized multi-modal critic with global state. Experiments on visual-acoustic navigation tasks show that multi-agent methods significantly improve performance and efficiency over single-agent baselines. We find that homogeneous collaboration with limited modalities is sufficient for short-range navigation under salient cues; heterogeneous collaboration among agents with complementary modalities is generally efficient and effective; and navigation in large, complex environments requires both richer multi-modal perception and increased model capacity.
+
+论文作者: Shuo Liu, Xinzichen Li, Christopher Amato
+
+提交时间: 2026-05-07 17:20:34
+
+论文链接: http://arxiv.org/abs/2605.06595v1
+
+==================================================
+==================================================
+
+论文名称: ReActor: Reinforcement Learning for Physics-Aware Motion Retargeting
+
+论文摘要: Retargeting human kinematic reference motion onto a robot's morphology remains a formidable challenge. Existing methods often produce physical inconsistencies, such as foot sliding, self-collisions, or dynamically infeasible motions, which hinder downstream imitation learning. We propose a bilevel optimization framework that jointly adapts reference motions to a robot's morphology while training a tracking policy using reinforcement learning. To make the optimization tractable, we derive an approximate gradient for the upper-level loss. Our framework requires only a sparse set of semantic rigid-body correspondences and eliminates the need for manual tuning by identifying optimal values for a parameterization expressive enough to preserve characteristic motion across different embodiments. Moreover, by integrating retargeting directly with physics simulation, we produce physically plausible motions that facilitate robust imitation learning. We validate our method in simulation and on hardware, demonstrating challenging motions for morphologies that differ significantly from a human, including retargeting onto a quadruped.
+
+论文作者: David Müller, Agon Serifi, Sammy Christen, Ruben Grandia, Espen Knoop, Moritz Bächer
+
+提交时间: 2026-05-07 17:20:15
+
+论文链接: http://arxiv.org/abs/2605.06593v1
+
+==================================================
+==================================================
+
+论文名称: LLMSpace: Carbon Footprint Modeling for Large Language Model Inference on LEO Satellites
+
+论文摘要: Large language models (LLMs) impose rapidly growing energy demands, creating an emerging energy and carbon crisis driven by large-scale inference. Solar-powered, AI-enabled low Earth orbit (LEO) satellites have been proposed to mitigate terrestrial electricity consumption, but their lifecycle carbon footprint remains poorly understood due to launch emissions, satellite manufacturing, and radiation-hardened hardware requirements. This paper presents \textit{LLMSpace}, the first carbon modeling framework for LLM inference on AI-enabled LEO satellites. LLMSpace jointly models operational and embodied carbon, peripheral subsystems, radiation-hardened accelerators and memories, and LLM-specific workload characteristics such as prefill-decode behavior and token generation. Using realistic satellite and GPU configurations, LLMSpace reveals key trade-offs among carbon footprint, inference latency, hardware design, and operational lifetime for sustainable space-based LLM inference. Source code: https://github.com/UnchartedRLab/LLMSpace.
+
+论文作者: Lei Jiang, Adrian Ildefonso, Daniel Loveless, Fan Chen
+
+提交时间: 2026-05-07 03:06:56
+
+论文链接: http://arxiv.org/abs/2605.05615v1
+
+==================================================
+==================================================
+
+论文名称: When to Trust Imagination: Adaptive Action Execution for World Action Models
+
+论文摘要: World Action Models (WAMs) have recently emerged as a promising paradigm for robotic manipulation by jointly predicting future visual observations and future actions. However, current WAMs typically execute a fixed number of predicted actions after each model inference, leaving the robot blind to whether the imagined future remains consistent with the actual physical rollout. In this work, we formulate adaptive WAM execution as a future-reality verification problem: the robot should execute longer when the WAM-predicted future remains reliable, and replan earlier when reality deviates from imagination. To this end, we propose Future Forward Dynamics Causal Attention (FFDC), a lightweight verifier that jointly reasons over predicted future actions, predicted visual dynamics, real observations, and language instructions to estimate whether the remaining action rollout can still be trusted. FFDC enables adaptive action chunk sizes as an emergent consequence of prediction-observation consistency, preserving the efficiency of long-horizon execution while restoring responsiveness in contact-rich or difficult phases. We further introduce Mixture-of-Horizon Training to improve long-horizon trajectory coverage for adaptive execution. Experiments on the RoboTwin benchmark and in the real world demonstrate that our method achieves a strong robustness-efficiency trade-off: on RoboTwin, it reduces WAM forward passes by 69.10% and execution time by 34.02%, while improving success rate by 2.54% over the short-chunk baseline; in real-world experiments, it improves success rate by 35%.
+
+论文作者: Rui Wang, Yue Zhang, Jiehong Lin, Kuncheng Luo, Jianan Wang, Zhongrui Wang, Xiaojuan Qi
+
+提交时间: 2026-05-07 13:18:28
+
+论文链接: http://arxiv.org/abs/2605.06222v1
+
+==================================================
+==================================================
+
+论文名称: Reconstruction or Semantics? What Makes a Latent Space Useful for Robotic World Models
+
+论文摘要: World model-based policy evaluation is a practical proxy for testing real-world robot control by rolling out candidate actions in action-conditioned video diffusion models. As these models increasingly adopt latent diffusion modeling (LDM), choosing the right latent space becomes critical. While the status quo uses autoencoding latent spaces like VAEs that are primarily trained for pixel reconstruction, recent work suggests benefits from pretrained encoders with representation-aligned semantic latent spaces. We systematically evaluate these latent spaces for action-conditioned LDM by comparing six reconstruction and semantic encoders to train world model variants under a fixed protocol on BridgeV2 dataset, and show effective world model training in high-dimensional representation spaces with and without dimension compression. We then propose three axes to assess robotic world model performance: visual fidelity, planning and downstream policy performance, and latent representation quality. Our results show visual fidelity alone is insufficient for world model selection. While reconstruction encoders like VAE and Cosmos achieve strong pixel-level scores, semantic encoders such as V-JEPA 2.1 (strongest overall on policy), Web-DINO, and SigLIP 2 generally excel across the other two axes at all model scales. Our study advocates semantic latent space as stronger foundation for policy-relevant robotics diffusion world models.
+
+论文作者: Nilaksh, Saurav Jha, Artem Zholus, Sarath Chandar
+
+提交时间: 2026-05-07 15:05:26
+
+论文链接: http://arxiv.org/abs/2605.06388v1
