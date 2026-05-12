@@ -1,0 +1,322 @@
+论文名称: MASS-DPO: Multi-negative Active Sample Selection for Direct Policy Optimization
+
+论文摘要: Multi-negative preference optimization under the Plackett--Luce (PL) model extends Direct Preference Optimization (DPO) by leveraging comparative signals across one preferred and multiple rejected responses. However, optimizing over large negative pools is costly, and many candidates contribute redundant gradients due to their similar effects on policy updates. We introduce MASS-DPO, a multi-negative active sample selection method that derives a PL-specific Fisher-information objective for selecting compact, informative negative subsets within each prompt. The resulting log-determinant objective selects negatives that contribute complementary information for policy updates, yielding compact subsets that retain the full pool's information while reducing redundancy. In practice, this favors negatives whose gradients cover different update directions, reducing redundant signal from near-duplicate candidates while preserving the most useful training information. Across four benchmarks spanning recommendation and multiple-choice QA and three model families, MASS-DPO consistently exceeds or matches existing methods in accuracy, improves Recall/NDCG and margin-based optimization dynamics, and delivers stronger alignment with substantially fewer negatives.
+
+论文作者: Rohan Surana, Xintong Li, Sheldon Yu, Yiran Jenny Shen, Chuhan Wang, Tong Yu, Prithviraj Ammanabrolu, Jingbo Shang, Julian McAuley, Junda Wu
+
+提交时间: 2026-05-11 16:18:08
+
+论文链接: http://arxiv.org/abs/2605.10784v1
+
+==================================================
+==================================================
+
+论文名称: G-Zero: Self-Play for Open-Ended Generation from Zero Data
+
+论文摘要: Self-evolving LLMs excel in verifiable domains but struggle in open-ended tasks, where reliance on proxy LLM judges introduces capability bottlenecks and reward hacking. To overcome this, we introduce G-Zero, a verifier-free, co-evolutionary framework for autonomous self-improvement. Our core innovation is Hint-$δ$, an intrinsic reward that quantifies the predictive shift between a Generator model's unassisted response and its response conditioned on a self-generated hint. Using this signal, a Proposer model is trained via GRPO to continuously target the Generator's blind spots by synthesizing challenging queries and informative hints. The Generator is concurrently optimized via DPO to internalize these hint-guided improvements. Theoretically, we prove a best-iterate suboptimality guarantee for an idealized standard-DPO version of G-Zero, provided that the Proposer induces sufficient exploration coverage and the data filteration keeps pseudo-label score noise low. By deriving supervision entirely from internal distributional dynamics, G-Zero bypasses the capability ceilings of external judges, providing a scalable, robust pathway for continuous LLM self-evolution across unverifiable domains.
+
+论文作者: Chengsong Huang, Haolin Liu, Tong Zheng, Runpeng Dai, Langlin Huang, Jinyuan Li, Zongxia Li, Zhepei Wei, Yu Meng, Jiaxin Huang
+
+提交时间: 2026-05-11 04:12:34
+
+论文链接: http://arxiv.org/abs/2605.09959v1
+
+==================================================
+==================================================
+
+论文名称: What should post-training optimize? A test-time scaling law perspective
+
+论文摘要: Large language models are increasingly deployed with test-time strategies: sample $N$ responses, score them with a reward model or verifier, and return the best. This deployment rule exposes a mismatch in post-training: standard objectives optimize the mean reward of a single response, whereas best-of-$N$ performance is governed by the upper tail of the reward distribution. Recent test-time-aware objectives partly address this mismatch, but typically assume that training can use the same per-prompt rollout budget as deployment, which is impractical when post-training must cover many prompts while deployment can allocate much larger per-prompt test-time compute. We study this budget-mismatch regime, where only $m\ll N$ per-prompt rollouts are available during training but the target objective is best-of-$N$ deployment. Under structural assumptions on the reward tails, we show that the policy gradient of the best-of-$N$ objective can be approximated from a much smaller rollout group by extrapolating upper-tail statistics. This yields a family of Tail-Extrapolated estimators for best-of-$N$-oriented post-training: a simple direct estimator, Tail-Extrapolated Advantage (TEA), and a fixed-order debiased Prefix-TEA estimator based on moment cancellation. Experiments on instruction-following tasks show that TEA and Prefix-TEA improve best-of-$N$ performance across different language models, reward models and datasets under various training and test-time budget settings.
+
+论文作者: Muheng Li, Jian Qian, Wenlong Mou
+
+提交时间: 2026-05-11 15:25:29
+
+论文链接: http://arxiv.org/abs/2605.10716v1
+
+==================================================
+==================================================
+
+论文名称: Unsupervised Process Reward Models
+
+论文摘要: Process Reward Models (PRMs) are a powerful mechanism for steering large language model reasoning by providing fine-grained, step-level supervision. However, this effectiveness comes at a significant cost: PRMs require expert annotations for every reasoning step, making them costly and difficult to scale. Here, we propose a method for training unsupervised PRMs (uPRM) that requires no human supervision, neither at the level of step-by-step annotations nor through ground-truth verification of final answers. The key idea behind our approach is to define a scoring function, derived from LLM next-token probabilities, that jointly assesses candidate positions of first erroneous steps across a batch of reasoning trajectories. We demonstrate the effectiveness of uPRM across diverse scenarios: (i) uPRM achieves up to 15% absolute accuracy improvements over the LLM-as-a-Judge in identifying first erroneous steps on the ProcessBench dataset; (ii) as a verifier for test-time scaling, uPRM performs comparably to supervised PRMs and outperforms the majority voting baseline by up to 6.9%, and (iii) when used as a reward signal in reinforcement learning, uPRM enables more robust policy optimization throughout training compared to a supervised PRM trained using ground-truth labels. Overall, our results open a path toward scalable reward modeling for complex reasoning tasks.
+
+论文作者: Artyom Gadetsky, Maxim Kodryan, Siba Smarak Panigrahi, Hang Guo, Maria Brbic
+
+提交时间: 2026-05-11 08:05:27
+
+论文链接: http://arxiv.org/abs/2605.10158v1
+
+==================================================
+==================================================
+
+论文名称: FormalRewardBench: A Benchmark for Formal Theorem Proving Reward Models
+
+论文摘要: Recent neural theorem provers use reinforcement learning with verifiable rewards (RLVR), where proof assistants provide binary correctness signals. While verifiable rewards are cheap and scalable without reward hacking issues, they suffer from sparse credit assignment: models receive no learning signal from difficult problems where partial progress goes unrewarded. This motivates learned reward models that can evaluate proof quality beyond binary verification. However, comparing reward models is challenging since it typically requires expensive RL training ablations. To address this, we introduce \textbf{FormalRewardBench}, the first benchmark for evaluating reward models in formal theorem proving with Lean 4. Our benchmark consists of 250 preference pairs where correct proofs are paired with incorrect variants generated through five expert curated error injection strategies: forced mistakes, minimal single-point variations, verbose incorrect proofs, natural language justification, and Python code injection. We evaluate frontier LLMs (e.g., Claude Opus 4.5), judge LLMs (e.g., CompassJudger-1-14B), general-purpose LLMs (e.g., Qwen2.5-72B-Instruct), and specialized theorem proving models (e.g., DeepSeek-Prover-V2-7B).
+  Our results reveal that frontier LLMs achieve the highest performance (59.8\%) while specialized theorem provers perform the worst (24.4\%), suggesting that theorem proving ability does not transfer to proof evaluation. We provide further insights on various error injection mechanisms, highlighting the challenging nature of most injection mechanisms. We release \textbf{FormalRewardBench} publicly to encourage more research on developing reward models in formal mathematics.
+
+论文作者: Zeynel A. Uluşan, Burak S. Akbudak, Can S. Erer, Gözde Gül Şahin
+
+提交时间: 2026-05-11 07:51:15
+
+论文链接: http://arxiv.org/abs/2605.10141v1
+
+==================================================
+==================================================
+
+论文名称: ALAM: Algebraically Consistent Latent Transitions for Vision-Language-Action Models
+
+论文摘要: Vision-language-action (VLA) models remain constrained by the scarcity of action-labeled robot data, whereas action-free videos provide abundant evidence of how the physical world changes. Latent action models offer a promising way to extract such priors from videos, but reconstruction-trained latent codes are not necessarily suitable for policy generation: they may predict future observations while lacking the structure needed to be reused or generated coherently with robot actions. We introduce ALAM (Algebraic Latent Action Model), an Algebraically Consistent Latent Action Model that turns temporal relations in action-free video into structural supervision. Given frame triplets, ALAM learns latent transitions that are grounded by reconstruction while being regularized by composition and reversal consistency, encouraging a locally additive transition space. For downstream VLA learning, we freeze the pretrained encoder and use its latent transition sequences as auxiliary generative targets, co-generated with robot actions under a joint flow-matching objective. This couples structured latent transitions with flow-based policy generation, allowing the policy to exploit ALAM's locally consistent transition geometry without requiring latent-to-action decoding. Representation probes show that ALAM reduces additivity and reversibility errors by 25-85 times over unstructured latent-action baselines and improves long-horizon cumulative reconstruction. When transferred to VLA policies, ALAM raises the average success rate from 47.9% to 85.0% on MetaWorld MT50 and from 94.1% to 98.1% on LIBERO, with consistent gains on real-world manipulation tasks. Ablations further confirm that the strongest improvements arise from the synergy between algebraically structured latent transitions and joint flow matching.
+
+论文作者: Zuojin Tang, Haoyun Liu, Xinyuan Chang, Changjie Wu, Dongjie Huo, Yandan Yang, Bin Liu, Zhejia Cai, Feng Xiong, Mu Xu, jiachen Luo, De Ma, Zhiheng Ma, Gang Pan
+
+提交时间: 2026-05-11 16:37:07
+
+论文链接: http://arxiv.org/abs/2605.10819v1
+
+==================================================
+==================================================
+
+论文名称: CoWorld-VLA: Thinking in a Multi-Expert World Model for Autonomous Driving
+
+论文摘要: Vision-Language-Action (VLA) models have emerged as a promising paradigm for end-to-end autonomous driving. However, existing reasoning mechanisms still struggle to provide planning-oriented intermediate representations: textual Chain-of-Thought (CoT) fails to preserve continuous spatiotemporal structure, while latent world reasoning remains difficult to use as a direct condition for action generation. In this paper, we propose CoWorld-VLA, a multi-expert world reasoning framework for autonomous driving, where world representations serve as explicit conditions to guide action planning. CoWorld-VLA extracts complementary world information through multi-source supervision and encodes it into expert tokens within the VLA, thereby providing planner-accessible conditioning signals. Specifically, we construct four types of tokens: semantic interaction, geometric structure, dynamic evolution, and ego trajectory tokens, which respectively model interaction intent, spatial structure, future temporal dynamics, and behavioral goals. During action generation, CoWorld-VLA employs a diffusion-based hierarchical multi-expert fusion planner, which is coupled with scene context throughout the joint denoising process to generate continuous ego trajectories. Experiments show that CoWorld-VLA achieves competitive results in both future scene generation and planning on the NAVSIM v1 benchmark, demonstrating strong performance in collision avoidance and trajectory accuracy. Ablation studies further validate the complementarity of expert tokens and their effectiveness as planning conditions for action generation. Code will be available at https://github.com/potatochip1211/CoWorld-VLA.
+
+论文作者: Minqing Huang, Yujiao Xiang, Zihan Liang, Jiajie Huang, Jingqi Wang, Zhi Xu, Feiyang Tan, Hangning Zhou, Mu Yang, Gong Che
+
+提交时间: 2026-05-11 12:01:13
+
+论文链接: http://arxiv.org/abs/2605.10426v1
+
+==================================================
+==================================================
+
+论文名称: Retrieve-then-Steer: Online Success Memory for Test-Time Adaptation of Generative VLAs
+
+论文摘要: Vision-Language-Action (VLA) models show strong potential for general-purpose robotic manipulation, yet their closed-loop reliability often degrades under local deployment conditions. Existing evaluations typically treat test episodes as independent zero-shot trials. However, real robots often operate repeatedly in the same or slowly changing environments, where successful executions provide environment-verified evidence of reliable behavior patterns. We study this persistent-deployment setting, asking whether a partially competent frozen VLA can improve its reliability by reusing its successful test-time experience. We propose an online success-memory guided test-time adaptation framework for generative VLAs. During deployment, the robot stores progress-calibrated successful observation-action segments in a long-term memory. At inference, it retrieves state-relevant action chunks, filters inconsistent candidates via trajectory-level consistency, and aggregates them into an elite action prior. To incorporate this prior into action generation, we introduce confidence-adaptive prior guidance, which injects the elite prior into an intermediate state of the flow-matching action sampler and adjusts the guidance strength based on retrieval confidence. This design allows the frozen VLA to exploit environment-specific successful experience while preserving observation-conditioned generative refinement. This retrieve-then-steer mechanism enables lightweight, non-parametric test-time adaptation without requiring parameter updates. Simulation and real-world experiments show improved task success and closed-loop stability, especially in long-horizon and multi-stage tasks.
+
+论文作者: Jianchao Zhao, Huoren Yang, Hu Yusong, Yuyang Gao, Qiguan Ou, Cong Wan, SongLin Dong, Zhiheng Ma, Yihong Gong
+
+提交时间: 2026-05-11 07:11:10
+
+论文链接: http://arxiv.org/abs/2605.10094v1
+
+==================================================
+==================================================
+
+论文名称: LoopVLA: Learning Sufficiency in Recurrent Refinement for Vision-Language-Action Models
+
+论文摘要: Current Vision-Language-Action (VLA) models typically treat the deepest representation of a vision-language backbone as universally optimal for action prediction. However, robotic manipulation is composed of many frequent closed-loop spatial adjustments, for which excessive abstraction may waste computation and weaken low-level geometric cues essential for precise control. Existing early-exit strategies attempt to reduce computation by stopping at predefined layers or applying heuristic rules such as action consistency, but they do not directly answer when a representation is actually sufficient for action. In this paper, we present LoopVLA, a recurrent VLA architecture that jointly learns representation refinement, action prediction, and sufficiency estimation. LoopVLA iteratively applies a shared Transformer block to refine multimodal tokens, and at each iteration produces both a candidate action and a sufficiency score that estimates whether further refinement is necessary. By sharing parameters across iterations, LoopVLA decouples refinement from absolute layer indices and grounds sufficiency estimation in the evolving representation itself. Since sufficiency has no direct supervision, we introduce a self-supervised distribution alignment objective, where intermediate confidence scores are trained to match the relative action quality across refinement steps, thereby linking sufficiency learning to policy optimization signals. Experiments on LIBERO, LIBERO-Plus, and VLA-Arena show that LoopVLA pushes the efficiency-performance frontier of VLA policies, reducing parameters by 45% and improving inference throughput by up to 1.7 times while matching or outperforming strong baselines in task success.
+
+论文作者: Boyang Shen, Kaixiang Yang, Hao Wang, Qiuyu Yu, Qiang Xie, Qiang Li, Zhiwei Wang
+
+提交时间: 2026-05-11 03:51:22
+
+论文链接: http://arxiv.org/abs/2605.09948v1
+
+==================================================
+==================================================
+
+论文名称: WildClawBench: A Benchmark for Real-World, Long-Horizon Agent Evaluation
+
+论文摘要: Large language and vision-language models increasingly power agents that act on a user's behalf through command-line interface (CLI) harnesses. However, most agent benchmarks still rely on synthetic sandboxes, short-horizon tasks, mock-service APIs, and final-answer checks, leaving open whether agents can complete realistic long-horizon work in the runtimes where they are deployed. This work presents WildClawBench, a native-runtime benchmark of 60 human-authored, bilingual, multimodal tasks spanning six thematic categories. Each task averages roughly 8 minutes of wall-clock time and over 20 tool calls, and runs inside a reproducible Docker container hosting an actual CLI agent harness (OpenClaw, Claude Code, Codex, or Hermes Agent) with access to real tools rather than mock services. Grading is hybrid, combining deterministic rule-based checks, environment-state auditing of side effects, and an LLM/VLM judge for semantic verification. Across 19 frontier models, the best, Claude Opus 4.7, reaches only 62.2% overall under OpenClaw, while every other model stays below 60%, and switching harness alone shifts a single model by up to 18 points. These results show that long-horizon, native-runtime agent evaluation remains a far-from-resolved task for current frontier models. We release the tasks, code, and containerized tooling to support reproducible evaluation.
+
+论文作者: Shuangrui Ding, Xuanlang Dai, Long Xing, Shengyuan Ding, Ziyu Liu, Yang JingYi, Penghui Yang, Zhixiong Zhang, Xilin Wei, Xinyu Fang, Yubo Ma, Haodong Duan, Jing Shao, Jiaqi Wang, Dahua Lin, Kai Chen, Yuhang Zang
+
+提交时间: 2026-05-11 17:49:43
+
+论文链接: http://arxiv.org/abs/2605.10912v1
+
+==================================================
+==================================================
+
+论文名称: CADBench: A Multimodal Benchmark for AI-Assisted CAD Program Generation
+
+论文摘要: Recovering editable CAD programs from images or 3D observations is central to AI-assisted design, but progress is difficult to measure because existing evaluations are fragmented across datasets, modalities, and metrics. We introduce CADBench, a unified benchmark for multimodal CAD program generation. CADBench contains 18,000 evaluation samples spanning six benchmark families derived from DeepCAD, Fusion 360, ABC, MCB, and Objaverse; five input modalities including clean meshes, noisy meshes, single-view renders, photorealistic renders, and multi-view renders; and six metrics covering geometric fidelity, executability, and program compactness. STEP-based families are stratified by B-rep face count and all families are diversity-sampled to support controlled analysis across complexity and object variation. We benchmark eleven CAD-specialized and general-purpose vision-language systems, generating more than 1.4 million CAD programs. Under idealized inputs, specialized mesh-to-CAD models substantially outperform code-generating VLMs, which remain far from reliable CAD program reconstruction. CADBench further reveals three recurring failure modes: reconstruction quality degrades with geometric complexity, CAD-specialized models can be brittle under modality shift, and model rankings change across metrics. Together, these results position CADBench as a diagnostic testbed for measuring progress in editable 3D reconstruction and multimodal CAD understanding. The benchmark is publicly available at https://huggingface.co/datasets/DeCoDELab/CADBench.
+
+论文作者: Anna C. Doris, Jacob Thomas Sony, Ghadi Nehme, Era Syla, Amin Heyrani Nobari, Faez Ahmed
+
+提交时间: 2026-05-11 17:25:47
+
+论文链接: http://arxiv.org/abs/2605.10873v1
+
+==================================================
+==================================================
+
+论文名称: Learning More from Less: Exploiting Counterfactuals for Data-Efficient Chart Understanding
+
+论文摘要: Vision-Language Models (VLMs) have demonstrated remarkable progress in chart understanding, largely driven by supervised fine-tuning (SFT) on increasingly large synthetic datasets. However, scaling SFT data alone is inefficient and overlooks a key property of charts: charts are programmatically generated visual artifacts, where small, code-controlled visual changes can induce drastic shifts in semantics and correct answers. Learning this counterfactual sensitivity requires VLMs to discriminate fine-grained visual differences, yet standard SFT treats training instances independently and provides limited supervision to enforce this behavior. To address this, we introduce ChartCF, a data-efficient training framework designed to enhance counterfactual sensitivity. ChartCF consists of: (1) a counterfactual data synthesis pipeline via code modification, (2) a chart similarity-based data selection strategy that filters overly difficult samples for improved training efficiency, and (3) multimodal preference optimization across both textual and visual modalities. Experiments on five benchmarks show that ChartCF achieves superior or comparable performance to strong chart-specific VLMs while using significantly less training data.
+
+论文作者: Jianzhu Bao, Haozhen Zhang, Kuicai Dong, Bozhi Wu, Sarthak Ketanbhai Modi, Zi Pong Lim, Yon Shin Teo, Wenya Wang
+
+提交时间: 2026-05-11 17:02:09
+
+论文链接: http://arxiv.org/abs/2605.10855v1
+
+==================================================
+==================================================
+
+论文名称: PhyGround: Benchmarking Physical Reasoning in Generative World Models
+
+论文摘要: Generative world models are increasingly used for video generation, where learned simulators are expected to capture the physical rules that govern real-world dynamics. However, evaluating whether generated videos actually follow these rules remains challenging. Existing physics-focused video benchmarks have made important progress, but they still face three key challenges, including the coarse evaluation frameworks that hide law-specific failures, response biases and fatigue that undermine the validity of annotation judgments, and automated evaluators that are insufficiently physics-aware or difficult to audit. To address those challenges, we introduce PhyGround, a criteria-grounded benchmark for evaluating physical reasoning in video generation. The benchmark contains 250 curated prompts, each augmented with an expected physical outcome, and a taxonomy of 13 physical laws across solid-body mechanics, fluid dynamics, and optics. Each law is operationalized through observable sub-questions to enable per-law diagnostics. We evaluate eight modern video generation models through a large-scale, quality-controlled human study, grounded on social science lab experiment design. A total of 459 annotators provided 5,796 complete annotations and over 37.4K fine-grained labels; after quality control, the retained annotations exhibited high split-half model-ranking correlations (Spearman's rho > 0.90). To support reproducible automated evaluation, we release PhyJudge-9B, an open physics-specialized VLM judge. PhyJudge-9B achieves substantially lower aggregate relative bias than Gemini-3.1-Pro (3.3% vs. 16.6%). We release prompts, human annotations, model checkpoints, and evaluation code on the project page https://phyground.github.io/.
+
+论文作者: Juyi Lin, Arash Akbari, Yumei He, Lin Zhao, Haichao Zhang, Arman Akbari, Xingchen Xu, Zoe Y. Lu, Enfu Nan, Hokin Deng, Edmund Yeh, Sarah Ostadabbas, Yun Fu, Jennifer Dy, Pu Zhao, Yanzhi Wang
+
+提交时间: 2026-05-11 16:30:51
+
+论文链接: http://arxiv.org/abs/2605.10806v1
+
+==================================================
+==================================================
+
+论文名称: Break the Brake, Not the Wheel: Untargeted Jailbreak via Entropy Maximization
+
+论文摘要: Recent studies show that gradient-based universal image jailbreaks on vision-language models (VLMs) exhibit little or no cross-model transferability, casting doubt on the feasibility of transferable multimodal jailbreaks. We revisit this conclusion under a strictly untargeted threat model without enforcing a fixed prefix or response pattern. Our preliminary experiment reveals that refusal behavior concentrates at high-entropy tokens during autoregressive decoding, and non-refusal tokens already carry substantial probability mass among the top-ranked candidates before attack. Motivated by this finding, we propose Untargeted Jailbreak via Entropy Maximization(UJEM)-KL, a lightweight attack that maximizes entropy at these decision tokens to flip refusal outcomes, while stabilizing the remaining low-entropy positions to preserve output quality. Across three VLMs and two safety benchmarks, UJEM-KL achieves competitive white-box attack success rates and consistently improves transferability, while remaining effective under representative defenses. Our experimental results indicate that the limited transferability primarily stems from overly constrained optimization objectives.
+
+论文作者: Mengqi He, Xinyu Tian, Xin Shen, Shu Zou, Jinhong Ni, Zhaoyuan Yang, Weikang Li, Xuesong Li, Jing Zhang
+
+提交时间: 2026-05-11 15:59:02
+
+论文链接: http://arxiv.org/abs/2605.10764v1
+
+==================================================
+==================================================
+
+论文名称: GridProbe: Posterior-Probing for Adaptive Test-Time Compute in Long-Video VLMs
+
+论文摘要: Long-video understanding in VLMs is bottlenecked by a single monolithic forward pass over thousands of frames at quadratic attention cost. A common mitigation is to first select a small subset of informative frames before the forward pass; common for training-free selectors via auxiliary encoder-space similarities. Such signals are capped by contrastive pretraining, which usually fails on reasoning-heavy queries (negation, cross-frame counting, holistic summarization). We propose GridProbe, an efficient training-free posterior-probing inference paradigm that scores evidence in answer space using a frozen VLM's own reasoning and then selects question-relevant frames adaptively, resulting in sub-quadratic attention cost with little to no accuracy loss. We arrange frames on a $K{\times}K$ grid and run lightweight row R and column C probes, where each probe reads its peak posterior as a query-conditioned confidence. The outer product of R and C yields an interpretable importance map whose skewness and kurtosis drive Shape-Adaptive Selection, a closed-form rule that reliably replaces the fixed frame budget $M$ with a per-question $M_{\mathrm{eff}}$. We show empirically that $M_{\mathrm{eff}}$ tracks intrinsic question difficulty without ever seeing the answer, a sign of test-time adaptive compute. On Video-MME-v2, GridProbe matches the monolithic baseline within $1.6$ pp Avg Acc at $3.36\times$ TFLOPs reduction, while on LongVideoBench it Pareto-dominates the baseline ($+0.9$ pp at $0.35\times$ compute). Because the selector and QA models can be decoupled, pairing a small 2B selector with a stronger 4B or 8B QA is strictly Pareto-dominant over the 2B monolithic baseline (up to $+4.0$ pp at $0.52\times$ compute, on average), with no retraining. Finally, the interpretability of the importance maps opens future avenues for behavioral diagnostics, grounding, and frame-selection distillation.
+
+论文作者: Mohamed Eltahir, Lama Ayash, Ali Habibullah, Tanveer Hussain, Naeemullah Khan
+
+提交时间: 2026-05-11 15:57:46
+
+论文链接: http://arxiv.org/abs/2605.10762v1
+
+==================================================
+==================================================
+
+论文名称: LLaVA-CKD: Bottom-Up Cascaded Knowledge Distillation for Vision-Language Models
+
+论文摘要: Large Vision-Language Models (VLMs) are successful in addressing a multitude of vision-language understanding tasks, such as Visual Question Answering (VQA), but their memory and compute requirements remain a concern for practical deployment. A promising class of techniques for mitigating this concern is Knowledge Distillation, where knowledge from a high-capacity Teacher network is transferred to a considerably smaller Student network. However, the capacity gap between the two networks is both a blessing and a curse: the smaller the Student network, the better its efficiency, and the larger the Teacher, the more knowledge it carries; yet, beyond a point, the larger capacity gap between the two leads to worse knowledge transfer. To counter this effect, we propose a bottom-up cascaded knowledge distillation (CKD) framework. Instead of treating knowledge transfer as an activity involving one high-capacity Teacher (or an ensemble of such), inspired by human formal education systems, we introduce one (potentially, more) additional Teacher(s) of intermediate capacity that gradually bring the Student network to the next level, where the next (higher-capacity) Teacher can take over. We provide a theoretical analysis in order to study the effect of cascaded distillation in the generalization performance of the Student. We apply the proposed framework on models build upon the LLaVA methodology and evaluate the derived models on seven standard, publicly available VQA benchmarks, demonstrating their SotA performance.
+
+论文作者: Nikolaos Gkalelis, Vasileios Mezaris
+
+提交时间: 2026-05-11 14:28:44
+
+论文链接: http://arxiv.org/abs/2605.10641v1
+
+==================================================
+==================================================
+
+论文名称: SenseBench: A Benchmark for Remote Sensing Low-Level Visual Perception and Description in Large Vision-Language Models
+
+论文摘要: Low-level visual perception underpins reliable remote sensing (RS) image analysis, yet current image quality assessment (IQA) methods output uninterpretable scalar scores rather than characterizing physics-driven RS degradations, deviating markedly from the diagnostic needs of RS experts. While Vision-Language Models (VLMs) present a compelling alternative by delivering language-grounded IQA, their visual priors are heavily biased toward ground-level natural images. Consequently, whether VLMs can overcome this domain gap to perceive and articulate RS artifacts remains insufficiently studied. To bridge this gap, we propose \textbf{SenseBench}, the first dedicated diagnostic benchmark for RS low-level visual perception and description. Driven by a physics-based hierarchical taxonomy that unifies both non-reference and reference-based paradigms, SenseBench features over 10K meticulously curated instances across 6 major and 22 fine-grained RS degradation categories. Specifically, two complementary protocols are designed for evaluation: objective low-level visual \textit{perception} and subjective diagnostic \textit{description}. Comprehensive evaluation of 29 state-of-the-art VLMs reveals not only skewed domain priors and multi-distortion collapse, but also \textit{fluency illusion} and a \textit{perception-description inversion} effect. We hope SenseBench provides a robust evaluation testbed and high-quality diagnostic data to advance the development of VLMs in RS low-level perception. Code and datasets are available \href{https://github.com/Zhong-Chenchen/SenseBench}{\textcolor{blue}{here}}.
+
+论文作者: Chen Zhong, Xiao An, Jiaxing Sun, Zihan Gui, Guangyi Yang, Wei He
+
+提交时间: 2026-05-11 13:48:57
+
+论文链接: http://arxiv.org/abs/2605.10576v1
+
+==================================================
+==================================================
+
+论文名称: AnomalyClaw: A Universal Visual Anomaly Detection Agent via Tool-Grounded Refutation
+
+论文摘要: Visual anomaly detection (VAD) is crucial in many real-world fields, such as industrial inspection, medical imaging, infrastructure monitoring, and remote sensing. However, the specific anomaly definitions, data modalities, and annotation standards across different domains make it difficult to transfer single-domain trained VAD models. Vision-language models (VLMs), pre-trained on large-scale cross-domain data, can perform visual perception under task instructions, offering a promising solution for cross-domain VAD. However, single-inference VLM judgments are unreliable, since they rely more on prior knowledge than on normal-sample references or fine-grained feature evidence. We therefore present AnomalyClaw, a training-free VAD agent that turns anomaly judgment into a multi-round refutation process. In each round, the agent proposes candidate anomalies and refutes each against normal-sample references, drawing on a 13-tool library for visual verification, reference parsing, and frozen expert probing. On the CrossDomainVAD-12 benchmark (12 datasets), AnomalyClaw achieves consistent macro-AUROC improvements over single-step direct inference with +6.23 pp on GPT-5.5, +7.93 pp on Seed2.0-lite, and +3.52 pp on Qwen3.5-VL-27B. We further introduce an optional verbalized self-evolution extension. It builds an online rulebook from internal-branch disagreement without oracle labels. On Qwen3.5-VL-27B, it delivers a +2.09 pp mean gain, comparable to a K = 10 oracle-label supervised baseline (+1.99 pp). These results show that agentic refutation improve anomaly understanding and reasoning of VLMs, rather than merely aggregating tool outputs.
+
+论文作者: Xi Jiang, Yinjie Zhao, Zesheng Yang, Feng Zheng
+
+提交时间: 2026-05-11 11:40:07
+
+论文链接: http://arxiv.org/abs/2605.10397v1
+
+==================================================
+==================================================
+
+论文名称: The Gordian Knot for VLMs: Diagrammatic Knot Reasoning as a Hard Benchmark
+
+论文摘要: A vision-language model can look at a knot diagram and report what it sees, yet fail to act on that structure. KnotBench pairs an 858,318-image corpus from 1,951 prime-knot prototypes (crossing numbers 3 to 19) with a protocol whose answers are checked against Regina's canonical knot signature. Its 14 tasks span four families, equivalence judgment, move prediction, identification, and cross-modal grounding; an image-versus-symbol split locates failures along the perception-operation gap. We score Claude Opus 4.7 and GPT-5, each with and without thinking, under a 64K output-token budget matched on both vendors. Across 56 (task, model) cases, 15 sit at or below a random baseline and 8 of 14 tasks have a best score under 1.5x random. On diagram-to-symbol transcription, no model produces a strictly correct string, and permissive Regina decoding recovers the knot in 0 to 4 of 100 items. Thinking-mode reasoning lifts overall accuracy by 1.65 points for Claude and 9.25 points for GPT-5, narrowing the gap only modestly. Read together, the four families suggest current vision-language models hold features of a diagram but lack apparatus to simulate moves on those features.
+
+论文作者: Hao Liu, Jicheng Liu
+
+提交时间: 2026-05-11 02:44:30
+
+论文链接: http://arxiv.org/abs/2605.09900v1
+
+==================================================
+==================================================
+
+论文名称: EmbodiSkill: Skill-Aware Reflection for Self-Evolving Embodied Agents
+
+论文摘要: Embodied agents can benefit from skills that guide object search, action execution, and state changes across diverse environments. Since embodied environments vary across layouts, object states, and other execution factors, these skills must self-evolve from trajectories generated during task execution. However, existing skill self-evolution methods are mainly developed in digital environments and often convert trajectories into coarse skill updates. Directly applying this paradigm to embodied settings is problematic, because a failed task execution may reflect not only incorrect skill content, but also an execution lapse in which the agent fails to follow valid guidance. We propose EmbodiSkill, a training-free framework for embodied skill self-evolution through skill-aware reflection and targeted revision. EmbodiSkill interprets each trajectory with respect to the current skill, uses skill-changing evidence to update the skill body, and uses execution-lapse evidence to preserve and emphasize valid guidance. Experiments on ALFWorld and EmbodiedBench show that EmbodiSkill consistently improves embodied task success. On ALFWorld, EmbodiSkill enables a frozen Qwen3.5-27B executor to reach 93.28% task success, outperforming GPT-5.2 used as a direct agent without skills by 31.58%. These results show that skill-aware self-evolution helps embodied agents accumulate reusable procedural knowledge from their own trajectories.
+
+论文作者: Ruofei Ju, Xinrui Wang, Xin Ding, Yifan Yang, Hao Wu, Shiqi Jiang, Qianxi Zhang, Hao Wen, Xiangyu Li, Weijun Wang, Kun Li, Yunxin Liu, Haipeng Dai, Wei Wang, Ting Cao
+
+提交时间: 2026-05-11 10:33:29
+
+论文链接: http://arxiv.org/abs/2605.10332v1
+
+==================================================
+==================================================
+
+论文名称: Continual Harness: Online Adaptation for Self-Improving Foundation Agents
+
+论文摘要: Coding harnesses such as Claude Code and OpenHands wrap foundation models with tools, memory, and planning, but no equivalent exists for embodied agents' long-horizon partial-observability decision-making. We first report our Gemini Plays Pokemon (GPP) experiments. With iterative human-in-the-loop harness refinement, GPP became the first AI system to complete Pokemon Blue, Yellow Legacy on hard mode, and Crystal without a lost battle. In the hardest stages, the agent itself began iterating on its strategy through long-context memory, surfacing emergent self-improvement signals alongside human-in-the-loop refinement. Continual Harness removes the human fully from this loop: a reset-free self-improving harness for embodied agents that formalizes and automates what we observed. Starting from only a minimal environment interface, the agent alternates between acting and refining its own prompt, sub-agents, skills, and memory, drawing on any past trajectory data. Prompt-optimization methods require episode resets; Continual Harness adapts online within a single run. On Pokemon Red and Emerald across frontier models, Continual Harness starting from scratch substantially reduces button-press cost relative to the minimalist baseline and recovers a majority of the gap to a hand-engineered expert harness, with capability-dependent gains, despite starting from the same raw interface with no curated knowledge, no hand-crafted tools, and no domain scaffolding. We then close the loop with the model itself: an online process-reward co-learning loop, in which an open-source agent's rollouts through the refining harness are relabeled by a frontier teacher and used to update the model, drives sustained in-game milestone progress on Pokemon Red without resetting the environment between training iterations.
+
+论文作者: Seth Karten, Joel Zhang, Tersoo Upaa, Ruirong Feng, Wenzhe Li, Chengshuai Shi, Chi Jin, Kiran Vodrahalli
+
+提交时间: 2026-05-11 05:21:33
+
+论文链接: http://arxiv.org/abs/2605.09998v1
+
+==================================================
+==================================================
+
+论文名称: EgoMemReason: A Memory-Driven Reasoning Benchmark for Long-Horizon Egocentric Video Understanding
+
+论文摘要: Next-generation visual assistants, such as smart glasses, embodied agents, and always-on life-logging systems, must reason over an entire day or more of continuous visual experience. In ultra-long video settings, relevant information is sparsely distributed across hours or days, making memory a fundamental challenge: models must accumulate information over time, recall prior states, track temporal order, and abstract recurring patterns. However, existing week-long video benchmarks are primarily designed for perception and recognition, such as moment localization or global summarization, rather than reasoning that requires integrating evidence across multiple days. To address this gap, we introduce EgoMemReason, a comprehensive benchmark that systematically evaluates week-long egocentric video understanding through memory-driven reasoning. EgoMemReason evaluates three complementary memory types: entity memory, tracking how object states evolve and change across days; event memory, recalling and ordering activities separated by hours or days; and behavior memory, abstracting recurring patterns from sparse, repeated observations over the whole week period. EgoMemReason comprises 500 questions across three memory types and six core challenges, with an average of 5.1 video segments of evidence per question and 25.9 hours of memory backtracking. We evaluate EgoMemReason on 17 methods across MLLMs and agentic frameworks, revealing that even the best model achieves only 39.6% overall accuracy. Further analysis shows that the three memory types fail for distinct reasons and that performance degrades as evidence spans longer temporal horizons, revealing that long-horizon memory remains far from solved. We believe EgoMemReason establishes a strong foundation for evaluating and advancing long-context, memory-aware multimodal systems.
+
+论文作者: Ziyang Wang, Yue Zhang, Shoubin Yu, Ce Zhang, Zengqi Zhao, Jaehong Yoon, Hyunji Lee, Gedas Bertasius, Mohit Bansal
+
+提交时间: 2026-05-11 01:59:59
+
+论文链接: http://arxiv.org/abs/2605.09874v1
+
+==================================================
+==================================================
+
+论文名称: EnactToM: An Evolving Benchmark for Functional Theory of Mind in Embodied Agents
+
+论文摘要: Theory of Mind (ToM), the ability to track others epistemic state, makes humans efficient collaborators. AI agents need the same capacity in multi agent settings, yet existing benchmarks mostly test literal ToM by asking direct belief questions. The ability act optimally on implicit beliefs in embodied environments, called functional ToM, remains largely untested. We introduce EnactToM, an evolving benchmark of 300 embodied multi-agent tasks set in a 3D household with partial observability, private information, and constrained communication. Each task is formally verified for solvability and required epistemic depth, and new tasks are generated increase difficulty as models improve. On the hard split, all seven evaluated frontier models score 0.0% Pass^3 on functional task completion, while averaging 45.0% on literal belief probes. Manual analysis traces 93% of sampled failures to epistemic coordination breakdowns such as withheld information, ignored partner constraints, and misallocated messages, providing a concrete target for future work.
+
+论文作者: Gurusha Juneja, Dylan Lu, Saaket Agashe, Parth Diwane, Edward Gunn, Jayanth Srinivasa, Gaowen Liu, William Yang Wang, Yali Du, Xin Eric Wang
+
+提交时间: 2026-05-11 00:04:19
+
+论文链接: http://arxiv.org/abs/2605.09826v1
+
+==================================================
+==================================================
+
+论文名称: Adaptive Action Chunking via Multi-Chunk Q Value Estimation
+
+论文摘要: Action chunking emerged as a pivotal technique in imitation learning, enabling policies to predict cohesive action sequences rather than single actions. Recently, this approach has expanded to reinforcement learning (RL), enhancing behavioral consistency and reducing bootstrapping errors in value function estimation. However, existing methods rely on a fixed chunk length, creating a performance bottleneck as the optimal length varies across states and tasks. In this paper, we propose Adaptive Action CHunking (ACH), a novel offline-to-online RL algorithm that dynamically modulates chunk length during both training and inference. To find the optimal chunk length for a dynamically varying current state, we simultaneously estimate action-values for all candidate chunk lengths in a single forward pass, using a Transformer-based architecture. Our mechanism allows the agent to select the most effective chunk length adaptively based on the current state. Evaluated on 34 challenging tasks, ACH consistently outperforms fixed-length baselines, demonstrating superior generalization and learning efficiency in complex environments.
+
+论文作者: Yongjae Shin, Jongseong Chae, Seongmin Kim, Jongeui Park, Youngchul Sung
+
+提交时间: 2026-05-11 06:14:32
+
+论文链接: http://arxiv.org/abs/2605.10044v1
+
+==================================================
+==================================================
+
+论文名称: Hierarchical Causal Abduction: A Foundation Framework for Explainable Model Predictive Control
+
+论文摘要: Model Predictive Control (MPC) is widely used to operate safety-critical infrastructure by predicting future trajectories and optimizing control actions. However, nonlinear dynamics, hard safety constraints, and numerical optimization often render individual control moves opaque to human operators, undermining trust and hindering deployment. This paper presents Hierarchical Causal Abduction (HCA), which combines (i) physics-informed reasoning via domain knowledge graphs, (ii) optimization evidence from Karush--Kuhn--Tucker (KKT) multipliers, and (iii) temporal causal discovery via the PCMCI algorithm to generate faithful, human-interpretable explanations for control actions computed by nonlinear MPC. Across three diverse control applications (greenhouse climate, building HVAC, chemical process engineering) with expert validation, HCA improves explanation accuracy by 53\% over LIME (0.478 vs. 0.311) using a single set of cross-domain parameters without per-domain tuning; domain-specific KKT-threshold calibration over 2--3 days further increases accuracy to 0.88. Ablation studies confirm that each evidence source is essential, with 32--37\% accuracy degradation when any component is removed, and HCA's ranking-and-validation methodology generalizes beyond MPC to other prediction-based decision systems, including learning-based control and trajectory planning.
+
+论文作者: Ramesh Arvind Naagarajan, Zühal Wagner, Stefan Streif
+
+提交时间: 2026-05-11 14:16:39
+
+论文链接: http://arxiv.org/abs/2605.10624v1
