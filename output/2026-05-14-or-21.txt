@@ -1,0 +1,269 @@
+论文名称: Not Just RLHF: Why Alignment Alone Won't Fix Multi-Agent Sycophancy
+
+论文摘要: LLM-based multi-agent pipelines flip from correct to incorrect answers under simulated peer disagreement at rates we term yield, a vulnerability widely attributed to RLHF-induced sycophancy. We test this attribution across four model families and find it largely wrong: pretrained base models exhibit the same substitution pattern as their Instruct variants, averaging higher yield than Instruct. Using activation patching, we localize the corruption to a narrow mid-layer window where attention carries the causal weight and MLP contribution is negligible; patching above this window restores 96% of the clean-to-pressured P(correct) gap. The attack surface decomposes into two independent factors (channel framing and consensus strength) whose interaction produces a 47.5 percentage-point yield gap at majority consensus, preserved across jury sizes $N \in \{4, 5, 6\}$. Two converging activation-space interventions show that pressure suppresses clean-reasoning features rather than activating a new sycophancy circuit. A single correctly-arguing dissenter reduces yield by 54-73 percentage points across all framings tested, whereas the strongest prompt-level defense fails on attack variants outside its design surface. Mitigations should target the mechanism, structured dissent at the pipeline level, rather than prompt-level defenses.
+
+论文作者: Adarsh Kumarappan, Ananya Mujoo
+
+提交时间: 2026-05-13 04:45:08
+
+论文链接: http://arxiv.org/abs/2605.12991v1
+
+==================================================
+==================================================
+
+论文名称: PRISM-X: Experiments on Personalised Fine-Tuning with Human and Simulated Users
+
+论文摘要: Personalisation is a standard feature of conversational AI systems used by millions; yet, the efficacy of personalisation methods is often evaluated in academic research using simulated users rather than real people. This raises questions about how users and their simulated counterparts differ in interaction patterns and judgements, as well as whether personalisation is best achieved through context-based prompting or weight-based fine-tuning. Here, in a large-scale within-subject experiment, we re-recruit 530 participants from 52 countries two years after they gave their preferences in the PRISM dataset (Kirk et al., 2024) to evaluate personalised and non-personalised language models in blinded multi-turn conversations. We find preference fine-tuning (P-DPO, Li et al., 2024) significantly outperforms both a generic model and personalised prompting but adapting to individual preference data yields marginal gains over training on pooled preferences from a diverse population. Beyond length biases, fine-tuning amplifies sycophancy and relationship-seeking behaviours that people reward in short-term evaluations but which may introduce deleterious long-term consequences. Replicating this within-subject experiment with simulated users recovers aggregate model hierarchies but simulators perform far below human self-consistency baselines for individual judgements, discuss different topics, exhibit amplified position biases, and produce feedback dynamics that diverge from humans.
+
+论文作者: Hannah Rose Kirk, Liu Leqi, Fanzhi Zeng, Henry Davidson, Bertie Vidgen, Christopher Summerfield, Scott A. Hale
+
+提交时间: 2026-05-13 10:21:14
+
+论文链接: http://arxiv.org/abs/2605.13307v1
+
+==================================================
+==================================================
+
+论文名称: Temper and Tilt Lead to SLOP: Reward Hacking Mitigation with Inference-Time Alignment
+
+论文摘要: Inference-time alignment techniques offer a lightweight alternative or complement to costly reinforcement learning, while enabling continual adaptation as alignment objectives and reward targets evolve. Existing theoretical analyses justify these methods as approximations to sampling from distributions optimally tilted toward a given reward model. We extend these techniques by introducing reference-model temperature adjustment, which leads to further generalization of inference-time alignment to ensembles of generative reward models combined as a sharpened logarithmic opinion pool (SLOP). To mitigate reward hacking, we propose an algorithm for calibrating SLOP weight parameters and experimentally demonstrate that it improves robustness while preserving alignment performance.
+
+论文作者: Ye Wang, Jing Liu, Toshiaki Koike-Akino
+
+提交时间: 2026-05-13 13:47:06
+
+论文链接: http://arxiv.org/abs/2605.13537v1
+
+==================================================
+==================================================
+
+论文名称: HLS-Seek: QoR-Aware Code Generation for High-Level Synthesis via Proxy Comparative Reward Reinforcement Learning
+
+论文摘要: High-Level Synthesis (HLS) compiles algorithmic C/C++ descriptions into hardware, with Quality of Results (QoR) -- latency and resource utilization -- critically governed by pragma configurations and code structure. Existing LLM-based HLS approaches train for functional correctness but ignore QoR entirely. We observe that reinforcement learning (RL) for HLS does not require absolute synthesis results -- only relative comparisons between candidates. Based on this insight, we propose \textbf{HLS-Seek}, a QoR-aware NL-to-HLS framework that replaces expensive synthesis-in-the-loop RL with a comparative proxy reward model achieving 99.53\% Pareto-dominance accuracy. To prevent reward hacking, we introduce \textit{uncertainty-aware Monte Carlo (MC) dropout switching} that selectively invokes real Vitis HLS synthesis for low-confidence candidates and online updates the proxy, creating a self-improving reward system. HLS-Seek achieves 81.5\% syntax correctness pass@1 and 81.4\% Func@5 on HLS-eval with only 7B parameters, surpassing GPT-5.1 and other frontier models while achieving 8.5$\times$ faster training than real-reward RL. On QoR evaluation, HLS-Seek achieves the lowest latency on 16/30 kernels and Pareto-dominates HLS-specific baselines on 9 kernels.
+
+论文作者: Qingyun Zou, Feng Yu, Hongshi Tan, Yao Chen, Bingsheng He, WengFai Wong
+
+提交时间: 2026-05-13 13:47:03
+
+论文链接: http://arxiv.org/abs/2605.13536v1
+
+==================================================
+==================================================
+
+论文名称: AcquisitionSynthesis: Targeted Data Generation using Acquisition Functions
+
+论文摘要: Data quality remains a critical bottleneck in developing capable, competitive models. Researchers have explored many ways to generate top quality samples. Some works rely on rejection sampling: generating lots of synthetic samples and filtering out low-quality samples. Other works rely on larger or closed-source models to extract model weaknesses, necessary skills, or a curriculum off of which to base data generation. These works have one common limitation: there is no quantitative approach to measure the impact of the generated samples on the downstream learner. Active learning literature provides exactly this, in the form of acquisition functions. Acquisition functions measure the informativeness and/or influence of data, providing interpretable, model-centric signals. Inspired by this, we propose AcquisitionSynthesis: using acquisition functions as reward models to train language models to generate higher-quality synthetic data. We conduct experiments on classic verifiable tasks of math, medical question-answering, and coding. Our experimental results indicate that (1) student models trained with AcquisitionSynthesis data achieve good performance on in-distribution tasks (2-7% gain) and is more robust to catastrophic forgetting, and (2) AcquisitionSynthesis models can generate data for other models and for low-to-high resource training paradigms. By leveraging acquisition rewards, we seek to demonstrate a principled path toward model-aware self-improvement that surpasses static datasets.
+
+论文作者: Ishika Agarwal, Sofia Stoica, Emre Can Acikgoz, Pradeep Natarajan, Mahdi Namazifar, Jiaqi Ma, Dilek Hakkani-Tür
+
+提交时间: 2026-05-13 08:15:48
+
+论文链接: http://arxiv.org/abs/2605.13149v1
+
+==================================================
+==================================================
+
+论文名称: GRACE: Gradient-aligned Reasoning Data Curation for Efficient Post-training
+
+论文摘要: Existing reasoning data curation pipelines score whole samples, treating every intermediate step as equally valuable. In reality, steps within a trace contribute very unevenly, and selecting reasoning data well requires assessing them individually. We present GRACE, a gradient-aligned curation method that views each reasoning trace as a sequence of optimization events and scores every step by two complementary signals: its alignment with the answer-oriented gradient direction, and its consistency with the preceding reasoning trajectory. Step-level scores are aggregated into a sample-level value for subset selection, using only the model's internal optimization signals and no external reward models or step annotations. To make this scalable, GRACE introduces a representation-level gradient proxy that estimates step-level alignment from token-level upstream signals in a single forward pass. Post-training Qwen3-VL-2B-Instruct on MMathCoT-1M, GRACE reaches 108.8% of the full-data performance with 20% of the data and retains 100.2% with only 5%, with subsets that transfer effectively across model backbones.
+
+论文作者: Junjie Li, Ziao Wang, NingXuan Ma, Jianghong Ma, Xiaofeng Zhang
+
+提交时间: 2026-05-13 07:55:39
+
+论文链接: http://arxiv.org/abs/2605.13130v1
+
+==================================================
+==================================================
+
+论文名称: The Mechanism of Weak-to-Strong Generalization: Feature Elicitation from Latent Knowledge
+
+论文摘要: Weak-to-strong (W2S) generalization, in which a strong model is fine-tuned on outputs of a weaker, task-specialized model, has been proposed as an approach to aligning superhuman AI systems. Existing theoretical analyses either fix the student's representations or operate in restricted settings. Whether multi-step SGD can succeed in feature learning while preserving diverse pre-trained capabilities remains open. We study W2S in the setting of reward-model learning with two-layer neural networks. The strong model has pre-trained representations organized into low-dimensional subspaces $V_k$, and is fine-tuned under the supervision of a weak model specialized on task $κ$. We prove that the strong model efficiently learns task $κ$, eliciting its pre-trained knowledge while retaining general capabilities. This establishes W2S generalization in the feature-learning regime, in the sense that the strong model acquires the target feature direction through W2S training, rather than having it given a priori. Moreover, W2S preserves pre-trained off-target features, whereas standard supervised fine-tuning causes catastrophic forgetting when off-target feature directions are correlated with the target's. Numerical experiments on synthetic data confirm our theoretical results.
+
+论文作者: Ryoya Awano, Taiji Suzuki
+
+提交时间: 2026-05-13 02:35:58
+
+论文链接: http://arxiv.org/abs/2605.12908v1
+
+==================================================
+==================================================
+
+论文名称: AttenA+: Rectifying Action Inequality in Robotic Foundation Models
+
+论文摘要: Existing robotic foundation models, while powerful, are predicated on an implicit assumption of temporal homogeneity: treating all actions as equally informative during optimization. This "flat" training paradigm, inherited from language modeling, remains indifferent to the underlying physical hierarchy of manipulation. In reality, robot trajectories are fundamentally heterogeneous, where low-velocity segments often dictate task success through precision-demanding interactions, while high-velocity motions serve as error-tolerant transitions. Such a misalignment between uniform loss weighting and physical criticality fundamentally limits the performance of current Vision-Language-Action (VLA) models and World-Action Models (WAM) in complex, long-horizon tasks. To rectify this, we introduce AttenA+, an architecture-agnostic framework that prioritizes kinematically critical segments via velocity-driven action attention. By reweighting the training objective based on the inverse velocity field, AttenA+ naturally aligns the model's learning capacity with the physical demands of manipulation. As a plug-and-play enhancement, AttenA+ can be integrated into existing backbones without structural modifications or additional parameters. Extensive experiments demonstrate that AttenA+ significantly elevates the ceilings of current state-of-the-art models. Specifically, it improves OpenVLA-OFT to 98.6% (+1.5%) on the Libero benchmark and pushes FastWAM to 92.4% (+0.6%) on RoboTwin 2.0. Real-world validation on a Franka manipulator further showcases its robustness and cross-task generalization. Our work suggests that mining the intrinsic structural priors of action sequences offers a highly efficient, physics-aware complement to standard scaling laws, paving a new path for general-purpose robotic control.
+
+论文作者: Daojie Peng, Fulong Ma, Jiahang Cao, Qiang Zhang, Xupeng Xie, Jian Guo, Ping Luo, Andrew F. Luo, Boyu Zhou, Jun Ma
+
+提交时间: 2026-05-13 13:55:37
+
+论文链接: http://arxiv.org/abs/2605.13548v1
+
+==================================================
+==================================================
+
+论文名称: D-VLA: A High-Concurrency Distributed Asynchronous Reinforcement Learning Framework for Vision-Language-Action Models
+
+论文摘要: The rapid evolution of Embodied AI has enabled Vision-Language-Action (VLA) models to excel in multimodal perception and task execution. However, applying Reinforcement Learning (RL) to these massive models in large-scale distributed environments faces severe systemic bottlenecks, primarily due to the resource conflict between high-fidelity physical simulation and the intensive VRAM/bandwidth demands of deep learning. This conflict often leaves overall throughput constrained by execution-phase inefficiencies. To address these challenges, we propose D-VLA, a high-concurrency, low-latency distributed RL framework for large-scale embodied foundation models. D-VLA introduces "Plane Decoupling," physically isolating high-frequency training data from low-frequency weight control to eliminate interference between simulation and optimization. We further design a four-thread asynchronous "Swimlane" pipeline, enabling full parallel overlap of sampling, inference, gradient computation, and parameter distribution. Additionally, a dual-pool VRAM management model and topology-aware replication resolve memory fragmentation and optimize communication efficiency. Experiments on benchmarks like LIBERO show that D-VLA significantly outperforms mainstream RL frameworks in throughput and sampling efficiency for billion-parameter VLA models. In trillion-parameter scalability tests, our framework maintains exceptional stability and linear speedup, providing a robust system for high-performance general-purpose embodied agents.
+
+论文作者: Yucheng Guo, Yongjian Guo, Zhong Guan, Wen Huang, Haoran Sun, Haodong Yue, Xiaolong Xiang, Shuai Di, Zhen Sun, Luqiao Wang, Junwu Xiong, Yicheng Gong
+
+提交时间: 2026-05-13 09:54:31
+
+论文链接: http://arxiv.org/abs/2605.13276v1
+
+==================================================
+==================================================
+
+论文名称: Towards Long-horizon Embodied Agents with Tool-Aligned Vision-Language-Action Models
+
+论文摘要: Vision-language-action (VLA) models are effective robot action executors, but they remain limited on long-horizon tasks due to the dual burden of extended closed-loop planning and diverse physical operations. We therefore propose VLAs-as-Tools, a strategy that distributes this burden across a high-level vision language model (VLM) agent for temporal reasoning and a family of specialized VLA tools for diverse local physical operations. The VLM handles scene analysis, global planning, and recovery, while each VLA tool executes a bounded subtask. To tightly couple agent planning with VLA tool execution in long-horizon tasks, we introduce a VLA tool-family interface that exposes explicit tool selection and in-execution progress feedback, enabling efficient event-triggered agent replanning without continuous agent polling. To obtain diverse specialized VLA tools that faithfully follow agent invocations, we further propose Tool-Aligned Post-Training (TAPT), which constructs invocation-aligned training units for instruction following and adopts tool-family residual adapters for efficient tool specialization. Experiments show that VLAs-as-Tools improves the success rate of $π_{0.5}$ by 4.8 points on LIBERO-Long and 23.1 points on RoboTwin, and further enhances invocation fidelity by 15.0 points as measured by Non-biased Rate. Code will be released.
+
+论文作者: Zixing Lei, Changxing Liu, Yichen Xiong, Minhao Xiong, Yuanzhuo Ding, Zhipeng Zhang, Weixin Li, Siheng Chen
+
+提交时间: 2026-05-13 07:40:34
+
+论文链接: http://arxiv.org/abs/2605.13119v1
+
+==================================================
+==================================================
+
+论文名称: GRIP-VLM: Group-Relative Importance Pruning for Efficient Vision-Language Models
+
+论文摘要: In Vision-Language Models (VLMs), processing a massive number of visual tokens incurs prohibitive computational overhead. While recent training-aware pruning methods attempt to selectively discard redundant tokens, they largely rely on continuous-gradient relaxations. However, visual token pruning is inherently a discrete, non-convex combinatorial problem; consequently, these continuous approximations frequently trap the optimization in sub-optimal local minima, especially under aggressive compression budgets. To overcome this fundamental bottleneck, we propose GRIP-VLM, a Group-Relative Importance Pruning framework driven by Reinforcement Learning. Rather than relying on smooth-gradient assumptions, GRIP-VLM formulates pruning as a Markov Decision Process, employing a Group Relative Policy Optimization (GRPO) paradigm anchored by supervised warm-up to directly explore the discrete selection space. Integrated with a budget-aware scorer, our lightweight agent dynamically evaluates per-token importance and adapts to arbitrary compression ratios without retraining. Extensive experiments across diverse multimodal benchmarks demonstrate that GRIP-VLM consistently outperforms heuristic and supervised-learning baselines, achieving a superior Pareto frontier and delivering up to a 15\% inference speedup at equal accuracy.
+
+论文作者: Mingzhe Huang, Weijun Wang, Xin Ding, Liang Mi, Hao Wen, Yuanchun Li, Lichen Pang, Shansong Yang, Yunxin Liu, Ting Cao
+
+提交时间: 2026-05-13 11:32:03
+
+论文链接: http://arxiv.org/abs/2605.13375v1
+
+==================================================
+==================================================
+
+论文名称: GeoFlowVLM: Geometry-Aware Joint Uncertainty for Frozen Vision-Language Embedding
+
+论文摘要: Standard dual-encoder vision-language models that map images and text to deterministic points on a shared unit hypersphere through $\ell_2$ normalization typically expose neither \emph{aleatoric} uncertainty (cross-modal ambiguity) nor \emph{epistemic} uncertainty (lack of training-distribution support). Existing post-hoc methods either recover at most one of the two uncertainty components, or ignore the hyperspherical geometry of these models' embeddings. We propose \textbf{GeoFlowVLM} as a post-hoc adapter that learns the joint distribution of paired $\ell_2$-normalised dual-encoder VLM embeddings on the product hypersphere $\mathbb{S}^{d-1} \times \mathbb{S}^{d-1}$ via Riemannian flow matching with a single masked velocity field. A consistency result shows that, in the population limit, the trained network exposes the joint flow and both cross-modal conditional flows as valid Riemannian flow-matching velocity fields on their respective domains. We derive two quantities from this single model: a conditional retrieval entropy that quantifies aleatoric ambiguity with a decision-theoretic interpretation via a Fano-type bound, and a marginal-typicality epistemic score justified by an exact chain-rule decomposition of the joint NLL. This decomposition isolates a cross-modal pointwise-mutual-information term that is structurally discriminative rather than epistemic, and is empirically the only consistently uninformative standalone component. Empirically, the entropy tracks Recall@1 with near-ideal monotonic calibration across three retrieval benchmarks in both directions, and the marginal-typicality sum yields consistently calibrated selective accuracy across four zero-shot classification benchmarks.
+
+论文作者: Mayank Nautiyal, Li Ju, Andreas Hellander, Ekta Vats, Prashant Singh
+
+提交时间: 2026-05-13 11:12:18
+
+论文链接: http://arxiv.org/abs/2605.13352v1
+
+==================================================
+==================================================
+
+论文名称: Revealing the Gap in Human and VLM Scene Perception through Counterfactual Semantic Saliency
+
+论文摘要: Evaluating whether large vision-language models (VLMs) align with human perception for high-level semantic scene comprehension remains a challenge. Traditional white-box interpretability methods are inapplicable to closed-source architectures and passive metrics fail to isolate causal features. We introduce Counterfactual Semantic Saliency (CSS). This black-box, model-agnostic framework quantifies the importance of objects by measuring the semantic shift induced by their causal ablation from a scene. To evaluate AI-human semantic alignment, we tested prominent VLMs against a human psychophysics baseline comprising 16,289 valid responses across 307 complex natural scenes and 1,306 high-fidelity counterfactual variants. Our analysis reveals a pervasive scene comprehension gap: models exhibit an overreliance (relative to humans) on large objects (size bias), objects at the center of the image (center bias), and high saliency objects. In contrast, models rely less on people in the scenes than our human participants to describe the images. A model's size bias is a primary driver explaining variations in model-human semantic divergence. Code and data will be available at https://github.com/starsky77/Counterfactual-Semantic-Saliency.
+
+论文作者: Ziqi Wen, Parsa Madinei, Miguel P. Eckstein
+
+提交时间: 2026-05-13 06:11:47
+
+论文链接: http://arxiv.org/abs/2605.13047v1
+
+==================================================
+==================================================
+
+论文名称: Ego2World: Compiling Egocentric Cooking Videos into Executable Worlds for Belief-State Planning
+
+论文摘要: Embodied agents in household environments must plan under partial observation: they need to remember objects, track state changes, and recover when actions fail. Existing benchmarks only partially test this ability. Egocentric video datasets capture realistic human activities but remain passive, while interactive simulators support execution but rely on synthetic scenes and hand-crafted dynamics, introducing a sim-to-real gap and often assuming fully observable state. We introduce Ego2World, an executable benchmark that turns egocentric cooking videos into executable symbolic worlds governed by graph-transition rules. Built on HD-EPIC, Ego2World derives reusable transition rules from video annotations and executes them in a hidden symbolic world graph. During evaluation, the simulator maintains the hidden world graph, while the agent plans over its own partial belief graph using only local observations and execution feedback. This separation forces agents to update memory and replan without observing the true world state. Experiments show that action-overlap scores overestimate physical-state success, and that persistent belief memory improves task completion while reducing repeated visual exploration -- suggesting that belief maintenance should be a first-class target of embodied-agent evaluation.
+
+论文作者: Qinchuan Cheng, Zhantao Gong, Pengzhan Sun, Angela Yao, Xulei Yang, Shijie Li
+
+提交时间: 2026-05-13 10:53:15
+
+论文链接: http://arxiv.org/abs/2605.13335v1
+
+==================================================
+==================================================
+
+论文名称: CoGE: Sim-to-Real Online Geometric Estimation for Monocular Colonoscopy
+
+论文摘要: Geometric estimation including depth estimation and scene reconstruction is a crucial technique for colonoscopy which can provide surgeons with 3D spatial perception and navigation. However, geometric ground truth in colonoscopy is difficult to obtain due to narrow and enclosed space of the colon, while there is a large feature gap between simulated data and realistic data caused by artifacts and illumination. In this paper, we present CoGE, a novel framework for online monocular geometric estimation during colonoscopy. Firstly, we propose an illumination-aware supervision module based on the Retinex theory to address illumination diversity in different colonoscopy scenes. Moreover, a structure-aware perception module is proposed based on wavelet decomposition to extract common structural and local features of the colon. Both quantitative and qualitative results demonstrate that the proposed model solely trained on simulated data achieves state-of-the-art performance in geometric estimation for both simulated and realistic scenes.
+
+论文作者: Liangjing Shao, Beilei Cui, Hongliang Ren
+
+提交时间: 2026-05-13 05:46:39
+
+论文链接: http://arxiv.org/abs/2605.13038v1
+
+==================================================
+==================================================
+
+论文名称: HetScene: Heterogeneity-Aware Diffusion for Dense Indoor Scene Generation
+
+论文摘要: Generating controllable and physically plausible indoor scenes is a pivotal prerequisite for constructing high-fidelity simulation environments for embodied AI. However, existing deeplearning-based methods usually treat all objects as homogeneous instances within a unified generation process. While effective for sparse and simplistic layouts, they struggle to model realistic layouts with dense object arrangements and complex spatial dependencies, leadingto limited scalability and degraded physical plausibility. To deal with these challenges, we revisit indoor layout generation from the perspective of structural heterogeneity and decompose the objects into primary objects and secondary objects according to their distinct roles in shaping a scene. Based on this decomposition, we propose HetScene, a heterogeneous two-stage generation framework that decouples indoor layout synthesis into Structural Layout Generation (SLG) and Contextual Layout Generation (CLG). SLG first generates globally coherent structural layouts with only primary objects conditioned on text descriptions, top-down binary room masks, and spatial relation graphs, establishing a stable global macro-skeleton of large core furniture.
+
+论文作者: Zini Chen, Junming Huang, Rong Zhang, Jiamin Xu, Cheng Peng, Chi Wang, Weiwei Xu
+
+提交时间: 2026-05-13 14:21:51
+
+论文链接: http://arxiv.org/abs/2605.13586v1
+
+==================================================
+==================================================
+
+论文名称: What Limits Vision-and-Language Navigation ?
+
+论文摘要: Vision-and-Language Navigation (VLN) is a cornerstone of embodied intelligence. However, current agents often suffer from significant performance degradation when transitioning from simulation to real-world deployment, primarily due to perceptual instability (e.g., lighting variations and motion blur) and under-specified instructions. While existing methods attempt to bridge this gap by scaling up model size and training data, we argue that the bottleneck lies in the lack of robust spatial grounding and cross-domain priors. In this paper, we propose StereoNav, a robust Vision-Language-Action framework designed to enhance real-world navigation consistency. To address the inherent gap between synthetic training and physical execution, we introduce Target-Location Priors as a persistent bridge. These priors provide stable visual guidance that remains invariant across domains, effectively grounding the agent even when instructions are vague. Furthermore, to mitigate visual disturbances like motion blur and illumination shifts, StereoNav leverages stereo vision to construct a unified representation of semantics and geometry, enabling precise action prediction through enhanced depth awareness. Extensive experiments on R2R-CE and RxR-CE demonstrate that StereoNav achieves state-of-the-art egocentric RGB performance, with SR and SPL scores of 81.1% and 68.3%, and 67.5% and 52.0%, respectively, while using significantly fewer parameters and less training data than prior scaling-based approaches. More importantly, real-world robotic deployments confirm that StereoNav substantially improves navigation reliability in complex, unstructured environments. Project page: https://yunheng-wang.github.io/stereonav-public.github.io.
+
+论文作者: Yunheng Wang, Yuetong Fang, Taowen Wang, Lusong Li, Kun Liu, Junzhe Xu, Zizhao Yuan, Yixiao Feng, Jiaxi Zhang, Wei Lu, Zecui Zeng, Renjing Xu
+
+提交时间: 2026-05-13 10:41:24
+
+论文链接: http://arxiv.org/abs/2605.13328v1
+
+==================================================
+==================================================
+
+论文名称: Embodied Neurocomputation: A Framework for Interfacing Biological Neural Cultures with Scaled Task-Driven Validation
+
+论文摘要: Biological neural networks (BNNs) have been established as a powerful and adaptive substrate that offer the potential for incredibly energy and data efficient information processing with distinct learning mechanisms. Yet a core challenge to utilizing BNN for neurocomputation is determining the optimal encoding and decoding mechanisms between the traditional silicon computing interface and the living biology. Here, we propose an Embodied Neurocomputation framework as a systems-level approach to this multi-variable optimization encoding/decoding problem. We operationalize this approach through the first large-scale parameter optimization of encoding configurations for a BNN agent performing closed-loop navigation along an odor-style gradient in a simulated grid-world. Despite the relative simplicity of the task, the biological interactions gave rise to a massive multi-combinatorial search space for optimal parameters. By considering how the components of the system are interconnected and parameterized, we evaluated approximately 1,300 parameter combinations, over 4,000 hours of real-time agent-environment interactions, to identify 12 configurations that consistently demonstrated learning across multiple episodes. These configurations achieved significantly higher task performances than optimized silicon-based DQN agents under the same interaction budget. These findings represent an initial step toward robust and scalable goal-oriented learning using BNNs. Our framework establishes a foundation for applying task-driven neurocomputing and supports the development of field-wide benchmarks. In the long term, this work supports the development of hybrid bio-silicon architectures capable of efficient, adaptive and real-time computation, including the potential for robotic control applications.
+
+论文作者: Johnson Zhou, Daniel Tanneberg, Forough Habibollahi, Alon Loeffler, Kiaran Lawson, Valentina Baccetti, Kwaku Dad Abu-Bonsrah, Candice Desouza, Finn Doensen, Bradley Watmuff, Daria Kornienko, Azin Azadi, Justin Leigh Bourke, Bernhard Sendhoff, Brett J. Kagan
+
+提交时间: 2026-05-13 10:27:05
+
+论文链接: http://arxiv.org/abs/2605.13315v1
+
+==================================================
+==================================================
+
+论文名称: Embodied Multi-Agent Coordination by Aligning World Models Through Dialogue
+
+论文摘要: Effective collaboration between embodied agents requires more than acting in a shared environment; it demands communication grounded in each agent's evolving understanding of the world. When agents can only partially observe their surroundings, coordination without communication is provably hard, but communication can, in principle, bridge this gap by allowing agents to share observations and align their world models. In this work, we examine whether LLM-based embodied agents actually realize the ability to communicate. We extend PARTNR, a benchmark for collaborative household robotics, with a natural-language dialogue channel that enables two agents with partial observability to communicate during task execution. To evaluate whether dialogue leads to genuine world-model alignment rather than superficial coordination, we propose a framework for measuring world-model alignment defined over per-agent world graphs: observation convergence (do private world models align over time?), information novelty (do messages convey what the partner lacks?), and belief-sensitive messaging (do agents model what their partner knows?). Our experiments across three LLMs reveal that dialogue reduces action conflicts 40 to 83 percentage points but degrades task success relative to silent coordination. Using our metrics, we characterize the gap between superficial coordination and genuine world-model alignment, and identify where current models fall on this spectrum.
+
+论文作者: Vardhan Dongre, Dilek Hakkani-Tür
+
+提交时间: 2026-05-13 02:48:14
+
+论文链接: http://arxiv.org/abs/2605.12920v1
+
+==================================================
+==================================================
+
+论文名称: LMPath: Language-Mediated Priors and Path Generation for Aerial Exploration
+
+论文摘要: Traditional autonomous UAV search missions rely on geometric coverage patterns that ignore the semantic context of the target, leading to significant time waste in large-scale environments. In this paper we present LMPath, a pipeline for generating language-mediated exploration priors for Unmanned Aerial Vehicle (UAV) search missions that leverages semantics. Given a basic geofence and an object of interest prompt, LMPath uses generative language models to determine what regions of the environment should contain that object and a foundation vision model ran over satellite imagery to segment sub-regions that form the exploration prior. This prior can then be used to generate UAV paths with various objectives, such as minimizing the expected time to locate the object of interest, maximizing the probability that the object is found given a limited travel distance, or narrowing down the search space to sub-regions that are most likely to contain the object. To demonstrate it's capabilities, we used LMPath to generate various UAV paths and ran them using a real UAV over large-scale environments. We also ran simulations to demonstrate how paths generated using LMPath outperform traditional path planning approaches for search missions.
+
+论文作者: Jonathan A. Diller, Fernando Cladera, Camillo J. Taylor, Vijay Kumar
+
+提交时间: 2026-05-13 17:02:51
+
+论文链接: http://arxiv.org/abs/2605.13782v1
+
+==================================================
+==================================================
+
+论文名称: AI Harness Engineering: A Runtime Substrate for Foundation-Model Software Agents
+
+论文摘要: Foundation models have transformed automated code generation, yet autonomous software-engineering agents remain unreliable in realistic development settings. The dominant explanation locates this gap in model capability. We propose a different locus: software-engineering capability emerges from a model-harness-environment system, in which a runtime substrate -- the harness -- mediates how a foundation-model agent observes a project, acts on it, receives feedback, and establishes that a change is complete. We formalize this substrate as an AI Harness Engineering and identify eleven component responsibilities: task specification, context selection, tool access, project memory, task state, observability, failure attribution, verification, permissions, entropy auditing, and intervention recording. We operationalize the harness through a four-level ladder (H0-H3) that progressively exposes runtime support to the agent, and we propose a trace-based evaluation protocol that converts each agent run into an auditable episode package. Applied to a controlled validation task, the framework yields episode packages whose evidence structure varies systematically with harness level: lower levels produce only a final patch, higher levels produce reproduction logs, failure attributions, deterministic requirement checks, and structured verification reports. The framework reframes the central question of autonomous software engineering from whether a foundation model can produce a patch to whether the model-harness-environment system can produce a verifiably correct, attributed, and maintainable change. We outline a research program for the runtime systems that foundation-model software agents will require.
+
+论文作者: Hailin Zhong, Shengxin Zhu
+
+提交时间: 2026-05-13 11:14:59
+
+论文链接: http://arxiv.org/abs/2605.13357v1
