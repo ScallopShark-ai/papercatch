@@ -1,0 +1,296 @@
+论文名称: From Sycophantic Consensus to Pluralistic Repair: Why AI Alignment Must Surface Disagreement
+
+论文摘要: Pluralistic alignment is typically operationalised as preference aggregation: producing responses that span (Overton), steer toward (Steerable), or proportionally represent (Distributional) diverse human values. We argue that aggregation alone is an incomplete primitive for deployed pluralistic alignment. Under genuine value pluralism, the failure mode of contemporary RLHF-trained assistants is not insufficient coverage but sycophantic consensus: a learned tendency to agree with, validate, and minimise friction with the immediate interlocutor. Because deployed AI systems now mediate consequential deliberation across health, civic life, labour, and governance, the collapse of disagreement at the interaction layer is not a narrow technical concern but a structural failure with distributive consequences. We reframe pluralistic alignment around three conversational mechanisms drawn from Grice's maxims: scoping (acknowledging the limits of one's perspective), signalling (surfacing value-conflict rather than smoothing it over), and repair (revising one's position on principled grounds, not on user pressure). We formalise a metric, the Pluralistic Repair Score (PRS), distinguishing principled revision from capitulation, and present a small-scale empirical illustration on two frontier RLHF-trained models (Claude Sonnet 4.5, N=198; GPT-4o, N=100) showing that, for both, agreement-following coexists with low repair-quality on contested-value prompts. PRS measures an interactional precondition for pluralism (visible disagreement; principled revision) rather than pluralism in full; we discuss the difference, take seriously the reflexive question of whose "principled" counts, and argue that pluralism is most decisively made or unmade at the deployment-governance layer: interfaces, preference-data pipelines, and audit infrastructure.
+
+论文作者: Varad Vishwarupe, Nigel Shadbolt, Marina Jirotka
+
+提交时间: 2026-05-14 14:47:06
+
+论文链接: http://arxiv.org/abs/2605.14912v1
+
+==================================================
+==================================================
+
+论文名称: Distributionally Robust Multi-Task Reinforcement Learning via Adaptive Task Sampling
+
+论文摘要: Multi-task reinforcement learning (MTRL) aims to train a single agent to efficiently optimize performance across multiple tasks simultaneously. However, jointly optimizing all tasks often yields imbalanced learning: agents quickly solve easy tasks but learn slowly on harder ones. While prior work primarily attributes this imbalance to conflicting task gradients and proposes gradient manipulation or specialized architectures to address it, we instead focus on a distinct and under-explored challenge: imbalanced data allocation. Standard MTRL allocates an equal number of environment interactions to each task, which over-allocates data to easy tasks that require relatively few interactions to solve and under-allocates data to hard tasks that require substantially more experience to solve. To address this challenge, we introduce Distributionally Robust Adaptive Task Sampling (DRATS), an algorithm that adaptively prioritizes sampling tasks furthest from being solved. We derive DRATS by formalizing MTRL as a feasibility problem from which we derive a minimax objective for minimizing the worst-case return gap, the difference between a desired target return and the agent's return on a task. In benchmarks like MetaWorld-MT10 and MT50, DRATS improves data efficiency and increases worst-task performance compared to existing task sampling algorithms.
+
+论文作者: Nicholas E. Corrado, Wenyuan Huang, Josiah P. Hanna
+
+提交时间: 2026-05-14 04:22:24
+
+论文链接: http://arxiv.org/abs/2605.14350v1
+
+==================================================
+==================================================
+
+论文名称: Hand-in-the-Loop: Improving Dexterous VLA via Seamless Interventional Correction
+
+论文摘要: Vision-Language-Action (VLA) models are prone to compounding errors in dexterous manipulation, where high-dimensional action spaces and contact-rich dynamics amplify small policy deviations over long horizons. While Interactive Imitation Learning (IIL) can refine policies through human takeover data, applying it to high-degree-of-freedom (DoF) robotic hands remains challenging due to a command mismatch between human teleoperation and policy execution at the takeover moment, which causes abrupt robot-hand configuration changes, or "gesture jumps". We present Hand-in-the-Loop (HandITL), a seamless human-in-the-loop intervention method that blends human corrective intent with autonomous policy execution to avoid gesture jumps during bimanual dexterous manipulation. Compared with direct teleoperation takeover, HandITL reduces takeover jitter by 99.8% and preserves robust post-takeover manipulation, reducing grasp failures by 87.5% and mean completion time by 19.1%. We validate HandITL on tasks requiring bimanual coordination, tool use, and fine-grained long-horizon manipulation. When used to collect intervention data for policy refinement, HandITL yields policies that outperform those trained with standard teleoperation data by 19% on average across three long-horizon dexterous tasks.
+
+论文作者: Zhuohang Li, Liqun Huang, Wei Xu, Zhengming Zhu, Nie Lin, Xiao Ma, Xinjun Sheng, Ruoshi Wen
+
+提交时间: 2026-05-14 17:51:40
+
+论文链接: http://arxiv.org/abs/2605.15157v1
+
+==================================================
+==================================================
+
+论文名称: IntentVLA: Short-Horizon Intent Modeling for Aliased Robot Manipulation
+
+论文摘要: Robot imitation data are often multimodal: similar visual-language observations may be followed by different action chunks because human demonstrators act with different short-horizon intents, task phases, or recent context. Existing frame-conditioned VLA policies infer each chunk from the current observation and instruction alone, so under partial observability they may resample different intents across adjacent replanning steps, leading to inter-chunk conflict and unstable execution. We introduce IntentVLA, a history-conditioned VLA framework that encodes recent visual observations into a compact short-horizon intent representation and uses it to condition chunk generation. We further introduce AliasBench, a 12-task ambiguity-aware benchmark on RoboTwin2 with matched training data and evaluation environments that isolate short-horizon observation aliasing. Across AliasBench, SimplerEnv, LIBERO, and RoboCasa, IntentVLA improves rollout stability and outperforms strong VLA baselines
+
+论文作者: Shijie Lian, Bin Yu, Xiaopeng Lin, Zhaolong Shen, Laurence Tianruo Yang, Yurun Jin, Haishan Liu, Changti Wu, Hang Yuan, Cong Huang, Kai Chen
+
+提交时间: 2026-05-14 11:31:02
+
+论文链接: http://arxiv.org/abs/2605.14712v1
+
+==================================================
+==================================================
+
+论文名称: Pelican-Unified 1.0: A Unified Embodied Intelligence Model for Understanding, Reasoning, Imagination and Action
+
+论文摘要: We present Pelican-Unified 1.0, the first embodied foundation model trained according to the principle of unification. Pelican-Unified 1.0 uses a single VLM as a unified understanding module, mapping scenes, instructions, visual contexts, and action histories into a shared semantic space. The same VLM also serves as a unified reasoning module, autoregressively producing task-, action-, and future-oriented chains of thought in a single forward pass and projecting the final hidden state into a dense latent variable. A Unified Future Generator (UFG) then conditions on this latent variable and jointly generates future videos and future actions through two modality-specific output heads within the same denoising process. The language, video, and action losses are all backpropagated into the shared representation, enabling the model to jointly optimize understanding, reasoning, imagination, and action during training, rather than training three isolated expert systems.
+  Experiments demonstrate that unification does not imply compromise. With a single checkpoint, Pelican-Unified 1.0 achieves strong performance across all three capabilities: 64.7 on eight VLM benchmarks, the best among comparable-scale models; 66.03 on WorldArena, ranking first; and 93.5 on RoboTwin, the second-best average among compared action methods. These results show that the unified paradigm succeeds in preserving specialist strength while bringing understanding, reasoning, imagination, and action into one model.
+
+论文作者: Yi Zhang, Yinda Chen, Che Liu, Zeyuan Ding, Jin Xu, Shilong Zou, Junwei Liao, Jiayu Hu, Xiancong Ren, Xiaopeng Zhang, Yechi Liu, Haoyuan Shi, Zecong Tang, Haosong Sun, Renwen Cui, Kuishu Wu, Wenhai Liu, Yang Xu, Yingji Zhang, Yidong Wang, Senkang Hu, Jinpeng Lu, Nga Teng Chan, Yechen Wu, Yong Dai, Jian Tang, Xiaozhu Ju
+
+提交时间: 2026-05-14 17:50:42
+
+论文链接: http://arxiv.org/abs/2605.15153v1
+
+==================================================
+==================================================
+
+论文名称: MemEye: A Visual-Centric Evaluation Framework for Multimodal Agent Memory
+
+论文摘要: Long-term agent memory is increasingly multimodal, yet existing evaluations rarely test whether agents preserve the visual evidence needed for later reasoning. In prior work, many visually grounded questions can be answered using only captions or textual traces, allowing answers to be inferred without preserving the fine-grained visual evidence. Meanwhile, harder cases that require reasoning over changing visual states are largely absent. Therefore, we introduce MemEye, a framework that evaluates memory capabilities from two dimensions: one measures the granularity of decisive visual evidence (from scene-level to pixel-level evidence), and the other measures how retrieved evidence must be used (from single evidence to evolutionary synthesis). Under this framework, we construct a new benchmark across 8 life-scenario tasks, with ablation-driven validation gates for assessing answerability, shortcut resistance, visual necessity, and reasoning structure. By evaluating 13 memory methods across 4 VLM backbones, we show that current architectures still struggle to preserve fine-grained visual details and reason about state changes over time. Our findings show that long-term multimodal memory depends on evidence routing, temporal tracking, and detail extraction.
+
+论文作者: Minghao Guo, Qingyue Jiao, Zeru Shi, Yihao Quan, Boxuan Zhang, Danrui Li, Liwei Che, Wujiang Xu, Shilong Liu, Zirui Liu, Mubbasir Kapadia, Vladimir Pavlovic, Jiang Liu, Mengdi Wang, Yiyu Shi, Dimitris N. Metaxas, Ruixiang Tang
+
+提交时间: 2026-05-14 17:37:52
+
+论文链接: http://arxiv.org/abs/2605.15128v1
+
+==================================================
+==================================================
+
+论文名称: On the Cultural Anachronism and Temporal Reasoning in Vision Language Models
+
+论文摘要: Vision-Language Models (VLMs) are increasingly applied to cultural heritage materials, from digital archives to educational platforms. This work identifies a fundamental issue in how these models interpret historical artifacts. We define this phenomenon as cultural anachronism, the tendency to misinterpret historical objects using temporally inappropriate concepts, materials, or cultural frameworks. To quantify this phenomenon, we introduce the Temporal Anachronism Benchmark for Vision-Language Models (TAB-VLM), a dataset of 600 questions across six categories, designed to evaluate temporal reasoning on 1,600 Indian cultural artifacts spanning prehistoric to modern periods. Systematic evaluations of ten state-of-the-art models reveal significant deficiencies on our benchmark, and even the best model (GPT-5.2) achieves only 58.7% overall accuracy. The performance gap persists across varying architectures and scales, suggesting that cultural anachronism represents a significant limitation in visual AI systems, regardless of model size. These findings highlight the disparity between current VLM capabilities and the requirements for accurately interpreting cultural heritage materials, particularly for non-Western visual cultures underrepresented in training data. Our benchmark provides a foundation for enhancing temporal cognition in multimodal AI systems that interact with historical artifacts. The dataset and code are available in our project page.
+
+论文作者: Mukul Ranjan, Prince Jha, Khushboo Kumari, Zhiqiang Shen
+
+提交时间: 2026-05-14 16:58:16
+
+论文链接: http://arxiv.org/abs/2605.15071v1
+
+==================================================
+==================================================
+
+论文名称: Chain-of-Procedure: Hierarchical Visual-Language Reasoning for Procedural QA
+
+论文摘要: Recent advances in vision-language models (VLMs) have achieved impressive results on standard image-text tasks, yet their potential for visual procedure question answering (VP-QA) remains largely unexplored. VP-QA presents unique challenges where users query next-step actions by uploading images for intermediate states of complex procedures. To systematically evaluate VLMs on this practical task, we propose ProcedureVQA, a novel multimodal benchmark specifically designed for visual procedural reasoning. Through comprehensive analysis, we identify two critical limitations in current VLMs: inadequate cross-modal retrieval of structured procedures given visual states, and misalignment between image sequence granularity and textual step decomposition. To address these issues, we present Chain-of-Procedure (CoP), a hierarchical reasoning framework that first retrieves relevant instructions using visual cues, then performs step refinement through semantic decomposition, and finally generates the next step. Experiments across six VLMs demonstrate CoP's effectiveness, achieving up to 13% absolute improvement over standard baselines.
+
+论文作者: Guanhua Chen, Yutong Yao, Shenghe Sun, Ci-Jun Gao, Shudong Liu, Lidia S. Chao, Feng Wan, Derek F. Wong
+
+提交时间: 2026-05-14 15:03:36
+
+论文链接: http://arxiv.org/abs/2605.14928v1
+
+==================================================
+==================================================
+
+论文名称: Your CLIP has 164 dimensions of noise: Exploring the embeddings covariance eigenspectrum of contrastively pretrained vision-language transformers
+
+论文摘要: Contrastively pre-trained Vision-Language Models (VLMs) serve as powerful feature extractors. Yet, their shared latent spaces are prone to structural anomalies and act as repositories for non-semantic, multi-modal noise. To address this phenomenon, we employ spectral decomposition of covariance matrices to decompose the VLM latent space into a multi-modal semantic signal component and a shared noise subspace. We observe that this noise geometry exhibits strong subgroup invariance across distinct data subsets. Crucially, pruning these shared noise dimensions is mainly harmless, preserving or actively improving downstream task performance. By isolating true semantic signals from artifactual noise, this work provides new mechanistic insights into the representational structure of modern VLMs, suggesting that a substantial fraction of their latent geometry is governed by shared, architecture-level noise rather than task-relevant semantics alone.
+
+论文作者: Jakub Grzywaczewski, Dawid Płudowski, Przemysław Biecek
+
+提交时间: 2026-05-14 14:37:50
+
+论文链接: http://arxiv.org/abs/2605.14893v1
+
+==================================================
+==================================================
+
+论文名称: EVA: Editing for Versatile Alignment against Jailbreaks
+
+论文摘要: Large Language Models (LLMs) and Vision Language Models (VLMs) have demonstrated impressive capabilities but remain vulnerable to jailbreaking attacks, where adversaries exploit textual or visual triggers to bypass safety guardrails. Recent defenses typically rely on safety fine-tuning or external filters to reduce the model's likelihood of producing harmful content. While effective to some extent, these methods often incur significant computational overheads and suffer from the safety utility trade-off, degrading the model's performance on benign tasks. To address these challenges, we propose EVA (Editing for Versatile Alignment against Jailbreaks), a novel framework that pioneers the application of direct model editing for safety alignment. EVA reframes safety alignment as a precise knowledge correction task. Instead of retraining massive parameters, EVA identifies and surgically edits specific neurons responsible for the model's susceptibility to harmful instructions, while leaving the vast majority of the model unchanged. By localizing the updates, EVA effectively neutralizes harmful behaviors without compromising the model's general reasoning capabilities. Extensive experiments demonstrate that EVA outperforms baselines in mitigating jailbreaks across both LLMs and VLMs, offering a precise and efficient solution for post-deployment safety alignment.
+
+论文作者: Yi Wang, Hongye Qiu, Yue Xu, Sibei Yang, Zhan Qin, Minlie Huang, Wenjie Wang
+
+提交时间: 2026-05-14 12:16:10
+
+论文链接: http://arxiv.org/abs/2605.14750v1
+
+==================================================
+==================================================
+
+论文名称: SceneFunRI: Reasoning the Invisible for Task-Driven Functional Object Localization
+
+论文摘要: In real-world scenes, target objects may reside in regions that are not visible. While humans can often infer the locations of occluded objects from context and commonsense knowledge, this capability remains a major challenge for vision-language models (VLMs). To address this gap, we introduce SceneFunRI, a benchmark for Reasoning the Invisible. Based on the SceneFun3D dataset, SceneFunRI formulates the task as a 2D spatial reasoning problem via a semi-automatic pipeline and comprises 855 instances. It requires models to infer the locations of invisible functional objects from task instructions and commonsense reasoning. The strongest baseline model (Gemini 3 Flash) only achieves an CAcc@75 of 15.20, an mIoU of 0.74, and a Dist of 28.65. We group our prompting analysis into three categories: Strong Instruction Prompting, Reasoning-based Prompting, and Spatial Process of Elimination (SPoE). These findings indicate that invisible-region reasoning remains an unstable capability in current VLMs, motivating future work on models that more tightly integrate task intent, commonsense priors, spatial grounding, and uncertainty-aware search.
+
+论文作者: Posheng Chen, Powen Cheng, Gueter Josmy Faure, Hung-Ting Su, Winston H. Hsu
+
+提交时间: 2026-05-14 11:21:41
+
+论文链接: http://arxiv.org/abs/2605.14704v1
+
+==================================================
+==================================================
+
+论文名称: When Robots Do the Chores: A Benchmark and Agent for Long-Horizon Household Task Execution
+
+论文摘要: Long-horizon household tasks demand robust high-level planning and sustained reasoning capabilities, which are largely overlooked by existing embodied AI benchmarks that emphasize short-horizon navigation or manipulation and rely on fixed task categories. We introduce LongAct, a benchmark designed to evaluate planning-level autonomy in long-horizon household tasks specified through free-form instructions. By abstracting away embodiment-specific low-level control, LongAct isolates high-level cognitive capabilities such as instruction understanding, dependency management, memory maintenance, and adaptive planning. We further propose HoloMind, a VLM-driven agent with a DAG-based long-horizon hierarchical planner, a Multimodal Spatial Memory for persistent world modeling, an Episodic Memory for experience reuse, and a global Critic for reflective supervision. Experiments with GPT-5 and Qwen3-VL models show that HoloMind substantially improves long-horizon performance while reducing reliance on model scale. Even top models achieve only 59% goal completion and 16% full-task success, underscoring the difficulty of LongAct and the need for stronger long-horizon planning in embodied agents.
+
+论文作者: Zilin Zhu, Longteng Guo, Yanghong Mei, Bowen Pang, Zongxun Zhang, Xingjian He, Ruyi Ji, Jing Liu
+
+提交时间: 2026-05-14 07:47:53
+
+论文链接: http://arxiv.org/abs/2605.14504v1
+
+==================================================
+==================================================
+
+论文名称: Systematic Discovery of Semantic Attacks in Online Map Construction through Conditional Diffusion
+
+论文摘要: Autonomous vehicles depend on online HD map construction to perceive lane boundaries, dividers, and pedestrian crossings -- safety-critical road elements that directly govern motion planning. While existing pixel perturbation attacks can disrupt the mapping, they can be neutralized by standard adversarial defenses. We present MIRAGE, a framework for systematic discovery of semantic attacks that bypass adversarial defenses and degrade mapping predictions by finding plausible environmental variation (e.g. shadows, wet roads). MIRAGE exploits the latent manifold of real-world data learned by diffusion models, and searches for semantically mutated scenes neighboring the ground truth with the same road topology yet mislead the mapping predictions. We evaluate MIRAGE on nuScenes and demonstrate two attacks: (1) boundary removal, suppressing 57.7% of detections and corrupting 96% of planned trajectories; and (2) boundary injection, the only method that successfully injects fictitious boundaries, while pixel PGD and AdvPatch fail entirely. Both attacks remain potent under various adversarial defenses. We use two independent VLM judges to quantify realism, where MIRAGE passes as realistic 80--84% of the time (vs. 97--99% for clean nuScenes), while AdvPatch only 0--9%. Our findings expose a categorical gap in current adversarial defenses: semantic-level perturbations that manifest as legitimate environmental variation are substantially harder to mitigate than pixel-level perturbations.
+
+论文作者: Chenyi Wang, Ruoyu Song, Raymond Muller, Jean-Philippe Monteuuis, Jonathan Petit, Z. Berkay Celik, Ryan Gerdes, Ming F. Li
+
+提交时间: 2026-05-14 05:21:17
+
+论文链接: http://arxiv.org/abs/2605.14396v1
+
+==================================================
+==================================================
+
+论文名称: ICED: Concept-level Machine Unlearning via Interpretable Concept Decomposition
+
+论文摘要: Machine unlearning in Vision-Language Models (VLMs) is typically performed at the image or instance level, making it difficult to precisely remove target knowledge without affecting unrelated semantics. This issue is especially pronounced since a single image often contains multiple entangled concepts, including both target concepts to be forgotten and contextual information that should be preserved. In this paper, we propose an interpretable concept-level unlearning framework for VLMs, which constructs a compact task-specific concept vocabulary from the forgetting set using a multimodal large language model. In addition to modality alignment, visual representations are decomposed into sparse, nonnegative combinations of semantic concepts, providing an explicit interface for fine-grained knowledge manipulation. Based on this decomposition, our method formulates unlearning as concept-level optimization, where target concepts are selectively suppressed while intra-instance non-target semantics and global cross-modal knowledge are preserved. Extensive experiments across both in-domain and out-of-domain forgetting settings demonstrate that our method enables more comprehensive target forgetting, better preserves non-target knowledge within the same image, and maintains competitive model utility compared with existing VLM unlearning methods.
+
+论文作者: Shen Lin, Jing Lin, Junhao Dong, Piotr Koniusz, Li Xu
+
+提交时间: 2026-05-14 03:22:12
+
+论文链接: http://arxiv.org/abs/2605.14309v1
+
+==================================================
+==================================================
+
+论文名称: Sat3DGen: Comprehensive Street-Level 3D Scene Generation from Single Satellite Image
+
+论文摘要: Generating a street-level 3D scene from a single satellite image is a crucial yet challenging task. Current methods present a stark trade-off: geometry-colorization models achieve high geometric fidelity but are typically building-focused and lack semantic diversity. In contrast, proxy-based models use feed-forward image-to-3D frameworks to generate holistic scenes by jointly learning geometry and texture, a process that yields rich content but coarse and unstable geometry. We attribute these geometric failures to the extreme viewpoint gap and sparse, inconsistent supervision inherent in satellite-to-street data. We introduce Sat3DGen to address these fundamental challenges, which embodies a geometry-first methodology. This methodology enhances the feed-forward paradigm by integrating novel geometric constraints with a perspective-view training strategy, explicitly countering the primary sources of geometric error. This geometry-centric strategy yields a dramatic leap in both 3D accuracy and photorealism. For validation, we first constructed a new benchmark by pairing the VIGOR-OOD test set with high-resolution DSM data. On this benchmark, our method improves geometric RMSE from 6.76m to 5.20m. Crucially, this geometric leap also boosts photorealism, reducing the Fréchet Inception Distance (FID) from $\sim$40 to 19 against the leading method, Sat2Density++, despite using no extra tailored image-quality modules. We demonstrate the versatility of our high-quality 3D assets through diverse downstream applications, including semantic-map-to-3D synthesis, multi-camera video generation, large-scale meshing, and unsupervised single-image Digital Surface Model (DSM) estimation. The code has been released on https://github.com/qianmingduowan/Sat3DGen.
+
+论文作者: Ming Qian, Zimin Xia, Changkun Liu, Shuailei Ma, Wen Wang, Zeran Ke, Bin Tan, Hang Zhang, Gui-Song Xia
+
+提交时间: 2026-05-14 15:48:15
+
+论文链接: http://arxiv.org/abs/2605.14984v1
+
+==================================================
+==================================================
+
+论文名称: An Amortized Efficiency Threshold for Comparing Neural and Heuristic Solvers in Combinatorial Optimization
+
+论文摘要: A common critique of neural combinatorial-optimization solvers is that they are less energy-efficient than CPU metaheuristics, given the operational energy cost of training them on GPUs. This paper examines the inferential step from "training is expensive" to "neural solvers are net-inefficient", which is where the critique actually goes wrong. Training the network costs a large fixed amount of GPU energy; running the metaheuristic costs a small amount of CPU energy on every instance, repeated as long as the solver is deployed. The two are not commensurable until a deployment volume is fixed. We define the Amortized Efficiency Threshold (AET) as the deployment volume above which a neural solver breaks even with a heuristic baseline in total energy or carbon, under an explicit constraint on solution quality. We show that the cumulative-energy ratio between the two solvers tends to a constant strictly below one whenever the network wins per-instance, and that this limit does not depend on how the training cost was measured. An embodied-carbon term amortizes hardware fabrication symmetrically on both sides. We instantiate the framework on the Multi-Task VRP (MTVRP) environment at n=20 customers across 19 problem variants and five training seeds, with HGS via PyVRP as the heuristic baseline. The measured crossover sits near $1.58 \times 10^5$ deployed instances; the per-instance ratio is 0.41, reflecting the moderate size of the instances tested. The contribution is the framework, the open instrumentation, and the measurement protocol; structural convergence of the ratio at larger problem sizes is left to future empirical work.
+
+论文作者: Sohaib Afifi
+
+提交时间: 2026-05-14 09:39:15
+
+论文链接: http://arxiv.org/abs/2605.14624v1
+
+==================================================
+==================================================
+
+论文名称: Let Robots Feel Your Touch: Visuo-Tactile Cortical Alignment for Embodied Mirror Resonance
+
+论文摘要: Observing touch on another's body can elicit corresponding tactile sensations in the observer, a phenomenon termed mirror touch that supports empathy and social perception. This visuo-tactile resonance is thought to rely on structural correspondence between visual and somatosensory cortices, yet robotic systems lack computational frameworks that instantiate this principle. Here we demonstrate that cortical correspondence can be operationalized to endow robots with mirror touch. We introduce Mirror Touch Net, which imposes semantic, distributional and geometric alignment between visual and tactile representations through multi-level constraints, enabling prediction of millimetre-scale tactile signals across 1,140 taxels on a robotic hand from RGB images. Manifold analysis reveals that these constraints reshape visual representations into geometry consistent with the tactile manifold, reducing the complexity of cross-modal mapping. Extending this alignment framework to cross-domain observations of human hands enables tactile prediction and reflexive responses to observed human touch. Our results link a neural principle of visuo-tactile resonance to robotic perception, providing an explainable route towards anticipatory touch and empathic human-robot interaction. Code is available at https://github.com/fun0515/Mirror-Touch-Net.
+
+论文作者: Tianfang Zhu, Ning An, Rui Wang, Jiasi Gao, Qingming Luo, Anan Li, Guyue Zhou
+
+提交时间: 2026-05-14 08:40:24
+
+论文链接: http://arxiv.org/abs/2605.14571v1
+
+==================================================
+==================================================
+
+论文名称: TeachAnything: A Multimodal Crowdsourcing Platform for Training Embodied AI Agents in Symmetrical Reality
+
+论文摘要: Symmetrical Reality (SR) is emerging as a future trend for human-agent coexistence, placing higher demands on agents to acquire human-like intelligence. It calls for richer and more diverse human guidance. We introduce a three-stage demonstration paradigm integrating multimodal demonstration signals. Building on this paradigm, we developed TeachAnything, a cloud-based, crowdsourcing-oriented demonstration platform with physics simulation capable of collecting diverse demonstration data across varied scenes, tasks, and embodiments. By unifying virtual and physical interactions through both methodological design and physics simulation, the system serves as a practical foundation for developing embodied agents aligned with Symmetrical Reality.
+
+论文作者: Zidong Liu, Rongkai Liu, Yue Li, Zhenliang Zhang
+
+提交时间: 2026-05-14 08:32:46
+
+论文链接: http://arxiv.org/abs/2605.14556v1
+
+==================================================
+==================================================
+
+论文名称: Metis AI: The Overlooked Middle Zone Between AI-Native and World-Movers
+
+论文摘要: The dominant discourse on AI limitations frames the boundary of AI capability as a divide between digital tasks (where AI excels) and physical tasks (where embodiment is required). We argue this framing misses the most consequential boundary: the one within digital tasks. We identify a class of tasks we call Metis AI, named for the Greek concept of metis (practical, contextual knowledge), that are performed entirely on computers yet resist reliable AI automation. These tasks are not computationally intractable; they are institutionally, socially, and normatively entangled in ways that defeat algorithmic approaches. We distinguish constitutive metis (knowledge destroyed by the act of formalization) from operational metis (system-specific familiarity that automation can progressively absorb), and propose five structural characteristics that define the Metis AI zone: consequential irreversibility, relational irreducibility, normative open texture, adversarial co-evolution, and accountability anchoring. We ground each in established theory from across the social sciences, philosophy, and humanitarian practice, argue that these characteristics are properties of the tasks themselves rather than limitations of current models, and show that the appropriate design response is not better automation but centaur architectures in which humans lead and AI supports.
+
+论文作者: Xiang Li
+
+提交时间: 2026-05-14 05:47:07
+
+论文链接: http://arxiv.org/abs/2605.14407v1
+
+==================================================
+==================================================
+
+论文名称: Coding Agent Is Good As World Simulator
+
+论文摘要: World models have emerged as a powerful paradigm for building interactive simulation environments, with recent video-based approaches demonstrating impressive progress in generating visually plausible dynamics. However, because these models typically infer dynamics from video and represent them in latent states, they do not explicitly enforce physical constraints. As a result, the generated video rollouts are not physically plausible, exhibiting unstable contacts, distorted shapes, or inconsistent motion. In this paper, we present an agentic framework constructing physics-based world models through executable simulation code. The framework coordinates planning, code generation, visual review, and physics analysis agents. The planning agent converts the natural language prompt into a structured scene plan, the code agent implements it as executable simulation code, and the visual review agent provide visual feedback while the physics analysis agent checks physical consistency. The code is iteratively revised based on the feedback until the simulation matches the prompt reqirements and physical constraints. Experimental results show that our framework outperforms advanced video-based models in physical accuracy, instruction fidelity and visual quality, which could be applied to various scenarios including driving simulation and embodied robot tasks.
+
+论文作者: Hongyu Wang, Jingquan Wang, Bocheng Zou, Radu Serban, Dan Negrut
+
+提交时间: 2026-05-14 05:33:41
+
+论文链接: http://arxiv.org/abs/2605.14398v1
+
+==================================================
+==================================================
+
+论文名称: ASH: Agents that Self-Hone via Embodied Learning
+
+论文摘要: Long-horizon embodied tasks remain a fundamental challenge in AI, as current methods rely on hand-engineered rewards or action-labeled demonstrations, neither of which scales. We introduce ASH, an agentic system that learns an embodied policy from unlabeled, noisy internet video, without reward shaping or expert annotation. ASH follows a self-improvement loop; when it gets stuck, ASH learns an Inverse Dynamics Model (IDM) from its own trajectories, and uses its IDM to extract supervision from relevant internet video. ASH uses unsupervised learning to identify key moments from large-scale internet video and retains them as long-term memory -- allowing it to tackle long-horizon problems. We evaluate ASH on two complementary environments demanding multi-hour planning: Pokemon Emerald, a turn-based RPG, and The Legend of Zelda: The Minish Cap, a real-time action-adventure game. In both games, behavioral cloning, retrieval-augmented and zero-shot foundation-model baselines plateau, while ASH sustains progression across our 8-hour evaluation. ASH reaches an average of $11.2/12$ milestones in Pokemon Emerald and $9.9/12$ in Legend of Zelda, while the strongest baseline gets stuck in both environments at an average of $6.5/12$ and $6.0/12$ milestones, respectively. We demonstrate that self-improving agents are a scalable recipe for long-horizon embodied learning.
+
+论文作者: Benjamin Schneider, Xavier Schneider, Victor Zhong, Sun Sun
+
+提交时间: 2026-05-14 00:10:12
+
+论文链接: http://arxiv.org/abs/2605.14211v1
+
+==================================================
+==================================================
+
+论文名称: Policy Optimization in Hybrid Discrete-Continuous Action Spaces via Mixed Gradients
+
+论文摘要: We study reinforcement learning in hybrid discrete-continuous action spaces, such as settings where the discrete component selects a regime (or index) and the continuous component optimizes within it -- a structure common in robotics, control, and operations problems. Standard model-free policy gradient methods rely on score-function (SF) estimators and suffer from severe credit-assignment issues in high-dimensional settings, leading to poor gradient quality. On the other hand, differentiable simulation largely sidesteps these issues by backpropagating through a simulator, but the presence of discrete actions or non-smooth dynamics yields biased or uninformative gradients. To address this, we propose Hybrid Policy Optimization (HPO), which backpropagates through the simulator wherever smoothness permits, using a mixed gradient estimator that combines pathwise and SF gradients while maintaining unbiasedness. We also show how problems with action discontinuities can be reformulated in hybrid form, further broadening its applicability. Empirically, HPO substantially outperforms PPO on inventory control and switched linear-quadratic regulator problems, with performance gaps increasing as the continuous action dimension grows. Finally, we characterize the structure of the mixed gradient, showing that its cross term -- which captures how continuous actions influence future discrete decisions -- becomes negligible near a discrete best response, thereby enabling approximate decentralized updates of the continuous and discrete components and reducing variance near optimality. All resources are available at github.com/MatiasAlvo/hybrid-rl.
+
+论文作者: Matias Alvo, Daniel Russo, Yash Kanoria
+
+提交时间: 2026-05-14 02:59:45
+
+论文链接: http://arxiv.org/abs/2605.14297v1
+
+==================================================
+==================================================
+
+论文名称: Language Generation as Optimal Control: Closed-Loop Diffusion in Latent Control Space
+
+论文摘要: This work reformulates language generation as a stochastic optimal control problem, providing a unified theoretical perspective to analyze autoregressive and diffusion models and explain their limitations (Efficiency-Fidelity Paradox, Irreversibility Error Propagation, Optimization Tractability and Fidelity) in terms of combination of trajectory singularity, adjoint state vanishing, and gradient absence. To address these issues, we approximate the solution to the Hamilton-Jacobi-Bellman (HJB) equation, yielding an optimal policy that acts as a closed-loop controller. To bypass the intractability of directly solving the HJB PDE, we employ Flow Matching as the optimal trajectory solver within the rectified latent control space. This allows our Manta-LM with Global Integral Operator to approximate the global vector field, effectively realizing a model that simultaneously achieves high-fidelity text generation and efficient, low-cost parallel sampling. Empirically, our method achieves strong performance on language modeling and conditional generation tasks, while exhibiting improved stability, efficiency, and controllability.
+
+论文作者: ZiYi Dong, Yuliang Huang, Weijian Deng, Xiangyang Ji, Liang Lin, Pengxu Wei
+
+提交时间: 2026-05-14 08:13:43
+
+论文链接: http://arxiv.org/abs/2605.14531v1
