@@ -1,0 +1,271 @@
+论文名称: General Preference Reinforcement Learning
+
+论文摘要: Post-training has split large language model (LLM) alignment into two largely disconnected tracks. Online reinforcement learning (RL) with verifiable rewards drives emergent reasoning on math and code but depends on a programmatic verifier that cannot reach open-ended tasks, while preference optimization handles open-ended generation yet forgoes the continuous exploration that powers online RL. Closing this gap requires a verifier for open-ended quality, but a scalar reward model is the wrong shape for the job. Quality is multi-dimensional, and any scalar score is an incomplete proxy that lets online RL collapse onto whichever axis the score is most sensitive to. We turn instead to the General Preference Model (GPM), which embeds responses into $k$ skew-symmetric subspaces and represents preference as a structured, intransitivity-aware comparison. Building on this, we propose General Preference Reinforcement Learning (GPRL), which carries the $k$-way structure through to the policy update. GPRL computes per-dimension group-relative advantages, normalizes each on its own scale so no axis can dominate, and aggregates them with context-dependent eigenvalues. The same structure powers a closed-loop drift monitor that detects single-axis exploitation and corrects it on the fly by reweighting dimensions and tightening the trust region. Starting from $\texttt{Llama-3-8B-Instruct}$, GPRL reaches a length-controlled win rate of $56.51\%$ on AlpacaEval~2.0 while also outperforming SimPO and SPPO on Arena-Hard, MT-Bench, and WildBench by resisting reward hacking across extended training runs.
+
+论文作者: Muhammad Umer, Muhammad Ahmed Mohsin, Ahsan Bilal, Arslan Chaudhry, Andreas Haupt, Sanmi Koyejo, Emily Fox, John M. Cioffi
+
+提交时间: 2026-05-18 17:50:27
+
+论文链接: http://arxiv.org/abs/2605.18721v1
+
+==================================================
+==================================================
+
+论文名称: Offline Contextual Bandits in the Presence of New Actions
+
+论文摘要: Automated decision-making algorithms drive applications such as recommendation systems and search engines. These algorithms often rely on off-policy contextual bandits or off-policy learning (OPL). Conventionally, OPL selects actions that maximize the expected reward from an existing action set. However, in many real-world scenarios, actions, such as news articles or video content, change continuously, and the action space evolves over time after data collection. We define actions introduced after deploying the logging policy as new actions and focus on OPL with new actions. Existing OPL methods identify optimal actions from the existing set effectively but cannot learn and select new actions because no relevant data are logged. To address this limitation, we propose a new OPL method that leverages action features. We first introduce the Local Combination PseudoInverse (LCPI) estimator for the policy gradient, generalizing the PseudoInverse estimator initially proposed for off-policy evaluation of slate bandits. LCPI controls the trade-off between reward-modeling condition and the condition for data collection regarding the action features, capturing the interaction effects among different dimensions of action features. Furthermore, we propose a generalized algorithm called Policy Optimization for Effective New Actions (PONA), which integrates LCPI, a component specialized for new action selection, with Doubly Robust (DR), which excels at learning within existing actions. We define PONA as a weighted sum of the LCPI and DR estimators, optimizing both the selection of existing and new actions, and allowing the proportion of new action selections to be adjusted by the weight parameter. Through extensive experiments, we demonstrate that PONA efficiently selects new actions while maintaining the overall policy performance as opposed to most existing methods that cannot select new actions.
+
+论文作者: Ren Kishimoto, Tatsuhiro Shimizu, Kazuki Kawamura, Takanori Muroi, Yusuke Narita, Yuki Sasamoto, Kei Tateno, Takuma Udagawa, Yuta Saito
+
+提交时间: 2026-05-18 15:01:30
+
+论文链接: http://arxiv.org/abs/2605.18509v1
+
+==================================================
+==================================================
+
+论文名称: Pairwise Preference Reward and Group-Based Diversity Enhancement for Superior Open-Ended Generation
+
+论文摘要: Current reinforcement learning(RL) methods are broadly applicable and powerful in verifiable settings where scalar rewards can be provided. However, in open-ended generation tasks, verifying the correctness of responses remains challenging, and training reward models incurs substantial computational and annotation costs. Moreover, reinforcement learning (RLVR) often leads to diversity collapse and produces stereotypical or rigid outputs, outcomes that are particularly undesirable in open-domain scenarios. We propose Pairwise Preference Reward and Group-based Diversity Enhancement (PPR-GDE), a RL method that is more suitable for open-ended generation. PPR-GDE does not require scalar rewards and incorporates group-level diversity into the reward signal, it preserves the comparative structure of subjective evaluation through a pairwise preference reward, mitigates judge position bias via repeated comparisons with swapped response order, and introduces a group-based diversity reward that explicitly encourages semantic dispersion within a response group, all of these reward signals are integrated into a unified group-relative policy optimization objective. We instantiate PPR-GDE on role-playing task, experiments show that PPR-GDE achieves a better alignment quality as well as expressive diversity than strong RL baselines. Further analysis shows that pairwise preference is critical for preference alignment in subjective perspective, while the diversity metric plays an essential role in achieving superior expressive diversity and broader semantic coverage.
+
+论文作者: Guining Cao, Jiaxin Peng, Chu Zeng, Yu Zhao, Shuangyong Song,  Yongxiang
+
+提交时间: 2026-05-18 10:31:34
+
+论文链接: http://arxiv.org/abs/2605.18191v1
+
+==================================================
+==================================================
+
+论文名称: PAIR: Prefix-Aware Internal Reward Model for Multi-Turn Agent Optimization
+
+论文摘要: A significant hurdle for current LLMs is the execution of complex, multi-stage tasks. Group Relative Policy Optimization (GRPO) has been emerging as a leading choice, but its reliance on sparse outcome rewards severely limits credit assignment across intermediate steps. Existing remedies such as running full rollouts to assign step-level advantages, calling external LLM judges at each step, or computing intrinsic rewards that require ground-truth answers at every evaluation introduce significant costs or practical constraints. We hypothesize that internal correctness probing over LLM hidden states can be repurposed as a step-level reward signal, potentially addressing all of these limitations at once. However, existing probing research assumes clean inputs, and we first show that this assumption breaks down in multi-step settings: hidden-state probes degrade severely under prefix contamination tracking coherence with the (possibly corrupted) prefix rather than grounded correctness, while attention-based features remain robust to contamination but underperform on clean prefixes. Building on this complementary relationship, we propose the Prefix-Aware Internal Reward (PAIR), a two-stage model with a frozen hidden-state probe estimating belief-consistency and a lightweight attention-based head correcting it toward grounded correctness. Experimental results show that PAIR achieves the highest AUROC on contaminated trajectories while operating at negligible inference cost, enabling dense step-level reward signals for GRPO training without external model calls, ground-truth dependencies, or full-trajectory rollouts.
+
+论文作者: Wonjoong Kim, Yeonjun In, Sangwu Park, Dongha Lee, Chanyoung Park
+
+提交时间: 2026-05-18 05:39:30
+
+论文链接: http://arxiv.org/abs/2605.17877v1
+
+==================================================
+==================================================
+
+论文名称: Curriculum Group Policy Optimization: Adaptive Sampling for Unleashing the Potential of Text-to-Image Generation
+
+论文摘要: Text-to-Image (T2I) generation has achieved remarkable progress in recent years. Meanwhile, reinforcement learning methods, particularly those based on Group Relative Policy Optimization (GRPO), have attracted widespread attention and been successfully applied to T2I tasks. However, the uniform sampling strategy commonly used during training often ignores the match between sample difficulty and the model's current learning capability, leading to low training efficiency. We argue that improving training efficiency requires continuously prioritizing prompts that match the model's evolving capability and remain actively learnable. To this end, we propose Curriculum Group Policy Optimization (CGPO), an adaptive curriculum training framework. During training, each prompt produces a group of images scored by a reward model. We use the variance of group rewards as an online proxy for prompt inconsistency. A higher variance suggests that the model has partially captured the prompt requirements but has not yet achieved stable mastery. Such prompts are more likely to provide useful learning signals, so we increase their sampling probabilities accordingly. Additionally, to address data imbalance in multi-category datasets, we design a category calibration method based on proportional fairness optimization, which balances training difficulty across categories. Experiments on GenEval, T2I-CompBench++, and DPG Bench demonstrate that our framework effectively improves generation performance.
+
+论文作者: Baoteng Li, Xianghao Zang, Xinran Wang, Xiangyu Na, Zhixiang He, Hao Sun, Chi Zhang, Zhongjiang He, Tianwei Cao, Kongming Liang, Zhanyu Ma
+
+提交时间: 2026-05-18 03:30:14
+
+论文链接: http://arxiv.org/abs/2605.17807v1
+
+==================================================
+==================================================
+
+论文名称: SPATIOROUTE: Dynamic Prompt Routing for Zero-Shot Spatial Reasoning
+
+论文摘要: Spatial question answering over egocentric video is a challenging task that requires Vision-Language Models (VLMs) to reason about 3D object positions, scene affordances, and directional relationships, particularly in the zero-shot setting where no task-specific fine-tuning is available. We introduce SpatioRoute, a dynamic prompt generation approach that routes each incoming question to a semantically tailored prompt template -- without any additional training, fine-tuning, or 3D sensor input. SpatioRoute operates in two complementary modes: SpatioRoute-R, a rule-based router that deterministically maps question typologies (e.g., What, Is, How, Can, Which) to specialized prompt templates; and SpatioRoute-L, an LLM-driven approach that generates task-specific prompts from the question and situational context alone, with no video input at routing time. We evaluate SpatioRoute on the SQA3D benchmark across VLMs spanning model families. SpatioRoute achieves consistent overall accuracy gains up to 5% over fixed prompt baselines, establishing a new state-of-the-art for zero-shot video-only spatial VQA without requiring 3D point-cloud inputs. As an additional finding, we observe that Chain-of-Thought (CoT) prompting, implemented via the Think it Twice architecture, consistently degrades performance in this setting on Qwen series models, confirming that question-aware routing is more effective than uniform reasoning instructions for spatial video understanding.
+
+论文作者: Pawat Chunhachatrachai, Gueter Josmy Faure, Hung-Ting Su, Winston H. Hsu
+
+提交时间: 2026-05-18 10:54:55
+
+论文链接: http://arxiv.org/abs/2605.18209v1
+
+==================================================
+==================================================
+
+论文名称: CATA: Continual Machine Unlearning via Conflict-Averse Task Arithmetic
+
+论文摘要: Vision-language models (VLMs) have shown remarkable ability in aligning visual and textual representations, enabling a wide range of multimodal applications. However, their large-scale training data inevitably raises concerns about privacy, copyright, and undesirable content, creating a strong need for machine unlearning. While existing studies mainly focus on single-shot unlearning, practical VLM deployment often involves sequential removal requests over time, giving rise to continual machine unlearning. In this work, we make the first attempt to study continual unlearning for VLMs and identify three key challenges in this setting: effectiveness in removing target knowledge, fidelity in preserving retained model utility, and persistence in preventing knowledge re-emergence under sequential updates. To address these challenges, we propose CATA, a conflict-averse task arithmetic method that represents each forget request as an unlearning task vector. By maintaining historical task vectors and performing sign-aware conflict-averse aggregation, CATA suppresses conflicting update components that may weaken previous forgetting effects. Extensive experiments under both single-shot and continual settings show that CATA outperforms baselines in terms of forgetting effectiveness, model fidelity, and forgetting persistence.
+
+论文作者: Shen Lin, Junhao Dong, Rongjie Chen, Xiaoyu Zhang, Li Xu, Xiaofeng Chen
+
+提交时间: 2026-05-18 16:21:41
+
+论文链接: http://arxiv.org/abs/2605.18610v1
+
+==================================================
+==================================================
+
+论文名称: VISAFF: Speaker-Centered Visual Affective Feature Learning for Emotion Recognition in Conversation
+
+论文摘要: Emotion Recognition in Conversation (ERC) is essential for effective human-machine interaction, aiming to identify speakers' emotional states in multi-turn dialogues. Early text-based methods struggle with complex scenarios like sarcasm because they inherently neglect vital non-verbal information. While recent Vision-Language Models (VLMs) address this by analyzing video directly, they are not inherently tailored for ERC and often focus on emotionally irrelevant background regions or passive listeners rather than the active speaker. Furthermore, fine-tuning these large models incurs prohibitive computational costs. Additionally, isolated visual signals are frequently ambiguous or technically compromised without the context of linguistic content and vocal prosody. To address these challenges, we propose VISAFF, a speaker-centered VISual AFFective feature learning framework for ERC. VISAFF consists of two stages: Speaker-Centered Affective Grounding and Reliability-Guided Affective Complementation. VISAFF utilizes a tuning-free approach to unlock the reasoning capabilities of frozen VLMs, efficiently steering them to focus on the active speaker's emotional visual cues without heavy training overheads. In the second stage, we introduce a reliability-guided affective complementation mechanism that dynamically leverages textual and acoustic modalities to compensate for visual uncertainty. Experiments on two real-world datasets demonstrate that VISAFF achieves highly competitive performance compared to state-of-the-art methods in a tuning-free setting, significantly enhancing computational efficiency by eliminating the need for expensive fine-tuning of large VLMs. The source code is available at https://anonymous.4open.science/r/speaker-2365/.
+
+论文作者: Linan ZHU, Zihao Zhai, Xiao Han, Yuqian Fu, Xiangfan Chen, Xiangjie Kong, Guojiang Shen
+
+提交时间: 2026-05-18 15:27:10
+
+论文链接: http://arxiv.org/abs/2605.18547v1
+
+==================================================
+==================================================
+
+论文名称: Geometry-Aware Uncertainty Coresets for Robust Visual In-Context Learning in Histopathology
+
+论文摘要: Vision-language models (VLMs) can couple visual perception with open-ended clinical reasoning, making them attractive for computational histopathology. However, fine-tuning billions of parameters on scarce, expert-annotated pathology data is prohibitive, while in-context learning (ICL), which conditions the VLM on demonstrative image-text pairs without parameter updates, suffers from high sensitivity to which examples are selected and how the query is phrased, producing unreliable diagnostics. Existing selection strategies rely on query-dependent nearest-neighbour retrieval that ignores global data structure, require costly parameter updates, or disregard the joint vision-text embedding geometry of VLMs. We propose GAUC, a training-free coreset selection method operating directly in the pre-trained multimodal embedding space. GAUC jointly optimises three objectives: (1) a Maximum Mean Discrepancy term enforcing distributional fidelity between coreset and full dataset, (2) an Effective Mutual Information Difference regulariser bounding performance degradation under prompt paraphrases by exploiting the VLM's joint vision-text alignment, and (3) a predictive-variance penalty suppressing overconfident, unstable outputs. On CRC-100K and MHIST across multiple open-source VLM architectures, GAUC consistently improves accuracy, calibration, and prompt robustness over recent ICL selection methods and dataset-distillation baselines, all without a single gradient update.
+
+论文作者: Franciskus Xaverius Erick, Johanna Paula Müller, Bernhard Kainz
+
+提交时间: 2026-05-18 13:54:04
+
+论文链接: http://arxiv.org/abs/2605.18419v1
+
+==================================================
+==================================================
+
+论文名称: Self-Evolving Spatial Reasoning in Vision Language Models via Geometric Logic Consistency
+
+论文摘要: Vision-Language Models (VLMs) have made striking progress, yet their spatial reasoning remains fragile: models that answer an original input correctly can still fail under paired transformations with predictable answer mappings, revealing a gap between instance-level correctness and robust spatial reasoning. To address this, we propose Spatial Alignment via Geometric Evolution (SAGE), a self-evolving framework that enforces logical consistency in VLMs through geometric and linguistic duality operations. SAGE incorporates duality consistency as an auxiliary reward within GRPO training, encouraging models to produce logically coherent answers across original and transformed inputs. A dynamic operation pool continuously probes for inconsistencies, promoting challenging operations and retiring mastered ones, so that training focuses on the most informative signals. SAGE is model-agnostic, data-efficient compared to prior GRPO methods, and can be applied as a lightweight post-training stage to any existing VLM. Experiments on video and spatial reasoning benchmarks demonstrate consistent improvements over strong baselines and enhanced generalization to unseen data.
+
+论文作者: Junming Liu, Yuqi Li, Yifei Sun, Maonan Wang, Piotr Koniusz, Yirong Chen, Ding Wang
+
+提交时间: 2026-05-18 10:05:21
+
+论文链接: http://arxiv.org/abs/2605.18162v1
+
+==================================================
+==================================================
+
+论文名称: Temporal Aware Pruning for Efficient Diffusion-based Video Generation
+
+论文摘要: Video diffusion models have recently enabled high-quality video generation with ViT-based architectures, but remain computationally intensive because generation requires attention computation over long spatiotemporal sequences. Token pruning has proven effective for ViTs and VLMs. However, most prior pruning methods are attention-based and operate per frame, failing to ensure the vital temporal coherence across frames in video generation tasks. In practice, naively adopting attention-only pruning causes noticeable degradation due to worsened background consistency, flickering, and reduced image quality. To address this, we propose TAPE, a training-free Temporal Aware Pruning for Efficient diffusion-based video generation. TAPE (i) applies temporal smoothing to align token-importance across adjacent frames and suppress selection jitter; and (ii) performs token reselection in selected layers to align token pruning with layers' diverse semantic focus and avoid error accumulation in specific areas; it also (iii) adopt a timestep-level budget scheduling that prunes aggressively at early noisy steps and relaxes pruning during fidelity-critical refinement. The experimental results show that TAPE delivers significant speedups while preserving high visual fidelity, outperforming prior token reduction approaches.
+
+论文作者: Sheng Li, Yang Sui, Junhao Ran, Bo Yuan, Yue Dai, Xulong Tang
+
+提交时间: 2026-05-18 04:18:24
+
+论文链接: http://arxiv.org/abs/2605.17837v1
+
+==================================================
+==================================================
+
+论文名称: CounterCount: A Diagnostic Framework for Counting Bias in Vision Language Models
+
+论文摘要: Vision-Language Models (VLMs) excel at multimodal reasoning, yet it remains unclear whether their answers are grounded in visual evidence or driven by learned language and world priors. Counting provides a precise testbed: when visual evidence conflicts with canonical object knowledge, a model must rely on the image rather than a prototypical count. We introduce CounterCount, a diagnostic framework for counterfactual counting in VLMs, consisting of paired factual and counterfactual images with edited count-relevant attributes, verified answers, and localized evidence annotations. Evaluating recent VLMs, we find strong performance on factual images but consistent degradation under counterfactual attribute changes, indicating reliance on object-level priors even when contradictory visual evidence is present. Using localized annotations, we show that these failures are not solely due to missing or ambiguous visual evidence, but to models underweighting attention to count-relevant visual tokens. We introduce a unified inference-time attention modulation strategy that reweights selected visual tokens, improving counterfactual counting accuracy by up to 8% across multiple VLMs. Overall, CounterCount exposes prior-driven counting failures and provides diagnostic insights for designing future VLMs.
+
+论文作者: Reem Alzahrani, Hassan Alshanqiti, Bushra Bin Hemid, Zaid Alyafeai, Abdelrahman Eldesokey, Bernard Ghanem
+
+提交时间: 2026-05-18 04:00:05
+
+论文链接: http://arxiv.org/abs/2605.17826v1
+
+==================================================
+==================================================
+
+论文名称: Code as Agent Harness
+
+论文摘要: Recent large language models (LLMs) have demonstrated strong capabilities in understanding and generating code, from competitive programming to repository-level software engineering. In emerging agentic systems, code is no longer only a target output. It increasingly serves as an operational substrate for agent reasoning, acting, environment modeling, and execution-based verification. We frame this shift through the lens of agent harnesses and introduce code as agent harness: a unified view that centers code as the basis for agent infrastructure. To systematically study this perspective, we organize the survey around three connected layers. First, we study the harness interface, where code connects agents to reasoning, action, and environment modeling. Second, we examine harness mechanisms: planning, memory, and tool use for long-horizon execution, together with feedback-driven control and optimization that make harness reliable and adaptive. Third, we discuss scaling the harness from single-agent systems to multi-agent settings, where shared code artifacts support multi-agent coordination, review, and verification. Across these layers, we summarize representative methods and practical applications of code as agent harness, spanning coding assistants, GUI/OS automation, embodied agents, scientific discovery, personalization and recommendation, DevOps, and enterprise workflows. We further outline open challenges for harness engineering, including evaluation beyond final task success, verification under incomplete feedback, regression-free harness improvement, consistent shared state across multiple agents, human oversight for safety-critical actions, and extensions to multimodal environments. By centering code as the harness of agentic AI, this survey provides a unified roadmap toward executable, verifiable, and stateful AI agent systems.
+
+论文作者: Xuying Ning, Katherine Tieu, Dongqi Fu, Tianxin Wei, Zihao Li, Yuanchen Bei, Jiaru Zou, Mengting Ai, Zhining Liu, Ting-Wei Li, Lingjie Chen, Yanjun Zhao, Ke Yang, Bingxuan Li, Cheng Qian, Gaotang Li, Xiao Lin, Zhichen Zeng, Ruizhong Qiu, Sirui Chen, Yifan Sun, Xiyuan Yang, Ruida Wang, Rui Pan, Chenyuan Yang, Dylan Zhang, Liri Fang, Zikun Cui, Yang Cao, Pan Chen, Dorothy Sun, Ren Chen, Mahesh Srinivasan, Nipun Mathur, Yinglong Xia, Hong Li, Hong Yan, Pan Lu, Lingming Zhang, Tong Zhang, Hanghang Tong, Jingrui He
+
+提交时间: 2026-05-18 17:59:03
+
+论文链接: http://arxiv.org/abs/2605.18747v1
+
+==================================================
+==================================================
+
+论文名称: ESI-Bench: Towards Embodied Spatial Intelligence that Closes the Perception-Action Loop
+
+论文摘要: Spatial intelligence unfolds through a perception-action loop: agents act to acquire observations, and reason about how observations vary as a function of action. Rather than passively processing what is seen, they actively uncover what is unseen - occluded structure, dynamics, containment, and functionality that cannot be resolved from passive sensing alone. We move beyond prior formulations of spatial intelligence that assume oracle observations by recasting the observer as an actor. We introduce ESI-BENCH, a comprehensive benchmark for embodied spatial intelligence spanning 10 task categories and 29 subcategories built on OmniGibson, grounded in Spelke's core knowledge systems. Agents must decide what abilities to deploy - perception, locomotion, and manipulation - and how to sequence them to actively accumulate task-relevant evidence. We conduct extensive experiments on state-of-the-art MLLMs and find that active exploration substantially outperforms passive counterparts, with agents spontaneously discovering emergent spatial strategies without explicit instructions, while random multi-view often adds noise rather than signal despite consuming far more images. Most failures stem not from weak perception but from action blindness: poor action choices lead to poor observations, which in turn drive cascading errors. While explicit 3D grounding stabilizes reasoning on depth-sensitive tasks, imperfect 3D representation proves more harmful than 2D baselines by distorting spatial relations. Human studies further reveal that unlike humans who seek falsifying viewpoints and revise beliefs under contradiction, models commit prematurely with high confidence regardless of evidence quality, exposing a metacognitive gap that neither better perception nor more embodied interaction alone can close.
+
+论文作者: Yining Hong, Jiageng Liu, Han Yin, Manling Li, Leonidas Guibas, Li Fei-Fei, Jiajun Wu, Yejin Choi
+
+提交时间: 2026-05-18 17:59:02
+
+论文链接: http://arxiv.org/abs/2605.18746v1
+
+==================================================
+==================================================
+
+论文名称: DexHoldem: Playing Texas Hold'em with Dexterous Embodied System
+
+论文摘要: Evaluating embodied systems on real dexterous hardware requires more than isolated primitive skills: an agent must perceive a changing tabletop scene, choose a context-appropriate action, execute it with a dexterous hand, and leave the scene usable for later decisions. We introduce DexHoldem, a real-world system-level benchmark built around Texas Hold'em dexterous manipulation with a ShadowHand. DexHoldem provides 1,470 teleoperated demonstrations across 14 Texas Hold'em manipulation primitives, a standardized physical policy benchmark, and an agentic perception benchmark that tests whether agents can recover the structured game state needed for embodied decision making. On primitive execution, $π_{0.5}$ obtains the highest task completion rate ($61.2\%$), while $π_{0.5}$ and $π_0$ tie on scene-preserving success rate ($47.5\%$). On agentic perception, Opus 4.7 obtains the best strict problem-level accuracy ($34.3\%$), while GPT 5.5 obtains the best average field-wise accuracy ($66.8\%$), exposing a gap between isolated visual sub-capabilities and complete routing-relevant state recovery. Finally, we instantiate the full embodied-agent loop in three case studies, where waiting, recovery dispatches, human-help requests, and repeated primitive execution reveal how perception and policy errors accumulate during closed-loop deployment. DexHoldem therefore evaluates dexterous tabletop execution, agentic perception, and embodied decision routing in a shared physical setting. Project page: https://dexholdem.github.io/Dexholdem/.
+
+论文作者: Feng Chen, Tianzhe Chu, Li Sun, Pei Zhou, Zhuxiu Xu, Shenghua Gao, Yuexiang Zhai, Yanchao Yang, Yi Ma
+
+提交时间: 2026-05-18 17:51:34
+
+论文链接: http://arxiv.org/abs/2605.18727v1
+
+==================================================
+==================================================
+
+论文名称: Not What You Asked For: Typographic Attacks in Household Robot Manipulation
+
+论文摘要: Open-vocabulary embodied AI agents increasingly rely on vision-language models such as CLIP for object perception and task grounding. However, the shared embedding space that enables this flexibility introduces a structural vulnerability to typographic attacks, where printed text in a physical scene semantically overrides visual judgment. While prior work has quantified this threat in static 2D benchmarks and 3D navigation tasks, its impact on the full Sense-Plan-Act pipeline of household robot manipulation remains unexplored.
+  This work evaluates typographic attacks in a Habitat-based simulation using the HomeRobot benchmark. We introduce a decoupled perception architecture that exposes a frozen CLIP encoder to adversarial stickers while maintaining geometric grounding via DETIC. In a controlled evaluation pool of 59 attributable episodes, the attack achieves an overall Attack Success Rate (ASR) of 67.8%, rising to 70.0% among fully successful episodes, under uncontrolled viewing angles and occlusion with no perceptual optimization.
+  Critically, we find that perceptual errors propagate through the persistent 3D semantic map to produce kinetic failures, defined here as physically executed grasping and transport of the wrong object driven by an adversarially poisoned semantic state. In these cases, the robot physically grasps and delivers the wrong object to a target receptacle. These results establish typographic misclassification as a real, measurable, and physically consequential threat to the safety of modular manipulation pipelines that prior typographic attack research has left unexamined.
+
+论文作者: Ali Iranmanesh, Peng Liu
+
+提交时间: 2026-05-18 16:06:29
+
+论文链接: http://arxiv.org/abs/2605.18593v1
+
+==================================================
+==================================================
+
+论文名称: Key-Gram: Extensible World Knowledge for Embodied Manipulation
+
+论文摘要: Embodied control increasingly requires models to follow compositional language instructions while reasoning over dynamic visual states. However, current vision-language-action policies and world-action models often couple linguistic knowledge with visual computation in a shared backbone or conditioning pathway, leading to modality competition and making knowledge extension dependent on backbone updates. In this paper, we introduce Key-Gram, a conditional-memory framework that separates language-derived world knowledge from visual-state reasoning for embodied control. At its core is a memory module that decomposes an instruction into task-specific key-grams, retrieves static linguistic priors through deterministic hashed lookup, and injects the retrieved entries into selected hidden layers through context-aware gating and lightweight convolutional fusion. This design allows the backbone to devote its main capacity to visual reasoning and action inference, while reusable instruction knowledge is stored in an extensible external memory. The logical memory table can be conveniently partitioned during training and, due to its $O(1)$ lookup pattern, efficiently placed on host memory during inference. Across RoboTwin2.0, LIBERO/LIBERO-Plus, and real-world dual-arm manipulation, Key-Gram consistently improves both $π_{0}$ and $π_{0.5}$ backbones, with average relative gains of $29.5\%/9.9\%$ on RoboTwin2.0, $35.8\%/4.5\%$ on LIBERO-Plus transfer without target-domain fine-tuning, and $15.4\%/8.1\%$ on real-world long-horizon tasks. These results demonstrate that externalized linguistic memory provides an effective and extensible mechanism for improving compositional grounding, transfer, and real-world manipulation.
+
+论文作者: Jingjing Fan, Siyuan Li, Botao Ren, Zhidong Deng
+
+提交时间: 2026-05-18 15:37:02
+
+论文链接: http://arxiv.org/abs/2605.18556v1
+
+==================================================
+==================================================
+
+论文名称: Qumus: Realization of An Embodied AI Quantum Material Experimentalist
+
+论文摘要: While modern Large Language Models (LLMs) and agentic artificial intelligence (AI) have demonstrated transformative capabilities in digital domains, the realization of embodied AI capable of real-world scientific discovery remains a difficult frontier. The advancements are hindered by the inherent complexity of integrating high-level reasoning, multimodal information processing and real-time physical execution. Here we introduce Qumus, the first AI quantum materials experimentalist. Physically embodied within a robotic mini-laboratory, Qumus is an intelligent, multimodal, and multi-agent system designed for the creation and nano-processing of atomically thin two-dimensional (2D) materials and stacked van der Waals (vdW) structures. Qumus autonomously navigates the full scientific cycle, from hypothesis generation and protocol planning to multi-step experimental execution, result analysis and reporting, acting as an experimentalist. Markedly, the system has achieved, for the first time, the AI-creation of graphene, as well as the first AI-fabrication of complex nanodevices including atomically thin field-effect transistors via vdW stacking. Qumus excels at these tasks by demonstrating autonomous error correction and closed-loop experimentation. Our results establish a generalizable framework for self-improving embodied AI systems that learn directly from the quantum world, opening a pathway toward accelerated discovery in quantum materials, electronics and beyond.
+
+论文作者: Lihan Shi, Zhaoyi Joy Zheng, Xinzhe Juan, Yimin Wang, Ming Yin, Mayank Sengupta, Kristina Wolinski, Yanyu Jia, Jingzhi Shi, Derek Saucedo, Neill Saggi, Haosen Guan, Kenji Watanabe, Takashi Taniguchi, Ali Yazdani, Mengdi Wang, Sanfeng Wu
+
+提交时间: 2026-05-18 13:47:31
+
+论文链接: http://arxiv.org/abs/2605.18407v1
+
+==================================================
+==================================================
+
+论文名称: Beyond the Cartesian Illusion: Testing Two-Stage Multi-Modal Theory of Mind under Perceptual Bottlenecks
+
+论文摘要: While Multi-Modal Large Language Models (MLLMs) demonstrate impressive capabilities in general reasoning, their embodied spatial intelligence remains hampered by a "Cartesian Illusion" - a reliance on text-based probability distributions that lack grounded, 3D topological understanding. This limitation is starkly exposed in multi-agent environments, which demand more than just scene perception; they require second-order Theory of Mind (ToM). Specifically, an Agent A must be able to infer Agent B's belief about the environment, governed strictly by Agent B's physical orientation and sensory limitations. In this paper, we probe the limits of two-stage spatial inference in MLLMs through a novel audio-visual task: requiring Agent A to predict Agent B's estimation of A's relative location. To solve this, we propose an Epistemic Sensory Bottleneck module that abandons rigid, rule-based coordinate transformations. Instead, we introduce an Anchor-Based Embodied Spatial Decomposition Chain-of-Thought (CoT). This guides the MLLM through a "geometric-to-semantic" projection, forcing it to first establish B's local coordinate system and then dynamically weight visual and auditory modalities based on whether A falls within B's visual frustum. Extensive evaluations reveal that while current MLLMs fundamentally struggle with spatial symmetry and out-of-view ambiguities (establishing a rigorous zero-shot baseline of 42% accuracy), our sensory-bounded reasoning chain robustly outperforms pure egocentric and allocentric baselines. By systematically benchmarking these perceptual bottlenecks, our work exposes the current limits of MLLM spatial reasoning and establishes a foundational paradigm for epistemic, modality-aware inference in Embodied AI.
+
+论文作者: Yajing Zhou, Xiangyu Kong
+
+提交时间: 2026-05-18 10:32:56
+
+论文链接: http://arxiv.org/abs/2605.18194v1
+
+==================================================
+==================================================
+
+论文名称: Confidence-Gated Robot Autonomy: When Does Uncertainty Actually Help?
+
+论文摘要: Robotic systems often use predictive uncertainty to decide whether to act autonomously or defer to a fallback policy. In threshold-gated autonomy, uncertainty matters mainly through its ability to rank likely errors. Standard metrics such as expected calibration error and AUROC do not directly test whether uncertainty changes act/defer decisions. We therefore evaluate uncertainty using Spearman rank correlation, paired bootstrap equivalence testing, and act/defer agreement. Across three temporal activity-recognition benchmarks, we find a dataset-dependent competence regime below which uncertainty provides a weak and unstable error ranking. Above this regime, softmax heuristics, MC Dropout, and ensembles produce similar gating behavior, while threshold choice has a much larger effect on execution outcomes. A multi-seed embodied simulation shows the same pattern for collision rate and cost once realized autonomy is matched. Under temporal covariate shift, ranking quality remains stable, but fine grained semantic OOD detection remains near chance. These results suggest that simple uncertainty proxies can suffice for selective gating once the base model is competent, but not for semantic novelty detection.
+
+论文作者: Johannes A. Gaus, Jhon P. F. Charaja, Daniel Haeufle
+
+提交时间: 2026-05-18 08:35:27
+
+论文链接: http://arxiv.org/abs/2605.18045v1
+
+==================================================
+==================================================
+
+论文名称: StableHand: Quality-Aware Flow Matching for World-Space Dual-Hand Motion Estimation from Egocentric Video
+
+论文摘要: Recovering world space 4D motion of two interacting hands from egocentric video is a fundamental capability for supervising robot policy learning, where wrist trajectories track the end-effector and finger articulations specify the grasp pose. Two major challenges arise in this setting: hands frequently leave the camera view for extended periods due to head motion, and persistent hand-object interactions cause severe occlusions of one or both hands. Existing methods uniformly condition on noisy hand motion observations without accounting for their per-frame reliability, leading to substantial performance degradation. Our key insight is that accurate world space hand motion estimation is tightly coupled with the quality of per-frame hand observations. To this end, we decompose the quality of hand motion observations extracted from an off-the-shelf hand pose estimator into four channels: wrist global translation and finger articulations for both hands. We propose StableHand, a quality-aware flow-matching framework conditioned on these four-channel quality signals, which are predicted by a learned quality network. We naturally incorporate the quality signals into the flow-matching process through a per-channel forward schedule, a quality-adjusted velocity target, AdaLN modulation of the DiT denoiser, and a quality-aware ODE initialization. This unified generative process preserves high-quality observations while reconstructing unreliable ones using a learned bimanual motion prior. Experiments on HOT3D and ARCTIC, two egocentric benchmarks featuring long missing-hand spans and persistent hand-object occlusions, show that StableHand achieves state-of-the-art performance across all reported metrics, reducing W-MPJPE by 20-25% compared to the strongest baseline, with the largest gains on heavily occluded ARCTIC sequences.
+
+论文作者: Huajian Zeng, Chaohua Yao, Yuantai Zhang, Jiaqi Yang, Rolandos Alexandros Potamias, Xingxing Zuo
+
+提交时间: 2026-05-18 15:33:15
+
+论文链接: http://arxiv.org/abs/2605.18553v1
