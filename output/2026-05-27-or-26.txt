@@ -1,0 +1,335 @@
+论文名称: FineVLA: Fine-Grained Instruction Alignment for Steerable Vision-Language-Action Policies
+
+论文摘要: Vision-Language-Action (VLA) models are increasingly expected to not only complete robot tasks, but also follow human instructions about how those tasks should be executed. However, existing robot datasets usually pair trajectories with coarse goal-level language, leaving execution-critical details such as active arm, approach direction, and contact region unspecified. This limits steerable policy learning and robotic video understanding. We introduce FineVLA, an open framework for action-aligned fine-grained VLA supervision. The framework includes: (1) a data construction tool that unifies 972,247 trajectories across 85K tasks from 10 open-source robot datasets and builds FineVLA-Data, a human-verified dataset of 47,159 fine-grained trajectories; (2) a held-out benchmark with 500 videos, 10,816 atomic facts, and 1,030 VQA questions; (3) a robotics-specialized VLM annotator for scalable fine-grained annotation; and (4) a steerable VLA policy trained with controlled mixtures of fine-grained and raw goal-level instructions. Our experiments yield three findings. First, fine-grained supervision does not sacrifice goal-level success: FG-only improves over Raw-only by +1.4 to +8.1 success-rate points across settings. Second, fine-grained and raw instructions are complementary, following a consistent inverted-U trend peaking at FG:Raw = 1:2 to 1:1. The best mixed setting reaches 86.8%/82.5% in RoboTwin simulation and 62.7/100 in real-world dual-arm manipulation (vs. 49.9 Raw-only). Third, fine-grained supervision improves steerable control: the largest real-world gains appear on pose (+23), color (+18), and approach direction (+18)--factors where goal-level instructions provide no guidance. Overall, fine-grained language should augment goal-level instructions: specifying how to execute alongside what to achieve. Project page: https://finevla.xlang.ai/
+
+论文作者: Xintong Hu, Xuhong Huang, Jinyu Zhang, Yutong Yao, Yuchong Sun, Qiuyue Wang, Mingsheng Li, Sicheng Xie, Yitao Liu, Junhao Chen, Yixuan Chen, Yingming Zheng, Shuai Bai, Tao Yu
+
+提交时间: 2026-05-26 17:01:10
+
+论文链接: http://arxiv.org/abs/2605.27284v1
+
+==================================================
+==================================================
+
+论文名称: LocateAnything: Fast and High-Quality Vision-Language Grounding with Parallel Box Decoding
+
+论文摘要: Vision-language models (VLMs) commonly formulate visual grounding and detection as a coordinate-token generation problem, serializing each 2D box into multiple 1D tokens that are learned and decoded largely independently. This token-by-token decoding mismatches the coupled structure of box geometry and creates a practical inference bottleneck due to strictly sequential generation. We introduce LocateAnything, a unified generative grounding and detection framework based on Parallel Box Decoding (PBD). By decoding geometric elements such as bounding boxes and points as atomic units in a single step, LocateAnything preserves intra-box geometric coherence and unlocks substantial parallelism. We show that PBD improves both decoding throughput and localization accuracy. We further develop a scalable data engine and curate LocateAnything-Data, a large-scale dataset with more than 138 million training samples, substantially increasing data diversity for high-precision localization. Extensive evaluations show that LocateAnything advances the speed-accuracy frontier, achieving significantly higher decoding throughput while improving high-IoU localization quality across diverse benchmarks. The results highlight the complementary benefits of Parallel Box Decoding and large-scale training data in enabling efficient and precise unified visual grounding and detection.
+
+论文作者: Shihao Wang, Shilong Liu, Yuanguo Kuang, Xinyu Wei, Yangzhou Liu, Zhiqi Li, Yunze Man, Guo Chen, Andrew Tao, Guilin Liu, Jan Kautz, Lei Zhang, Zhiding Yu
+
+提交时间: 2026-05-26 17:59:12
+
+论文链接: http://arxiv.org/abs/2605.27365v1
+
+==================================================
+==================================================
+
+论文名称: EdgeFlow: Edge-Map Augmented VLM-Based Flowchart Processing for Industrial Requirements Engineering
+
+论文摘要: Flowcharts are widely used in industrial requirements, but usually remain embedded as static images. Vision Language Models (VLMs) show promise in the conversion of these flowcharts into machine-readable models for RE activities, yet, when directly applied to flowchart conversion, they often fail on topology-critical visual details. To address this, we propose EdgeFlow that augments a VLM's original input with a deterministically extracted Canny edge map-acting as a structural prior-to improve flowchart-to-Mermaid conversion, without requiring annotated training data or domain-specific model fine-tuning.
+  We evaluate EdgeFlow on IndusReqFlow, a dataset sourced from real-world requirements. Compared with off-the-shelf VLMs, EdgeFlow improves node-level F1 by 17.39 percentage points and edge-level F1 by 16.94 percentage points. At the path level, EdgeFlow improves path F1 by 11.06 percentage points, enabling better support for model-based testing. These results demonstrate that EdgeFlow provides a practical, training-free means to improve topology-preserving flowchart-to-Mermaid conversion for industrial RE. Cross-dataset evaluation results on a public synthetic benchmark show no significant improvement; this highlights the need for diverse benchmarks incorporating industrial data for the comprehensive evaluation of future VLM-based RE tools.
+
+论文作者: Zhifei Dou, Shabnam Hassani, Ou Wei
+
+提交时间: 2026-05-26 17:40:47
+
+论文链接: http://arxiv.org/abs/2605.27332v1
+
+==================================================
+==================================================
+
+论文名称: Real Images, Worse Judgments: Evaluating Vision-Language Models on Concreteness and Imagery
+
+论文摘要: Visual inputs are often assumed to improve language understanding in multimodal models. We examine this assumption by asking whether vision-language models (VLMs) can distinguish useful visual evidence from incidental image context in lexical judgments. We use human concreteness and imagery ratings because they span words with varying expected visual relevance, from abstract and low-imagery words to concrete and high-imagery words. We find that real-image contexts do not yield consistent gains and often hurt alignment with human ratings, most sharply when visual evidence is least relevant. Through probing and canonical correlation analysis, complemented by an attribution case study, we find that real-image contexts are associated with representational shifts and greater sensitivity to spurious visual cues, coinciding with weaker recoverability of the targeted lexical properties. We further show that instructing models to focus solely on textual content at inference time can reduce this degradation, with the clearest gains on these vulnerable subsets. Our findings suggest that current instruction-tuned VLMs need better calibration of when visual context should inform lexical judgments.
+
+论文作者: Yifan Jiang, Ruoxi Ning, Sheng Yao, Freda Shi
+
+提交时间: 2026-05-26 17:24:59
+
+论文链接: http://arxiv.org/abs/2605.27315v1
+
+==================================================
+==================================================
+
+论文名称: Chartographer: Counterfactual Chart Generation for Evaluating Vision-Language Models
+
+论文摘要: Chart question-answering (QA) benchmarks aim to pose questions that require visual reasoning to correctly answer, but models can often reach solutions through shortcuts or prior familiarity with a chart based on their own background knowledge. To strictly evaluate visual reasoning, we propose counterfactual charts where the chart-question task remains fixed, but underlying chart and the corresponding answer are varied. We introduce Chartographer, a framework to reverse engineer charts into executable code, validate reconstruction fidelity, generate seed-controlled counterfactual variants, and derive new answers from executable QA logic. We apply this framework to existing chart QA datasets and evaluate proprietary and open-source vision-language models (VLMs), measuring variation sensitivity and generalizability. Counterfactual charts reveal failures hidden by single-chart performance: VLMs often fail to generalize after answering the original chart correctly. We find failures are most prevalent when updated charts require novel visual reasoning pathways.
+
+论文作者: Yifan Jiang, Dae Yon Hwang, Jesse C. Cresswell, Freda Shi
+
+提交时间: 2026-05-26 17:20:15
+
+论文链接: http://arxiv.org/abs/2605.27311v1
+
+==================================================
+==================================================
+
+论文名称: Self-Ensembling Vision-Language Models for Chart Data Extraction
+
+论文摘要: Charts effectively convey quantitative information, but the underlying data are often locked in image form, hindering reuse and analysis. Manually digitizing charts is time-consuming and error-prone, motivating automatic chart-to-table extraction. Recent approaches use specialized vision-language models (VLMs), yet performance still lags on charts with many datapoints or substantial stylistic variation. We propose a VLM self-ensembling method that repeatedly samples multiple tabular outputs from the same VLM for a fixed chart image and aggregates them at the level of individual table cells. We align candidate tables and take per-cell medians over numerical values to produce a more accurate consensus table. Our method also includes convergence detection to stop sampling once the aggregated table stabilizes, and uncertainty estimation based on dispersion across samples to help users assess extraction reliability. Because existing chart extraction benchmarks contain relatively simple plots with limited room for improvement, we introduce WB-ChartExtract, a new benchmark built from World Bank data with more complex and stylistically diverse charts; on average, its charts contain 7 times more datapoints than those in the ChartQA benchmark. Across both ChartQA and WB-ChartExtract, our approach improves extraction accuracy over single-pass VLM outputs, yielding up to 23% relative improvement on WB-ChartExtract after ensembling. More broadly, our method helps unlock tabular data previously siloed in chart images, enabling downstream analysis and reuse.
+
+论文作者: Thomas Berkane, Qianyi Wang, Maimuna S. Majumder
+
+提交时间: 2026-05-26 17:10:51
+
+论文链接: http://arxiv.org/abs/2605.27298v1
+
+==================================================
+==================================================
+
+论文名称: EpiCurveBench: Evaluating VLMs on Epidemic Curve Digitization
+
+论文摘要: Chart-to-data extraction with vision-language models (VLMs) is increasingly evaluated on benchmarks that show diminishing headroom (frontier VLMs exceed 89% on ChartQA) and with metrics that treat extracted points as unordered key-value pairs, ignoring the temporal structure of time series and penalizing small alignment shifts as catastrophic failures. We address both gaps with EpiCurveBench, a benchmark of 1,000 real-world epidemic curve images curated from diverse public-health sources, and EpiCurveSimilarity (ECS), an evaluation metric that aligns predicted and ground-truth series via dynamic programming, tolerating local temporal shifts and gaps while penalizing them proportionally. Evaluating six methods--three frontier closed VLMs, one open VLM, and two specialized chart-extraction systems--we find the strongest model reaches only 52.3% ECS, and that ECS spreads the four general-purpose VLMs over a 25-point range where key-value metrics (RMS, SCRM) compress them into a 5-point band. We further validate ECS against four downstream epidemiological summary statistics, finding that higher ECS predicts smaller errors in total counts, peak timing, and peak magnitude, and higher growth-rate fidelity; across all four, ECS correlates 1.5--3.6 times more strongly than Dynamic Time Warping, which lacks a gap penalty and therefore cannot distinguish a truncated prediction from a temporally faithful one. EpiCurveBench targets a high-impact public-health application--unlocking decades of outbreak data trapped in published figures--but the benchmark and metric apply directly to any structured time-series chart-extraction setting.
+
+论文作者: Thomas Berkane, Maimuna S. Majumder
+
+提交时间: 2026-05-26 15:48:29
+
+论文链接: http://arxiv.org/abs/2605.27195v1
+
+==================================================
+==================================================
+
+论文名称: Not All Tokens Matter Equally: Dynamic In-context Vector Distillation with Decisive-Token Supervision for Long-form Medical Report Generation
+
+论文摘要: Distilling demonstration effects into hidden-space interventions offers a lightweight alternative to full finetuning. However, existing multimodal variants are mostly evaluated on short-form tasks, where outputs end after a few tokens. Extending these methods to long-form generation exposes a fundamental yet underexamined limitation: token-level distillation implicitly treats all output tokens as equally informative, but long-form outputs are dominated by high-frequency template and grammatical tokens, while the tokens that actually determine output quality are sparsely distributed. In medical report generation (MRG), two such decisive tokens stand out: pathology-related tokens that determine diagnostic content, and the end-of-sequence (EOS) event that determines termination. Both receive insufficient supervision under uniform cross-entropy, and autoregressive decoding further compounds the problem by drifting away from teacher-forced trajectories. We propose DIVE, a frozen-backbone distillation framework that addresses long-form report generation through two complementary mechanisms matched to these failures. Decisive-token supervision restores supervision balance by upweighting the cross-entropy contribution of pathology-related tokens and the EOS event, ensuring that content fidelity and termination are learned during training rather than imposed at decoding time. State-conditioned dynamic steering replaces fixed open-loop residuals with hidden-state-dependent adapters, allowing the injected signal to adapt as decoding drifts. Experiments on MIMIC-CXR and CheXpert Plus with two medical VLM backbones show that DIVE consistently ranks among the strongest methods across lexical and clinical-proxy metrics. Our method achieves the best BLEU-4, ROUGE-L, and RadGraph F1 in all dataset--backbone settings, while remaining competitive on coarse label-level CheXbert F1.
+
+论文作者: Ning Wu, Rui Liu, Xinkun Lin, Weixing Chen, Jinxi Xiang, Tao Wei, Lina Yao, Mingjie Li
+
+提交时间: 2026-05-26 15:46:00
+
+论文链接: http://arxiv.org/abs/2605.27194v1
+
+==================================================
+==================================================
+
+论文名称: Scaling, Benchmarking, and Reasoning of Vision-Language Agents for Mobile GUI Navigation
+
+论文摘要: Vision-Language Models (VLMs) have shown rapid progress in mobile GUI navigation. This paper presents a systematic study of data scaling, benchmarking, and reasoning for VLM-based agents in this domain. To facilitate rigorous evaluation, we introduce HyperTrack, a large-scale dataset with over 16000 real-world tasks across more than 650 Chinese mobile applications, along with GUIEvalKit, an open-source toolkit for unified benchmarking of VLMs on offline GUI navigation tasks. Using HyperTrack, we analyze the effects of training data scale on both supervised and reinforcement-based finetuning. Our results show that reinforcement-based finetuning consistently outperforms supervised finetuning, particularly in out-of-domain settings, highlighting the synergy between data scaling and reinforcement learning. Leveraging GUIEvalKit, we further benchmark state-of-the-art (SOTA) VLMs and analyze how interaction history and reasoning capabilities influence task completion. Together, HyperTrack and GUIEvalKit provide a comprehensive platform for developing and evaluating VLM agents in mobile GUI navigation tasks.
+
+论文作者: Heng Qu, Yike Liu, Renren Jin, Wenzong Zhang, Pengzhi Gao, Wei Liu, Jian Luan
+
+提交时间: 2026-05-26 15:03:56
+
+论文链接: http://arxiv.org/abs/2605.27134v1
+
+==================================================
+==================================================
+
+论文名称: QUACK: Questioning, Understanding, and Auditing Communicated Knowledge in Multimodal Social Deduction Agents
+
+论文摘要: Social deduction games have become a popular testbed for probing reasoning, deception, coordination, and belief modeling in Large Language Model (LLM) agents. However, most environments are scored only by game outcomes such as win rates and largely remain to text-only interaction, making it difficult to tell whether an agent's language is actually grounded in what it perceived and did, or to identify the failure modes underlying its behavior. To address this gap, we introduce QUACK, an open-source environment and evaluation framework for auditing the grounding of agent language in multimodal social reasoning. QUACK evaluates agents at three levels: game outcomes, behavioral trajectories, and utterance-level consistency. Its core Statement Verification Pipeline reconstructs each agent's ground-truth trajectory from engine logs and checks every discussion claim against it, automatically flagging spatial hallucination, unsupported accusation, deception collapse, and language-action inconsistency. Evaluating three frontier VLMs in both homogeneous and cross-model adversarial settings, we find that even the strongest agent hallucinates 15.1% of its verifiable spatial claims and makes over half of its accusations without grounded evidence. We release the full engine, evaluation framework, toolkit, and logs at https://github.com/AAAAA-Academia-Attractions/QUACK.
+
+论文作者: Ye Yuan, Rui Song, Weien Li, Zeyu Li, Haochen Liu, Xiangyu Kong, Changjiang Han, Yonghan Yang, Zichen Zhao, Zixuan Dong, Fuyuan Lyu, Bowei He, Haolun Wu, Jikun Kang, Xue Liu
+
+提交时间: 2026-05-26 14:19:08
+
+论文链接: http://arxiv.org/abs/2605.27068v1
+
+==================================================
+==================================================
+
+论文名称: HTMLCure: Turning Browser Experience into State Guided Repair for Interactive HTML
+
+论文摘要: LLMs can now produce full HTML pages, but many of those pages are only superficially correct: they render once, then fail under scroll, hover, click, resize, or gameplay. Evaluation from screenshots can miss these failures, and filtering discards many pages that are still repairable. We introduce HTMLCure, a browser experience framework that evaluates HTML after the system has interacted with it. The evaluator executes the page across viewports and interaction states, records deterministic browser evidence, and gives the VLM curated keyframes from the executed trajectory rather than isolated screenshots. The same state signal drives a closed loop repair engine: HTMLCure diagnoses the current page, chooses a state specific repair family, runs each candidate again, and exports quality cleared pages for SFT. On a 97K prompt corpus, this expands the directly usable seed into a candidate pool of 63703 quality cleared pages, from which we construct the final refined SFT set of 40K pages. Under the same backbone and training recipe, HTMLCure-27B-Refined reaches 50.6 on HTMLBench-400 with 45.2% deterministic test case pass, placing it in the same performance band as strong reference rows such as Kimi-K2.6 and GPT-5.4. On the released MiniAppBench validation split, it reaches 81.2 average, improving raw 27B SFT by 15.3 points and approaching the level of strong reference systems.
+
+论文作者: Jiajun Wu, Jian Yang, Tuney Zheng, Wei Zhang, Haowen Wang, Yihang Lou, Xianglong Liu
+
+提交时间: 2026-05-26 10:22:56
+
+论文链接: http://arxiv.org/abs/2605.26807v1
+
+==================================================
+==================================================
+
+论文名称: PinPoint: Prompting with Informative Interior Points
+
+论文摘要: Modern referring image segmentation pipelines couple a vision-language model (VLM) for grounding with a promptable segmenter such as the Segment Anything Model (SAM) for mask generation. Prior training-free instances of this recipe consistently trail fine-tuned and reinforcement-learning (RL)-tuned specialists, and it has been unclear whether the gap comes from the VLM's grounding, SAM's capacity, or the prompt. We show that the gap is dominated by prompt ambiguity: a VLM-proposed bounding box (bbox) leaves SAM to guess which pixels inside the bbox belong to the object the expression denotes. Interior points are the natural disambiguator, but where they fall matters; prior work relies on naively sampled points that land on boundaries, distractors, and background clutter, and can even hurt performance compared to the bbox alone. Supervised and RL-tuned methods close this gap by training a VLM to predict better points; we show that this training is unnecessary. At a matched budget of five interior points, replacing naive sampling with stable, informative point selection improves cumulative Intersection-over-Union (cIoU) by 12-18 points across RefCOCO/+/g, with every model fixed. We turn this observation into PinPoint, a deterministic, training-free point selector that fuses four visual cues into a consensus map, selects compact, spatially diverse points away from boundaries, and uses the frozen VLM to label each point. Without any task-specific training, PinPoint matches supervised and RL-tuned specialists on the same stack while issuing only two VLM calls per query.
+
+论文作者: Pouya Sadeghi, Shawn He, Pedro Pablo Guerrero Vela, C. Thomas, Alex Wong, Sirisha Rambhatla
+
+提交时间: 2026-05-26 08:28:54
+
+论文链接: http://arxiv.org/abs/2605.26689v1
+
+==================================================
+==================================================
+
+论文名称: Respecting Modality Gap in Post-hoc Out-of-distribution Detection with Pre-trained Vision-Language Models
+
+论文摘要: Out-of-distribution (OOD) detection has emerged as a popular technique to enhance the reliability of machine learning models by identifying unexpected inputs from unknown classes. Recent progress in pre-trained vision-language models (VLMs) has enabled zero-shot OOD detection without access to in-distribution (ID) training data; in this setting, existing methods commonly treat text embeddings of class names as class prototypes. In this paper, we challenge the widely adopted text-as-prototype paradigm by theoretically showing that off-the-shelf textual prototypes are generally misaligned with the optimal visual prototypes, yielding an intrinsic modality gap that cannot be eliminated by prompt engineering alone. To mitigate this gap under the post-hoc constraint, this paper presents an online pseudo-supervised framework that directly learns class prototypes in the visual feature space using unlabeled test-time data streams and soft predictions from the pre-trained VLMs. We provide theoretical guarantees for the convergence of the online optimization procedure. Extensive experiments empirically demonstrate that our method achieves a new state of the art across a variety of OOD detection setups.
+
+论文作者: Yuanwei Hu, Bo Peng, Yadan Luo, Zhen Fang, Ling Chen, Jie Lu
+
+提交时间: 2026-05-26 07:46:23
+
+论文链接: http://arxiv.org/abs/2605.26661v1
+
+==================================================
+==================================================
+
+论文名称: MobileExplorer: Accelerating On-Device Inference for Mobile GUI Agents via Online Exploration
+
+论文摘要: Mobile graphical user interface (GUI) agents enable AI models to autonomously operate smartphones on behalf of users. However, most existing systems focus primarily on optimizing task accuracy and rely on cloud-hosted models for inference, which introduces privacy concerns and network-dependent latency. As a result, fully on-device deployment of mobile GUI agents remains underexplored. We propose MobileExplorer, a new framework that accelerates on-device inference for vision-based mobile GUI agents via online exploration. The key idea is to exploit the long per-step reasoning time of vision-language models (VLMs) by performing lightweight, parallel exploration of UI elements. During model inference, the agent proactively probes semantically relevant UI elements and records these exploration traces as structured memory. To ensure reliable execution in live mobile environments, we design a two-level rollback mechanism that robustly restores the initial UI state when a fast but naive backtracking strategy fails. The collected exploration traces are then summarized into concise contextual hints and injected into the prompt to enhance the subsequent reasoning step. We evaluate MobileExplorer on multiple off-the-shelf devices using the AndroidWorld benchmark, as well as newly designed, more complex tasks and dynamic on-device environments. MobileExplorer reduces the average number of reasoning steps and end-to-end latency by 23\%, while maintaining or improving task success rates by up to 5\%. A video demonstration of MobileExplorer performance in the real world is available at https://youtu.be/thK7MJmdlvM .
+
+论文作者: Runxi Huang, Liyu Zhang, Shengzhong Liu, Xiaomin Ouyang
+
+提交时间: 2026-05-26 04:53:53
+
+论文链接: http://arxiv.org/abs/2605.26546v1
+
+==================================================
+==================================================
+
+论文名称: A Hybrid Vision-Language Architecture for Automated Defect Reasoning and Report Generation in Industrial Inspection
+
+论文摘要: Automated industrial inspection requires both precise defect localization and structured maintenance report generation; in current practice these tasks are handled separately, with linguistic interpretation left to human experts. This paper describes a decoupled, edge-deployable pipeline for wind turbine blade inspection built from three components that each handle a distinct sub-task. The Eyes a YOLO26-x-obb oriented bounding-box detector localizes defects at dataset-native resolution. The Bridge a deterministic, parameter-free encoding module maps each detected bounding box to grid-referenced spatial tokens embedded in a structured prompt. The Brain a 4-bit quantized Qwen-2.5-1.5B model adapted with Quantized Low-Rank Adaptation (QLoRA) on 947 synthetically generated maintenance reports generates a structured JSON report from that prompt. Retrieval-Augmented Fine-Tuning (RAFT) further grounds each recommendation in indexed maintenance procedures. Five ablation experiments, scored by BLEU-4, ROUGE-L, Hallucination Rate (HR), and an LLM-as-a-Judge rubric, compare the pipeline against a monolithic vision-language model (VLM) baseline and against partial configurations in which one component is removed. The complete system achieves BLEU-4 0.41, HR=4%, and Expert Score = 8.6/10 compared with 0.07, 65%, and 3.3/10 for the zero-shot VLM baseline. The QLoRA-adapted 1.5B model generates higher-quality reports than a 671B-parameter generalist API model given identical detection evidence, at 47 tokens per second on a single T4-class GPU. The results show that purpose-built decoupled architecture with a small domain-specific training corpus outperforms a generalist end-to-end model on this structured generation task.
+
+论文作者:  Malikussaid, Imad Gohar
+
+提交时间: 2026-05-26 04:27:38
+
+论文链接: http://arxiv.org/abs/2605.26533v1
+
+==================================================
+==================================================
+
+论文名称: InterSketch: An Interleaved Reasoning Model with Self-correcting Visual Sketch and Stepwise Reward
+
+论文摘要: While vision-language models (VLMs) have exhibited multi-turn visual reasoning capabilities, their reasoning trajectories remain relatively shallow and are dominated by a text-centric paradigm, limiting their applicability to complex visual challenges. In contrast, human-like thought typically involves long-horizon reasoning with an interleaved visual-textual chain-of-thought (VT-CoT). To bridge this gap, we introduce InterSketch, an interleaved reasoning model to enhance the VT-CoT capability via self-correcting and stepwise reward mechanisms. InterSketch dynamically generates intermediate visual sketches using external tools and interleaves them with textual reasoning, enabling effective perception and logical reasoning over long-horizon visual understanding tasks. Specifically, in the first cold-start stage, we propose a synthesized high-quality interleaved VT-CoT dataset and include a reflection mechanism to enable the model's capability in multi-turn interleaved reasoning and self-correction. In the subsequent reinforcement learning (RL) stage, we design a stepwise reward mechanism to mitigate the sparsity of reward signals inherent in end-only supervision over long-horizon reasoning. Extensive experiments on visual reasoning benchmarks demonstrate the effectiveness of InterSketch, even outperforming proprietary models such as Gemini-3-Pro.
+
+论文作者: Zhiwei Ning, Wenwen Tong, Xiangli Kong, Shengnan Ma, Ziyi Shang, Jingcheng Ni, Tao Hu, Yong Xien Chng, Jixuan Ying, Zehuan Wu, Hanming Deng, Jie Yang, Yuanjie Zheng, Wei Liu, Lewei Lu
+
+提交时间: 2026-05-26 04:07:49
+
+论文链接: http://arxiv.org/abs/2605.26520v1
+
+==================================================
+==================================================
+
+论文名称: Efficient On-policy Visual-RL via Stochastic Decoupled Policy Gradient
+
+论文摘要: We present the stochastic decoupled policy gradient (SDPG), a lightweight visual reinforcement learning (RL) method that trains diverse visuomotor control policies end-to-end within a few hours on a single NVIDIA RTX 4080 GPU. SDPG estimates policy gradients via random perturbations of trajectory rollouts, requiring orders of magnitude fewer batch-rendered environments and substantially reducing compute and memory overhead. On visual MuJoCo benchmarks, SDPG consistently outperforms baseline methods in training time, memory usage, and rewards. Finally, to support future research, we introduce a suite of realistic visual robotics benchmarks spanning dexterous manipulation, challenging locomotion, and demonstrate effective sim-to-real transfer on physical hardware.
+
+论文作者: Haoxiang You, Yilang Liu, Davis Zong, Qian Wang, Teeratham Vitchutripop, Qi Wang, Daniel Rakita, Ian Abraham
+
+提交时间: 2026-05-26 02:35:08
+
+论文链接: http://arxiv.org/abs/2605.26478v1
+
+==================================================
+==================================================
+
+论文名称: From Static Context to Calibrated Interactive RL: Mitigating Distribution Shift in Multi-turn Dialogue with Aligned Simulator
+
+论文摘要: A long-standing goal of the research community is to develop highly interactive LLM-based dialogue agents. Recent research focuses on optimizing policies based on fixed offline logs (Static Context RL) or using a prompt-based simulator (Interactive RL). In this work, we theoretically show that both paradigms are fundamentally limited by context distribution shift--a mismatch between dialogue histories observed during training and those encountered in real conversations. This shift compounds quadratically over turns and severely degrades dialogue quality. Specifically, we attribute this shift to two distinct sources: (i) policy-induced shift, arising from training on static histories rather than self-generated trajectories; and (ii) simulator-induced shift, stemming from discrepancies between simulated and real human behaviors. To address these challenges, we propose Calibrated Interactive RL, a unified framework that couples interactive RL with simulator alignment. By aligning the simulator with human interaction patterns, our approach reduces the sim-to-real gap and mitigates compounding distribution shifts. Experiments across multiple dialogue tasks confirm our theoretical analysis: (i) Interactive RL significantly outperforms the Static Context baseline by mitigating policy distribution shift; and (ii) calibrating simulators with our alignment method further bridges the sim-to-real gap, yielding state-of-the-art downstream performance.
+
+论文作者: Xiaohua Wang, Jiakang Yuan, Zisu Huang, Muzhao Tian, Changze Lv, Kaitao Song, Tao Chen, Xiaoqing Zheng
+
+提交时间: 2026-05-26 00:25:12
+
+论文链接: http://arxiv.org/abs/2605.26403v1
+
+==================================================
+==================================================
+
+论文名称: Adversarial Dual On-Policy Distillation from Expressive Flow-based Teacher
+
+论文摘要: Learning from demonstrations in embodied control is often cast as behavioral cloning, and recent diffusion or flow-matching policies improve this paradigm by modeling multi-modal expert actions. Yet these methods remain offline supervised learners: the policy is trained only on expert states and receives no corrective signal on the states it actually visits. On-policy distillation (OPD) offers a natural remedy, but standard OPD assumes a strong fixed teacher, which is unavailable in demonstration-only control. We propose \textbf{FA-OPD}, an \emph{adversarial dual on-policy distillation} method in which a Flow Matching (FM) teacher is learned from demonstrations and co-trained with a lightweight MLP student. The teacher provides two complementary signals on student rollouts. The reward channel learns an expert-likeness objective over state-action pairs and drives online exploration through long-horizon policy optimization. The action channel supplies dense local targets at student-visited states, stabilizing exploitation. FA-OPD couples them so that reward distillation enables generalization beyond point-wise demonstrations, while action distillation keeps exploration anchored near expert-like behavior. Across six robot navigation, manipulation, and locomotion benchmarks, FA-OPD beats strong baselines and shows much stronger robustness under noisy or limited demonstrations.
+
+论文作者: Zhenglin Wan, Jingxuan Wu, Xingrui Yu, Chubin Zhang, Mingcong Lei, Bo An, Ivor W. Tsang, Yang You
+
+提交时间: 2026-05-26 14:38:03
+
+论文链接: http://arxiv.org/abs/2605.27095v1
+
+==================================================
+==================================================
+
+论文名称: The Sensation Modulating Network:Haltability as the architectural ground for object-directed phenomenology
+
+论文摘要: Cognitive science remains split between cognitivism - which accounts for recursion and language but cannot ground formal symbols in meaning - and 4E approaches - which ground cognition in the body but rarely specify the body's architecture in enough detail to support generativity. We argue the impasse stems from an incomplete account of the embodied agent's architecture, and propose one: the Sensation Modulating Network (SMN), the cognitive agent conceived as the whole body, organized at every anatomical scale by opponent dynamics, built from Sensation Modulators that sense and act through one substrate, paired into Coordinated Action Zones routed by a body-wide broadcast network. Three commitments give the SMN its purchase. Haltability - the recruitment of antagonistic affordance into co-activated equilibrium - provides the architectural locus that object-directed phenomenology, in Husserl's sense, requires: opponency enables co-activation, co-activation enables halt, halt enables attention, attention enables intentional directedness, with no module added on top. The dual-signal property of self-modulatable action patterns (SMAPs) makes the self/world distinction a structural feature of the wiring rather than a category the agent applies. And a four-level action-pattern hierarchy - Basal, Haltable, Negotiable, Transactional - gives a single trajectory from autonomic regularity to public conventionalization, locating the conditions for grammar-grounded generativity as architectural transitions. The SMN reconciles the cognitivism-4E debate: recursion lives in the modifiable dynamics of Negotiable Action Patterns, embodiment in the opponent substrate that supports them. A tentative formalism and eight predicted registers (seven testable, one hypothetical), with reference simulations, are given in an appendix.
+
+论文作者: G. Nagarjuna, Durgaprasad Karnam
+
+提交时间: 2026-05-26 11:15:56
+
+论文链接: http://arxiv.org/abs/2605.26856v1
+
+==================================================
+==================================================
+
+论文名称: TrackRef3D: Multi-View Consistent Track-then-Label for Open-World Referring Segmentation in 3D Gaussian Splatting
+
+论文摘要: Referring 3D Gaussian Splatting (R3DGS), which utilizes natural language for 3D object segmentation, has emerged as a crucial capability for embodied AI. However, existing methods typically rely on expensive per-scene manual annotation and per-view pseudo mask generation, which suffer from multi-view inconsistency and poor generalization to varying query specificities. To address this, we present TrackRef3D, a fully automatic pipeline that achieves open-world referring segmentation in 3D Gaussian Splatting (3DGS) without manual annotation by introducing a multi-view consistent track-then-label paradigm that fundamentally decouples object discovery from semantic grounding. Specifically, we propose a Trajectory-Aware Semantic Consensus Module (TSCM) which aggregates cross-view predictions via synonymous clustering and trajectory-aware voting to establish a canonical semantic identity, thereby ensuring multi-view consistency. Furthermore, we employ a visibility-aware description generation strategy to mitigate ambiguity and propose a Hybrid Training Strategy (HTS) that jointly optimizes coarse category semantics and fine-grained referential cues to ensure robustness under varying query specificities using a multi-positive contrastive objective. Extensive experiments on benchmarks demonstrate that TrackRef3D achieves state-of-the-art performance.
+
+论文作者: Yuyang Tan, Renhe Zhang, Hang Zhang, Ao Li, Xin Tan
+
+提交时间: 2026-05-26 05:49:12
+
+论文链接: http://arxiv.org/abs/2605.26576v1
+
+==================================================
+==================================================
+
+论文名称: Ratio-Variance Regularized Policy Optimization
+
+论文摘要: Standard on-policy reinforcement learning relies on heuristic clipping to enforce trust regions, but this mechanism imposes a severe cost by indiscriminately truncating high-return yet high-divergence updates. We demonstrate that explicitly constraining the policy ratio variance provides a principled local approximation to trust-region constraints, eliminating the need for binary hard clipping. By acting as a distributional ``soft brake'', this approach preserves critical gradient signals from novel discoveries while naturally down-weighting and enabling the reuse of stale, off-policy data. We introduce ${\bf R}^2{\bf VPO}$ (Ratio-Variance Regularized Policy Optimization), which implements this constraint via a primal-dual optimization framework. Extensive evaluations across $7$ LLM scales, spanning both fast and slow reasoning paradigms, and $10$ robotic control tasks demonstrate the generality of the proposed approach. R$^2$VPO achieves substantial performance gains on mathematical reasoning benchmarks, with particularly pronounced improvements on smaller models, while significantly improving sample efficiency. Furthermore, it consistently outperforms PPO baselines in continuous control domains, particularly in sparse-reward and dynamic environments. Together, these findings establish ratio-variance regularization as a principled foundation for stable and data-efficient policy optimization.
+
+论文作者: Yu Luo, Shuo Han, Yihan Hu, Lei Lv, Huaping Liu, Fuchun Sun, Jianye Hao, Dong Li
+
+提交时间: 2026-05-26 09:53:42
+
+论文链接: http://arxiv.org/abs/2605.26784v1
+
+==================================================
+==================================================
+
+论文名称: LATTE: Forecasting Peer Anchored Preference Trajectories for Personalized LLM Generation
+
+论文摘要: Personalized generation with frozen large language models requires a conditioning signal that is both compact and current. Existing personalization methods typically retrieve or summarize user histories in text, or compress them into static latent profiles and soft prompts. These approaches are efficient, but they treat a user's past behavior as an aggregate profile and therefore mix stable identity, recent drift, and item content in the same representation. We propose LAtent Trajectory Tracking and Extrapolation (LATTE), a framework that represents personalization as forecasting a peer anchored relative preference state. For each historical session, LATTE subtracts a time masked baseline formed from comparable users who responded to the same item, producing a state that measures how the target user differs from peers under a shared item context. A lightweight sequence predictor then forecasts the next state in this trajectory, and a State to Token Bridge injects the forecast into a frozen instruction tuned LLM through a single anchored soft token. We provide a latent factor analysis showing when peer anchoring cancels shared item variation and why temporal forecasting trades off stale averages against noisy recent states. Experiments on Amazon Reviews 2023 and MemoryCD show that LATTE consistently outperforms retrieval, summary memory, static latent profiles, difference aware latent profiles, and soft prompt compression baselines. On Amazon Reviews 2023, LATTE improves average ROUGE-L from 0.219 for a static latent profile and 0.245 for the strongest added latent compression baseline to 0.259. Additional pairwise comparisons and diagnostic analyses suggest that the improvement is mainly due to forecasting user-specific trajectory information, rather than merely adding a soft prompt interface.
+
+论文作者: Jinze Li, Xiaoyan Yang, Shuo Yang, Jinfeng Xu, Yue Shen, Jian Wang, Jinjie Gu, Edith Cheuk-Han Ngai
+
+提交时间: 2026-05-26 06:50:45
+
+论文链接: http://arxiv.org/abs/2605.26612v1
+
+==================================================
+==================================================
+
+论文名称: Trust Region Q Adjoint Matching
+
+论文摘要: Off-policy reinforcement learning of pretrained flow policies remains challenging due to the instability of optimization arising from the multi-step sampling process. Recently, Q-learning with Adjoint Matching (QAM) addressed this issue by reformulating into a memoryless stochastic optimal control (SOC) problem with a learned critic. However, QAM inherits a fundamental fragility of critic-guided improvement: small critic errors are amplified when critics are ill-conditioned, often leading to model collapse. This paper introduces Trust Region Q-Adjoint Matching (TRQAM), a stable off-policy fine-tuning algorithm that adaptively controls the path-space KL with pretrained flow policies through projected dual descent. Specifically, we optimize the trust-region parameter $λ$ in SOC dynamics, and theoretically show that the path-space KL can be represented by a closed-form function of $λ$. As a result, our method can precisely control the exact deviation from pretrained flow policies, achieving stable off-policy RL. Through experiments on 50 OGBench tasks, TRQAM consistently outperforms prior arts in both offline RL and offline-to-online RL. In particular, TRQAM achieves an overall success rate of 68% in offline RL, substantially improves the strongest baseline at 46%.
+
+论文作者: Yonghoon Dong, Kyungmin Lee, Changyeon Kim, Jaehyuk Kim, Jinwoo Shin
+
+提交时间: 2026-05-26 14:28:43
+
+论文链接: http://arxiv.org/abs/2605.27079v1
+
+==================================================
+==================================================
+
+论文名称: Adaptive Reinforcement Learning for Robust Open Quantum System Control: A Multi-Task Framework with Temporal Optimization
+
+论文摘要: We present a Multi-task Soft Actor-Critic (SAC) Reinforcement Learning framework designed for open-system quantum control across diverse Hamiltonians, which learns optimal pulse sequences while simultaneously discovering problem-specific evolution time T and number of control pulse segments N. Experimental results across 51 Hamiltonian variations demonstrate that the multi-task SAC model is able to generate control pulses that can drive a system, under environment noise, from its initial state to its target state with high fidelities, establishing essential foundations for universal quantum control applicable to realistic noisy quantum devices. Through progressive expansion of the training Hamiltonian set, we investigate if a single multi-task model trained using a given number of sample Hamiltonians can successfully accomplish state-transfer tasks for Hamiltonians drawn from the same Hamiltonian space but not encountered during training. In addition, our Robustness Infidelity Measure (RIM) analysis reveals that SAC trained policies exhibit superior robustness to pulse amplitude perturbations and decoherence rate variations compared to GRAPE-optimized controls.
+
+论文作者: Haftu W. Fentaw, Steve Campbell, Simon Caton
+
+提交时间: 2026-05-26 12:20:55
+
+论文链接: http://arxiv.org/abs/2605.26925v1
+
+==================================================
+==================================================
+
+论文名称: Pretrained Approximators for Low-Thrust Trajectory Cost and Reachability
+
+论文摘要: Low-thrust trajectory design relies heavily on repeated evaluations of fuel consumption and transfer feasibility, which require expensive optimal control solutions. In this work, we show these quantities can be accurately approximated by machine learning surrogates, enabling fast and scalable evaluation across a wide range of scenarios. By increasing both dataset size and model capacity, we observe that low-thrust trajectory optimization follows a scaling law, with performance improving linearly with the logarithm of training data and network parameters, and no evidence of saturation within the explored regime. Guided by this observation, we construct a large-scale dataset using the proposed homotopy-ray strategy tailored to mission design requirements. A key is the introduction of a self-similar transformation, which allows generalization across semi-major axes, inclinations, and central bodies avoiding retraining. As a result, the same neural approximator can be applied to diverse orbital environments and mission classes. The proposed models accurately predict optimal fuel consumption and minimum transfer time for single- and multi-revolution transfers. Their performance and generalization are demonstrated on a public dataset, a multi-asteroid flyby problem from the Global Trajectory Optimization Competition, and an asteroid rendezvous mission design. The models and datasets are released as open-source to support the space community.
+
+论文作者: Zhong Zhang, Giacomo Acciarini, Dario Izzo, Hexi Baoyin, Francesco Topputo
+
+提交时间: 2026-05-26 10:01:45
+
+论文链接: http://arxiv.org/abs/2605.26790v1
