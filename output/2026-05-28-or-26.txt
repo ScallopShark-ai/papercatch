@@ -1,0 +1,334 @@
+论文名称: Affective Music Recommendation: A Rollout-Based World Model for Offline Preference Optimization
+
+论文摘要: Functional music applications, from consumer focus and sleep aids to clinical interventions, share a distinctive recommendation problem: success is defined by the listener's affective state, but online experimentation on emotion is ethically constrained, particularly for clinical populations who cannot reliably skip a song or report distress. We describe AMRS, the Affective Music Recommendation System deployed on LUCID's health-and-wellness platforms, which serve clinical users (primarily older adults with neurocognitive conditions) and consumer-wellness users across energize, focus, calm, and sleep modes. AMRS is built around a rollout-based world model: a causal transformer trained on logged listening data to jointly predict engagement, binary rating, and self-reported valence and arousal. The world model serves both as an in-silico simulator for offline policy training and as a stress-testing tool before deployment. A recommender policy initialized by behaviour cloning is fine-tuned offline with Direct Preference Optimization (DPO) against a configurable multi-objective utility function. Under a strict cold-start protocol, the world model predicts both behavioural and affective signals with usable fidelity; DPO improves predicted valence and arousal over the cloned baseline while maintaining a similar diversity profile and avoiding the distributional collapse produced by greedy optimization. We position the work as an early deployed validation of a methodology for affective recommendation when online experimentation is ethically untenable.
+
+论文作者: Audrey Chan, Aaron Labbé, Jacob Lavoie, Jordan Bannister, Arsène Fansi Tchango, Guillaume Lajoie, Laurent Charlin
+
+提交时间: 2026-05-27 17:58:46
+
+论文链接: http://arxiv.org/abs/2605.28810v1
+
+==================================================
+==================================================
+
+论文名称: AdaDPO: Self-Adaptive Direct Preference Optimization with Balanced Gradient Updates
+
+论文摘要: DPO has become a widely adopted alternative to RLHF for aligning LLMs with human preferences, eliminating the need for a separate reward model or RL loop. Recent theoretical analysis uncovers an asymmetric gradient behavior in DPO: the loss suppresses dispreferred responses substantially faster than it promotes preferred ones, causing the model to learn to avoid bad answers rather than to generate good ones. We propose AdaDPO, a Self-Adaptive variant of the DPO algorithm that introduces per-preference-pair, stop-gradient-based coefficients derived directly from the policy model's generation probabilities, with the reference model's probabilities as an optional component. AdaDPO is constructed to enforce equality of gradient magnitudes between preferred and dispreferred probabilities; the practical implementation balances per-token gradients and applies a numerical clipping bound for stability, while retaining DPO's original hyperparameter structure. On Llama-3-8B-Instruct trained on UltraFeedback under a SimPO similar setup, AdaDPO consistently outperforms DPO on AlpacaEval 2: it achieves higher length-controlled win rates (LC) in 81% of hyperparameter combinations, attains the global best LC (48.3%) and raw win rate (46.1%), and enlarges the LC-over-WR margin in 88% of combinations, indicating effective mitigation of length bias. Additional analyses on KL divergence, reward margin, and reward accuracy confirm that AdaDPO rectifies the gradient imbalance and yields more efficient optimization. Because it operates purely at the loss level, AdaDPO can be dropped into existing preference-based alignment pipelines without changing data collection or model architectures. The method requires only a few lines of code, and the same self-adaptive principle generalizes to a broad family of pairwise contrastive preference losses including SimPO, R-DPO, IPO, CPO, and ORPO.
+
+论文作者: Shaolong Chen, Madalina Ciobanu, Qingqing Mao, Ritankar Das
+
+提交时间: 2026-05-27 13:05:49
+
+论文链接: http://arxiv.org/abs/2605.28440v1
+
+==================================================
+==================================================
+
+论文名称: Reasoning Matters: Mitigate Hallucination in Multimodal Large Reasoning Models via Reasoning-Conditioned Preference Optimization
+
+论文摘要: Multimodal Large Reasoning Models introduce the reasoning paradigm, demonstrating strong capabilities on complex vision-language tasks. However, they still suffer from severe hallucinations. Existing training-based methods typically mitigate hallucinations through response-level direct preference optimization (DPO), where the Chain-of-Thought (CoT) and the final answer are treated as a monolithic output and optimized jointly. We reveal that this formulation performs similarly to answer-only optimization, suggesting that it primarily learns answer-level preference, while leaving CoT-level supervision insufficiently exploited. To address this issue, we explicitly formulate a CoT-oriented preference term and derive Reasoning-Conditioned Direct Preference Optimization (RC-DPO), which models the CoT as a condition for answer generation and contrasts the preference for the same preferred answer under different CoT conditions, promoting answer-supportive reasoning chain alignment. To further improve optimization, we introduce a reasoning-enhanced preference data generation strategy that employs Monte Carlo Tree Search to discover visually grounded and logically consistent CoTs as positive samples, and attention-guided CoT token pruning to construct negative ones. Extensive experiments across various models and benchmarks show that RC-DPO effectively mitigates hallucinations and improves the reliability of the multimodal reasoning process.
+
+论文作者: Jiawei Kong, Hao Fang, Shunxiang Liao, Jinyu Li, Bin Chen, Hao Wu, Shu-Tao Xia, Min Zhang
+
+提交时间: 2026-05-27 03:27:23
+
+论文链接: http://arxiv.org/abs/2605.27906v1
+
+==================================================
+==================================================
+
+论文名称: Narrative Flattening: How Post-Training Compresses Thematic, Affective, and Stylistic Variation in LLM Fiction
+
+论文摘要: Large language models produce fluent fiction, yet their creative output is widely seen as flat. We ask where this quality originates in the training and whether it affects different domains of human fiction equally. We construct a matched story-continuation paradigm across StoryStar (public-platform), TMAS (prompt-guided), and The New Yorker (professional literary)-and compare continuations from four OLMo 32B checkpoints (Base, SFT, DPO, RLVR) against matched human text. Because these checkpoints share architecture, scale, tokenizer, and pretraining, the design isolates the post-training effect. We measure each continuation along three sentence-level dimensions: thematic motion, affective prevalence, and linguistic diversity. Across all three, post-training compresses dynamic variation: thematic transitions become more uniform, high-intensity emotions give way to neutrality, and stylistic diversity across stories shrinks. We term this progressive loss narrative flattening. The effect is directionally stable across story domains but gap size depends on the human baseline: professional literary fiction is compressed most, while public-platform and prompt-guided stories show smaller gaps, consistent with their human baselines sitting closer to the model's default rhythm. Post-trained endpoints converge across domains, suggesting alignment produces a continuation regime largely insensitive to the source domain's narrative texture.
+
+论文作者: Zehan Li, Yutong Zhu, Siyang Wu, Honglin Bao, James A. Evans
+
+提交时间: 2026-05-27 02:55:34
+
+论文链接: http://arxiv.org/abs/2605.27878v1
+
+==================================================
+==================================================
+
+论文名称: VCap: Hypergeometric Rewards for Weak-to-Strong Visual Captioning
+
+论文摘要: Visual captioning requires models to capture visual content faithfully while minimizing both omission and hallucination. As the dominant paradigm for captioning, MLLMs have achieved strong performance through scaling and high-quality data. Recently, RL has emerged as a key route to driving MLLMs toward higher precision and broader coverage, however, existing reward designs for captioning fail to provide fine-grained and reliable signals for factual verification, limiting their effectiveness. To address this, we propose VCap, a Witness-Adjudicator reward that pairs the reference caption (a witness) with the visual signal (an adjudicator). By explicitly verifying factual consistency between the reference and policy-generated captions grounded in the visual signal, VCap delivers a reward signal with hypergeometric-distribution-level precision for caption quality verification. This design enables effective learning even from imperfect references, facilitating weak-to-strong generalization in RL training. In our experiments, an 8B model trained with VCap outperforms open- and closed-source SOTA models on multiple image and video captioning benchmarks. Human evaluation further confirms its strong alignment with factual correctness. Additionally, VCap improves MLLM perceptual capability, generalizes across tasks, and surpasses best-of-N distillation, challenging prior assumptions about RLVR.
+
+论文作者: Xingyu Lu, Jinpeng Wang, Yi-Fan Zhang, Yankai Yang, Yancheng Long, Yiyang Fan, Xuanyu Zheng, Haonan Fan, Kaiyu Jiang, Tianke Zhang, Changyi Liu, Bin Wen, Fan Yang, Tingting Gao, Han Li, Chun Yuan
+
+提交时间: 2026-05-27 06:27:04
+
+论文链接: http://arxiv.org/abs/2605.28023v1
+
+==================================================
+==================================================
+
+论文名称: Ω-QVLA: Robust Quantization for Vision-Language-Action Models via Composite Rotation and Per-step Scaling
+
+论文摘要: Vision-Language-Action (VLA) models unify perception, reasoning, and control within a single policy, yet their multi-billion-parameter backbones and diffusion-based action heads make on-device deployment prohibitively expensive. Prior quantization efforts offer only partial solutions, compressing the LLM backbone while leaving the DiT action head at full precision, or resorting to mixed-precision schemes, driven by the belief that uniformly quantizing the action head is inherently unstable. We challenge this assumption with Omega-QVLA, the first training-free post-training quantization framework that compresses both the language backbone and the entire diffusion action head of a VLA model to a uniform W4A4 precision, eliminating the need for mixed-precision allocation. Omega-QVLA combines a composite SVD-Hadamard rotation that equalizes per-channel weight energy while diffusing residual activation outliers with per-step DiT activation scaling quantization that absorbs dynamic-range drift across denoising steps. On LIBERO, Omega-QVLA compresses Pi 0.5 and GR00T N1.5 to W4A4 with 98.0% and 87.8% task success rates, matching or exceeding their FP16 references of 97.1% and 87.0%, while reducing the static memory footprint by 71.3%. Real-world manipulation experiments further confirm smooth, accurate manipulation where prior methods fail. Code is available at https://github.com/UCMP13753/Omega-QVLA.
+
+论文作者: Xinyu Wang, Mingze Li, Sicheng Lyu, Dongxiu Liu, Kaicheng Yang, Ziyu Zhao, Yufei Cui, Xiao-Wen Chang, Peng Lu
+
+提交时间: 2026-05-27 17:55:01
+
+论文链接: http://arxiv.org/abs/2605.28803v1
+
+==================================================
+==================================================
+
+论文名称: How VLAs Fail Differently: Black-Box Action Monitoring Reveals Architecture-Specific Failure Signatures
+
+论文摘要: We discover that VLA architectures fail in fundamentally different, predictable ways at the motor-command level. Running VQ-BeT, Diffusion Policy, and ACT on identical evaluation protocols (n=450 episodes across PushT and ALOHA 14-DOF bimanual manipulation), we find: (1) direction reversal rate is a universal failure predictor across all three architectures (AUROC=0.93, 0.79, 0.91; p<0.001); (2) jerk monitoring is predictive only for discrete-token architectures, following a discrete-to-continuous gradient (0.88, 0.69, 0.41); (3) velocity violations alone are non-predictive everywhere (AUROC 0.41-0.69), yet velocity checking is the most common safety mechanism in VLA deployment code; and (4) for continuous-family VLAs, velocity monitoring provides effectively zero predictive signal (AUROC=0.52 on ACT, 0.41 on Diffusion), proving that architecture-matched monitor selection is essential. These results quantify a monitoring consequence of the well-known discrete/continuous VLA distinction: the two families produce qualitatively different failure signatures that require different monitors. No single monitor works universally; architecture-matched selection is required. This finding was enabled by SafeContract, a training-free, black-box action monitoring toolkit with conformal calibration. Code: https://github.com/krishnam94/vla-edge
+
+论文作者: Krishnam Gupta
+
+提交时间: 2026-05-27 16:44:55
+
+论文链接: http://arxiv.org/abs/2605.28726v1
+
+==================================================
+==================================================
+
+论文名称: ProgVLA: Progress-Aware Robot Manipulation Skill Learning
+
+论文摘要: We present ProgVLA, a compact vision-language-action (VLA) model designed for reliable robot manipulation under tight compute and memory budgets. The model specifically focuses on efficiently processing long multi-modal sequences by maintaining an explicit representation of task progress over extended horizons. To this end, ProgVLA integrates two key components. First, a multi-modal encoder with a two-stage Perceiver resampling scheme compresses variable-length visual, language, and proprioceptive streams into a fixed set of control-ready context tokens, substantially reducing sequence length while preserving cross-modal grounding. Second, an auxiliary set of progress heads is trained with offline reinforcement learning (RL) objectives to jointly learn critics over normalized remaining-horizon targets. This provides the policy with an internal estimate of task progress and enables advantage- and success-weighted flow-matching imitation learning. On two well-established multi-task robot manipulation benchmarks, a 0.1B-parameter ProgVLA model reaches success rates that are competitive with, and on long-horizon and harder task tiers exceed, substantially larger pretrained baselines. Ablations indicate that the learned context resampler and task-adaptive visual fine-tuning are the largest single contributors, while progress-aware training provides a consistent additional gain that is concentrated on long-horizon and multi-object tasks. We further validate the approach in real-world toy-kitchen environments.
+
+论文作者: Seungsu Kim, Jinyoung Choi, Seungmin Baek, Jean-Michel Renders
+
+提交时间: 2026-05-27 09:44:46
+
+论文链接: http://arxiv.org/abs/2605.28231v1
+
+==================================================
+==================================================
+
+论文名称: VLMs May Not Globally Enhance Human Alignment over LLMs During Natural Reading
+
+论文摘要: Large language models (LLMs) have become increasingly useful computational models of human language processing, but it remains unclear whether vision-language learning makes text representations more human-like during natural reading. Here, we address this question by comparing tightly matched LLM and vision-language model (VLM) pairs under a strictly text-only setting, allowing us to isolate the effect of multimodal training history from online visual input or cross-modal fusion. We evaluate model alignment with a human natural-reading dataset that includes whole-cortex fMRI responses and synchronized eye-tracking saccades. Our findings demonstrate that multimodal pretraining may not confer a uniform, global advantage in human alignment during natural reading, indicating that language-internal representations remain the key factor for modeling human text processing. However, the VLM advantage could emerge more selectively when sentences contain stronger visual semantic content, with converging evidence from both fMRI and eye-movement alignments. Together, our findings provide a controlled in silico framework for testing how visual learning history shapes model-human alignment of language processing, suggesting that multimodal pretraining contributes selectively rather than globally to human-like language representations during natural reading.
+
+论文作者: Jinzhou Wu, Zhengwu Ma, Jixing Li, Baoping Tang, Zitong Lu
+
+提交时间: 2026-05-27 17:59:34
+
+论文链接: http://arxiv.org/abs/2605.28818v1
+
+==================================================
+==================================================
+
+论文名称: The Abstraction Gap in Vision-Language Causal Reasoning
+
+论文摘要: Vision-language models (VLMs) generate fluent causal explanations, but current evaluations cannot distinguish linguistic plausibility from faithful causal reasoning. We introduce a dual-probe methodology that isolates these properties. The Text-Only Probe measures linguistic quality. The Chain-Text Probe requires models to first generate explicit causal chains. The Abstraction Gap (AG) metric quantifies the normalized performance difference. Evaluating eight VLMs on CAGE (Causal Abstraction Gap Evaluation), a benchmark of 49,500 questions across 5,500 images spanning Pearl's causal hierarchy, we find seven models exhibit AG exceeding 0.50 with text scores of 6--8 but chain scores below 2.5. Fine-tuning on 45,000 chain-annotated examples fails to close the gap. However, one model achieves near-zero AG. The capability exists within current VLM architectures and depends on pretraining and architectural choices. CAGE provides a diagnostic tool for assessing faithful causal reasoning in VLMs.
+
+论文作者: Chinh Hoang, Mohammad Rashedul Hasan
+
+提交时间: 2026-05-27 17:38:10
+
+论文链接: http://arxiv.org/abs/2605.28779v1
+
+==================================================
+==================================================
+
+论文名称: MaskClaw: Edge-Side Personalized Privacy Arbitration for GUI Agents with Behavior-Driven Skill Evolution
+
+论文摘要: GUI agents rely on screenshots to infer intent and operate across applications, but these screenshots often contain private messages, medical records, payment credentials, and workplace-specific workflows. Privacy decisions in this setting depend on task, recipient, application state, and user role, yet static PII detectors miss these boundaries and cloud-side VLM reasoning can upload the raw screen before deciding what should be protected. We present MaskClaw, an edge-side privacy arbitrator for GUI agents. MaskClaw extracts local visual evidence, retrieves user- and task-specific policy memory, and decides Allow, Mask, or Ask before raw screenshots leave a trusted user- or organization-controlled environment. In five designed skill-evolution scenarios, it turns corrections, cancellations, and edits into reusable privacy skills checked by a sandbox gate. We introduce P-GUI-Evo, a benchmark built from real UI patterns, reconstructed HTML screens, and sanitized labels. Experiments show that pattern matching, cloud reasoning, and routing alone tend to over-confirm, over-mask, or expose raw screenshots under the same protocol. The artifact is available at https://github.com/Theodora-Y/MaskClaw.
+
+论文作者: Yanqiu Zhao, Dongying Zheng, Kaibo Huang, Yukun Wei, Zhongliang Yang, Linna Zhou
+
+提交时间: 2026-05-27 15:51:22
+
+论文链接: http://arxiv.org/abs/2605.28646v1
+
+==================================================
+==================================================
+
+论文名称: MUSE: Benchmarking Manufacturable, Functional, and Assemblable Text-to-CAD Generation
+
+论文摘要: Large language models (LLMs) have recently advanced text-driven 3D generation, yet Text-to-CAD remains far from supporting industrial product design. Existing benchmarks focus primarily on generating single-part CAD models and evaluate them using geometric similarity metrics that fail to capture functionality, manufacturability, and assemblability. To address this gap, we introduce MUSE, a Text-to-CAD benchmark focused on complex, editable boundary representation (B-Rep) assemblies. MUSE pairs practical design instances with structured Design Specifications and evaluates generated models through a three-stage protocol: code check, geometric check, and design-intent alignment. The final stage uses design-specific rubrics to assess functionality, manufacturability, and assemblability, moving beyond shape matching toward practical design quality. To enable scalable evaluation, we use a rubric-based visual language model (VLM) judge and validate its reliability through human annotation. Experiments on closed-source and open-source LLMs reveal a clear failure cascade from executable code to valid geometry and finally to engineering-ready design, with even the strongest models achieving limited success on fine-grained engineering criteria. Together, MUSE provides a realistic benchmark and evaluation framework for advancing Text-to-CAD from geometric generation toward true engineering design. Our project website, including the leaderboard, dataset, and code, is available at https://dong7313.github.io/muse-benchmark/.
+
+论文作者: Xiaoyu Dong, Zhi Li, Xiao-Ming Wu
+
+提交时间: 2026-05-27 15:01:59
+
+论文链接: http://arxiv.org/abs/2605.28579v1
+
+==================================================
+==================================================
+
+论文名称: FedMPT: Federated Multi-label Prompt Tuning of Vision-Language Models
+
+论文摘要: Multi-Label Recognition (MLR) based on Vision-Language Models (VLMs) aims to leverage their pre-trained knowledge to better adapt complex recognition scenarios, thereby enhancing model robustness. However, for realistic decentralized applications requiring federated learning, adapting VLMs to each client that possesses private and heterogeneous data can cause the model to overfit spurious label correlations, consequently triggering irrelevant categories when encountering new samples. To tackle this problem, we reconsider the federated learning for MLR with a causal model, in which we adopt a front-door adjustment and decouple the MLR modeling process by intermediate variables that magnify the oracle label co-occurrence. Guided by our analysis, we propose our FedMPT, the first method specifically designed for federated MLR. The core idea of FedMPT is to leverage generalizable conditions to steer federated MLR to mitigate erroneous label activations. To achieve this, FedMPT introduces an Large Language Model (LLM)-driven pipeline to decipher the underlying conditions that govern label dependencies. Furthermore, we introduce an optimal transport between the condition-enriched prompts and the image patches to uncover multiple region-level semantics. Finally, we generate synergistic predictions from different conditions with a crafted gating mechanism. Experiments on multiple benchmark datasets show that our proposed approach achieves competitive results and outperforms SOTA methods under varied settings.
+
+论文作者: Xucong Wang, Pengkun Wang, Zhe Zhao, Liheng Yu, Shuang Wang, Yang Wang
+
+提交时间: 2026-05-27 11:51:25
+
+论文链接: http://arxiv.org/abs/2605.28347v1
+
+==================================================
+==================================================
+
+论文名称: When Discourse Pressures Conflict: Information Structure in Vision-Language Model Outputs
+
+论文摘要: Vision-language models (VLMs) are increasingly evaluated for whether they identify the right visual content, but little is known about whether they express such content in a discourse-appropriate form. We address this research gap using information structure (IS), testing whether VLMs distinguish discourse-old Topics from discourse-new Foci in visually grounded question answering. We exploit Hungarian, a language in which Topic and Focus map onto dedicated syntactic positions, making IS choices observable in text. Comparing six VLMs with human participants, we find that models produce IS-relevant constructions, but over-regularise this sensitivity. Under the interacting pressures of discourse status, grammatical role (preference for subject Topics) and definiteness (preference for indefinite Foci), humans choose variable strategies for IS realisation. VLMs, by contrast, collapse onto narrow response templates, resembling mode collapse (Kirk et al., 2024). Our findings suggest that VLM evaluation should look beyond content accuracy to how content is packaged for the discourse.
+
+论文作者: Marcell Fekete, Johannes Bjerva, Tamás Káldi
+
+提交时间: 2026-05-27 11:50:56
+
+论文链接: http://arxiv.org/abs/2605.28346v1
+
+==================================================
+==================================================
+
+论文名称: VidPrism: Heterogeneous Mixture of Experts for Image-to-Video Transfer
+
+论文摘要: With the rapid development of pre-training technologies, adapting large-scale Vision-Language Models (VLMs) for video understanding \emph{\ie} image-to-video transfer learning has become a dominant paradigm. To achieve superior performance, it raises as an effective strategy among recent advances to employ Mixture-of-Experts (MoE) to enhance VLMs' temporal modeling capabilities. However, conventional MoE designs suffer from expert homogenization, where all experts act as identical generalists, inefficiently learning spatio-temporal features from undifferentiated video streams. To overcome this problem, we propose VidPrism, a novel heterogeneous temporal Mixture-of-Experts framework. VidPrism pioneers a division of labor by deploying functionally specialized experts, each assuming a role ranging from spatial understanding to temporal modeling. To feed these specialists appropriately, we introduce a content-aware, multi-rate sampling module that dynamically generates streams ranging from semantically rich to motion-focused representations, providing specialized inputs for experts. Furthermore, a dynamic, bidirectional fusion mechanism enables synergistic information exchange between these pathways, leading to a comprehensive video representation. Extensive experiments on various video recognition benchmarks demonstrate that VidPrism achieves state-of-the-art performance and effectively fosters expert specialization. Our source code is available at \href{https://github.com/Lrrrr549/VidPrism.git}{https://github.com/Lrrrr549/VidPrism.git}.
+
+论文作者: Rui Lin, Chuanming Wang, Huadong Ma
+
+提交时间: 2026-05-27 09:43:06
+
+论文链接: http://arxiv.org/abs/2605.28229v1
+
+==================================================
+==================================================
+
+论文名称: MIRAGE: Context-Aware Prompt Injection against Mobile GUI Agents via User-Generated Content
+
+论文摘要: Mobile graphical user interface (GUI) agents driven by vision-language models (VLMs) perceive the screen as rendered pixels and choose actions from what they see, so they cannot reliably separate trusted interface elements from user-generated content. We present MIRAGE (Mobile Injection of Realistic Adversarial GUI Examples), a pipeline that turns benign mobile screenshots into prompt-injection samples by placing attacker-controlled text into ordinary user-generated content regions, without modifying the agent, the application, or the operating system. MIRAGE operates in three stages: a Localizer identifies user-controllable regions on the screenshot, a Generator synthesises context-aware payloads and renders them in the application's native style, and a Curator moderates realism and balances the samples across applications, region types, and attack intents. A key challenge is that an injected screenshot must stay visually indistinguishable from genuine user content while still diverting the agent; we address this by separating the stages that control reach, realism, and distributional balance. On a 1,111-sample benchmark spanning ten applications and eleven attack intents, all five evaluated VLM agents are vulnerable, with attack success rates of 23%-30%, and MIRAGE scores higher on human realism ratings than the strongest prior attack (3.02 versus 2.52 out of 5). We further find that per-sample realism and attack success are uncorrelated, so visual-quality filtering alone cannot reliably defend against this threat.
+
+论文作者: Ruoqi Guo, Yi Liu, Gelei Deng, Yiheng Xiong, Yuekang Li, Ying Zhang, Leo Yu Zhang, Lida Zhao, Ji Jie, Yuxiao Lu
+
+提交时间: 2026-05-27 08:09:53
+
+论文链接: http://arxiv.org/abs/2605.28116v1
+
+==================================================
+==================================================
+
+论文名称: CIVIC: End-to-End Sequence Compactness for Efficient Vision-Language Models
+
+论文摘要: Vision-Language Models (VLMs) face severe memory and latency bottlenecks due to high-resolution visual tokens. While current token reduction methods theoretically save FLOPs, post-hoc pruning introduces structural overhead, failing to yield proportional wall-clock acceleration. However, enforcing a contiguous compact pathway risks geometric disorientation and loss of fine-grained localization. To overcome these barriers, this paper introduces CIVIC, a path-consistent compact visual inference framework. By maintaining compact sequence representations seamlessly across the vision encoder, projection layer, LLM prefill, and KV-cache, CIVIC avoids non-contiguous memory access and localized unmerging overheads. Evaluated on the Qwen3-VL architecture, CIVIC successfully translates sequence reductions into genuine physical hardware efficiency, shrinking KV-cache memory to approximately one-third of the baseline and reducing end-to-end inference latency. Enabled by text-aligned KL distillation and an adaptive spatial retention floor, CIVIC achieves these efficiency milestones without degrading accuracy across rigorous multimodal reasoning and visual grounding benchmarks.
+
+论文作者: Fengze Yang, Bo Yu, Xuewen Luo, Cathy Liu, Chenxi Liu
+
+提交时间: 2026-05-27 08:09:44
+
+论文链接: http://arxiv.org/abs/2605.28115v1
+
+==================================================
+==================================================
+
+论文名称: MACReD: A Multi-Agent Collaborative Reasoning Framework for Reaction Diagram Parsing
+
+论文摘要: Parsing chemical reaction diagrams from scientific literature is challenging due to heterogeneous layouts, intertwined visual elements, and the difficulty of integrating recognition and reasoning. Existing vision-language models advance multimodal understanding but still fail on complex diagrams, struggling to maintain spatial coherence and to integrate multidimensional information during reasoning. To address these issues, we propose MACReD, a hierarchical multi-agent framework that coordinates specialized agents for molecular perception, arrow understanding, text extraction, and reaction reconstruction within a unified VLM-guided architecture. The planning and perception layers use flexible, fine-grained detection to handle visual complexity, while the reasoning layer uses a multigraph fusion mechanism to integrate heterogeneous cues and enforce chemically consistent global reasoning. Experiments on the RxnScribe benchmark show that MACReD achieves state-of-the-art performance, with F1 scores of 75.2% and 84.6% under hard and soft match criteria, outperforming the RxnScribe baseline, which obtains 69.1% and 80.0%, respectively. These results demonstrate the robustness of MACReD across diverse diagram layouts, including multi-step and tree-structured reactions.
+
+论文作者: Chuang Tang, Chenhao Lin, Yin Xu, Hao Wang, Jinrui Zhou, Xin Li, Mingjun Xiao, Enhong Chen
+
+提交时间: 2026-05-27 07:32:13
+
+论文链接: http://arxiv.org/abs/2605.28077v1
+
+==================================================
+==================================================
+
+论文名称: DiagramRAG: A Lightweight Framework to Retrieve Scientific Diagram for Figure Generation
+
+论文摘要: Scientific diagrams are essential for communicating complex methodologies in academic papers. A natural way for researchers to specify such diagrams is through rough sketches, where text labels, connectors, and spatial arrangements express early semantic and topological intentions. However, sketches are usually incomplete, making them insufficient for directly producing publication-quality diagrams. Existing sketch-based generation methods mainly reconstruct the sketch itself, while recent text-driven diagram generation frameworks rely on textual semantics and do not fully exploit the topological structure contained in sketches. In this paper, we introduce DiagramRAG, a lightweight retrieval-augmented framework for sketch-based scientific diagram completion. Given a user sketch, DiagramRAG retrieves reference diagrams that are both semantically relevant to the sketch content and topologically compatible with its structure, and uses them to guide downstream diagram generation. To enable efficient structure-aware retrieval, we represent diagrams as knowledge graphs, synthesize sketch variants at different simplification levels, and train an embedding model to align sketches with compatible diagrams in a shared space. The retrieved references further provide content, topology, and visual priors for completing and rendering the final diagram. Experiments show that DiagramRAG achieves F1-scores of 0.848 and 0.802 on DiagramBank and FigureBench, respectively, and improves generation quality with the best VLM-as-a-Judge score of 7.170, while reducing inference latency to 35.48 seconds per sample. Our code and data are available at https://anonymous.4open.science/r/DiagramRAG-A262 and https://huggingface.co/datasets/anonymous-review-a262/DiagramSketch.
+
+论文作者: Xinjiang Yu, Junyi Han, Zhuofan Chen, Chi Zhang, Xiangyu Fu, Jingyuan Tan, Zirui You, Yixiang Jian, Yu-Ping Wang, Chengliang Chai
+
+提交时间: 2026-05-27 04:03:22
+
+论文链接: http://arxiv.org/abs/2605.27931v1
+
+==================================================
+==================================================
+
+论文名称: Beyond Binary: Sim-to-Real Dexterous Manipulation with Physics-Grounded Contact Representation
+
+论文摘要: A primary bottleneck in contact-rich manipulation is the difficulty of collecting real-world data. Sim-to-real reinforcement learning offers a scalable alternative, but the simulation-reality gap prevents information-dense modalities like touch from being effectively used. Existing sim-to-real methods often mitigate this gap by simplifying tactile data into coarse low-dimensional features -- sacrificing the richness required for complex manipulation. In this work, we introduce Center-of-Pressure (CoP), an effective tactile representation grounded in physical principles that preserves dense contact information while maintaining robustness for sim-to-real transfer. To support this representation, we propose a sensor calibration scheme based on differentiable dynamics, enabling the estimation of taxel orientations without requiring ground-truth force measurements. We evaluate CoP on two blind, challenging contact-rich manipulation tasks: peg-in-hole insertion and ball balancing. Across both tasks, policies conditioned on CoP achieve zero-shot sim-to-real transfer on a multi-fingered hand, and outperform both coarse binary-contact and raw-taxel baselines. Analysis of learned policy states further suggests that CoP-conditioned policies encode task-relevant physical properties, such as object mass, as an emergent byproduct of control.
+
+论文作者: Jiahe Pan, Stelian Coros, Jitendra Malik, Toru Lin
+
+提交时间: 2026-05-27 17:59:02
+
+论文链接: http://arxiv.org/abs/2605.28812v1
+
+==================================================
+==================================================
+
+论文名称: SPRINT: Efficient Spectral Priors for Humanoid Athletic Sprints
+
+论文摘要: The pursuit of humanoid athletic sprints is hindered by a scarcity of humanoid-viable kinematic reference data and the inability of existing frameworks to maintain stability during sprints. To overcome these limitations, we introduce SPRINT, a novel framework driven by efficient, frequency-adaptive spectral priors. By characterizing the fundamental periodicity of human locomotion in the frequency domain using a reference library of five discrete motion sequences, these priors generate kinematically feasible joint trajectories across a broad velocity spectrum, successfully extrapolating to speeds that exceed the reference distribution. Guided by these pretrained priors, the SPRINT policy achieves zero-shot sim-to-real transfer in field experiments on the Unitree G1 platform, reaching a peak sprinting velocity of 6 m/s and demonstrating seamless gait transitions while preserving biomimetic naturalness. Ultimately, this work establishes frequency-adaptive spectral priors as a highly data-efficient foundation for humanoid athletic sprints. The project page is available at https://anonymous.4open.science/w/SPRINT-138A/.
+
+论文作者: Yantong Wei, Kaihong Huang, Hainan Pan, Jiawei Luo, Jiawei Zhou, Ziyan Mai, Zhiwen Zeng, Yaonan Wang, Huimin Lu
+
+提交时间: 2026-05-27 14:40:29
+
+论文链接: http://arxiv.org/abs/2605.28549v1
+
+==================================================
+==================================================
+
+论文名称: EigeNet: Geometry-Informed Multi-Modal Learning for Few-shot Novel View RIR Prediction
+
+论文摘要: Predicting spatially varying Room Impulse Response (RIR) from sparse observations is a critical but highly challenging inverse problem for immersive spatial audio rendering. In this work, we present EIGENET, a geometry-informed multi-modal framework for few-shot novel view RIR prediction. At its core is a Cross-view Alternate-attention Transformer that iteratively refines local intra-view acoustic structures and global cross-view spatial relationships. We empirically demonstrate that this architecture is capable of making full use of the multi-view multi-modal context while performing spatial-temporal reasoning for RIR prediction. Inspired by acoustic ray tracing, we design a geometry-informed modulation block to formulate the connection between geometric features and RIR power spectrum. In the mean time, an auxiliary loss is introduced to transform the single-target waveform prediction into a multi-task learning framework. Through ablation studies, we demonstrate that this design yields consistent performance gains regardless of the underlying backbone, thereby confirming its foundational utility and architecture-agnostic generalizability for RIR prediction task. Evaluated on both simulated and real-world benchmarks, EIGENET achieves both state-of-the-art performance in few-shot novel view RIR prediction and sim-to-real generalization. Codes and checkpoints are available on https://github.com/FEAfeatherTHER/EigeNet.
+
+论文作者: Chong Jing, Zitong Lan, Junan Zhang, Zhizheng Wu
+
+提交时间: 2026-05-27 07:54:47
+
+论文链接: http://arxiv.org/abs/2605.28101v1
+
+==================================================
+==================================================
+
+论文名称: Self-Improving Language Models with Bidirectional Evolutionary Search
+
+论文摘要: Search has been proposed as an effective method for self-improving language models and agentic systems, both for post-training sample generation and for inference. However, widely used methods such as best-of-N sampling and tree search face two fundamental limitations: they are guided by sparse verification signals, and they construct candidates primarily through autoregressive expansion, restricting exploration to regions with substantial model probability mass. To address these, we propose Bidirectional Evolutionary Search (BES), a search framework that couples forward candidate evolution with backward goal decomposition. In the forward search, BES augments standard expansion with evolution operators that recombine partial trajectories to generate candidates that are difficult to obtain from a single model rollout. In the backward search, BES recursively decomposes the original task into checkable subgoals, producing dense intermediate feedback that guides forward search. We provide theoretical motivation showing that candidates generated by expansion-only search are confined to a narrow entropy shell while evolutionary operators can escape it, and that backward search can exponentially reduce the number of required samples to find a correct answer. Experiments show that on challenging post-training tasks where mainstream post-training algorithms fail to improve, BES enables consistent gains, and on three open problem solving benchmarks at inference time, BES outperforms existing open-source frameworks in both average and best-case performance. Code and trained models are available at https://github.com/Embodied-Minds-Lab/BES.
+
+论文作者: Guowei Xu, Zhenting Qi, Huangyuan Su, Weirui Ye, Himabindu Lakkaraju, Sham M. Kakade, Yilun Du
+
+提交时间: 2026-05-27 17:59:15
+
+论文链接: http://arxiv.org/abs/2605.28814v1
+
+==================================================
+==================================================
+
+论文名称: Deconstructing Spatial Complexity: Hierarchical Decomposition for LLM Spatial Reasoning
+
+论文摘要: LLMs have shown remarkable proficiency in general language understanding and reasoning. However, they consistently underperform in spatial reasoning that severely limits their application, particularly in embodied intelligence. Inspired by the success of hierarchical reinforcement learning, this paper introduces a novel method for hierarchical task decomposition in LLM spatial reasoning. Our approach guides LLMs to decompose complex tasks into manageable sub-tasks by identifying key intermediate states and generating simplified sub-environments. However, we identify that LLMs often fail to derive optimal intermediate states due to their insufficient spatial prior, leading to sub-optimal task decomposition. To address this limitation and enhance its planning capability, we propose the MCTS-Guided Group Relative Policy Optimization (M-GRPO), where we reformulate the UCT formula by incorporating the LLM's prior predictive probabilities alongside its epistemic uncertainty. Furthermore, we implement a more fine-grained advantage function, enabling the model to learn optimal path planning. Experimental results demonstrate that our method substantially improves LLM performance on spatial tasks, including navigation, planning, and strategic games, achieving state-of-the-art results. This work paves the way for LLMs in real-world applications.
+
+论文作者: Yi Wang, Haojie Lu, Zhaofan Zhang, Li Chen, Sihong Xie
+
+提交时间: 2026-05-27 08:26:57
+
+论文链接: http://arxiv.org/abs/2605.28144v1
+
+==================================================
+==================================================
+
+论文名称: Turning Video Models into Generalist Robot Policies
+
+论文摘要: Video generative models have emerged as a promising robotics backbone, capable of generating videos that depict the completion of complex tasks across embodiments and environments. Recent work proposes robot foundation models that jointly predict future observations and actions by finetuning video models with action-labeled data. In this paper, we test the limits of an alternative approach: leave the video planner as-is while training an embodiment-specific inverse dynamics model (IDM). This decoupling offers several natural benefits: the video planner remains embodiment-agnostic, different video models can be interchanged easily without re-training the IDM, and the IDM can be independently trained with readily available self-play data. We present a closed-loop, video-to-action policy that combines an action-free video world model with a carefully-designed IDM based on the robot embodiment Jacobian. We demonstrate that our IDM design is both data-efficient and scalable to high-dimensional action spaces. Our policy, which we coin the Video-to-Embodied Robot Action Model (VERA), achieves strong performance across simulated and real-world benchmarks, including zero-shot Panda arm manipulation and 16-DoF Allegro-hand dexterous cube re-orientation. The same video planner can be used across multiple embodiments by pairing it with different embodiment-specific IDMs. Our results show that decoupled video planning plus faithful video-to-action translation is a viable alternative route towards zero-shot, cross-embodiment, and generalizable robot control. More results are available on our project website: https://vera.csail.mit.edu.
+
+论文作者: Sizhe Lester Li, Evan Kim, Xingjian Bai, Tong Zhao, Tao Pang, Max Simchowitz, Vincent Sitzmann
+
+提交时间: 2026-05-27 01:21:58
+
+论文链接: http://arxiv.org/abs/2605.27817v1
+
+==================================================
+==================================================
+
+论文名称: Decision-focused learning for optimal PV-Battery scheduling
+
+论文摘要: The use of residential photovoltaics has increased dramatically in recent years. With battery systems becoming more affordable, the optimal operation of a photovoltaic-battery system can bring significant savings to households. Optimal control requires correct forecasts of underlying parameters, such as photovoltaic power generation, to schedule the battery. While forecasting models have become increasingly accurate due to algorithmic advances and data availability, accuracy is typically measured in generic metrics which might not align with the downstream application. This study proposes a decision-focused learning framework that integrates optimization and prediction by training a Long Short-Term Memory photovoltaic energy forecaster on the downstream optimal scheduling of a battery system. The proposed methodology is compared against a standard two-phase approach. Across a 14-month evaluation period, the decision-focused method reduced average electricity costs across twenty buildings by 3.6% when normalized against performance bounds defined by a perfect forecast and a baseline of no optimization. Critically, this financial improvement was achieved despite the model exhibiting a root mean squared error of 19.9%, significantly higher than the decoupled model's 8.2%. Warm-starting the decision-focused model further improves results, lowering average cost by approximately 8%, while also mitigating the negative impact on statistical accuracy (root mean squared error of 13.7%). The findings are statistically significant at the 0.001 level across the twenty households and for each household individually. These results demonstrate that aligning forecast models with optimization goals is key for achieving cost advantages in PV-battery systems. Future research should replicate these findings on other datasets, alternate forecasting models and alternate optimization algorithms.
+
+论文作者: Joris Depoortere, Hussain Kazmi, Johan Driesen
+
+提交时间: 2026-05-27 11:43:27
+
+论文链接: http://arxiv.org/abs/2605.28340v1
