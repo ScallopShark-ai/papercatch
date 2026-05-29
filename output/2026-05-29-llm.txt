@@ -1,0 +1,413 @@
+# arXiv 论文每日总结 - 2026-05-29
+# 共 26 篇论文
+# 由 Gemini 大模型自动生成
+
+==================================================
+==================================================
+
+【第 1 篇】
+
+论文名称: In-Context Reward Adaptation for Robust Preference Modeling
+
+论文链接: http://arxiv.org/abs/2605.30323v1
+
+--- Gemini 总结 ---
+
+【工作概述】  
+这篇论文提出了一种名为“上下文奖励自适应”（In-Context Reward Adaptation）的框架，利用transformer的上下文学习能力，动态建模多样化和未见过的人类偏好。通过引入人类响应时间作为辅助输入信号，该方法能够在无需重新训练的情况下适应新的偏好域。
+
+【核心问题】  
+该论文主要解决如何在强化学习中动态建模和适应多样化的人类偏好的问题。这个问题重要，因为人类偏好具有异质性和不可预测性，传统静态奖励模型难以泛化到未见的偏好领域。
+
+【主要贡献】  
+1. 提出了基于transformer的上下文奖励自适应框架，用于动态建模人类偏好。  
+2. 发现标准transformer架构存在偏向问题，并通过引入人类响应时间作为辅助信号解决该问题。  
+3. 提供了一种更鲁棒的偏好建模方法，能够处理偏好分布的变化并提升人机对齐的灵活性。
+
+【关键词归类】  
+强化学习
+
+==================================================
+==================================================
+
+【第 2 篇】
+
+论文名称: ESPO: Early-Stopping Proximal Policy Optimization
+
+论文链接: http://arxiv.org/abs/2605.29860v1
+
+--- Gemini 总结 ---
+
+【工作概述】  
+本文提出了一种名为ESPO（Early-Stopping Proximal Policy Optimization）的算法，用于在强化学习中检测并提前终止失败的生成轨迹，从而提高计算效率和学习效果。该方法通过计算累计后悔值来判断是否提前终止，并将截断的轨迹视为吸收失败状态，集中负的时间差分误差。
+
+【核心问题】  
+该论文主要解决了强化学习中因错误推理导致的无效计算和奖励估计污染问题。这一问题在大语言模型的推理任务中尤为重要，因为它直接影响模型的训练效率和性能。
+
+【主要贡献】  
+1. 提出了ESPO算法，通过在线检测失败轨迹并提前终止，减少了无效计算和噪声传播。  
+2. 使用累计后悔值作为终止条件，无需额外的奖励模型或人工标注。  
+3. 在数学推理任务上显著提升了性能，同时节省了超过20%的计算资源。  
+
+【关键词归类】  
+强化学习
+
+==================================================
+==================================================
+
+【第 3 篇】
+
+论文名称: PEARL: Training Socratic Tutors with Pedagogically Aligned Reinforcement Learning
+
+论文链接: http://arxiv.org/abs/2605.29582v1
+
+--- Gemini 总结 ---
+
+【工作概述】  
+这篇论文提出了PEARL框架，通过强化学习训练符合教育学原则的苏格拉底式教学代理。框架包括可控学生模拟器、生成式奖励模型以及稳定的多目标强化学习方案，用于优化教学质量和目标正确性。
+
+【核心问题】  
+论文解决了训练教育型语言模型中的三个关键问题：学生模拟的有限逼真性和可控性、教学奖励建模的不明确性，以及多目标优化的不稳定性。这些问题对于开发高效的教育型AI至关重要。
+
+【主要贡献】  
+1. 提出了一个可控的学生模拟器，能够分离认知状态与响应生成，模拟多样化能力和误解。  
+2. 开发了生成式奖励模型，联合评估教学质量和目标正确性，用于策略优化。  
+3. 设计了一种稳定的多目标强化学习方法，通过离散化奖励和归一化优势聚合，避免高方差目标主导更新。
+
+【关键词归类】  
+强化学习
+
+==================================================
+==================================================
+
+【第 4 篇】
+
+论文名称: Source-Grounded Semantic Reinforcement Learning for Low-Resource Target-Language Generation
+
+论文链接: http://arxiv.org/abs/2605.29502v1
+
+--- Gemini 总结 ---
+
+【工作概述】  
+本文提出了一种名为Source-Grounded Semantic Reinforcement Learning (SG-SRL)的框架，用于低资源目标语言生成。该方法利用高资源源语言的单语数据，通过跨语言语义奖励模型进行无参考的强化学习，并结合小规模平行语料进行恢复阶段以提升生成质量。
+
+【核心问题】  
+论文解决了低资源目标语言生成中因平行数据稀缺而导致的性能限制问题。该问题对于提升低资源语言的自然语言生成能力具有重要意义，尤其是在跨语言语义一致性和事实覆盖方面。
+
+【主要贡献】  
+1. 提出SG-SRL框架，通过跨语言语义奖励模型实现无参考的强化学习，充分利用高资源源语言单语数据。  
+2. 设计了一种轻量级恢复阶段，解决了因奖励黑客问题导致的生成冗长问题，同时保持语义增益。  
+3. 实验验证了SG-SRL在低资源语言生成任务中的有效性，并探讨了跨语言语义奖励模型的泛化能力。
+
+【关键词归类】  
+强化学习
+
+==================================================
+==================================================
+
+【第 5 篇】
+
+论文名称: Information-Directed Offline-to-Online Reinforcement Learning
+
+论文链接: http://arxiv.org/abs/2605.29405v1
+
+--- Gemini 总结 ---
+
+【工作概述】  
+本文提出了一种信息导向采样（Information-Directed Sampling, IDS）方法，用于离线到在线强化学习（Offline-to-Online RL），通过权衡即时后悔和信息增益来选择动作。论文形式化了离线数据条件下的剩余不确定性，并为IDS提供了通用的贝叶斯后悔界限分析。
+
+【核心问题】  
+该论文解决了如何在离线数据的基础上，通过有限的在线交互高效探索剩余不确定性的问题。这个问题对于提升离线到在线强化学习的样本效率和性能具有重要意义，特别是在离线数据存在偏差或低概率不确定性的情况下。
+
+【主要贡献】  
+1. 提出了基于条件互信息的剩余不确定性建模方法，并引入信息导向采样（IDS）框架。  
+2. 证明了IDS在离线到在线强化学习中的通用贝叶斯后悔界限，并通过覆盖系数分析了其性能。  
+3. 在控制带宽实验和D4RL离线到在线强化学习实验中验证了IDS的有效性，特别是在离线数据具有偏差或低概率不确定性时的优势。
+
+【关键词归类】  
+强化学习
+
+==================================================
+==================================================
+
+【第 6 篇】
+
+论文名称: Prompt-Level Reward Specifications for Open-Ended Post-Training
+
+论文链接: http://arxiv.org/abs/2605.29275v1
+
+--- Gemini 总结 ---
+
+【工作概述】  
+本文提出了一种面向开放式后训练的提示级奖励规范框架，该框架通过构建任务自适应评分标准和硬约束检测器，使奖励标准在训练前明确化，并可在多次训练中重复使用。该方法无需人工偏好标注、参考答案或单独训练的奖励模型，能够改进离线奖励建模（RM）风格的响应排序，并支持在线强化学习。
+
+【核心问题】  
+论文解决了开放式任务中奖励标准隐式化的问题，提出了一种明确化奖励标准的框架。这一问题重要性在于，明确的奖励标准能够更好地指导模型生成高质量的响应，特别是在存在局部需求、整体偏好和显式约束的复杂任务中。
+
+【主要贡献】  
+1. 提出了提示级奖励规范框架，分离奖励规范和奖励计算，构建可复用的任务自适应评分标准和硬约束检测器。  
+2. 提供了一种结合局部需求、整体质量和确定性约束的混合奖励方法，且无需依赖人工标注或单独训练的奖励模型。  
+3. 实验表明该框架在离线奖励建模和在线强化学习中均表现优异，并通过消融实验验证了各模块的互补性。
+
+【关键词归类】  
+强化学习
+
+==================================================
+==================================================
+
+【第 7 篇】
+
+论文名称: Tiny but Trusted: Efficient Vision-Language Reasoning for Time-Series Anomaly Detection
+
+论文链接: http://arxiv.org/abs/2605.30344v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 403 - {'error': {'message': '预扣费额度失败, 用户[118889]剩余额度: 💰0.010564, 需要预扣费额度: 💰0.011866 (request id: B2026052923264769727758268d9d6nvt5j4xKMaster)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}]
+
+==================================================
+==================================================
+
+【第 8 篇】
+
+论文名称: LoMo: Local Modality Substitution for Deeper Vision-Language Fusion
+
+论文链接: http://arxiv.org/abs/2605.30265v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 403 - {'error': {'message': '预扣费额度失败, 用户[118889]剩余额度: 💰0.010564, 需要预扣费额度: 💰0.012130 (request id: B20260529232657576062368268d9d6YY0qDhjhMaster)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}]
+
+==================================================
+==================================================
+
+【第 9 篇】
+
+论文名称: Beyond 3D VQAs: Injecting 3D Spatial Priors into Vision-Language Models for Enhanced Geometric Reasoning
+
+论文链接: http://arxiv.org/abs/2605.30231v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 403 - {'error': {'message': '预扣费额度失败, 用户[118889]剩余额度: 💰0.010564, 需要预扣费额度: 💰0.012112 (request id: B202605292327071075597398268d9d6HmHMrSNhMaster)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}]
+
+==================================================
+==================================================
+
+【第 10 篇】
+
+论文名称: BORA: Bridging Offline Reinforcement Learning and Online Residual Adaptation for Real-World Dexterous VLA Models
+
+论文链接: http://arxiv.org/abs/2605.30226v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 403 - {'error': {'message': '预扣费额度失败, 用户[118889]剩余额度: 💰0.010564, 需要预扣费额度: 💰0.012100 (request id: B202605292327171597430098268d9d6S5f9zVDrMaster)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}]
+
+==================================================
+==================================================
+
+【第 11 篇】
+
+论文名称: Unveiling the Visual Counting Bottleneck in Vision-Language Models
+
+论文链接: http://arxiv.org/abs/2605.30170v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 403 - {'error': {'message': '预扣费额度失败, 用户[118889]剩余额度: 💰0.010564, 需要预扣费额度: 💰0.011794 (request id: B202605292327272089524778268d9d6bf3MipV9Master)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}]
+
+==================================================
+==================================================
+
+【第 12 篇】
+
+论文名称: MuPHI: Learning Implicit Multimodal Harm Reasoning via Semantically Grounded Reward Optimization
+
+论文链接: http://arxiv.org/abs/2605.29951v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 403 - {'error': {'message': '预扣费额度失败, 用户[118889]剩余额度: 💰0.010564, 需要预扣费额度: 💰0.011796 (request id: B202605292327373419570198268d9d6NMNkRcmcMaster)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}]
+
+==================================================
+==================================================
+
+【第 13 篇】
+
+论文名称: OccamToken: Efficient VLM Inference with Training-Free and Budget-Adaptive Token Pruning
+
+论文链接: http://arxiv.org/abs/2605.29657v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 403 - {'error': {'message': '预扣费额度失败, 用户[118889]剩余额度: 💰0.010564, 需要预扣费额度: 💰0.011970 (request id: B202605292327476226247738268d9d6sQCggxfhMaster)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}]
+
+==================================================
+==================================================
+
+【第 14 篇】
+
+论文名称: DiffSpot: Can VLMs Spot Fine-Grained Visual Differences in Web Interfaces?
+
+论文链接: http://arxiv.org/abs/2605.29615v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 403 - {'error': {'message': '预扣费额度失败, 用户[118889]剩余额度: 💰0.010564, 需要预扣费额度: 💰0.011914 (request id: B202605292327576745773758268d9d62JegKTq6Master)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}]
+
+==================================================
+==================================================
+
+【第 15 篇】
+
+论文名称: World Models in Words: Auditing Physical State-Transition Commitments in Vision-Language Models
+
+论文链接: http://arxiv.org/abs/2605.29585v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 403 - {'error': {'message': '预扣费额度失败, 用户[118889]剩余额度: 💰0.010564, 需要预扣费额度: 💰0.012160 (request id: B202605292328077322678108268d9d6nZ6fIJc7Master)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}]
+
+==================================================
+==================================================
+
+【第 16 篇】
+
+论文名称: Planning with the Views via Scene Self-Exploration
+
+论文链接: http://arxiv.org/abs/2605.29563v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 403 - {'error': {'message': '预扣费额度失败, 用户[118889]剩余额度: 💰0.010564, 需要预扣费额度: 💰0.011940 (request id: B202605292328177817042448268d9d6g7vb3bTyMaster)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}]
+
+==================================================
+==================================================
+
+【第 17 篇】
+
+论文名称: AsymVLM: Asymmetric Token Pruning for Efficient Vision-Language Model Inference
+
+论文链接: http://arxiv.org/abs/2605.29535v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 403 - {'error': {'message': '预扣费额度失败, 用户[118889]剩余额度: 💰0.010564, 需要预扣费额度: 💰0.011794 (request id: B202605292328278301274908268d9d6Gf4gJdS2Master)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}]
+
+==================================================
+==================================================
+
+【第 18 篇】
+
+论文名称: On Asymmetric Optimization of Reasoning and Perception in Vision-Language Model Post-Training
+
+论文链接: http://arxiv.org/abs/2605.29496v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 403 - {'error': {'message': '预扣费额度失败, 用户[118889]剩余额度: 💰0.010564, 需要预扣费额度: 💰0.011876 (request id: B202605292328379011071038268d9d64yMHlSoHMaster)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}]
+
+==================================================
+==================================================
+
+【第 19 篇】
+
+论文名称: CrystalXRD-Bench: Benchmarking Vision-Language Models for XRD Peak Indexing Across Diverse Crystalline Materials
+
+论文链接: http://arxiv.org/abs/2605.29446v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 403 - {'error': {'message': '预扣费额度失败, 用户[118889]剩余额度: 💰0.010564, 需要预扣费额度: 💰0.011910 (request id: B202605292328479714718748268d9d6shzHVDceMaster)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}]
+
+==================================================
+==================================================
+
+【第 20 篇】
+
+论文名称: Pocket-Dentist: On-Device Dental Image Understanding via Efficient Multimodal Large Language Models
+
+论文链接: http://arxiv.org/abs/2605.29299v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 403 - {'error': {'message': '预扣费额度失败, 用户[118889]剩余额度: 💰0.010564, 需要预扣费额度: 💰0.011786 (request id: B202605292328582419492528268d9d6rlJtWpANMaster)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}]
+
+==================================================
+==================================================
+
+【第 21 篇】
+
+论文名称: RoboWits: Unexpected Challenges for Robotic Creative Problem Solving
+
+论文链接: http://arxiv.org/abs/2605.30326v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 403 - {'error': {'message': '预扣费额度失败, 用户[118889]剩余额度: 💰0.010564, 需要预扣费额度: 💰0.011854 (request id: B202605292329082923464148268d9d6MYl7yAWjMaster)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}]
+
+==================================================
+==================================================
+
+【第 22 篇】
+
+论文名称: Qwen-VLA: Unifying Vision-Language-Action Modeling across Tasks, Environments, and Robot Embodiments
+
+论文链接: http://arxiv.org/abs/2605.30280v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 403 - {'error': {'message': '预扣费额度失败, 用户[118889]剩余额度: 💰0.010564, 需要预扣费额度: 💰0.012180 (request id: B202605292329183413437218268d9d6uJyLcmt5Master)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}]
+
+==================================================
+==================================================
+
+【第 23 篇】
+
+论文名称: VLA-Trace: Diagnosing Vision-Language-Action Models through Representation and Behavior Tracing
+
+论文链接: http://arxiv.org/abs/2605.30117v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 403 - {'error': {'message': '预扣费额度失败, 用户[118889]剩余额度: 💰0.010564, 需要预扣费额度: 💰0.011774 (request id: B202605292329284085025958268d9d67wr1TPviMaster)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}]
+
+==================================================
+==================================================
+
+【第 24 篇】
+
+论文名称: VisualThink-VLA: Visual Intermediate Reasoning for Effective and Low-Latency Vision-Language-Action Policies
+
+论文链接: http://arxiv.org/abs/2605.30011v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 403 - {'error': {'message': '预扣费额度失败, 用户[118889]剩余额度: 💰0.010564, 需要预扣费额度: 💰0.012024 (request id: B202605292329384745413578268d9d6m86MIcEnMaster)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}]
+
+==================================================
+==================================================
+
+【第 25 篇】
+
+论文名称: VLA-Pro: Cross-Task Procedural Memory Transfer for Vision-Language-Action Models
+
+论文链接: http://arxiv.org/abs/2605.29562v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 403 - {'error': {'message': '预扣费额度失败, 用户[118889]剩余额度: 💰0.010564, 需要预扣费额度: 💰0.011812 (request id: B202605292329485847387678268d9d6h3UuNF7vMaster)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}]
+
+==================================================
+==================================================
+
+【第 26 篇】
+
+论文名称: Extreme dynamic symmetry enables omnidirectional and multifunctional robots
+
+论文链接: http://arxiv.org/abs/2605.29254v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 403 - {'error': {'message': '预扣费额度失败, 用户[118889]剩余额度: 💰0.010564, 需要预扣费额度: 💰0.012004 (request id: B202605292329586516922318268d9d6CGMk9ISMMaster)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}]

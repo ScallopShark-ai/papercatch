@@ -1,0 +1,334 @@
+论文名称: In-Context Reward Adaptation for Robust Preference Modeling
+
+论文摘要: Reinforcement Learning from Human Feedback (RLHF) typically relies on static reward models to align Large Language Models with human preferences. However, human values are inherently diverse and heterogeneous, and a single reward model often lacks the robustness required to generalize to unseen preference domains. While existing multi-reward frameworks attempt to address this, they are often restricted to a fixed set of known domains and fail to adapt to unseen human distributions without costly retraining. In this work, we propose In-Context Reward Adaptation, a transformer-based framework designed to model diverse and unseen human preferences on the fly. By leveraging the in-context learning capabilities of transformers, our approach adaptively infers the underlying reward structure from a small set of preference demonstrations. We demonstrate that while a standard transformer architecture is insufficient for this task by characterizing an asymptotic bias to the ground-truth, incorporating human response time as an auxiliary input signal enables the model to successfully adapt to preferences from previously unseen domains. Our findings show that this approach provides a more robust foundation for preference modeling, allowing for the representation of heterogeneous rewards and preference distribution shift, and offering a scalable path toward more flexible human-AI alignment.
+
+论文作者: Zhenyu Sun, Zheng Xu, Ermin Wei
+
+提交时间: 2026-05-28 17:56:54
+
+论文链接: http://arxiv.org/abs/2605.30323v1
+
+==================================================
+==================================================
+
+论文名称: ESPO: Early-Stopping Proximal Policy Optimization
+
+论文摘要: When a large language model under reinforcement learning commits a wrong reasoning step early in a trajectory, standard algorithms force it to keep generating until the maximum horizon, spending compute on tokens that never receive positive reward and polluting advantage estimates with post-failure noise. We propose ESPO (Early-Stopping Proximal Policy Optimization), which detects trajectory failure on-the-fly and terminates rollouts early. At each generation step, ESPO computes a surrogate regret using only the logits already computed during sampling, and terminates when the smoothed cumulative regret significantly exceeds its estimated values. Truncated trajectories are treated as absorbing failure states with a terminal reward, concentrating negative temporal-difference (TD) errors near the detected failure step without any additional reward model or human annotation. On DeepSeek-R1-Distill-Qwen-7B trained for mathematical reasoning, ESPO surpasses PPO on AIME~2024 (46.28% vs. 45.25%), AMC~2023 (85.83% vs. 82.94%), and MATH-500 (87.42% vs. 85.43%), while saving more than 20% rollout tokens cumulatively.
+
+论文作者: Zihang Li, Rui Zhou, Yingcheng Shi, Wenhan Yu, Zhewen Tan, Zixiang Liu, Zeming Li, Binhua Li, Yongbin Li, Tong Yang, Jieping Ye
+
+提交时间: 2026-05-28 12:40:22
+
+论文链接: http://arxiv.org/abs/2605.29860v1
+
+==================================================
+==================================================
+
+论文名称: PEARL: Training Socratic Tutors with Pedagogically Aligned Reinforcement Learning
+
+论文摘要: Large Language Models (LLMs) have shown promise as educational tutors, yet effective tutoring requires more than solving problems: it must provide progressive Socratic guidance and balance multiple pedagogical objectives across multi-turn interactions. However, training such tutors remains challenging due to limited-fidelity and weakly controllable student simulation, under-specified pedagogical reward modeling, and unstable multi-objective optimization. To overcome these limitations, we propose PEARL, a pedagogically aligned reinforcement learning framework for training Socratic tutoring agents, consisting of three key components. First, we introduce a controllable student simulator that decouples latent cognitive states from response generation to model diverse abilities and misconceptions. Second, we develop a generative reward model that jointly evaluates pedagogical quality and objective correctness for policy optimization. Finally, we propose a stable multi-objective RL scheme that discretizes rewards within each dimension and aggregates normalized advantages across dimensions, preventing high-variance objectives from dominating updates. Experiments on multiple benchmarks show that PEARL achieves the best performance among open-source models and remains competitive with leading proprietary LLMs, despite using only a 30B policy model.
+
+论文作者: Qikai Chang, Zhenrong Zhang, Linbo Chen, Pengfei Hu, Jianshu Zhang, Youhui Guo, Jun Du
+
+提交时间: 2026-05-28 08:25:08
+
+论文链接: http://arxiv.org/abs/2605.29582v1
+
+==================================================
+==================================================
+
+论文名称: Source-Grounded Semantic Reinforcement Learning for Low-Resource Target-Language Generation
+
+论文摘要: Low-resource target-language generation is often limited by scarce parallel data, while high-resource source-language monolingual data is abundant but difficult to use with standard supervised fine-tuning. We propose Source-Grounded Semantic Reinforcement Learning (SG-SRL), a resource-utilization framework that converts source-language monolingual data into cross-lingual semantic supervision for target-language generation. SG-SRL performs reference-free reinforcement learning (RL) on source-language data using a cross-lingual semantic reward model, instantiated by a cross-lingual reranker that scores the semantic relevance between the source input and the target-language generation. While this induces severe verbosity-based reward hacking, a lightweight recovery stage using a small parallel corpus restores fluency, conciseness, and task format while preserving the semantic gains. Experiments on Chinese-to-Thai generation show that SG-SRL improves semantic grounding and factual coverage over cold-start SFT. Additional analyses on long-form transfer and Tibetan embedding-based rewards clarify the generalization behavior of SG-SRL and show that an encoder-based semantic reward can substitute for an LLM-based reranker in a realistic low-resource language setting.
+
+论文作者: Zeli Su, Ziyin Zhang, Zewei Pan, Zhou Liu, Dingcheng Huang, Dehan Li, Zhankai Xu, Longfei Zheng, Xiaolu Zhang, Jun Zhou, Wentao Zhang
+
+提交时间: 2026-05-28 07:27:16
+
+论文链接: http://arxiv.org/abs/2605.29502v1
+
+==================================================
+==================================================
+
+论文名称: Information-Directed Offline-to-Online Reinforcement Learning
+
+论文摘要: Decision-making from offline datasets typically warm-starts a policy or score model from fixed offline data and then refines it with limited online interaction. Offline data reduces uncertainty, but it does not remove the need for exploration; it changes what remains to be explored. We formalise this residual uncertainty by the conditional mutual information $I(χ;τ_{1:T}\mid\mathcal{D}_N)$ between a learning target $χ$ and the online trajectories after conditioning on the offline dataset. This view leads naturally to information-directed sampling (IDS), a family parameterised by $η\ge 0$ that selects actions by trading off instantaneous regret against information gain. We prove a generic offline-to-online Bayesian regret bound for IDS through a ratio certificate: any information-ratio bound satisfied by a reference Thompson-sampling policy over the same randomised policy class is inherited by IDS. In a known-dynamics Bayesian linear-reward model, the conditional mutual information has a log-determinant form, and vanilla IDS ($η=0$) satisfies $\widetilde O\!\left(Hd\min\left\{\sqrt T,\,T\sqrt{C^\dagger_{β,\mathrm{IDS}_0}(N,T)/N}\right\}\right),$ where the coverage coefficient is tied to the visitation distribution induced by vanilla IDS itself. We also identify a warm-start regime with a dominated but informative probe in which vanilla IDS selects the probe while Thompson sampling never does, giving a constant-factor Bayesian regret separation. Controlled bandit experiments and D4RL offline-to-online RL experiments validate this mechanism: IDS is most beneficial when offline data is informative but leaves biased or low-probability residual uncertainty that targeted online actions can resolve, a regime shared by offline RL, offline black-box optimization, and Bayesian optimization.
+
+论文作者: Keru Chen
+
+提交时间: 2026-05-28 05:58:15
+
+论文链接: http://arxiv.org/abs/2605.29405v1
+
+==================================================
+==================================================
+
+论文名称: Prompt-Level Reward Specifications for Open-Ended Post-Training
+
+论文摘要: Open-ended post-training benefits from rewards that make prompt-specific success conditions explicit, rather than relying only on post-hoc scalar scores. In instruction following, writing, and decision-support tasks, response quality depends on local requirements, holistic preferences, and explicit constraints, but existing reward methods often leave these criteria implicit or cover only narrowly verifiable cases. We propose a prompt-level reward specification framework that separates reward specification from reward computation. Given only prompts, our framework constructs reusable task-adaptive rubrics and executable hard-constraint checkers offline, making reward criteria explicit before training and reusable across rollouts. At scoring time, artifact-anchored rubric and code scores are combined with an independent global score for residual holistic quality, yielding a normalized hybrid reward over requirement satisfaction, holistic quality, and deterministic constraints. The framework requires no human preference annotations, reference answers, or a separately trained reward model. Experiments show that the resulting reward improves offline RM-style response ranking and supports online reinforcement learning across multiple open-ended benchmarks. Ablations further show that rubrics, global scoring, and executable verification provide complementary supervision.
+
+论文作者: Zijun Weng, Xiaohui Hu, Shuangyong Song, Yongxiang Li, Kaidong Yu, Xuanjing Huang
+
+提交时间: 2026-05-28 02:52:06
+
+论文链接: http://arxiv.org/abs/2605.29275v1
+
+==================================================
+==================================================
+
+论文名称: Tiny but Trusted: Efficient Vision-Language Reasoning for Time-Series Anomaly Detection
+
+论文摘要: Recent advances in Vision-Language Models (VLMs) have achieved impressive performance across many tasks, yet prior studies report unsatisfactory performance when applying large language or multimodal models to finding abnormal patterns in sequential data. Public anomaly detection benchmarks typically provide interval annotations but not natural-language rationales, making it difficult to fine-tune VLMs to produce grounded, interpretable decisions. To address this gap, we construct VisAnomBench, a curated benchmark built from public time-series datasets and augmented with high-quality anomaly explanations selected from multiple large VLMs using fine-grained, task-specific rewards. Through fine-tuning on this benchmark, we develop VisAnomReasoner, a parameter-efficient VLM for time-series anomaly detection. Experimental results on VisAnomBench show that VisAnomReasoner achieves more accurate anomaly localization and consistently outperforms all baselines, with improvements of at least 21.23 and 23.87 percentage points in precision and F1, respectively. Additional experiments on the TSB-AD-U benchmark demonstrate strong cross-benchmark generalization, with VisAnomReasoner improving precision and F1 by 9.57 and 13.39 percentage points, respectively.
+
+论文作者: Xiaona Zhou, Muntasir Wahed, Tianjiao Yu, Constantin Brif, Ismini Lourentzou
+
+提交时间: 2026-05-28 17:59:50
+
+论文链接: http://arxiv.org/abs/2605.30344v1
+
+==================================================
+==================================================
+
+论文名称: LoMo: Local Modality Substitution for Deeper Vision-Language Fusion
+
+论文摘要: Vision-Language Models (VLMs) have achieved substantial progress across a wide range of understanding and reasoning tasks, driven by large-scale image-text training aimed at multimodal fusion. Ideally, replacing a textual question with its rendered-image counterpart should leave model performance essentially unaffected. In practice, however, such modality substitution induces dramatic performance degradation. We attribute this "carrier sensitivity" issue to an inherent bias in current training corpora. Across prevalent datasets such as image captioning, VQA, OCR, and web-sourced interleaved data, text and images are typically organized into distinct and asymmetric roles, with text serving as linguistic queries and images as visual references. Such data bias leads VLMs to exhibit distinct preferences for information acquisition across different modalities. Consequently, VLMs fail to align representations of semantically equivalent content across textual and visual carriers, making model reasoning fragile under modality substitution. To address this, we propose Local Modality Substitution (LoMo), a lightweight, architecture-agnostic data curation paradigm designed to provide supervision for cross-modal representational invariance between semantically equivalent text and image carriers. LoMo achieves this by reformulating single-modality prompts into seamlessly interleaved multimodal sequences. It dynamically selects target text spans and recasts them as rendered images, thereby preserving the same semantics across "text, visual, text" carriers. Extensive experiments across 13 diverse multimodal benchmarks demonstrate that LoMo significantly improves overall multimodal reasoning and yields deeper cross-modal fusion. Specifically, it delivers consistent gains across foundational models, improving over standard SFT by 2.67 points on LLaVA-OneVision-1.5-8B and 2.82 points on Qwen3.5-9B.
+
+论文作者: Feng Han, Zhixiong Zhang, Zheming Liang, Yibin Wang, Jiaqi Wang
+
+提交时间: 2026-05-28 17:27:55
+
+论文链接: http://arxiv.org/abs/2605.30265v1
+
+==================================================
+==================================================
+
+论文名称: Beyond 3D VQAs: Injecting 3D Spatial Priors into Vision-Language Models for Enhanced Geometric Reasoning
+
+论文摘要: Vision-Language Models (VLMs) often struggle with robust 3D spatial reasoning. Prevailing methods that rely on fine-tuning with 3D visual question-answering (VQA) datasets may overfit dataset-specific biases, while integrating specialized 3D visual encoders is often inflexible and cumbersome. In this paper, we argue that genuine spatial understanding should emerge from learning fundamental geometric priors, not only from high-level VQA supervision. We propose GASP (Geometric-Aware Spatial Priors), a framework that injects these priors directly into the LLM's transformer layers. GASP employs a small correspondence head, applied as a deep supervision signal across all layers, and is trained with a dual objective leveraging ground-truth geometry from large-scale video scenes: a contrastive loss on ground-truth point correspondences enforces 2D view-invariance, while a depth consistency supervision resolves 3D geometric ambiguities. Our analysis first provides a diagnostic showing that standard VLMs' internal correspondence matching accuracy is very low (often below 5%). We then demonstrate that our training substantially improves this behavior, boosting peak layer-wise correspondence to over 70% and maintaining over 85% temporal robustness while baselines remain below 5%. These internal improvements translate to significant gains on downstream spatial benchmarks including +18.2% on All-Angles Bench and +29.0% on VSI-Bench, all without training on any 3D VQA data. Our findings indicate that learning from fundamental geometric priors is a promising and generalizable pathway towards VLMs with more reliable 3D spatial reasoning.
+
+论文作者: Chun-Hsiao Yeh, Shengyi Qian, Manchen Wang, Yi Ma, Joseph Tighe, Fanyi Xiao
+
+提交时间: 2026-05-28 17:00:52
+
+论文链接: http://arxiv.org/abs/2605.30231v1
+
+==================================================
+==================================================
+
+论文名称: BORA: Bridging Offline Reinforcement Learning and Online Residual Adaptation for Real-World Dexterous VLA Models
+
+论文摘要: Vision-Language-Action (VLA) models have emerged as a promising paradigm for grounding visual-language understanding into real-world robotic manipulation. However, dexterous manipulation remains challenging for VLA policies due to high-dimensional hand control and compounding execution errors, which makes real-world RL post-training essential for bridging the gap between visually grounded action generation and physically reliable dexterous execution. However, high-dimensional dexterous exploration often triggers temporal inconsistency, sample inefficiency and hardware risks in the real world. To address these challenges, we propose BORA, an offline-to-online RL post-training framework designed for real-world dexterous VLA models. In the offline phase, BORA constructs a critic that takes both the VLM's cognition tokens and action chunks as inputs. This design enables action-conditioned value guidance, allowing the critic to evaluate dexterous hand motions beyond visual context alone. During the subsequent online phase, BORA freezes the VLA base and introduces a lightweight, Human-in-the-Loop (HiL) chunk-wise residual adaptation mechanism to mitigate real-world execution errors and further correct the offline-learned intents within the actual physical environment. By inheriting the offline critic and employing intervention-driven rewards, BORA effectively corrects execution discrepancies and adapts to real-world physical variances while preserving the pretrained policy as a stable prior. Extensive evaluations across five complex real-world dexterous tasks demonstrate that BORA significantly outperforms pure imitation learning and traditional decoupled RL baselines, achieving a 33% absolute increase in average success rate under standard settings and up to a 43% improvement in unseen object generalization.
+
+论文作者: Zhongxi Chen, Yifan Han, Yanming Shao, Huanming Liu, Congsheng Xu, Xiaoyu Chen, Yao Mu, Wenzhao Lian
+
+提交时间: 2026-05-28 16:57:47
+
+论文链接: http://arxiv.org/abs/2605.30226v1
+
+==================================================
+==================================================
+
+论文名称: Unveiling the Visual Counting Bottleneck in Vision-Language Models
+
+论文摘要: While Large Vision-Language Models (VLMs) excel at interpolation, they suffer catastrophic failures in systematic generalization, most notably in visual counting. In this work, we investigate this extrapolation bottleneck by deconstructing visual counting into three cognitive stages: visual individuation, magnitude awareness, and symbolic mapping. Using synthetic Go boards and linear probes, we demonstrate that visual backbones maintain robust, linearly separable representations of quantity well into the extrapolation regime, ruling out perceptual failure. Furthermore, models retain latent magnitude awareness, successfully performing comparative reasoning on quantities they fail to enumerate. We pinpoint the collapse to the symbolic mapping stage, where the model fails to project valid visual magnitudes onto symbolic tokens. Our findings support a frac tured magnitude hypothesis: VLMs fail to acquire a universal number space, instead learning disjoint, modality-specific statistical manifolds that prevent cross-modal grounding for unseen quantities. Validated on the state-of-the-art foundation model, our results suggest that bridging this gap requires inductive priors enforcing unified representations, as data scaling alone is insufficient.
+
+论文作者: Xingzhou Pang, Yifan Hou, Junling Wang, Mrinmaya Sachan
+
+提交时间: 2026-05-28 16:20:29
+
+论文链接: http://arxiv.org/abs/2605.30170v1
+
+==================================================
+==================================================
+
+论文名称: MuPHI: Learning Implicit Multimodal Harm Reasoning via Semantically Grounded Reward Optimization
+
+论文摘要: Understanding how harm emerges from interaction between otherwise benign image-text pairs requires intent-aware cross-modal reasoning beyond surface-level features. Existing vision-language models (VLMs) excel at literal reasoning over perceptual cues but often fail to derive harmful semantics that rely on implicit, context-dependent reasoning. To evaluate VLMs on compositional harm detection and reasoning, we introduce Multimodal Pragmatic Harm Interpretation (MuPHI), a dataset containing image-text pairs where harm is encoded in subtle multimodal cues. MuPHI spans diverse harm categories and includes annotated harm rationales for assessing VLM reasoning chains. To improve both detection and reasoning in VLMs, we propose MuPHIRM, a reasoning-augmented training framework which learns joint semantics by optimizing multi-perspective rewards. MuPHIRM improves both harm detection and reasoning quality of VLMs while demonstrating superior out-of-distribution robustness compared to both trained and inference-time baselines. Our findings suggest that reasoning-oriented reward optimization offers a promising direction towards building multimodal systems that generalize beyond benchmark-specific shortcuts.
+
+论文作者: Anisha Saha, Varsha Suresh, Teodora Kamova, Sophia Wiedmann, Timothy Hospedales, Vera Demberg
+
+提交时间: 2026-05-28 13:58:15
+
+论文链接: http://arxiv.org/abs/2605.29951v1
+
+==================================================
+==================================================
+
+论文名称: OccamToken: Efficient VLM Inference with Training-Free and Budget-Adaptive Token Pruning
+
+论文摘要: Vision-language models (VLMs) rely on long visual token sequences for visual understanding, making the prefill stage expensive in both computation and memory. Most existing pruning methods follow an absolute-ranking paradigm, assigning importance scores to visual tokens and retaining a fixed top-K subset. In this work, we argue that this paradigm is fundamentally brittle: attention sinks distort token importance rankings, while image redundancy and query-dependent visual evidence make fixed token budgets unreliable across inputs. We propose OccamToken, a training-free framework that replaces absolute token ranking with register-anchored relative evidence testing. Instead of asking which tokens are globally important, OccamToken evaluates whether a visual token provides information beyond a register-based reference. Our key insight is that register tokens naturally absorb low-information attention patterns, making them a stable reference for identifying genuinely informative visual evidence. Based on this principle, OccamToken performs both image-adaptive redundancy pruning and query-adaptive relevance pruning through dynamic thresholds derived from register attention. Across LLaVA-NeXT, LLaVA-v1.5, and Qwen3-VL, OccamToken consistently improves the accuracy-efficiency trade-off without additional training. Notably, on LLaVA-NeXT, it reduces 2,880 visual tokens to approximately 40 while preserving over 93% of the original accuracy, enabling stable visual token compression even in the extreme 1.4% retention regime.
+
+论文作者: Geng Li, Guohao Chen, Ting Chen, Shilin Shan, Kuangji Zuo, Bofan Lyu, Tuo An, Gen Li, Jianfei Yang
+
+提交时间: 2026-05-28 09:20:47
+
+论文链接: http://arxiv.org/abs/2605.29657v1
+
+==================================================
+==================================================
+
+论文名称: DiffSpot: Can VLMs Spot Fine-Grained Visual Differences in Web Interfaces?
+
+论文摘要: Vision-language models (VLMs) have made strong progress on high-level image-text alignment, yet their ability to perceive subtle visual differences remains limited. We study this problem in rendered web interfaces, where localized visual changes are both a diagnostic test of fine-grained perception and a practical requirement for GUI agents and design tools. We introduce \textbf{DiffSpot}, a code-driven benchmark for open-ended spot-the-difference on web interfaces. DiffSpot constructs controlled image pairs by mutating a single CSS property of a target element in self-contained HTML, re-rendering the page, and recording the changed property, element, and mutation magnitude. A grounding gate retains only pairs whose rendered pixel difference is confined to the target element. The benchmark contains 4{,}400 pairs, including 3{,}900 has-diff pairs balanced across 13 CSS-property operators and three difficulty tiers, plus 500 no-diff pairs for hallucination control. Evaluating 13 frontier VLMs zero-shot, we find that even the best model identifies only $40.7\%$ of true changes, with Hard-tier Recall below $23\%$ for every model. DiffSpot further shows that difficulty is strongly property-dependent: across CSS operators, neither pixel magnitude nor CLIP distance reliably predicts Recall.
+
+论文作者: Linhao Zhang, Aiwei Liu, Yuan Liu, Xiao Zhou
+
+提交时间: 2026-05-28 08:50:34
+
+论文链接: http://arxiv.org/abs/2605.29615v1
+
+==================================================
+==================================================
+
+论文名称: World Models in Words: Auditing Physical State-Transition Commitments in Vision-Language Models
+
+论文摘要: Vision-language models (VLMs) are increasingly used to answer questions about physical scenes, yet most evaluations reduce performance to a final answer. This hides whether the model perceived the right objects, represented the right physical state, predicted a plausible transition, or merely selected the right option for the wrong reasons. We introduce \wmw, an evaluation framework for auditing the \emph{language-expressed physical commitments} of VLMs. Instead of scoring only $I,q\mapsto a$, we ask models to produce a typed trace $I,q\mapsto(s_0,Δs,s_1,a)$: an initial state, a state transition, a resulting state, and an answer. A hybrid verifier then checks schema validity, state grounding, transition consistency, and answer-trace compatibility, yielding typed error labels such as object, relation, force, transition, temporal, unit/scale, and faithfulness errors. We release \tracebank, a controlled trace resource with \nSeed schema- and recomputation-validated synthetic scenarios across \nFamilies physics families, \nPairs minimally perturbed contrastive preference pairs, verifier code, audit guidelines, and model outputs. We evaluate \nModels VLMs on both controlled and external physical-reasoning examples. \wmw reveals failures that answer-only evaluation misses: 35\% of correct answers from mid-tier models are backed by physically invalid traces. Verifier-guided reranking recovers up to 7 percentage points of trace validity without sacrificing answer accuracy, and trace-level preference tuning reduces hidden inconsistency by 41\% relative. The contribution is not another final-answer physics benchmark, but a reusable protocol for measuring whether a VLM's stated physical world can be true at the same time as its answer.
+
+论文作者: Emmanuelle Bourigault
+
+提交时间: 2026-05-28 08:29:32
+
+论文链接: http://arxiv.org/abs/2605.29585v1
+
+==================================================
+==================================================
+
+论文名称: Planning with the Views via Scene Self-Exploration
+
+论文摘要: Can VLMs predict how each camera move changes the view, and plan many such moves ahead? We call this capability view planning, requiring (1)understanding how a single action transforms the view, and (2)composing many such transformations across multi-turn plans to identify a target view. We probe both abilities in our proposed ViewSuite, a 3D point-cloud environment on real ScanNet scenes. Across 13 frontier VLMs, a critical planning gap emerges: they possess basic view-action knowledge but fail to compose it across multi-turn plans, with the gap widening as viewpoint distance grows. To close this gap, we propose an iterative framework that alternates self-exploration with view graph distillation. The key insight is that all exploration trajectories, regardless of their outcome, collectively form a view graph that compactly captures how viewpoints connect across a scene. Distilling this graph into diverse supervised tasks reshapes the policy distribution and overcomes the sparse rewards that stall pure RL. This improves Qwen2.5-VL-7B from 2.5% to 47.8% on interactive view planning, surpassing GPT-5.4 Pro (18.5%) and Gemini 3.1 Pro (21.4%). Self-exploration emerges as a promising path toward VLMs that can actively reason and plan in 3D space.
+
+论文作者: Kangrui Wang, Linjie Li, Zhengyuan Yang, Shiqi Chen, Zihan Wang, Li Fei-Fei, Jiajun Wu, Leonidas Guibas, Lijuan Wang, Manling Li
+
+提交时间: 2026-05-28 08:15:23
+
+论文链接: http://arxiv.org/abs/2605.29563v1
+
+==================================================
+==================================================
+
+论文名称: AsymVLM: Asymmetric Token Pruning for Efficient Vision-Language Model Inference
+
+论文摘要: Vision-Language Models (VLMs) process thousands of visual tokens per image alongside comparatively few text tokens, yet existing compression methods treat both modalities uniformly. We observe that the two modalities have fundamentally different properties: vision tokens are spatially redundant and dominate prefill, while text tokens are causally dependent and accumulate during decoding. Based on this asymmetry, we propose and empirically evaluate AsymVLM, which applies aggressive pruning to vision tokens before prefill using a learned importance scorer with per-sample adaptive budgeting, and temporal threshold-based eviction to text tokens only when they exceed a fixed budget. Our experiments indicate that AsymVLM achieves the highest FLOPs savings (up to 54%) among state-of-the-art methods while outperforming existing approaches by 2--3% on document and chart understanding tasks where visual information is spatially localized and query-specific, and maintaining competitive accuracy on holistic benchmarks. In text-dominated scenarios, our eviction strategy substantially outperforms standard LLM cache compression methods by adapting to the short-context nature of VLM.
+
+论文作者: Yilin Feng, Ahmed Burak Gulhan, Mahmut Taylan Kandemir
+
+提交时间: 2026-05-28 07:49:45
+
+论文链接: http://arxiv.org/abs/2605.29535v1
+
+==================================================
+==================================================
+
+论文名称: On Asymmetric Optimization of Reasoning and Perception in Vision-Language Model Post-Training
+
+论文摘要: Post-training has greatly improved reasoning in frontier vision-language models, yet its gains for perception remain comparatively limited, creating a bottleneck for end-to-end visual reasoning. To investigate this gap, we introduce a controlled diagnostic framework with two synthetic tasks that disentangle perception from reasoning. Our analysis reveals a consistent perception-reasoning asymmetry: posttraining improves reasoning more substantially than perception, though the underlying mechanism differs by training paradigm. For supervised fine-tuning (SFT), this asymmetry stems from token imbalance in chain-of-thought supervision, where perception occupies fewer tokens and thus receives a weaker training signal. Dynamically reweighting the loss mitigates this imbalance and boosts end-to-end performance by up to 18.2. For reinforcement learning (RL), the asymmetry instead arises from reward coupling: outcome rewards correlate more strongly with reasoning than with perception, weakening the signal for perception learning. Adding a perception-aware reward alleviates the imbalance and improves end-to-end accuracy by up to 6.0; even without groundtruth perception rewards, a reliable surrogate reward provide useful signal, yielding gains of 3.2 points. Together, our results comprehensively diagnose asymmetric optimization and suggest concrete interventions to balance perception and reasoning.
+
+论文作者: Xueqing Wu, Yu-Chi Lin, Kai-Wei Chang, Nanyun Peng
+
+提交时间: 2026-05-28 07:20:49
+
+论文链接: http://arxiv.org/abs/2605.29496v1
+
+==================================================
+==================================================
+
+论文名称: CrystalXRD-Bench: Benchmarking Vision-Language Models for XRD Peak Indexing Across Diverse Crystalline Materials
+
+论文摘要: Miller-index identification from powder XRD patterns requires capabilities untested by existing multimodal benchmarks: the model must read a narrow peak location from a rendered scientific curve and then connect that observation to multi-step crystallographic reasoning. We introduce CrystalXRD-Bench, a 250-sample benchmark built from 10 public crystallographic databases for a single task: recover the full set of HKLs contributing to the highest-intensity peak in an XRD pattern. Each sample pairs the rendered XRD image with the source CIF text and chemical formula, so visual extraction errors and reasoning errors can be examined side by side. We evaluate seven vision-language models. The best Jaccard score is 0.5888 (GPT-5.4) with an exact-match rate of 37.6%, yet six of seven models remain below Jaccard 0.50; the task is far from solved. Error patterns vary systematically: double-peak cases are especially brittle, recall-heavy models gain coverage by over-predicting HKLs, and access to CIF text does not close the gap in crystallographic calculation. Alongside model rankings, the benchmark identifies the conditions under which current VLMs fail on quantitative scientific figures. All data and evaluation code will be publicly available.
+
+论文作者: Chengliang Xu, Xiaogang Li, Peiyao Xiao, Beng Wang, Hu Wei, Bing Zhao
+
+提交时间: 2026-05-28 06:39:45
+
+论文链接: http://arxiv.org/abs/2605.29446v1
+
+==================================================
+==================================================
+
+论文名称: Pocket-Dentist: On-Device Dental Image Understanding via Efficient Multimodal Large Language Models
+
+论文摘要: Evaluations of dental vision-language models remain fragmented across datasets, task definitions and metrics, and often ignore their computational cost. This limits their widespread deployment for dental screening outside specialist centres, where timely inference, limited hardware, and local handling of patient images are vital for practical, privacy-preserving clinical prescreening. Here we present Pocket-Dentist, an efficiency-aware benchmark for dental multimodal question answering that brings together three datasets spanning approximately 1,159 patients, five task types and seven metrics. Across typical 14 VLMs, our results reveals an interesting observation: compact VLMs (e.g., 2B-parameter models) outperform larger VLMs in accuracy while requiring substantially lower computational costs in dental image understanding. Deployed locally on an iPhone 17 Pro, our finetuned compact VLM Pocket-Dentist-2B processed each sample in 4.31 s, reducing latency by 4.9-fold and memory use by 2.3-fold compared with a 7B baseline.
+
+论文作者: Kai Bian, Xucheng Guo, Bin Chen, Lingyan Ruan, Yiran Shen, Ting Dang, Hong Jia
+
+提交时间: 2026-05-28 03:28:07
+
+论文链接: http://arxiv.org/abs/2605.29299v1
+
+==================================================
+==================================================
+
+论文名称: RoboWits: Unexpected Challenges for Robotic Creative Problem Solving
+
+论文摘要: The ability to reason, adapt, and creatively solve problems under unexpected challenges is essential for robots operating in real-world environments. However, current robotic benchmarks primarily emphasize skill-level execution and provide limited insight into such cognitive reasoning capabilities. We introduce RoboWits, a bi-manual robotic benchmark designed to systematically evaluate cognitive reasoning, creative tool use, and robustness to unexpected conditions. To enable scalable construction of high-quality reasoning-centric unexpected scenarios, we propose an automated task generation pipeline formulated as a multi-agent cooperative framework, comprising agents for seed task generation and verification, metric generation, scene generation, and task mutation. Using the pipeline, we curated 30 diverse seed tasks and 208 tasks with mutations and graded difficulty across geometry, material, and assembly-based reasoning. We benchmark popular robot policies, pre-trained VLAs, and oracle-state planners. Our results reveal a significant performance gap: while pre-trained VLAs exhibit preliminary success on seed tasks after single-task fine-tuning, they struggle to perform on mutated tasks, implying their brittleness in manipulation tasks requiring reasoning, strategy adaptation, and robustness to deceptive or constrained environments. Project page is available at https://umass-embodied-agi.github.io/RoboWits.
+
+论文作者: Chunru Lin, Hongxin Zhang, Fenghao Yu, Zhehuan Chen, Thomas L. Griffiths, Yejin Choi, David Held, Chuang Gan
+
+提交时间: 2026-05-28 17:57:15
+
+论文链接: http://arxiv.org/abs/2605.30326v1
+
+==================================================
+==================================================
+
+论文名称: Qwen-VLA: Unifying Vision-Language-Action Modeling across Tasks, Environments, and Robot Embodiments
+
+论文摘要: Embodied intelligence is often studied through specialized models for individual tasks such as manipulation or navigation, resulting in fragmented capabilities and limited generalization across tasks, environments, and robot embodiments. In this work, we study whether heterogeneous embodied decision-making problems can be unified within a single vision-language-action model. We present Qwen-VLA, a unified embodied foundation model that extends Qwen's vision-language modeling stack from perception, understanding, and reasoning to continuous action and trajectory generation through a DiT-based action decoder. Qwen-VLA is trained with a large-scale joint pretraining recipe over diverse data sources, including robotics manipulation trajectories, human egocentric demonstrations, synthetic simulation data, vision-and-language navigation data, trajectory-centric supervision, and auxiliary vision-language data. To support multiple robot platforms, we introduce embodiment-aware prompt conditioning, where robot-specific textual descriptions specify the current embodiment and control convention. We further cast manipulation, navigation, and trajectory prediction into a unified action-and-trajectory prediction framework, enabling transferable visual grounding, spatial reasoning, and continuous action generation across robot morphologies, task families, and environments. Experiments on manipulation, navigation, and trajectory-centric benchmarks show consistent multi-task performance and out-of-distribution generalization under variations in scene layout, background, lighting, object configuration, and robot embodiment. Qwen-VLA-Instruct achieves 97.9% on LIBERO, 73.7% on Simpler-WidowX, 86.1%/87.2% on RoboTwin-Easy/Hard, 69.0% OSR on R2R, 59.6% SR on RxR, 76.9% average OOD success in real-world ALOHA experiments, and 26.6% zero-shot success on DOMINO dynamic manipulation.
+
+论文作者: Qiuyue Wang, Mingsheng Li, Jian Guan, Jinhui Ye, Sicheng Xie, Yitao Liu, Junhao Chen, Zhixuan Liang, Jie Zhang, Xintong Hu, Xuhong Huang, Pei Lin, Junyang Lin, Dayiheng Liu, Shuai Bai, Jingren Zhou, Jiazhao Zhang, Haoqi Yuan, Gengze Zhou, Hang Yin, Ye Wang, Yiyang Huang, Zixing Lei, Wujian Peng, Delin Chen, Yingming Zheng, Jingyang Fan, Xianwei Zhuang, Xin Zhou, Haoyang Li, Anzhe Chen, Tong Zhang, Xuejing Liu, Yuchong Sun, Ruizhe Chen, Zhaohai Li, Chenxu Lü, Zhibo Yang, Tao Yu, Xionghui Chen
+
+提交时间: 2026-05-28 17:36:31
+
+论文链接: http://arxiv.org/abs/2605.30280v1
+
+==================================================
+==================================================
+
+论文名称: VLA-Trace: Diagnosing Vision-Language-Action Models through Representation and Behavior Tracing
+
+论文摘要: Understanding how Vision-Language-Action (VLA) models transform multimodal knowledge into embodied control remains an open challenge. We present VLA-Trace, a progressive diagnostic framework that analyzes VLA models through a unified evidence chain from representation dynamics to causal control attribution and behavioral manifestation. It specifically combines cross-modal and checkpoint-drift centered kernel alignment (CKA) to trace representation evolution, attention knockout interventions to identify modality-specific control pathways, and rollout-level behavioral probes to examine grounding, shortcut dependence, and semantic following. Experiments on $π_{0.5}$ and OpenVLA reveal three key findings. First, the two models exhibit distinct modality-specific adaptation dynamics during VLA finetuning. Second, they rely on different multimodal routing strategies and layer-wise dependencies during action decoding. Third, although VLA policies excel at visually grounded trajectory generation, they remain limited in fine-grained semantic following. These findings highlight future directions for representation-preserving adaptation, causal VLA circuits, and compositional semantic control.
+
+论文作者: Haoyuan Shi, Xiancong Ren, Yingji Zhang, Qinfan Zhang, Jiayu Hu, Haozhe Shan, Han Dong, Jinpeng Lu, Yinda Chen, Yi Zhang, Yong Dai, Xiaozhu Ju
+
+提交时间: 2026-05-28 15:50:56
+
+论文链接: http://arxiv.org/abs/2605.30117v1
+
+==================================================
+==================================================
+
+论文名称: VisualThink-VLA: Visual Intermediate Reasoning for Effective and Low-Latency Vision-Language-Action Policies
+
+论文摘要: Recent work has begun to equip vision-language-action (VLA) policies with explicit intermediate reasoning. In embodied control, however, textual chain-of-thought is a poor fit: irrelevant or weakly textual information can interfere with action prediction, while autoregressive text decoding adds too much latency for real-time closed-loop execution. We present VISUALTHINK-VLA, a visual intermediate-reasoning framework for accurate, low-latency VLA policies. Our bootstrapping philosophy is to guide action with effective visual thinking: VISUALTHINK-VLA bootstraps action prediction through a compact visual-evidence interface that preserves spatial precision while avoiding decoding overhead. Besides, to further improve performance and efficiency, VISUALTHINK-VLA adopts a tailored selective routing mechanism to learn the visual evidence tokens, enabling low-latency inference while preserving high-capacity specialization. We also introduce VisualEvidence-Kit, a supervision-and-audit resource centered on a VisualEvidence-Agent that constructs a 754.7k VLA instructions VisualEvidence-Set for route supervision and counterfactual faithfulness tests. Across multiple benchmarks and real-robot evaluation, VISUALTHINK-VLA achieves the highest success rate on most benchmarks while reducing the multi-second latency of reasoning-augmented baselines to the sub-second regime. For example, on BridgeData V2, it reduces step latency from 8.377,s with ECoT to 0.367,s, achieving a 22.8 times speedup.
+
+论文作者: Mingjian Gao, Wenqiao Zhang, Yuqian Yuan, Yang Dai, Binhe Yu, Zheqi Lv, Haoyu Zheng, Jiaqi Zhu, Zhiqi Ge, Zixuan Wan, Siliang Tang, Yueting Zhuang
+
+提交时间: 2026-05-28 14:36:53
+
+论文链接: http://arxiv.org/abs/2605.30011v1
+
+==================================================
+==================================================
+
+论文名称: VLA-Pro: Cross-Task Procedural Memory Transfer for Vision-Language-Action Models
+
+论文摘要: Vision-Language-Action~(VLA) models have shown strong potential for general-purpose robotic manipulation, yet they still struggle to generalize to unseen tasks that necessitate transferring relevant experience across objects, scenes, and action patterns. This paper proposes VLA-Pro, a plug-and-play framework designed to enhance cross-task generalization by storing task-relevant procedural memories at training time and transferring these memories during inference. Specifically, VLA-Pro stores task-specific LoRA adapters as parameterized procedural memories during training. At inference time, VLA-Pro retrieves relevant procedural memories based on the current multi-modal context and dynamically fuses these memories for generating the current action chunk. Experiments on RoboTwin, RLBench, and real-world manipulation tasks show that VLA-Pro consistently improves cross-task generalization across multiple backbones, achieving up to a 207% relative improvement in simulation and increasing real-world success rate from 5.8% to 65.0%. These results suggest that procedural memory retrieval and adaptation provide an effective mechanism for transferring manipulation experience to novel tasks while preserving modularity and execution stability.
+
+论文作者: Shengyu Si, Yuanzhuo Lu, Ruimeng Yang, Ziyi Ye, Zuxuan Wu, Yu-Gang Jiang
+
+提交时间: 2026-05-28 08:14:08
+
+论文链接: http://arxiv.org/abs/2605.29562v1
+
+==================================================
+==================================================
+
+论文名称: Extreme dynamic symmetry enables omnidirectional and multifunctional robots
+
+论文摘要: Symmetry is a central organizing principle in natural systems, yet its use as a unifying design strategy in robotics has largely remained limited to geometric form. We show that symmetry can instead be leveraged at the level of dynamic actuation capability. We introduce dynamic symmetry, the uniformity of a robot's attainable center-of-mass accelerations, and formalize it through a measure coined as dynamic isotropy. Across more than 1000 simulated morphologies, we found that higher dynamic symmetry consistently improved trajectory tracking, task success, robustness, resiliency, and energy efficiency, with the benefits becoming most pronounced as dynamic isotropy approached its theoretical limit. To study this regime systematically, we developed Argus, a family of spherical robots designed to explore the effects of increasing dynamic symmetry. Members of the Argus family vary in their actuation geometry and dynamic symmetry level while sharing a common architectural principle: radially oriented linear actuators that directly shape the robot's center-of-mass dynamics. Among them, we built a physical 20-leg Argus variant that achieved near-extreme dynamic isotropy and demonstrated orientation-invariant locomotion, agile traversal of cluttered and deformable terrain, rapid self-stabilization, and resilience to partial actuator failures. Its distributed sensing further enabled omnidirectional perception and object interaction during continuous motion. These results show that designing robots for symmetry not only in morphology but also in their attainable dynamics provides a powerful and general pathway toward agility, robustness, and multifunctionality in uncertain terrestrial and extraterrestrial environments.
+
+论文作者: Jiaxun Liu, Boxi Xia, Boyuan Chen
+
+提交时间: 2026-05-28 02:15:58
+
+论文链接: http://arxiv.org/abs/2605.29254v1
