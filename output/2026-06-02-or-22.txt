@@ -1,0 +1,287 @@
+论文名称: Mechanistic Diagnostics of Spatial Lexical Bias in Multimodal Large Language Model Spatial Reasoning
+
+论文摘要: Multimodal large language models (MLLMs) remain unreliable on spatial multiple-choice questions, and their failures are often attributed to poorly attended visual information. In this work, we identify a complementary failure mode, spatial lexical bias: adding a spatial relation word to the answer options can attract the model's decision and make the newly added option likely to be selected. Using nine open-weight MLLMs, we show that this phenomenon is widely observed. In particular, models can answer a binary spatial question correctly, yet consistently select an incorrect third spatial option once it is added to the answer set. We isolate such binary-stable but ternary-fragile cases as diagnostic examples and leverage mechanistic interpretability tools, revealing that a substantial part of the failure instead originates on the language side rather than the visual side: visual attention analyses and residual-stream probes show the correct spatial relation remains internally available on these failures, while irrelevant-option controls, activation patching, and sparse component interventions trace the bias to specific LLM-side channels and neurons. Based on this finding, we show that a lightweight LLM-only DPO update on tiny single-object-pair synthetic data mitigates the bias, lifting four-way robust accuracy by up to 100 points on synthetic data, and by 68.0, 32.6, and 20.1 points on broader evaluation datasets WhatsUp, SpatialMQA-Direct, and VSR.
+
+论文作者: Chuang Ma, Qianying Liu, Tomoyuki Obuchi, Fei Cheng, Wang Yang, Sudong Cai, Shuyuan Zheng, Akiko Aizawa, Sadao Kurohashi
+
+提交时间: 2026-06-01 08:49:47
+
+论文链接: http://arxiv.org/abs/2606.01914v1
+
+==================================================
+==================================================
+
+论文名称: "I've Seen How This Goes": Characterizing Diversity via Progressive Conditional Surprise
+
+论文摘要: Measuring the diversity of creative outputs is central to evaluating post-training mode collapse, comparing decoding strategies, and quantifying creative behavior in both AI and human writing. We propose a new approach to measuring diversity using in-context learning, of which the ``Decan'' metric, $D_{Ca_n} = C \times a_n$, is the working instance we evaluate: a per-byte score read off the per-token log-probabilities of a base model $θ$ in a \emph{single forward pass} per permutation, with no embedding model, no reference corpus, and no human labels. This approach is grounded in information theory, makes use of language model in-context learning to detect a wide range of similarities between any number of inputs, and obviates the need to train a special-purpose model. The same pipeline scores AI samples and human-written response sets, with diversity treated as a property of (responses, prompt, scoring model). On Tevet and Berant's human-grounded McDiv benchmark, $D_{Ca_n}$ reaches OCA 0.846 on the McDiv prompt\_gen set where it performs best, behind the strongest neural baseline reported in Tevet and Berant (SentBERT, 0.897). On the OLMo-2-7B post-training pipeline, $D_{Ca_n}$ drops monotonically across the base $\to$ SFT $\to$ DPO $\to$ RLVR stages, detecting the type of diversity loss that creative-writing applications care about.
+
+论文作者: Matthew Khoriaty, David Williams-King, Shi Feng
+
+提交时间: 2026-06-01 07:27:43
+
+论文链接: http://arxiv.org/abs/2606.01811v1
+
+==================================================
+==================================================
+
+论文名称: S-SPPO: Semantic-Calibrated Self-Play Preference Optimization
+
+论文摘要: Aligning Large Language Models (LLMs) with human preferences is often formulated via Direct Preference Optimization (DPO). However, the standard Bradley-Terry instantiation of DPO is limited in modeling common departures from transitivity in human preferences. To address this, recent work has introduced Self-Play Preference Optimization (SPPO), which iteratively refines the policy by training on self-generated win-lose pairs. Our investigation, however, reveals a critical instability in SPPO: the optimization is prone to policy degeneration when the preference oracle assigns overly confident wins to semantically indistinguishable responses. To mitigate this, we propose S-SPPO, a dual-space semantic calibration framework comprising: i) Supervision Calibration via semantic gating, which anneals win rate targets toward the maximum-entropy baseline as semantic overlap increases; and ii) Representation Calibration via latent repulsion to enforce geometric diversity to prevent manifold collapse and maintain latent diversity between chosen and rejected samples. Theoretically, we show that the calibration preserves the constant-sum game structure, facilitating convergence to a Nash Equilibrium. Empirically, S-SPPO avoids the performance degradation seen in prior methods, achieving 52.19% win rate and 47.46% length-controlled win rate on AlpacaEval 2.0 with Llama-3-8B, without using additional human-annotated preferences during training. The code will be available at https://github.com/xiwenc1/s-sppo.
+
+论文作者: Xiwen Chen, Wenhui Zhu, Jingjing Wang, Peijie Qiu, Zhipeng Wang, Huayu Li, ZhengXiao He, Xuanzhao Dong, Prayag Tiwari, Mingkun Xu, Yujian Xiong, Feng Luo, Abolfazl Razi, Brendan Hogan Rappazzo, Anderson Schneider, Yuriy Nevmyvaka
+
+提交时间: 2026-06-01 02:06:58
+
+论文链接: http://arxiv.org/abs/2606.01561v1
+
+==================================================
+==================================================
+
+论文名称: Mitigating Perceptual Judgment Bias in Multimodal LLM-as-a-Judge via Perceptual Perturbation and Reward Modeling
+
+论文摘要: Recent multimodal large language models have demonstrated strong reasoning ability, yet their reliability as automated evaluators remains limited by a critical weakness: when visual evidence conflicts with textual cues, MLLM judges tend to reward plausible narratives over perceptually correct answers. We identify and systematically analyze this phenomenon, which we term Perceptual Judgment Bias. Through controlled visual perturbations, existing multimodal judges frequently anchor on the response text instead of their own visual perception, leading to inconsistent and non-verifiable evaluations. To address this issue, we introduce the Perceptually Perturbed Judgment Dataset, which constructs minimally edited counterfactual responses that isolate perceptual errors and enable verifiable supervision. Building on this dataset, we develop a unified training framework that combines a structured GRPO-based reward with a batch-ranking objective, achieving coherent global ordering without explicit pairwise labels. Experiments across diverse MLLM-as-a-Judge benchmarks show that our approach substantially improves perceptual fidelity, ranking coherence, and alignment with human evaluation. Our results establish a scalable and generalizable pathway for training multimodal judges that are perceptually grounded, interpretable, and robust to visual-reasoning conflicts.
+
+论文作者: Seojeong Park, Jiho Choi, Junyong Kang, Seonho Lee, Jaeyo Shin, Hyunjung Shim
+
+提交时间: 2026-06-01 17:59:46
+
+论文链接: http://arxiv.org/abs/2606.02578v1
+
+==================================================
+==================================================
+
+论文名称: SafeSteer: Localized On-Policy Distillation for Efficient Safety Alignment
+
+论文摘要: Aligning Large Language Models (LLMs) with human values often degrades their general capabilities, termed the alignment tax. Existing methods mitigate this by balancing dual objectives, which heavily rely on massive general-purpose data or auxiliary reward models.
+  In this paper, we argue that, because safety features are inherently sparse within the output distribution, alignment requires localized modifications rather than global trade-offs. To this end, we propose SafeSteer, which performs on-policy distillation confined to safety tokens. First, we construct a safety teacher via activation steering. Based on this teacher, we develop a safety token selection algorithm. Consequently, SafeSteer restricts the reverse KL penalty to these tokens during training to preserve general capabilities.
+  Experimental results across diverse models show that our SafeSteer achieves a superior trade-off between safety and general capability compared with existing methods, attaining strong safety performance on seven safety benchmarks with only minimal degradation on five general capability benchmarks. Notably, SafeSteer requires only 100 harmful samples without using any general-purpose data, less than 1% of what previous baselines used, considerably reducing alignment cost. More details are on our project page at https://anjingkun.github.io/SafeSteer.
+
+论文作者: Hao Li, Jingkun An, Zijun Song, Pengyu Zhu, Rui Li, Hao Wang, Wendi Feng, Yesheng Liu, Lijun Li, Jin-Ge Yao, Lei Sha
+
+提交时间: 2026-06-01 17:38:12
+
+论文链接: http://arxiv.org/abs/2606.02530v1
+
+==================================================
+==================================================
+
+论文名称: Drifting Preference Optimization for One-Step Generative Models
+
+论文摘要: One-step text-to-image generators are attractive for deployment because they generate an image with a single forward pass, but preference finetuning them remains difficult: standard alignment methods often rely on policy likelihoods, denoising trajectories, differentiable reward gradients, or test-time optimization. We propose Drifting Preference Optimization (DrPO), an online preference-finetuning method for deterministic one-step generators. For each prompt, DrPO samples candidates from the current generator, ranks them with a target reward, and uses high- and low-scoring samples to synthesize a feature-space update direction. The update is a non-parametric dipole preference field plus a reference drift estimated from the frozen base generator, and is optimized through a detached feature-space regression target. The target reward is used only for ranking, so DrPO can train with large, black-box, or non-differentiable rewards while inference remains a single generator call. We evaluate DrPO on SD-Turbo and SDXL-Turbo with multiple target rewards and benchmarks, including HPSv3 and GenEval. DrPO improves alignment over reward-gradient-free one-step preference baselines and reduces HPSv3 training computation by $3.51\times$ under the matched effective-batch setting by removing reward-model backpropagation. Initial offline experiments suggest that sample-based gradient synthesis can also be used beyond online reward ranking.
+
+论文作者: Zhou Jiang, Yandong Wen, Zhen Liu
+
+提交时间: 2026-06-01 17:31:49
+
+论文链接: http://arxiv.org/abs/2606.02521v1
+
+==================================================
+==================================================
+
+论文名称: A Primer in Post-Training Reasoning Data: What We Know About How It Works
+
+论文摘要: Post-training has become a primary driver of recent progress in large reasoning models, and reasoning data are often the key variable determining whether this stage succeeds. Work on post-training reasoning data has grown rapidly, yet this literature remains scattered across dataset papers, reinforcement-learning recipes, reward-model studies, benchmarks, and frontier system reports. This paper is the first primer to synthesize over 150 key public studies and system reports on post-training reasoning data. We organize the field around four questions: what data objects exist, what makes them useful, how they are constructed, and how they scale. Together, this organization provides an attribution framework for future reasoning-data releases and post-training recipes.
+
+论文作者: Yaoming Li, Guangxiang Zhao, Qilong Shi, Lin Sun, Xiangzheng Zhang, Tong Yang
+
+提交时间: 2026-06-01 11:45:50
+
+论文链接: http://arxiv.org/abs/2606.02113v1
+
+==================================================
+==================================================
+
+论文名称: Token Predictors Are Not Planners: Building Physically Grounded Causal Reasoners
+
+论文摘要: Current benchmarks for embodied vision-language planning often favor linguistic next-token prediction over physically grounded next-state reasoning. This rewards models that mimic statistical language priors rather than track causal dependencies, reducing physical planning to shallow sequence modeling. We argue that reliable physical autonomy requires a shift from linguistically grounded token prediction toward physically grounded causal reasoning. To this end, we introduce Causal-Plan-Bench, a high-fidelity diagnostic suite curated through multi-stage verification to evaluate embodied planning across four causal dimensions. We also construct Causal-Plan-1M, a million-scale corpus of explicit reasoning traces produced by a four-stage annotation pipeline over egocentric videos. Extensive evaluation shows that leading models still struggle to demonstrate genuine physical agency, with Gemini 3 Pro reaching only 38.18 on our benchmark. In contrast, our training recipe enables Causal Planner, built on Qwen3-VL-8B, to internalize physical logic for more accurate next-state estimation. The model achieves strong in-domain performance and cross-benchmark generalization, and reveals a Causal Scaling Law: scaling causal training data to one million instances yields a 36.3% relative gain, from 33.22 to 45.28. Overall, our work provides a concrete step toward turning agents from superficial token predictors into physically grounded causal reasoners.
+
+论文作者: Zheng Lu, Mingqi Gao, Qinlei Xie, Wanqi Zhong, Hanwen Cui, Heng Cao, Zirui Song, Yifan Yang, Chong Luo, Bei Liu, Yiming Li
+
+提交时间: 2026-06-01 07:27:39
+
+论文链接: http://arxiv.org/abs/2606.01810v1
+
+==================================================
+==================================================
+
+论文名称: Off-the-Shelf LLMs as Process Scorers: Training-Free Alternative to PRMs for Mathematical Reasoning
+
+论文摘要: Selecting the best response from multiple small-model samples using a stronger scorer is a simple inference-time strategy, but fails when the small model has already committed to incorrect reasoning paths. PRM guided search avoids this by scoring candidate continuations during generation, but requires a reward model trained with step-level labels.
+  We propose Chunk-Level Guided Generation, a training-free alternative that uses an off-the-shelf large language model as a process scorer. At each step, a small model samples k fixed-length candidate chunks, while the larger model scores the candidates using likelihoods without generating any text. The selected chunk is committed before the next step, steering generation before errors can propagate.
+  We instantiate this framework with two selection rules: Likelihood-Guided Selection (LGS), which selects the chunk with the highest length-normalized large-model log-probability, and Contrastive-Guided Selection (CGS), which subtracts the small model's log-probability to favor chunks where the large model's preference diverges from the small model's. We show that scoring variable-length reasoning steps with large-model likelihoods is unreliable due to a systematic length bias that persists even after length normalization, and that fixed-length chunks avoid this confound.
+  On GSM8K, MATH, Minerva Math, AMC23, and AIME24 with Qwen2.5-1.5B guided by Qwen2.5-32B and Llama-3.2-1B guided by Llama-3.1-70B, CGS outperforms majority voting by up to 28 pp and, under matched guidance budgets, matches or outperforms Qwen2.5-Math-PRM-72B guided search on most benchmarks without reward-model training. With Qwen2.5-7B guided by Qwen2.5-72B, CGS reaches 81.8% on MATH and 63.6% on Minerva Math at k=16, surpassing majority voting by 4--6 pp. Finally, Chunk-Level Guided Generation produces substantially shorter reasoning traces than PRM guided search.
+
+论文作者: Atoosa Chegini, Soheil Feizi
+
+提交时间: 2026-06-01 04:43:36
+
+论文链接: http://arxiv.org/abs/2606.01682v1
+
+==================================================
+==================================================
+
+论文名称: MASER: Modality-Adaptive Specialist Routing for Embodied 3D Spatial Intelligence
+
+论文摘要: In 3D environments, Embodied Agents answer spatially relevant questions through reasoning from a mixture of modalities including natural language, RGB images, point clouds, depth maps and camera poses. Existing Vision-Language models (VLMs) are fine-tuned over a single modality. This completely ignores the question semantics which may favor a different modality than the finetuned modality. To address this, we propose MASER (Modality-Adaptive SpEcialist Routing), a lightweight framework that trains five different modality adapters of a shared VLM backbone and learns a neural routing policy that selects the best adapter based on the question during inference. We encode each question with a frozen sentence transformer and pass the embedding through a small Multi-layer Perceptron (MLP) trained on oracle adapter-accuracy labels. We evaluate our methodology over the Open3D-VQA benchmark and our evaluations show that no single modality is universally optimal -- point-cloud answers are best in 51.5% of cases. MASER routes with 51.3% oracle agreement, outperforming a Random-Forest ablation (43.5%), with only a single adapter call per question.
+
+论文作者: Hilton Raj, Vishnuram AV
+
+提交时间: 2026-06-01 16:36:21
+
+论文链接: http://arxiv.org/abs/2606.02463v1
+
+==================================================
+==================================================
+
+论文名称: Bridging the Sim-to-Real Gap in Semiconductor Visual Program Synthesis via Input Binarization
+
+论文摘要: Precise parametric control over circuit geometry is essential for semiconductor inspection, yet obtaining sufficient real training data remains costly. Although generative models such as diffusion models and Generative Adversarial Networks (GANs) can augment training data, they cannot guarantee the nanometer-scale geometric accuracy required for metrology tasks. We propose a visual program synthesis framework in which a Vision-Language Model (VLM) converts inspection images into editable Domain-Specific Language (DSL) code describing circuit geometries, enabling controlled generation of training data with exact parameter manipulation. Because the VLM is trained solely on synthetic DSL-rendered data, a domain gap arises when processing real Scanning Electron Microscope (SEM) images. We bridge this gap with an input binarization strategy that strips SEM-specific texture and noise, letting the model focus on geometric structure. On the MIIC dataset, binarized inputs improve the mean Dice coefficient from 0.4393 to 0.5256 over the raw-input baseline, demonstrating that simple texture abstraction substantially mitigates the sim-to-real gap.
+
+论文作者: Yusuke Ohtsubo, Kota Dohi, Koichiro Yawata, Koki Takeshita, Tatsuya Sasaki
+
+提交时间: 2026-06-01 16:06:20
+
+论文链接: http://arxiv.org/abs/2606.02434v1
+
+==================================================
+==================================================
+
+论文名称: Cross-modal linkage risk in clinical vision-language models
+
+论文摘要: Vision-language models (VLMs) trained on paired chest radiographs and radiology reports learn a shared embedding space that can preserve instance-level image-report correspondence. This poses a privacy risk in settings where radiographs and reports are deliberately kept separate after acquisition, such as image-only data sharing or access-controlled reports, because a de-identified image may be re-linked to its original narrative report through cosine similarity alone. We formalized this as image-to-report retrieval and used public paired cohorts, in which the true pairing is known by design, as ground-truth benchmarks to audit the risk rather than as the privacy scenario. Evaluating VLMs of increasing clinical specialization on 406,241 paired examples from 126,804 patients across MIMIC-CXR (43,793 held-out pairs) and external CheXpert Plus (29,296 pairs), we found that re-linkage rose systematically with specialization: the strongest VLM retrieved the correct report at 15 times chance at a candidate pool of N = 100, 50 times chance at N = 10,000, and well above chance at full-database scale. The signal persisted under pathology-matched hard negatives that removed disease-label shortcuts, indicating correspondence beyond broad diagnostic categories. To reduce it without retraining, we froze both encoders and applied differentially private optimization only to the projection heads defining the alignment layer (epsilon = 0.34, delta = 6x10-6). This reduced Recall@1 by 61.8% at N = 10,000 on MIMIC-CXR and transferred to CheXpert Plus without retraining, while image-side utility was largely preserved: macro AUROC for linear-probe classification across 14 labels shifted only from 79.63% to 79.43%. Targeted DP finetuning of the shared alignment layer can substantially reduce cross-modal re-linkage without materially degrading the image representations that make these models clinically useful.
+
+论文作者: Soroosh Tayebi Arasteh, Mahshad Lotfinia, Sven Nebelung, Daniel Truhn
+
+提交时间: 2026-06-01 14:01:46
+
+论文链接: http://arxiv.org/abs/2606.02276v1
+
+==================================================
+==================================================
+
+论文名称: MMG2Skill: Can Agents Distill In-the-Wild Guides into Self-Evolving Skills?
+
+论文摘要: Abundant procedural knowledge on the Web holds great potential for helping agents solve long-horizon tasks. However, such knowledge is often multimodal, heterogeneous, noisy, and implicitly assumes human executors, making it difficult to use directly as the skills required by agents. To bridge the gap between human-oriented guides and agent-executable skills, we formalize this problem as guide-to-skill learning: converting in-the-wild guides into executable skills and continuously improving them from trajectories observable to the agent. To evaluate the capability of existing agents on this task, we introduce MMG2Skill-Bench, the first benchmark designed for this problem. We further propose MMG2Skill, a closed-loop framework that compiles guides into editable skills, conditions a fixed vision-language model (VLM) agent on these skills during execution, and revises the skills from trajectory-level root-cause feedback without using benchmark scores. Across GUI control, open-ended gameplay, and strategic card play with six VLM backbones, MMG2Skill consistently outperforms vanilla baseline agents in every model-domain setting, achieving macro-average gains of +12.8 to +25.3 percentage points across backbones. Ablation studies show that directly prompting agents with raw guides can degrade performance, while both structured skill construction and trajectory-driven revision are necessary for the observed improvements. On success-inferable tasks, analyzer-based early stopping further prevents late-stage performance regressions and saves 25%-53% of attempts when the success signal is properly calibrated.
+
+论文作者: Xinyu Che, Junqi Xiong, Yunfei Ge, Xinping Lei, Shihao Li, Hang Yan, Han Li, Yuanxing Zhang, Zhiqi Bai, Jinhua Hao, Ming Sun, Han Li, Jiaheng Liu
+
+提交时间: 2026-06-01 09:50:40
+
+论文链接: http://arxiv.org/abs/2606.01993v1
+
+==================================================
+==================================================
+
+论文名称: Density-Aware Translation of Spurious Correlations in Zero-Shot VLMs
+
+论文摘要: Vision-Language models (VLMs), such as CLIP, achieve powerful zero-shot classification. However, their predictions remain sensitive to spurious correlations, where contextual cues dominate over semantic content. Earlier solutions typically rely on fine-tuning or prompt engineering, which either undermine the advantages of pre-trained models or are prone to hallucination. In this work, we propose Density-Aware Translation (DAT) that refines image-text similarity scores using a local geometric density term derived from group reference sets. Our approach is motivated by the phenomenon that CLIP embeddings exhibit a modality gap and lie on an anisotropic shell in the feature space: common patterns cluster near the mean, while rare patterns are pushed outward. This geometry creates uneven alignment, where spurious correlations are amplified while semantically meaningful but rare cues are marginalised. To address this, we employ a relative measure to rescale similarities based on embedding density, suppressing overconfident scores in diffuse regions while preserving dense, semantically consistent matches. Experimental results on benchmark datasets demonstrate consistent improvements in worst-group and average accuracy, highlighting density-aware translation as a simple and effective calibration mechanism for reliable zero-shot classification using multimodal models.
+
+论文作者: Afsaneh Hasanebrahimi, Hanxun Huang, Christopher Leckie, Sarah Erfani
+
+提交时间: 2026-06-01 05:23:48
+
+论文链接: http://arxiv.org/abs/2606.01710v1
+
+==================================================
+==================================================
+
+论文名称: Encoded but Not Routed: Explaining the Table-Chart Gap in Scientific Claim Verification
+
+论文摘要: Multimodal LLMs are increasingly used to assist scientific peer review, where a core requirement is verifying whether claims in a paper are supported by its evidence. Prior work has shown that models perform substantially better at this task when the evidence is a table than when it is a chart of the same underlying data. This raises the question of whether models fail to extract information from charts, or do they extract it but fail to use it when forming their prediction? We study this question through layer-wise linear probing and attention analysis on three open-weight VLMs over table and chart evidence, representing the same underlying data. We find consistent evidence for the latter. Chart information is encoded in the models' intermediate representations but does not reach the prediction position, a gap that is absent for tables and holds across all conditions tested. Attention analysis further reveals that this disconnect takes two architecturally distinct forms across model families. These findings reframe the table-chart gap as a failure of how encoded visual information is routed at prediction time, rather than a failure of encoding itself.
+
+论文作者: Sunisth Kumar, Xanh Ho, Tim Schopf, Andre Greiner-Petter, Florian Boudin, Akiko Aizawa
+
+提交时间: 2026-06-01 04:39:13
+
+论文链接: http://arxiv.org/abs/2606.01679v1
+
+==================================================
+==================================================
+
+论文名称: RDA: Reward Design Agent for Reinforcement Learning
+
+论文摘要: Reinforcement learning has enabled the acquisition of impressive robotic skills, but typically requires hand-crafted reward functions that are slow to design and difficult to align with human intentions. Recent work, such as Eureka, automates reward design by using an LLM to iteratively generate and refine reward code from task descriptions. However, they rely on coarse feedback signals such as success rate, which provide little semantic insight into the learned behavior. As a result, their trained policies achieve the final goal but are frequently poorly aligned with task instructions. We introduce the Reward Design Agent (RDA), a VLM-based agentic framework that injects semantic understanding into reward design. RDA decomposes tasks, visually evaluates trajectories, summarizes failure modes, and iteratively revises reward code to better align with task instructions. Across 12 tabletop manipulation tasks from ManiSkill and 4 whole-body manipulation tasks from HumanoidBench, RDA produces policies substantially more instruction-aligned than those of other baselines, while achieving comparable task success rates. Videos and the generated reward code are available on https://nitinkamra1992.github.io/reward-design-agent.
+
+论文作者: Hojoon Lee, Ajay Subramanian, Ben Abbatematteo, Vijay Veerabadran, Pedro Matias, Karl Ridgeway, Nitin Kamra
+
+提交时间: 2026-06-01 04:29:30
+
+论文链接: http://arxiv.org/abs/2606.01672v1
+
+==================================================
+==================================================
+
+论文名称: TLG: Temporal-Logic Grounding for Video Question Answering via Source-Annotation Reconstruction and Category-Targeted Reasoning
+
+论文摘要: The TimeLogic Challenge evaluates formal temporal-logic reasoning over video - 16 operators (before, after, until, since, always, co-occur, ordering, ...) in boolean and 4-way multiple-choice form. End-to-end video-language models (VLMs) hover near chance on this task because they treat video as a bag of frames and cannot localize when actions occur. We present TLG (Temporal-Logic Grounding), a three-tier system that (i) reconstructs each video's action timeline from the public source-dataset annotations the benchmark was generated from, parses every question into a temporal-logic program, and executes it deterministically; (ii) falls back to a strong open VLM where no annotation exists; and (iii) routes only the question categories where the VLM is empirically weakest to a frontier reasoning model. TLG raises test accuracy from a 46.9% VLM baseline to 71.37%, a +24.5 absolute gain, reaching within 3 points of the leaderboard top. We report extensive ablations, including three model-based timeline-reconstruction variants that all underperform a holistic VLM, isolating temporal grounding as the irreducible bottleneck and showing that real annotations - not larger models - drive accuracy.
+
+论文作者: Ali Alavi
+
+提交时间: 2026-06-01 02:40:25
+
+论文链接: http://arxiv.org/abs/2606.01591v1
+
+==================================================
+==================================================
+
+论文名称: COMAP: Co-Evolving World Models and Agent Policies for LLM Agents
+
+论文摘要: Equipping language agents with world models enables them to anticipate environment dynamics and evaluate candidate actions before execution. However, existing textual world models are typically fixed after training, preventing them from adapting to the on-policy state-action distributions induced by an evolving agent. Meanwhile, agent-improvement methods often rely on external rewards or verifiers, limiting their applicability in realistic interactive environments. In this paper, we propose COMAP, a novel framework that co-evolves textual world models and agent policies through closed-loop interaction. At each decision step, the world model predicts future state feedback for candidate actions, and the agent performs future-aware reflection by estimating the reliability of this feedback and refining its action accordingly. The resulting on-policy trajectories are then used to update the world model via self-distillation, allowing it to better match the agent's evolving interaction distribution. Across embodied task planning, Web navigation, and tool-use benchmarks, COMAP consistently outperforms competitive baselines, e.g., +16.75% relative improvement with Qwen3-4B. Further analyses show that the co-evolutionary loop improves the world model's prediction accuracy over time and leads to more effective long-horizon decision-making. Our code is available at: https://github.com/loyiv/CoMAP.
+
+论文作者: Youwei Liu, Jian Wang, Hanlin Wang, Wenjie Li
+
+提交时间: 2026-06-01 15:21:17
+
+论文链接: http://arxiv.org/abs/2606.02372v1
+
+==================================================
+==================================================
+
+论文名称: World-Task Factorization for Robot Learning
+
+论文摘要: Robot learning must produce policies that generalize to new combinations of constraints, teammates, and environments. To achieve this, we must structurally factor the policy, which is a choice that dictates what generalizes, what requires retraining, and what remains entangled. Existing methods span a wide spectrum, from expecting structure to emerge from data scaling, to hand-designing it via hierarchies, skill libraries or learned specializations. In this paper, we study what we argue is the most fundamental factorization in robotics: separating the world from the task. We investigate the conditions under which this factorization is principled. World factors are properties of the embodied system and the environment; they exist independently of intent. Task factors are defined by the task's logic over what the world admits. We formalize this asymmetry through Bayesian model evidence: it aligns with the data-generating process, maintains high likelihood through an analytical world model, and reduces the Occam razor's penalty on task parameters. We instantiate this factorization by pairing AICON, a differentiable graph of recursive estimators and interconnections that is compositional, operates without task-specific data, and propagates cost gradients to actuators, with a compact, learned policy that modulates gradient paths. Gradients serve as the interface between the two factors: they carry world structure through the graph and task structure through costs, enabling low-dimensional learning while preserving structural generalization. We test the world/task factorization across three problems that encompass heterogeneous robots, environments, task logic and sensorimotor modalities. Our framework outperforms end-to-end baselines and analytical heuristics in all settings, generalizes zero-shot to out-of-distribution configurations, and transfers to real hardware without retraining.
+
+论文作者: Eduardo Sebastián, Adrian Pfisterer, Vito Mengers, Oliver Brock, Amanda Prorok
+
+提交时间: 2026-06-01 10:16:07
+
+论文链接: http://arxiv.org/abs/2606.02027v1
+
+==================================================
+==================================================
+
+论文名称: A Framework for Graph-Conditioned Hierarchical Shapley Attribution in Patent Valuation
+
+论文摘要: Estimating the economic contribution of a single patent inside a product that embodies tens of thousands of patents is a long-standing unsolved problem in intellectual property economics. We propose PatentXAI, a framework that treats patent valuation as a problem of explainable AI: given a characteristic function v(S) encoding the revenue achievable by patent subset S, a patent's Shapley value measures its fair share of product profit in a way that satisfies efficiency, symmetry, dummy, and additivity. To make computation tractable we restrict each patent's coalition to its Markov Blanket inside a knowledge graph, grounded in the C-SVE conditional independence theorem (Li et al., 2020). Scaling experiments from n=12 to n=100 patents using Pareto-distributed coverage graphs report median Markov Blanket size of 32.9 percent of n at n=100, with 90th-percentile blanket size of 55.2 percent of n, and runtime of 10 milliseconds per patent. Difference against exact ground truth at n=12 is 0.088; difference against a high-sample Monte Carlo reference at n=100 is 0.062 plus or minus 0.003. A dense-component experiment shows that when 80 percent of patents share one component, the blanket correctly expands to cover that dense cluster, and the difference versus reference falls to 0.039 because the pooled computation becomes more accurate on homogeneous portfolios. Profit allocation proceeds hierarchically: exact Shapley distributes total profit among macro-components, then centrality-weighted Shapley distributes each component budget among covering patents. Estimating v(S) from real data is the primary open problem; we distinguish this from the computational contribution and outline a concrete roadmap for empirical validation using public ETSI, USPTO, and Lens.org datasets.
+
+论文作者: Joy Bose
+
+提交时间: 2026-06-01 03:33:18
+
+论文链接: http://arxiv.org/abs/2606.01632v1
+
+==================================================
+==================================================
+
+论文名称: Coherent Off-Policy Improvement of Large Behavior Models with Learned Rewards
+
+论文摘要: Distilling expert demonstration data into large generative models using behavioral cloning is a scalable approach to learning capable policies for robotic control, particularly for dexterous manipulation. Reinforcement learning (RL) can be used as a means to finetune these policies further using additional experience. An open question is whether RL is more sample-efficient than collecting more human demonstrations. Prior work has finetuned large pretrained policies in a scalable fashion by applying RL to a smaller residual policy that corrects the pretrained model. However, for the typical sparse reward tasks, RL algorithms can struggle to optimize the behavior in a sample-efficient manner. We explore inverse reinforcement learning, where a dense reward function is learned from expert demonstrations, potentially reducing the challenge of RL finetuning. We specifically consider coherent imitation learning, an IRL method that facilitates improvement of the BC policy through using a specific reward formulation with theoretical guarantees. We show that our IRL method maintains or improves the performance of pi-0.5 on all six sparse manipulation tasks and achieves a $\geq 90\%$ success rate on five out of six complex manipulation tasks, outperforming RL-based baselines using sparse rewards. By ensuring our initial pretrained finetuning policy is optimal for our initial reward and critic, our method circumvents the initial drop commonly seen in RL finetuning and enables faster improvement.
+
+论文作者: Christian Scherer, Joe Watson, Theo Gruner, Daniel Palenicek, Ingmar Posner, Jan Peters
+
+提交时间: 2026-06-01 12:49:14
+
+论文链接: http://arxiv.org/abs/2606.02194v1
+
+==================================================
+==================================================
+
+论文名称: Evaluating Real-World Generalizability of Algorithm Selection Models
+
+论文摘要: Algorithm Selection (AS) aims to automatically identify the most suitable optimization algorithm for a given problem instance by leveraging measurable problem characteristics and historical performance data. In this study, we investigate the generalization ability of AS models across both synthetic and real-world optimization landscapes. We consider two widely used academic benchmark suites (BBOB and CEC) and two real-world problem sets (robotics trajectory optimization tasks and unmanned aerial vehicle path-planning problems). Through a systematic cross-benchmark evaluation, we analyze how AS models transfer between domains, identify where generalization succeeds or breaks down, and highlight the challenges that arise when applying AS in realistic, domain-specific contexts. Our findings provide insights into the robustness of current AS approaches and inform the development of more reliable, broadly applicable AS systems for real-world optimization.
+
+论文作者: Gjorgjina Cenikj, Jakub Kudela, Eva Tuba, Tome Eftimov
+
+提交时间: 2026-06-01 10:07:02
+
+论文链接: http://arxiv.org/abs/2606.02016v1
