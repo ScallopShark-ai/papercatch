@@ -1,0 +1,445 @@
+# arXiv 论文每日总结 - 2026-06-03
+# 共 34 篇论文
+# 由 Gemini 大模型自动生成
+
+==================================================
+==================================================
+
+【第 1 篇】
+
+论文名称: When RLHF Fails: A Mechanistic Taxonomy of Reward Hacking, Collapse, and Evaluator Gaming
+
+论文链接: http://arxiv.org/abs/2606.03238v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 403 - {'error': {'message': '预扣费额度失败, 用户[118889]剩余额度: 💰0.010564, 需要预扣费额度: 💰0.012012 (request id: B202606032326495413187458268d9d6M5QnnoqPMaster)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}]
+
+==================================================
+==================================================
+
+【第 2 篇】
+
+论文名称: P\textsuperscript{2}-DPO: Grounding Hallucination in Perceptual Processing via Calibration Direct Preference Optimization
+
+论文链接: http://arxiv.org/abs/2606.03376v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 403 - {'error': {'message': '预扣费额度失败, 用户[118889]剩余额度: 💰0.010564, 需要预扣费额度: 💰0.012042 (request id: B202606032326596339169288268d9d6pkJb1ibiMaster)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}]
+
+==================================================
+==================================================
+
+【第 3 篇】
+
+论文名称: Synthetic Hallucinations, Real Gains: Hard Negatives from Frontier Models for FIM Hallucination Mitigation
+
+论文链接: http://arxiv.org/abs/2606.03130v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 403 - {'error': {'message': '预扣费额度失败, 用户[118889]剩余额度: 💰0.010564, 需要预扣费额度: 💰0.012222 (request id: B20260603232710563808858268d9d6BQI9M5etMaster)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}]
+
+==================================================
+==================================================
+
+【第 4 篇】
+
+论文名称: Skill-RM: Unifying Heterogeneous Evaluation Criteria via Agent Skill
+
+论文链接: http://arxiv.org/abs/2606.03980v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 403 - {'error': {'message': '预扣费额度失败, 用户[118889]剩余额度: 💰0.010564, 需要预扣费额度: 💰0.011880 (request id: B202606032327201067436098268d9d6kPWRdoAfMaster)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}]
+
+==================================================
+==================================================
+
+【第 5 篇】
+
+论文名称: Using Reward Uncertainty to Induce Diverse Behaviour in Reinforcement Learning
+
+论文链接: http://arxiv.org/abs/2606.03962v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 403 - {'error': {'message': '预扣费额度失败, 用户[118889]剩余额度: 💰0.010564, 需要预扣费额度: 💰0.011912 (request id: B202606032327305275110428268d9d6SGISXjGVMaster)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}]
+
+==================================================
+==================================================
+
+【第 6 篇】
+
+论文名称: CAPER: Clause-Aligned Process Supervision for Text-to-SQL
+
+论文链接: http://arxiv.org/abs/2606.03327v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 403 - {'error': {'message': '预扣费额度失败, 用户[118889]剩余额度: 💰0.010564, 需要预扣费额度: 💰0.011804 (request id: B202606032327407978575418268d9d6Y5qU6vLTMaster)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}]
+
+==================================================
+==================================================
+
+【第 7 篇】
+
+论文名称: Reinforcement Learning from Cross-domain Videos with Video Prediction Model
+
+论文链接: http://arxiv.org/abs/2606.03201v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 403 - {'error': {'message': '预扣费额度失败, 用户[118889]剩余额度: 💰0.010564, 需要预扣费额度: 💰0.011764 (request id: B202606032327509726603368268d9d62zzLuewcMaster)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}]
+
+==================================================
+==================================================
+
+【第 8 篇】
+
+论文名称: HARVE: Hacking-Aware Reward-Head Vector Editing for Robust Reward Models
+
+论文链接: http://arxiv.org/abs/2606.03131v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 403 - {'error': {'message': '预扣费额度失败, 用户[118889]剩余额度: 💰0.010564, 需要预扣费额度: 💰0.011806 (request id: B20260603232801482606558268d9d6aNAeo9iMMaster)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}]
+
+==================================================
+==================================================
+
+【第 9 篇】
+
+论文名称: From Long News to Accurate Forecast: Importance-Aware Fusion and PRM-Guided Reflection for Time Series Forecasting
+
+论文链接: http://arxiv.org/abs/2606.03097v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 403 - {'error': {'message': '预扣费额度失败, 用户[118889]剩余额度: 💰0.010564, 需要预扣费额度: 💰0.011894 (request id: B20260603232811987382598268d9d6zKLw2CHhMaster)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}]
+
+==================================================
+==================================================
+
+【第 10 篇】
+
+论文名称: Predicting Inference-Time Scaling Gains from Labeled Validation-Set Output Statistics
+
+论文链接: http://arxiv.org/abs/2606.02981v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 403 - {'error': {'message': '预扣费额度失败, 用户[118889]剩余额度: 💰0.010564, 需要预扣费额度: 💰0.011920 (request id: B202606032328211556351938268d9d6XjduGBSKMaster)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}]
+
+==================================================
+==================================================
+
+【第 11 篇】
+
+论文名称: PHASER: Phase-Aware and Semantic Experience Replay for Vision-Language-Action Models
+
+论文链接: http://arxiv.org/abs/2606.03598v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 403 - {'error': {'message': '预扣费额度失败, 用户[118889]剩余额度: 💰0.010564, 需要预扣费额度: 💰0.011940 (request id: B202606032328314746080498268d9d6ZRX5BMoFMaster)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}]
+
+==================================================
+==================================================
+
+【第 12 篇】
+
+论文名称: Grasp-Then-Plan with Failure Attribution: A Closed Two-Stage Framework for Precise and Generalizable Robotic Manipulation
+
+论文链接: http://arxiv.org/abs/2606.03385v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 403 - {'error': {'message': '预扣费额度失败, 用户[118889]剩余额度: 💰0.010564, 需要预扣费额度: 💰0.011870 (request id: B202606032328415230838918268d9d66MfXZ5maMaster)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}]
+
+==================================================
+==================================================
+
+【第 13 篇】
+
+论文名称: NVIDIA OmniDreams: Real-Time Generative World Model for Closed-Loop Autonomous Vehicle Simulation
+
+论文链接: http://arxiv.org/abs/2606.03159v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 403 - {'error': {'message': '预扣费额度失败, 用户[118889]剩余额度: 💰0.010564, 需要预扣费额度: 💰0.012140 (request id: B202606032328518009510468268d9d6lX6b81o8Master)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}]
+
+==================================================
+==================================================
+
+【第 14 篇】
+
+论文名称: Imaginative Perception Tokens Enhance Spatial Reasoning in Multimodal Language Models
+
+论文链接: http://arxiv.org/abs/2606.03988v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 403 - {'error': {'message': '预扣费额度失败, 用户[118889]剩余额度: 💰0.010564, 需要预扣费额度: 💰0.011942 (request id: B202606032329019079893028268d9d6WlgX7B5uMaster)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}]
+
+==================================================
+==================================================
+
+【第 15 篇】
+
+论文名称: Beyond Encoder Accumulation: Measuring Encoder Roles in Multi-Encoder VLMs
+
+论文链接: http://arxiv.org/abs/2606.03879v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 403 - {'error': {'message': '预扣费额度失败, 用户[118889]剩余额度: 💰0.010564, 需要预扣费额度: 💰0.012132 (request id: B202606032329119718696068268d9d6ETMc37luMaster)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}]
+
+==================================================
+==================================================
+
+【第 16 篇】
+
+论文名称: Does Language Shift Break Medical Vision-Language Models? Indonesian Radiology Visual Question Answering Case Study
+
+论文链接: http://arxiv.org/abs/2606.03693v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 403 - {'error': {'message': '预扣费额度失败, 用户[118889]剩余额度: 💰0.010564, 需要预扣费额度: 💰0.011906 (request id: B20260603232922224598888268d9d61qcAVV9BMaster)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}]
+
+==================================================
+==================================================
+
+【第 17 篇】
+
+论文名称: TurtleAI: Benchmarking Multimodal Models for Visual Programming in Turtle Graphics
+
+论文链接: http://arxiv.org/abs/2606.03626v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 403 - {'error': {'message': '预扣费额度失败, 用户[118889]剩余额度: 💰0.010564, 需要预扣费额度: 💰0.011866 (request id: B20260603232932723416058268d9d6WFAWYjqLMaster)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}]
+
+==================================================
+==================================================
+
+【第 18 篇】
+
+论文名称: When Attention Collapses: Stage-Aware Visual Token Pruning from Structure to Semantics
+
+论文链接: http://arxiv.org/abs/2606.03569v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 403 - {'error': {'message': '预扣费额度失败, 用户[118889]剩余额度: 💰0.010564, 需要预扣费额度: 💰0.011760 (request id: B202606032329421267863868268d9d6Geuf14jwMaster)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}]
+
+==================================================
+==================================================
+
+【第 19 篇】
+
+论文名称: RobotValues: Evaluating Household Robots When Human Values Conflict
+
+论文链接: http://arxiv.org/abs/2606.03312v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 403 - {'error': {'message': '预扣费额度失败, 用户[118889]剩余额度: 💰0.010564, 需要预扣费额度: 💰0.011822 (request id: B202606032329522629801088268d9d6d68oSKjpMaster)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}]
+
+==================================================
+==================================================
+
+【第 20 篇】
+
+论文名称: GLINT: Sparsely Gated Vision-Language Alignment for Fine-Grained Radiology Representations
+
+论文链接: http://arxiv.org/abs/2606.03180v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 403 - {'error': {'message': '预扣费额度失败, 用户[118889]剩余额度: 💰0.010564, 需要预扣费额度: 💰0.012124 (request id: B202606032330023361649248268d9d6l1SEXzz0Master)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}]
+
+==================================================
+==================================================
+
+【第 21 篇】
+
+论文名称: Zero-Shot 3D Question Answering via Hierarchical View-to-Token Transportation
+
+论文链接: http://arxiv.org/abs/2606.03100v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 403 - {'error': {'message': '预扣费额度失败, 用户[118889]剩余额度: 💰0.010564, 需要预扣费额度: 💰0.011854 (request id: B202606032330123898634868268d9d6YCJgTZpFMaster)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}]
+
+==================================================
+==================================================
+
+【第 22 篇】
+
+论文名称: Decomposing how prompting steers behavior
+
+论文链接: http://arxiv.org/abs/2606.03093v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 403 - {'error': {'message': '预扣费额度失败, 用户[118889]剩余额度: 💰0.010564, 需要预扣费额度: 💰0.012006 (request id: B202606032330224387011678268d9d6JOOfFx88Master)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}]
+
+==================================================
+==================================================
+
+【第 23 篇】
+
+论文名称: ToolGate: Token-Efficient Pre-Call Control for Tool-Augmented Vision-Language Agents
+
+论文链接: http://arxiv.org/abs/2606.03054v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 403 - {'error': {'message': '预扣费额度失败, 用户[118889]剩余额度: 💰0.010564, 需要预扣费额度: 💰0.011870 (request id: B202606032330325091696928268d9d6Tgfp4dQKMaster)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}]
+
+==================================================
+==================================================
+
+【第 24 篇】
+
+论文名称: Self-Refining Agentic Reinforcement Learning for Vision-Conditioned UAV Navigation
+
+论文链接: http://arxiv.org/abs/2606.03963v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 403 - {'error': {'message': '预扣费额度失败, 用户[118889]剩余额度: 💰0.010564, 需要预扣费额度: 💰0.012006 (request id: B202606032330425598602328268d9d6p4HT6IIpMaster)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}]
+
+==================================================
+==================================================
+
+【第 25 篇】
+
+论文名称: AirDreamer: Generalist Drone Navigation with World Models
+
+论文链接: http://arxiv.org/abs/2606.03252v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 403 - {'error': {'message': '预扣费额度失败, 用户[118889]剩余额度: 💰0.010564, 需要预扣费额度: 💰0.011754 (request id: B202606032330526464431738268d9d6UfTBcH31Master)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}]
+
+==================================================
+==================================================
+
+【第 26 篇】
+
+论文名称: VLESA: Vision-Language Embodied Safety Agent for Human Activity Monitoring
+
+论文链接: http://arxiv.org/abs/2606.03954v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 403 - {'error': {'message': '预扣费额度失败, 用户[118889]剩余额度: 💰0.010564, 需要预扣费额度: 💰0.011792 (request id: B202606032331027187668348268d9d6LaDyK1AxMaster)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}]
+
+==================================================
+==================================================
+
+【第 27 篇】
+
+论文名称: LAP: An Agent-to-Instrument Protocol for Autonomous Science
+
+论文链接: http://arxiv.org/abs/2606.03755v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 403 - {'error': {'message': '预扣费额度失败, 用户[118889]剩余额度: 💰0.010564, 需要预扣费额度: 💰0.012164 (request id: B202606032331127718127638268d9d69fTfXAyJMaster)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}]
+
+==================================================
+==================================================
+
+【第 28 篇】
+
+论文名称: The DeepSpeak-Agentic Dataset
+
+论文链接: http://arxiv.org/abs/2606.03686v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 403 - {'error': {'message': '预扣费额度失败, 用户[118889]剩余额度: 💰0.010564, 需要预扣费额度: 💰0.011546 (request id: B202606032331228270333708268d9d6TWlwUvTwMaster)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}]
+
+==================================================
+==================================================
+
+【第 29 篇】
+
+论文名称: A 3D Isovist World Model -- Revealing a City's Unseen Geometry and Its Emergent Cross-City Signature
+
+论文链接: http://arxiv.org/abs/2606.03609v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 403 - {'error': {'message': '预扣费额度失败, 用户[118889]剩余额度: 💰0.010564, 需要预扣费额度: 💰0.012156 (request id: B202606032331328762506218268d9d6hljXP3qUMaster)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}]
+
+==================================================
+==================================================
+
+【第 30 篇】
+
+论文名称: Spike-Aware C++ INT8 Inference for Sparse Spiking Language Models on Commodity CPUs
+
+论文链接: http://arxiv.org/abs/2606.03026v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 403 - {'error': {'message': '预扣费额度失败, 用户[118889]剩余额度: 💰0.010564, 需要预扣费额度: 💰0.012386 (request id: B202606032332132245821718268d9d6vsO62OXEMaster)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}]
+
+==================================================
+==================================================
+
+【第 31 篇】
+
+论文名称: Local Guidance, Global Impact: Gaussian-Reshaped Trust Region Unlocks Behavior Transitions
+
+论文链接: http://arxiv.org/abs/2606.03382v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 403 - {'error': {'message': '预扣费额度失败, 用户[118889]剩余额度: 💰0.010564, 需要预扣费额度: 💰0.011936 (request id: B202606032332233125607208268d9d67d5wrQswMaster)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}]
+
+==================================================
+==================================================
+
+【第 32 篇】
+
+论文名称: SPADE: Sketch-guided Path Planning Augmented with Diffusion Experts
+
+论文链接: http://arxiv.org/abs/2606.03512v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 403 - {'error': {'message': '预扣费额度失败, 用户[118889]剩余额度: 💰0.010564, 需要预扣费额度: 💰0.011800 (request id: B202606032332333617365668268d9d6bQvzcBYtMaster)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}]
+
+==================================================
+==================================================
+
+【第 33 篇】
+
+论文名称: Neural Navigation Functions for Zero-Shot Generalizable Motion Planning
+
+论文链接: http://arxiv.org/abs/2606.03756v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 403 - {'error': {'message': '预扣费额度失败, 用户[118889]剩余额度: 💰0.010564, 需要预扣费额度: 💰0.011674 (request id: B202606032332435801583658268d9d6jn3B3B9uMaster)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}]
+
+==================================================
+==================================================
+
+【第 34 篇】
+
+论文名称: What Makes Interaction Trajectories Effective for Training Terminal Agents?
+
+论文链接: http://arxiv.org/abs/2606.03461v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 403 - {'error': {'message': '预扣费额度失败, 用户[118889]剩余额度: 💰0.010564, 需要预扣费额度: 💰0.011936 (request id: B202606032332536656779078268d9d6YjmvemJ0Master)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}]
