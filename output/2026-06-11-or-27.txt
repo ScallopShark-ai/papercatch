@@ -1,0 +1,347 @@
+论文名称: Substrate Asymmetry in User-Side Memory: A Diagnostic Framework
+
+论文摘要: User-side memory in LLMs is typically scored as a single "personalization" capability: given a user's history, is the output more user-aware? We show this aggregate metric hides opposite-direction failures. Memory factorises into at least three orthogonal axes -- behavioral consistency (style, voice), factual presence (recall facts in history), and factual absence (abstain when a fact is absent) -- and no single substrate wins all three. Comparing per-user gamma-LoRA (a small LoRA adapter trained on each user's history; gamma denotes per-user, not per-task) against BGE-large dense top-K retrieval on a controlled 50-user synthetic corpus and a real-data probe (LaMP-3), we find gamma-LoRA decisively wins behavioral style while RAG decisively wins factual absence -- and the same query-projection cells in attention layers 21-35 causally load-bear both effects in opposite directions (zeroing those LoRA weights raises absence-probe TPR by +33 pp and drops presence-probe TPR by 20 pp). On the more heavily RLHF-tuned Llama-3.1-8B-Instruct the asymmetry strengthens, not heals: parametric memory's behavioral advantage collapses while its absence-calibration deficit against retrieval widens -- an alignment tax on parametric user-memory. On real-data LaMP-3, gamma-LoRA underperforms a majority baseline; a 9-condition mitigation sweep diagnoses this as instruction-following collapse, not substrate failure (a 9x2 cross-product shows the eval-time {1..5} logit mask drives main_acc to >=0.995 on every recipe), and the best training-time fix replicates bit-identically on Llama. Finally, substrate-selection routing is question-classification, not calibration: a 110M DistilBERT on the question text alone beats every logit-based router. We contribute the diagnostic framework, the diagnosed real-data negative, the alignment-tax replication, and the routing-as-classification finding.
+
+论文作者: Youwang Deng
+
+提交时间: 2026-06-10 06:39:20
+
+论文链接: http://arxiv.org/abs/2606.11712v1
+
+==================================================
+==================================================
+
+论文名称: PAWS: Preference Learning with Advantage-Weighted Segments
+
+论文摘要: Preference-based reinforcement learning (PbRL) learns policies from human trajectory-level comparisons, avoiding explicit reward design and expert demonstrations. Existing methods typically train utility functions on trajectory or segment-level preferences while relying on per-step utility estimates during policy optimization. This training and inference mismatch induces a distribution shift that severely degrades temporal credit assignment and limits policy learning. We analyze this issue and propose PAWS, a segment-based preference learning method that performs policy updates directly using segment-level advantage functions. By aligning utility training with policy optimization, PAWS preserves trajectory-level preference information and avoids unreliable per-step learning signals. Experiments on simulated robotic manipulation and locomotion tasks demonstrate that PAWS consistently outperforms existing PbRL approaches, highlighting the importance of distribution-consistent preference learning.
+
+论文作者: Aleksandar Taranovic, Onur Celik, Niklas Freymuth, Ge Li, Serge Thilges, Huy Le, Tai Hoang, Rania Rayyes, Gerhard Neumann
+
+提交时间: 2026-06-10 12:00:17
+
+论文链接: http://arxiv.org/abs/2606.11982v1
+
+==================================================
+==================================================
+
+论文名称: Beyond the Golden Teacher: Enhancing Graph Learning through LLM-GNN Co-teaching
+
+论文摘要: Text-attributed graphs (TAGs) underlie real-world applications such as citation networks, social media, and e-commerce. Few-shot graph learning on TAGs is hard: with only a handful of labels per class and the rest of the graph unannotated, neither GNNs nor LLMs can learn well on their own. GNNs read topology and fail on cold nodes; LLMs read text and fail on text-ambiguous nodes. Existing LLM-GNN methods all follow the same recipe: designate one model as the golden teacher and use its outputs (e.g., features or pseudo-labels) to supervise the other. We argue this golden-teacher assumption breaks under sparse supervision: neither model is golden, and treating either as such transfers its blind spots into the student. We therefore ask: can we avoid designating either model as the golden teacher, and still perform effective graph learning? We answer with LLM-GNN Co-Teaching, a bidirectional co-teaching framework in which neither model is fixed as teacher. The GNN and LLM exchange their most confident pseudo-labels under an architecture-specific small-loss criterion, and both update every round. Supervision is then mined from the trajectory: whenever a node moves from cross-model contradiction at round t to cross-model agreement at round t+1, the LLM's two answers on the same input form a preference pair (old contradicting self < new peer-endorsed self) for DPO training. We call this Round-based Pseudo-Label Preference Optimization (RPL-PO). On six benchmarks, LLM-GNN Co-Teaching consistently outperforms GNN-as-Judge and all prior methods, with absolute 3-shot gains of 7.86% on Cora and 7.73% on ogbn-arxiv; improvements carry over to 5-shot and to zero-shot cross-dataset transfer. Error-structure analysis further shows that abandoning the golden-teacher assumption substantially improves the LLM's graph learning capability on challenging samples.
+
+论文作者: Zhuoyi Peng, Hanlin Gu, Lixin Fan, Yi Yang
+
+提交时间: 2026-06-10 02:15:56
+
+论文链接: http://arxiv.org/abs/2606.11583v1
+
+==================================================
+==================================================
+
+论文名称: CHORUS: Decentralized Multi-Embodiment Collaboration with One VLA Policy
+
+论文摘要: Multi-robot collaboration allows robots to efficiently take on a wide range of tasks, from moving a couch through a doorway to assembling structures on a construction site. However, achieving such coordination in mobile multi-robot settings remains challenging: centralized methods conditioned on the combined observations of a team scale poorly with team size, and decentralized methods that train one policy per robot often require explicit alignment procedures or information sharing at inference time to overcome partial observability. Our key insight is that the visuomotor priors of pretrained vision-language-action (VLA) models should enable reactive, decentralized collaboration from each robot's local observations alone, without these inference-time assumptions. We propose CHORUS, a framework that adapts a single VLA backbone to control diverse, multi-robot teams. At inference time, each robot runs an independent copy of CHORUS, conditioned only on its own observations and a robot-identifying prompt. In real-world experiments including mobile tape measurement, library book handovers, and laundry basket lifting, CHORUS achieves a 64% point improvement over decentralized, from-scratch models, improves reactivity to teammate behavior by 40% points, and outperforms centralized baselines. Together, these results show that a shared VLA backbone is capable of achieving decentralized multi-robot collaboration, without per-robot policies or inter-robot communication at inference.
+
+论文作者: Ria Doshi, Tian Gao, Annie Chen, Chelsea Finn, Jeannette Bohg
+
+提交时间: 2026-06-10 17:26:08
+
+论文链接: http://arxiv.org/abs/2606.12352v1
+
+==================================================
+==================================================
+
+论文名称: Learning What to Say to Your VLA: Mostly Harmless Vision Language Action Model Steering
+
+论文摘要: Vision-Language-Action (VLA) models provide a natural language interface to robot control, but the mapping from language to behavior is often brittle and unintuitive: semantically similar instructions can induce drastically different behaviors, while some capabilities may not be elicitable through prompting alone. As a result, both human instructions and zero-shot language models can fail to reliably steer VLAs toward successful task execution. In this work, we propose a framework that interactively searches for language sequences that improve closed-loop VLA task performance, distills these sequences into a test-time language feedback policy (LFP), and learns an improvement head that predicts when language steering will improve performance. We conformalize this improvement head to prevent harmful steering interventions, where the LFP decreases task performance relative to the original instruction on out-of-distribution scenarios. Crucially, our approach operates on arbitrary frozen pre-trained VLAs, requiring neither access to the original training distribution nor fine-tuning of the underlying model. On seen environments, our conformalized LFP improves base VLA performance by 24.7% in simulation and 65.0% in hardware. On visual and semantic perturbations, our conformalized LFP has strong harmlessness guarantees, and produces recovery behaviors not observed with open-loop prompting.
+
+论文作者: Hyun Joe Jeong, Gokul Swamy, Andrea Bajcsy
+
+提交时间: 2026-06-10 16:34:49
+
+论文链接: http://arxiv.org/abs/2606.12299v1
+
+==================================================
+==================================================
+
+论文名称: Bridging the Morphology Gap: Adapting VLA Models to Dexterous Manipulation via Intent-Conditioned Fine-Tuning
+
+论文摘要: Vision-Language-Action (VLA) models have demonstrated remarkable zero-shot generalization in robotic manipulation, yet the vast majority of pre-trained pipelines remain strictly confined to low-DoF parallel grippers. Adapting these rich semantic priors to high-DoF dexterous hands introduces a severe morphology gap, direct end-to-end joint fine-tuning inherently causes catastrophic forgetting of spatial reasoning and acute action manifold collapse due to data scarcity. In this paper, we present InDex, a novel, data-efficient adaptation framework rooted in cross-morphology semantic inheritance. Rather than discarding the pre-trained 1-DoF parallel grasp output, we repurpose it as a continuous, macroscopic virtual grasp intent proxy to sequentialize the control topology. We implement a two-stage decoupled learning architecture: the first stage parameter-efficiently aligns the VLA backbone to predict continuous arm trajectories and the scalar grasp intent; the second stage freezes this spatial backbone and leverages an intent-conditioned denoising diffusion head to decode fine-grained joint articulations for multi-fingered end-effectors. Extensive simulation benchmarks across a suite of multi-stage, contact-rich dexterous manipulation tasks demonstrate that InDex effectively masters intricate skills with minimal demonstration data, substantially outperforming monolithic baselines while preserving the robust spatial generalizability of the original VLA prior.
+
+论文作者: Chuanke Pang, Junyi Huang, Zhijun Zhao, Yaobing Wang, Kun Xu, Xilun Ding
+
+提交时间: 2026-06-10 14:03:52
+
+论文链接: http://arxiv.org/abs/2606.12109v1
+
+==================================================
+==================================================
+
+论文名称: DAM-VLA: Decoupled Asynchronous Multimodal Vision Language Action model
+
+论文摘要: Vision-language-action (VLA) models inherit a shared synchronous clock from vision-language pretraining, processing every input at one rate. This is misaligned with physical interaction, where a high-frequency modality changes at hundreds of hertz, vision evolves more slowly, and language stays constant across an episode. A synchronous VLA oversamples slow modalities, undersamples fast ones, and caps action generation at the lowest effective frequency. We hypothesize that decoupling temporal processing per modality, letting each update and retain information at its own sensor rate, yields stronger representations and more robust control. We present DAM-VLA, which maintains per-modality latent buffers refreshed at sensor rates and read continuously by the action head, integrating new high-frequency modalities through gated cross-attention that leaves the pretrained backbone intact. Across seven contact-rich real-world manipulation tasks, DAM-VLA more than doubles the average success rate of the strongest synchronous baseline (95.2\% vs.\ 40.95\%) while sustaining smooth, reactive 100\,Hz control. Project website: \href{https://intuitive-robots.github.io/DAM-VLA/}{intuitive-robots.github.io/DAM-VLA/}
+
+论文作者: Pankhuri Vanjani, Zhuoyue Li, Jakub Suliga, Moritz Reuss, Gianluca Geraci, Xinkai Jiang, Rudolf Lioutikov
+
+提交时间: 2026-06-10 13:59:07
+
+论文链接: http://arxiv.org/abs/2606.12105v1
+
+==================================================
+==================================================
+
+论文名称: When Does Language Matter? Multilingual Instructions Reveal Step-wise Language Sensitivity in Vision-Language-Action Models
+
+论文摘要: Vision-Language-Action (VLA) models have shown strong performance in language-conditioned robotic manipulation, yet their robustness to linguistic variation remains poorly understood. In this work, we present the first systematic multilingual evaluation of VLA models by translating the LIBERO benchmark into ten languages, revealing severe performance degradation under non-English instructions, with success rates dropping by 30-50%. Through fine-grained analysis of task executions, we find that language influence is highly non-uniform across steps: certain steps exhibit strong language dependence and dominate overall task failure, while others are largely language-agnostic. Based on this insight, we propose a step-wise inference-time intervention that aligns representations according to step language sensitivity, substantially improving performance under linguistic variation. Our results indicate that language robustness in VLA models is fundamentally a step-wise control problem, highlighting the importance of temporally structured analysis for reliable embodied agents.
+
+论文作者: Xuan Dong, Zhe Han, Tianhao Niu, Qingfu Zhu, Wanxiang Che
+
+提交时间: 2026-06-10 10:36:20
+
+论文链接: http://arxiv.org/abs/2606.11906v1
+
+==================================================
+==================================================
+
+论文名称: TacCoRL: Integrating Tactile Feedback into VLA via Simulation
+
+论文摘要: Vision-language-action (VLA) models provide strong visual, language, and action priors for robot manipulation, but visual observations alone often miss the local contact state required for contact-rich tasks. We present TacCoRL, a scalable framework that injects Tactile feedback into VLA policies and improves them through sim-real Co-training and simulation-based reinforcement learning (RL), without requiring large-scale tactile pretraining or extensive real-world contact exploration. The key idea is not only adding touch as an input, but learning how contact readings should modulate action responses in near-failure states that are rare in demonstrations and risky to collect on hardware. We use a real-aligned simulator as a closed-loop training environment for contact interaction. Mixed simulated and real trajectories first warm-start tactile-conditioned actions in the pretrained policy. Reinforcement learning with verifiable task rewards then optimizes the policy using simulated contact rollouts. It reinforces tactile-conditioned actions that lead to task completion, while a supervised objective on real trajectories keeps the refined policy anchored to deployment visual, tactile, and action distributions. The resulting policy transfers directly to the real robot without privileged simulation state or online real-world RL. Across four bimanual contact-rich tasks, the final visuo-tactile policy achieves an average success rate of 72.5%, compared to baseline of 50.0%. Result videos and more details are available at https://tac-corl.github.io/
+
+论文作者: Siyu Ma, Yuqi Liang, Chang Yu, Yunuo Chen, Hao Su, Yixin Zhu, Yin Yang, Chenfanfu Jiang
+
+提交时间: 2026-06-10 07:20:36
+
+论文链接: http://arxiv.org/abs/2606.11743v1
+
+==================================================
+==================================================
+
+论文名称: Reroute, Don't Remove: Recoverable Visual Token Routing for Vision-Language Models
+
+论文摘要: Vision-language models (VLMs) project images into hundreds to thousands of visual tokens, making decoder inference expensive in both attention computation and KV-cache memory. Existing visual-token reduction methods largely follow a rank-and-remove paradigm: they score visual tokens, keep a compact subset, and permanently discard the rest. We show that this irreversible action is fragile because visual-token importance changes across decoder depth; tokens ranked low at one stage may become relevant in later layers, especially for grounding-sensitive queries. We propose Reroute, a training-free plug-in that replaces removal with recoverable routing. At each routing stage, selected vision tokens pass through decoder blocks, while deferred tokens bypass the stage and re-enter the candidate pool at the next routing decision. Reroute reuses existing attention-score ranking rules and stage-wise schedules, preserving the theoretical TFLOPs and KV-cache budget class of the pruning method it augments. Across FastV, PDrop, and Nüwa variants on LLaVA-1.5 and Qwen backbones, reroute improves grounding under aggressive token reduction while maintaining general VQA performance. These results suggest that VLM token reduction should not be viewed only as irreversible pruning, but also as recoverable routing. The code can be found here: https://github.com/elmma/mllm-reroute/
+
+论文作者: Cheng-Yu Yang, Shao-Yuan Lo, Yu-Lun Liu
+
+提交时间: 2026-06-10 17:59:57
+
+论文链接: http://arxiv.org/abs/2606.12412v1
+
+==================================================
+==================================================
+
+论文名称: DIRECT: When and Where Should You Allocate Test-Time Compute in Embodied Planners?
+
+论文摘要: Vision-Language Models (VLMs) are increasingly deployed as high-level planners for embodied agents, with an emerging strategy of scaling test-time compute to improve capability. However, we observe that doing so increases latency, token usage, and FLOPs while yielding uneven, often diminishing gains in downstream success, limiting where embodied agents can be deployed. We argue that choosing when and where to spend test-time compute is central to bringing frontier performance to the real world. We introduce DIRECT, a routing framework that uses multimodal scene context to allocate compute per prompt, improving the success--cost Pareto frontier over fixed model selection. Across three dominant scaling axes, namely chain-of-thought depth, model size, and memory history, our experiments on VLABench and RoboMME show that test-time compute is not a uniform lever: different axes yield qualitatively distinct capability gains. We validate these insights on a physical Franka arm in a DROID setup spanning zero-shot manipulation and long-horizon chaining, where our router matches or exceeds a stronger model's success rate at up to 65% lower average latency. Ultimately, our results show that naively scaling test-time compute is wasteful, and that DIRECT can provide frontier-level embodied planning in robotic systems at a fraction of the cost. Project page can be found at jadee-dao.github.io/direct/.
+
+论文作者: Jadelynn Dao, Milan Ganai, Yasmina Abukhadra, Ajay Sridhar, Mozhgan Nasr Azadani, Katie Luo, Clark Barrett, Jiajun Wu, Chelsea Finn, Marco Pavone
+
+提交时间: 2026-06-10 17:58:49
+
+论文链接: http://arxiv.org/abs/2606.12402v1
+
+==================================================
+==================================================
+
+论文名称: MSUE: Multi-Modal Soccer Understanding Expert
+
+论文摘要: This paper presents our solution to the 2026 SoccerNet VQA Challenge. We first develop a cost-effective data synthesis pipeline driven by a Vision-Language Model (VLM), which systematically restructures raw domain data into diverse VQA samples, including concise answers and long-form responses. Second, we propose MSUE, a multi-expert question answering architecture that employs a Large Language Model (LLM) to dynamically dispatch questions to text, image, and video experts. These experts are instantiated as a strong text baseline Gemini3-Flash, a fine-tuned Qwen3-VL, and an external knowledge base, respectively, working collaboratively to enhance VQA performance. MSUE achieves an accuracy of \textbf{0.95} on the challenge benchmark, securing third place in the leaderboard.
+
+论文作者: Litao Li, Yibo Yu, Yufeng Hu, Zhuo Yang, Jiali Wen, Yixin Chen, Yixi Zhou
+
+提交时间: 2026-06-10 14:00:55
+
+论文链接: http://arxiv.org/abs/2606.12106v1
+
+==================================================
+==================================================
+
+论文名称: Task-Aligned Stability Analysis of Vision-Language Models for Autonomous Driving Hazard Detection
+
+论文摘要: Vision-language models (VLMs) are increasingly used for scene understanding in autonomous driving, but robustness analysis often relies on task-agnostic embedding stability alone. We study whether corruption-induced embedding drift predicts changes in a task-aligned hazard score derived from CLIP image-text similarities. Using controlled corruptions on BDD100K road scenes, we compare embedding drift against margin drift, defined as the change in hazard score under perturbation. The relationship is highly corruption-dependent: some families exhibit strong coupling between representation drift and decision drift, while others induce hazardous decision instability despite relatively modest embedding change. Furthermore, corruption families differ in failure direction: most suppress hazard detections via false negatives, while occlusion instead triggers false alarms, suggesting that benchmark design should account for asymmetric failure modes, not just overall instability rates. These results suggest that robustness benchmarks should include task-aligned stability measures in addition to embedding-level perturbation statistics.
+
+论文作者: Everett Richards
+
+提交时间: 2026-06-10 10:20:14
+
+论文链接: http://arxiv.org/abs/2606.11889v1
+
+==================================================
+==================================================
+
+论文名称: AutoMine Solution for AV2 2026 Scenario Mining Challenge
+
+论文摘要: With the development of autonomous driving systems, mining high-value, safety-critical, and planning-relevant scenarios from large-scale driving logs has become essential for data-driven evaluation. In this paper, we propose AutoMine, a robust self-refining scenario mining method based on LLMs and VLMs. AutoMine uses semantics-preserving prompt augmentation to reduce LLM prompt sensitivity, combines robust trajectory atomic functions with VLM-based functions to handle perception noise and open-world visual cues, and refines generated code through execution feedback from real logs. In the Argoverse 2 Scenario Mining Competition at CVPR 2026, AutoMine achieves a HOTA-Temporal score of 36.38 and a Timestamp BA score of 77.21.
+
+论文作者: Songliang Cao, Jiele Zhao, Yuru Wang, Hao Li, Daqi Liu, Zehan Zhang, Fangzhen Li, Yu Wang, Yue Zhang, Bing Wang, Guang Chen, Hao Lu, Hangjun Ye
+
+提交时间: 2026-06-10 09:58:21
+
+论文链接: http://arxiv.org/abs/2606.11874v1
+
+==================================================
+==================================================
+
+论文名称: From Prompts to Tokens: Internalizing Causal Supervision in Vision-Language Model for Multi-Image Causal Reasoning
+
+论文摘要: Visual causal reasoning is essential for understanding and intervening in the physical world, requiring identification of causal variables from visual inputs and reasoning over intervention effects. Despite recent progress, large vision--language models (VLMs) remain brittle at such tasks, especially for interventional and counterfactual queries over multi-image inputs. Most existing explorations inject causal knowledge via textual prompts, leaving causal mechanisms external to model execution and limiting reliable control during inference. To address this problem, we propose BridgeVLM, which internalizes visual causal reasoning by inducing a causal graph from multi-image inputs and converting it into structured Causal Tokens executed by RAMP layers injected into the LLM decoder for causal message passing. We further introduce a unified training interface M3S for fine-grained causal supervision from different granularities (local/global level). BridgeVLM achieves 54.4% accuracy on intervention tasks on CausalVLBench (vs. 33.2% with prompt-level supervision), improves results on Causal3D from 43.6% to 49.0%, and substantially improves causal structure learning on CausalVLBench ($F_1$: 33.4% $\rightarrow$ 75.1%).
+
+论文作者: Haoping Yu, Yuanxi Li, Jing Ma
+
+提交时间: 2026-06-10 07:21:45
+
+论文链接: http://arxiv.org/abs/2606.11745v1
+
+==================================================
+==================================================
+
+论文名称: Learning Instance-Adaptive Low-Rank Orthogonal Subspaces for Clothes-Changing Person Re-Identification
+
+论文摘要: Clothes-changing person re-identification (CC-ReID) aims to recognize individuals despite drastic appearance changes caused by clothing variation. While existing methods rely on adversarial learning to disentangle clothing features, we propose Ortho-ReID, which explicitly models a low-rank clothing subspace from VLM text descriptions and extracts clothing-invariant representations via direct geometric constraints. A critical component is our transformer-based Basis Maker, which refines a shared, low-dimensional clothing prior into an instance-adaptive low-rank subspace through cross-attention with image patches, enabling robust clothing feature extraction even under varying visibility conditions. This instance-adaptive subspace is supervised via alignment with clothing text embeddings, while identity features are extracted via a learnable projection head and geometrically constrained to be strictly orthogonal to it. Extensive experiments demonstrate state-of-the-art performance on PRCC (+5.9% top-1), Celeb-reID-light (+3.5%), and LaST (+5.3%), with competitive results on LTCC.
+
+论文作者: Dong-Woo Kim, Tae-Kyun Kim
+
+提交时间: 2026-06-10 05:07:45
+
+论文链接: http://arxiv.org/abs/2606.11661v1
+
+==================================================
+==================================================
+
+论文名称: AVIS: Adaptive Test-Time Scaling for Vision-Language Models
+
+论文摘要: Modern Vision-Language Models (VLMs) benefit from chain-of-thought prompting and test-time scaling, but these gains often come with prohibitive inference cost due to large visual contexts and long decoding chains. We view this cost through two coupled axes: Visual Context Scaling (VCS), which controls how much visual evidence is passed to the language model, and Visual Reasoning Scaling (VRS), which controls how much inference-time reasoning search is performed. Existing methods typically optimize one axis at a time, leaving the joint allocation of compute across these axes underexplored. We introduce Adaptive Visual Inference Scaling (AVIS), a lightweight policy that adapts both VCS and VRS per query. AVIS realizes VCS through Key Diversity Visual (KDV) pruning, a training-free $O(N)$ key-based rule for removing redundant visual tokens before prefilling, and realizes VRS through adaptive self-consistency, using a learned difficulty predictor to select the number of reasoning rollouts. AVIS is deployment-friendly and compatible with shared-prefill inference, where all rollouts reuse a single prefilling pass and KV cache. Across diverse image and video reasoning benchmarks, AVIS improves the accuracy--compute trade-off relative to VCS-only and VRS-only baselines, and remains effective on top of RL post-trained VLMs while keeping compute and latency low.
+
+论文作者: Ahmadreza Jeddi, Minh Ngoc Le, Amirhossein Kazerouni, Hakki Can Karaimer, Hue Nguyen, Iqbal Mohomed, Michael Brudno, Alex Levinshtein, Konstantinos G. Derpanis, Babak Taati, Radek Grzeszczuk
+
+提交时间: 2026-06-10 02:06:47
+
+论文链接: http://arxiv.org/abs/2606.11576v1
+
+==================================================
+==================================================
+
+论文名称: Ambient Diffusion Policy: Imitation Learning from Suboptimal Data in Robotics
+
+论文摘要: We propose Ambient Diffusion Policy, a simple and principled method for imitation learning from suboptimal data in robotics. High-quality, task-specific robot data is expensive and time-consuming to collect, while suboptimal datasets with lower-quality or out-of-distribution demonstrations are abundant. Existing methods that co-train on both data sources in robotics often fail to separate the meaningful and the harmful features in the suboptimal samples. In contrast, our method extracts only the useful features by introducing a new axis to co-training in robotics: noise-dependent data usage. Ambient Diffusion Policy restricts the contribution of suboptimal data during training to only the high and low diffusion times. To rigorously justify our approach, we first observe that robot action data exhibits a spectral power law. This induces two important properties on the optimal Diffusion Policy that we exploit: a global-to-local hierarchy and locality. We theoretically formalize this discussion using a simplified model. Our experiments validate Ambient Diffusion Policy on four types of suboptimal action data (noisy trajectories, sim-to-real gap, task mismatch, and large-scale data mixtures) across six tasks. The results show that it effectively learns from arbitrary sources of suboptimal data. Notably, it outperforms existing co-training baselines by up to 33% when scaled to Open X-Embodiment - a large dataset with heterogeneous data quality and unstructured distribution shifts. Overall, Ambient Diffusion Policy increases the utility of suboptimal demonstrations and expands the set of usable data sources in robotics.
+
+论文作者: Adam Wei, Nicholas Pfaff, Thomas Cohn, Arif Kerem Dayı, Constantinos Daskalakis, Giannis Daras, Russ Tedrake
+
+提交时间: 2026-06-10 17:34:12
+
+论文链接: http://arxiv.org/abs/2606.12365v1
+
+==================================================
+==================================================
+
+论文名称: Blind Dexterous Grasping via Real2Sim2Real Tactile Policy Learning
+
+论文摘要: Blind grasping with a dexterous hand is a crucial manipulation capability. Nevertheless, learning such tactile-only policies for real robots remains challenging due to the tactile sim-to-real gap and the limited expressiveness of sparse tactile signals. To bridge this gap, we propose a framework for tactile-only blind grasping that is deployable on a physical multi-fingered robotic hand. Our approach combines three key components. First, we introduce a Real2Sim tactile calibration pipeline that constructs a contact-calibrated digital-twin simulator capable of reproducing real tactile signals. Second, we improve the expressiveness of sparse tactile observations using a layout-aware tactile encoder, which incorporates sensor-geometry priors through self-supervised pretraining. Third, to improve generalization to unseen objects, we train object-specific reinforcement-learning experts in the calibrated simulator and aggregate their successful grasp trajectories into a tactile-conditioned Diffusion Policy. We evaluate our method on a physical LEAP Hand equipped with distributed tactile sensing across 10 seen and 10 unseen objects. The deployed policy achieves a 27\% real-world grasp success rate across all 20 objects, without real-world grasping demonstrations or visual input. Simulation ablations show that layout-aware tactile pretraining improves grasping performance, while sensing-level evaluations confirm that Real2Sim calibration increases the consistency of tactile contact events between simulation and hardware. Together, these results suggest that contact-event calibration, geometry-aware tactile representation learning, and diffusion-based policy aggregation provide an effective path toward tactile-only blind grasping on real dexterous robotic hands. Project page:Dex-Blind-Grasp.github.io.
+
+论文作者: Shengcheng Luo, Xiyan Huang, Zhe Xu, Wanlin Li, Ziyuan Jiao, Chenxi Xiao
+
+提交时间: 2026-06-10 07:46:38
+
+论文链接: http://arxiv.org/abs/2606.11767v1
+
+==================================================
+==================================================
+
+论文名称: Learning Object Manipulation from Scratch via Contrastive Interaction
+
+论文摘要: Contrastive Reinforcement Learning (CRL) has seen recent success in a wide variety of goal-conditioned robotics tasks by learning structured representations of the dynamics. However, despite its success in locomotion and simpler control domains, CRL often struggles in interaction-rich manipulation. We argue that a key source of this difficulty is object-centric interaction, such as contact or grasping, that induces distinct changes in the underlying dynamic modes. In this work, we formulate manipulation dynamics as a piecewise-smooth Markov process and show that interaction-induced mode changes create piecewise nonlinear reachability structures that are difficult for standard CRL energy functions to represent and plan over. Based on this analysis, we introduce Interaction-weighted Resampling (IWR). IWR performs interaction-aware resampling around phases before, during, and after interactions, encouraging the learned representation to preserve the mode boundaries that determine future reachability to capture multi-modal and piecewise nonlinear reachability. Across interaction-centric environments, including 2D dynamic control, robotic manipulation, and robot air hockey, IWR improves both sample efficiency and overall performance over prior CRL methods, with 19.8% average improvement in simulation. Finally, using a sim-to-real pipeline with policies trained by IWR, we demonstrate the first real-world goal-conditioned robot air hockey agent capable of hitting goals, improving success from 25% to 60%. Project Page: IWR-arxiv.github.io.
+
+论文作者: Tongle Shen, Caleb Chuck, Fan Feng, Biwei Huang
+
+提交时间: 2026-06-10 00:06:24
+
+论文链接: http://arxiv.org/abs/2606.11525v1
+
+==================================================
+==================================================
+
+论文名称: Intelligent Automation for Embodied Benchmark Construction: Pipelines, Embodiments, Simulators, and Trends
+
+论文摘要: Embodied intelligence now spans navigation, household assistance, manipulation, autonomous driving, aerial agents, and multimodal large-model control. This expansion has made benchmark construction a central bottleneck for reliable evaluation. Unlike static datasets, embodied benchmarks combine task specifications, environments, robot data, demonstrations, annotations, metrics, evaluation scripts, and release policies into a single evaluation system. This survey reviews the literature through a five-stage construction pipeline: requirement and task construction, data acquisition, data cleaning and annotation, benchmark suite generation and metric definition, and evaluation execution with diagnostic feedback. For each stage, the survey analyzes the transition from manual curation to traditional automation, foundation-model assistance, and agentic closed-loop workflows. It also compares qualitative construction costs across human labor, data and asset acquisition, compute and simulation, validation and debugging, governance and maintenance, and rework risk. The main conclusion is that automation does not simply reduce benchmark cost. Instead, it often shifts cost toward validation, auditability, version control, and long-term governance. Progress in embodied evaluation will therefore depend not only on larger benchmark suites, but also on construction pipelines that are diagnosable, auditable, and responsibly refreshable.
+
+论文作者: Jinshan Lai, Jianwei Hu, Baoyang Jiang, Fengchun Zhang, Leyuan Wang, Haotian Li, Yida Wang, Tingxuan Huang, Xi Ren, Qiang Ma
+
+提交时间: 2026-06-10 15:25:02
+
+论文链接: http://arxiv.org/abs/2606.12207v1
+
+==================================================
+==================================================
+
+论文名称: Embodied-BenchClaw: An Autonomous Multi-Agent System for Embodied Spatial Intelligence Benchmark Construction
+
+论文摘要: Benchmarks are essential for evaluating embodied spatial intelligence, yet their construction is labor-intensive, hard to reuse, and difficult to maintain. Existing embodied benchmarks are often static and may quickly become saturated as models improve, limiting their ability to distinguish new capabilities. We propose Embodied-BenchClaw, an autonomous agentic system for constructing embodied spatial intelligence benchmarks. Given a user-specified evaluation intent, Embodied-BenchClaw automatically produces a complete and continually updatable benchmark package through a five-stage pipeline: intent blueprinting, data collection, structuring and cleaning, benchmark synthesis, and evaluation reporting. The pipeline is coordinated by three agents for planning, construction, and evaluation. To improve reusability and reliability, Embodied-BenchClaw introduces an extensible Skill Library and process quality control, enabling benchmark construction to be composable, verifiable, and repairable. We instantiate multiple benchmarks covering indoor spatial reasoning, outdoor spatial reasoning, robotic manipulation, quadruped robot navigation, UAV/aerial-view understanding, and static benchmark enhancement. These benchmarks span diverse embodied carriers, data sources, and spatial capabilities. Experiments with human evaluation, judge-based assessment, consistency checks, cost analysis, and ablations show that Embodied-BenchClaw can construct verifiable, executable, maintainable, and diagnostically useful embodied spatial benchmarks with reduced manual effort.
+
+论文作者: Baoyang Jiang, Fengchun Zhang, Leyuan Wang, Haotian Li, Yida Wang, Zhe Ji, Jinshan Lai, Xi Ren, Jianwei Hu, Qiang Ma
+
+提交时间: 2026-06-10 10:37:27
+
+论文链接: http://arxiv.org/abs/2606.11909v1
+
+==================================================
+==================================================
+
+论文名称: Designing AI-Supported Focus Groups: A Role x Modality Playbook
+
+论文摘要: Collecting participants' lived experiences is central to design research. Focus groups are uniquely valuable because participants not only share individual accounts but also respond to one another, surfacing comparison, disagreement, and collective sensemaking. However, focus groups are resource-intensive and highly sensitive to facilitation: moderators must probe for specificity, balance participation, manage topic flow, and sustain psychological safety, and subtle facilitation choices can shape what becomes salient. Recent HCI work and commercial meeting tools show that generative AI can scaffold live conversation through prompting, turn regulation, thematic mapping, and real-time summarization. Yet UXR teams lack a clear map of what these capabilities mean in focus groups and what methodological risks they introduce. We synthesize AI supports for live conversation and translate them into a focus-group-specific playbook organized by AI role (tool, co-host, host) and modality (text, voice, embodied).We synthesize prior work on AI-supported live conversation and propose a focus-group-specific playbook of AI supports organized by role (tool, co-host, host) and modality (text, voice, embodied). We characterize interactional trade-offs and identify open questions for evaluating AI-supported focus groups as methodological configurations.
+
+论文作者: Zhiqing Wang, Steven Dow
+
+提交时间: 2026-06-10 09:16:26
+
+论文链接: http://arxiv.org/abs/2606.11835v1
+
+==================================================
+==================================================
+
+论文名称: TouchThinker: Scaling Tactile Commonsense Reasoning to the Open World with Large-scale Data and Action-aware Representation
+
+论文摘要: Touch is a key modality for embodied agents to understand the physical world. Although recent work has incorporated tactile signals into language systems for tactile commonsense reasoning, scaling such systems to realistic open-world settings remains challenging due to two key bottlenecks: (1) current tactile reasoning datasets remain limited in format and scale, providing insufficient supervision for reasoning from tactile observations to physical commonsense and hindering the learning of transferable tactile commonsense; (2) Tactile signals are inherently redundant and action-specific, yet existing methods often overlook these properties, resulting in inefficient representations with limited semantic expressiveness. To address these limitations, we propose TouchThinker, a tactile-language framework that scales tactile commonsense reasoning to the open world from both data and representation perspectives. First, we construct TouchThinker-1M, a million-scale, multi-source tactile reasoning dataset covering \textbf{415} objects, \textbf{8} scenarios, and \textbf{7} sensor types, providing a solid data foundation for open-world generalization. We further introduce TouchThinker-Bench, an open-world benchmark with more realistic and diverse tasks. Then, we propose action-aware modeling mechanism to improve tactile representation efficiency and enable efficient reasoning. Experimental results demonstrate that TouchThinker achieves competitive performance against state-of-the-art models across multiple datasets. Our code and dataset will be made available at: https://github.com/lvkailin0118/TouchThinker.
+
+论文作者: Kailin Lyu, Di Wu, Pengwei Zhang, Yuhang Zheng, Yingxin Lai, Long Xiao, Kangyi Wu, Pengna Li, Chen Gao, Lianyu Hu, Xiaobin Hu, Jie Hao, Ce Hao, Weihao Yuan, Shuicheng Yan
+
+提交时间: 2026-06-10 03:58:32
+
+论文链接: http://arxiv.org/abs/2606.11637v1
+
+==================================================
+==================================================
+
+论文名称: LUCID: Learning Embodiment-Agnostic Intent Models from Unstructured Human Videos for Scalable Dexterous Robot Skill Acquisition
+
+论文摘要: The most widely-adopted robot learning pipelines today learn skills from robot demonstrations or structured human data, which are expensive to collect and tied to specific embodiments. In contrast, unstructured human videos provide a scalable alternative. They contain diverse manipulation demonstrations across objects, scenes, and strategies, but are not directly connected to robot action. We propose LUCID, a two-stage framework that learns task intent from unstructured human videos drawn from internet-scale datasets and learns robot control in massively-parallel simulation. The intent model predicts short-horizon intent (what should happen next in the scene) from the current observation in closed loop. An embodiment-specific sensorimotor policy converts this intent into robot actions. The intent interface is shared across controllers, so the same intent model can be applied to different embodiments, from our primary dexterous hand to a parallel-jaw gripper. We evaluate LUCID on five real-world manipulation tasks: stirring, wiping, and binning supervised by only internet video, with zero-shot transfer to novel scenes and object instances; and push-T and cable routing supervised by 1 hr each of self-collected smartphone video. Project page: https://lucid-robot.github.io/.
+
+论文作者: Harsh Gupta, Guanya Shi, Wenzhen Yuan
+
+提交时间: 2026-06-10 03:49:01
+
+论文链接: http://arxiv.org/abs/2606.11628v1
+
+==================================================
+==================================================
+
+论文名称: Harness In-Context Operator Learning with Chain of Operators
+
+论文摘要: Neural operators approximate mappings between function spaces, but often generalize poorly to other operators and usually require fine-tuning or retraining. In-Context Operator Networks (ICON) addresses this issue by prompting the model with numerical context so that the model learns specific operators from prompts and adapt to different operators without fine-tuning. However, ICON may still fail to generalize to out-of-distribution (OOD) operator tasks. Inpired by the success of harness engineering of Large Language models (LLMs), we introduce Chain of Operators (CHOP), a framework that harness a frozen ICON to OOD operator tasks without updating its parameters. Specifically, CHOP constructs a chain of operators consisting of explicit elementary transformations and the frozen ICON. Experiments on a scalar conservation law and a mean-field control problem show that CHOP reduces relative inference error over direct ICON evaluation, while each operator in the chain remains interpretable and in closed form. A chain constructed on one PDE family further generalizes to a different family, indicating shared mechanisms across harness systems.
+
+论文作者: Minghui Yang, Ling Guo, Liu Yang
+
+提交时间: 2026-06-10 16:53:03
+
+论文链接: http://arxiv.org/abs/2606.12318v1
+
+==================================================
+==================================================
+
+论文名称: Toward Generalist Autonomous Research via Hypothesis-Tree Refinement
+
+论文摘要: Scientific progress depends on a repeated loop of exploration, experimentation, and abstraction. Researchers test candidate directions, interpret the evidence, and carry the resulting lessons into later attempts. We study how an AI agent can run this loop autonomously over long horizons. We introduce Arbor, a general framework for autonomous research that combines a long-lived coordinator, short-lived executors, and Hypothesis Tree Refinement (HTR), a persistent tree that links hypotheses, artifacts, evidence, and distilled insights across time. The coordinator manages global research strategy over the tree, while executors implement and test individual hypotheses in isolated worktrees. As results return, Arbor updates the tree, propagates reusable lessons, refines the search frontier, and admits verified improvements. This design turns autonomous research from a sequence of local attempts into a cumulative process in which strategy, execution, and evidence are carried across time. We evaluate Arbor under Autonomous Optimization (AO), an operational setting where an agent improves an initial research artifact through iterative experimentation without step-level human supervision. Across six real research tasks in model training, harness engineering, and data synthesis, Arbor achieves the best held-out result on all six tasks, attaining more than 2.5x the average relative held-out gain of Codex and Claude Code under the same task interface and resource budget. On MLE-Bench Lite, Arbor reaches 86.36% Any Medal with GPT-5.5, the strongest result in our comparison.
+
+论文作者: Jiajie Jin, Yuyang Hu, Kai Qiu, Qi Dai, Chong Luo, Guanting Dong, Xiaoxi Li, Tong Zhao, Xiaolong Ma, Gongrui Zhang, Zhirong Wu, Bei Liu, Zhengyuan Yang, Linjie Li, Lijuan Wang, Hongjin Qian, Yutao Zhu, Zhicheng Dou
+
+提交时间: 2026-06-10 10:57:05
+
+论文链接: http://arxiv.org/abs/2606.11926v1

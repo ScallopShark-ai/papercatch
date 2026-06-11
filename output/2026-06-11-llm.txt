@@ -1,0 +1,354 @@
+# arXiv 论文每日总结 - 2026-06-11
+# 共 27 篇论文
+# 由 Gemini 大模型自动生成
+
+==================================================
+==================================================
+
+【第 1 篇】
+
+论文名称: Substrate Asymmetry in User-Side Memory: A Diagnostic Framework
+
+论文链接: http://arxiv.org/abs/2606.11712v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606112313561800936648268d9d6wBBOAyq0Master)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 2 篇】
+
+论文名称: PAWS: Preference Learning with Advantage-Weighted Segments
+
+论文链接: http://arxiv.org/abs/2606.11982v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B20260611231408788447408268d9d6nBesKiEFMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 3 篇】
+
+论文名称: Beyond the Golden Teacher: Enhancing Graph Learning through LLM-GNN Co-teaching
+
+论文链接: http://arxiv.org/abs/2606.11583v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606112314202820764408268d9d6s540txweMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 4 篇】
+
+论文名称: CHORUS: Decentralized Multi-Embodiment Collaboration with One VLA Policy
+
+论文链接: http://arxiv.org/abs/2606.12352v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606112314322376095398268d9d6Okc1dHn7Master)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 5 篇】
+
+论文名称: Learning What to Say to Your VLA: Mostly Harmless Vision Language Action Model Steering
+
+论文链接: http://arxiv.org/abs/2606.12299v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606112314448639803328268d9d6SHuNo49mMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 6 篇】
+
+论文名称: Bridging the Morphology Gap: Adapting VLA Models to Dexterous Manipulation via Intent-Conditioned Fine-Tuning
+
+论文链接: http://arxiv.org/abs/2606.12109v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606112314569912944898268d9d6LQHWqu6NMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 7 篇】
+
+论文名称: DAM-VLA: Decoupled Asynchronous Multimodal Vision Language Action model
+
+论文链接: http://arxiv.org/abs/2606.12105v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606112315089115680398268d9d6LVa0symSMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 8 篇】
+
+论文名称: When Does Language Matter? Multilingual Instructions Reveal Step-wise Language Sensitivity in Vision-Language-Action Models
+
+论文链接: http://arxiv.org/abs/2606.11906v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606112315208686554168268d9d6I0h6JAJNMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 9 篇】
+
+论文名称: TacCoRL: Integrating Tactile Feedback into VLA via Simulation
+
+论文链接: http://arxiv.org/abs/2606.11743v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606112315327147712088268d9d6eU4ZIabPMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 10 篇】
+
+论文名称: Reroute, Don't Remove: Recoverable Visual Token Routing for Vision-Language Models
+
+论文链接: http://arxiv.org/abs/2606.12412v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606112315445614106808268d9d6QnvmtjBZMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 11 篇】
+
+论文名称: DIRECT: When and Where Should You Allocate Test-Time Compute in Embodied Planners?
+
+论文链接: http://arxiv.org/abs/2606.12402v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606112315566176354678268d9d6ZaW29h3kMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 12 篇】
+
+论文名称: MSUE: Multi-Modal Soccer Understanding Expert
+
+论文链接: http://arxiv.org/abs/2606.12106v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606112316084631328398268d9d6ekybNo2vMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 13 篇】
+
+论文名称: Task-Aligned Stability Analysis of Vision-Language Models for Autonomous Driving Hazard Detection
+
+论文链接: http://arxiv.org/abs/2606.11889v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606112316201797593368268d9d6NhsxS154Master)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 14 篇】
+
+论文名称: AutoMine Solution for AV2 2026 Scenario Mining Challenge
+
+论文链接: http://arxiv.org/abs/2606.11874v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606112316322655395068268d9d6r2Kiruv4Master)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 15 篇】
+
+论文名称: From Prompts to Tokens: Internalizing Causal Supervision in Vision-Language Model for Multi-Image Causal Reasoning
+
+论文链接: http://arxiv.org/abs/2606.11745v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606112316442694545928268d9d6wwFtMnWjMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 16 篇】
+
+论文名称: Learning Instance-Adaptive Low-Rank Orthogonal Subspaces for Clothes-Changing Person Re-Identification
+
+论文链接: http://arxiv.org/abs/2606.11661v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606112316562094194688268d9d61XsHX7cOMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 17 篇】
+
+论文名称: AVIS: Adaptive Test-Time Scaling for Vision-Language Models
+
+论文链接: http://arxiv.org/abs/2606.11576v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606112317079123796778268d9d60Is3CxQlMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 18 篇】
+
+论文名称: Ambient Diffusion Policy: Imitation Learning from Suboptimal Data in Robotics
+
+论文链接: http://arxiv.org/abs/2606.12365v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606112317199041919138268d9d6oiOl0bsWMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 19 篇】
+
+论文名称: Blind Dexterous Grasping via Real2Sim2Real Tactile Policy Learning
+
+论文链接: http://arxiv.org/abs/2606.11767v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606112317319844044188268d9d6mDGNCNaUMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 20 篇】
+
+论文名称: Learning Object Manipulation from Scratch via Contrastive Interaction
+
+论文链接: http://arxiv.org/abs/2606.11525v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606112317438354875468268d9d6cEKhAGMrMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 21 篇】
+
+论文名称: Intelligent Automation for Embodied Benchmark Construction: Pipelines, Embodiments, Simulators, and Trends
+
+论文链接: http://arxiv.org/abs/2606.12207v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606112317556441448928268d9d6yBNWosSEMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 22 篇】
+
+论文名称: Embodied-BenchClaw: An Autonomous Multi-Agent System for Embodied Spatial Intelligence Benchmark Construction
+
+论文链接: http://arxiv.org/abs/2606.11909v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606112318073109686498268d9d6LIuBVlj5Master)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 23 篇】
+
+论文名称: Designing AI-Supported Focus Groups: A Role x Modality Playbook
+
+论文链接: http://arxiv.org/abs/2606.11835v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B20260611231819753123688268d9d6KO7mWobdMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 24 篇】
+
+论文名称: TouchThinker: Scaling Tactile Commonsense Reasoning to the Open World with Large-scale Data and Action-aware Representation
+
+论文链接: http://arxiv.org/abs/2606.11637v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606112318309609659108268d9d6iJW18aZ1Master)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 25 篇】
+
+论文名称: LUCID: Learning Embodiment-Agnostic Intent Models from Unstructured Human Videos for Scalable Dexterous Robot Skill Acquisition
+
+论文链接: http://arxiv.org/abs/2606.11628v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606112318428878978448268d9d648Ju50vEMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 26 篇】
+
+论文名称: Harness In-Context Operator Learning with Chain of Operators
+
+论文链接: http://arxiv.org/abs/2606.12318v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606112318548750781358268d9d6M64XLkekMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 27 篇】
+
+论文名称: Toward Generalist Autonomous Research via Hypothesis-Tree Refinement
+
+论文链接: http://arxiv.org/abs/2606.11926v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606112319067658570308268d9d6ExXnAE1JMaster)', 'type': 'new_api_error'}}]
