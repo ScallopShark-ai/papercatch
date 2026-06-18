@@ -1,0 +1,211 @@
+# arXiv 论文每日总结 - 2026-06-18
+# 共 16 篇论文
+# 由 Gemini 大模型自动生成
+
+==================================================
+==================================================
+
+【第 1 篇】
+
+论文名称: Be Your Own Teacher: Steering Protein Language Models via Unsupervised Reward Optimization
+
+论文链接: http://arxiv.org/abs/2606.18961v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B20260618232834367054668268d9d6wcltyUDOMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 2 篇】
+
+论文名称: Generating Natural and Expressive Robot Gestures through Iterative Reinforcement Learning with Human Feedback using LLMs
+
+论文链接: http://arxiv.org/abs/2606.18747v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606182328459658466458268d9d6TdHz2TblMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 3 篇】
+
+论文名称: ProfiLLM: Utility-Aligned Agentic User Profiling for Industrial Ride-Hailing Dispatch
+
+论文链接: http://arxiv.org/abs/2606.18803v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606182328578473442878268d9d6FWyNKZNXMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 4 篇】
+
+论文名称: DeFAb: A Verifiable Benchmark for Defeasible Abduction in Foundation Models
+
+论文链接: http://arxiv.org/abs/2606.18557v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606182329098075872528268d9d6ePJycQBdMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 5 篇】
+
+论文名称: UBP2: Uncertainty-Balanced Preference Planning for Efficient Preference-based Reinforcement Learning
+
+论文链接: http://arxiv.org/abs/2606.19328v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606182329219785997028268d9d65BJXinxUMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 6 篇】
+
+论文名称: Learning from Own Solutions: Self-Conditioned Credit Assignment for Reinforcement Learning with Verifiable Rewards
+
+论文链接: http://arxiv.org/abs/2606.18810v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606182329338609232708268d9d668RQH6uQMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 7 篇】
+
+论文名称: Steerable Cultural Preference Optimization of Reward Models
+
+论文链接: http://arxiv.org/abs/2606.18606v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606182329454226875298268d9d6eZXGpUi6Master)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 8 篇】
+
+论文名称: Does VLA Even Know the Basics? Measuring Commonsense and World Knowledge Retention in Vision-Language-Action Models
+
+论文链接: http://arxiv.org/abs/2606.19297v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606182329572648636428268d9d6iUQiNkemMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 9 篇】
+
+论文名称: OneCanvas: 3D Scene Understanding via Panoramic Reprojection
+
+论文链接: http://arxiv.org/abs/2606.19253v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606182330092197068728268d9d6VsXperopMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 10 篇】
+
+论文名称: RTSGameBench: An RTS Benchmark for Strategic Reasoning by Vision-Language Models
+
+论文链接: http://arxiv.org/abs/2606.18950v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606182330211314237118268d9d6Zozgc5PdMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 11 篇】
+
+论文名称: Semantic Robustness Certification for Vision-Language Models
+
+论文链接: http://arxiv.org/abs/2606.18839v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606182330328435736818268d9d62p9gADmvMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 12 篇】
+
+论文名称: LandslideAgent with Multimodal LandslideBench: A Domain-Rule-Augmented Agent for Autonomous Landslide Identification and Analysis
+
+论文链接: http://arxiv.org/abs/2606.18661v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606182330448521769158268d9d6jyntBAUBMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 13 篇】
+
+论文名称: APT: Atomic Physical Transitions for Causal Video-Language Understanding
+
+论文链接: http://arxiv.org/abs/2606.18586v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606182330569443427328268d9d6MuUJaasbMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 14 篇】
+
+论文名称: Benchmarking Action Spaces in Reinforcement Learning for Vision-based Robotic Manipulation
+
+论文链接: http://arxiv.org/abs/2606.18594v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606182331088993038668268d9d63HMwCBdSMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 15 篇】
+
+论文名称: WorldLines: Benchmarking and Modeling Long-Horizon Stateful Embodied Agents
+
+论文链接: http://arxiv.org/abs/2606.18847v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606182331208035834048268d9d6NcEJElr5Master)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 16 篇】
+
+论文名称: Hardware- and Vision-in-the-Loop Validation of Deep Monocular Pose Estimation for Autonomous Maritime UAV Flight
+
+论文链接: http://arxiv.org/abs/2606.19176v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606182331327597901078268d9d6XkmhdHSvMaster)', 'type': 'new_api_error'}}]
