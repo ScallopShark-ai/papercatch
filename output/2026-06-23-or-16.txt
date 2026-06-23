@@ -1,0 +1,204 @@
+论文名称: Can LLMs Reliably Self-Report Adversarial Prefills, and How?
+
+论文摘要: Prior work shows that large language models (LLMs) exhibit introspective capability on benign tasks. We extend the question to safety contexts and examine how reliably a model can recognize that its own prior response was elicited by an adversarial prefill attack. Across ten open-weight instruction-tuned LLMs (3B to 70B) and four safety benchmarks, no model reliably recognizes its own compromised outputs, with models claiming intent on prefilled responses at an average rate of $27.3\%$. Introspective signal stems largely from safety- and refusal-related reasoning. Orthogonalizing models' weights against the refusal direction collapses the gap between claiming rates on prefilled and natural outputs to near zero, though the direction is not its unique mediator. The signal is also probe-dependent: framing the question as internal intention versus external tampering elicits qualitatively different responses on the same models. We test three LoRA finetuning methods (SFT, GRPO, DPO) on eight models from 3B to 27B; all three widen the intention-probe gap on every model from 8B to 27B, with method ranking varying by model. The intervention does not transfer to the tampering probe and counterintuitively raises attack success rate under adversarial prefill on most models, amounting to a partial mitigation. These findings outline mechanisms underpinning the observed introspective signals in safety contexts and highlight risks in the reliability of LLM self-reports.
+
+论文作者: Quang Minh Nguyen, Uzair Ahmed, Taegyoon Kim
+
+提交时间: 2026-06-22 17:56:30
+
+论文链接: http://arxiv.org/abs/2606.23671v1
+
+==================================================
+==================================================
+
+论文名称: Self-Evolution for Multi-Turn Tool-Calling Agents via Divergence-Point Preference Learning
+
+论文摘要: Multi-turn tool-using agents must coordinate long-horizon tool sequences while tracking dialogue state and policy constraints. Existing approaches often separate inference-time orchestration from parameter-level learning, leaving tool selection weakly structured and preference updates vulnerable to train--deployment prompt mismatch. For within-benchmark self-improvement, ToolGraph combines schema-derived topology, transition weights estimated from successful rollouts, and history-aware controls for write prerequisites and repeated-search loops. We then construct 161 preference pairs by locating divergence points via state-based matching and prefix-based alignment, filtered through action-correctness annotations, and train DPO under the same ToolGraph context used at inference. Across 375 tau2-bench tasks, ToolGraph raises the weighted average reward from 0.304 to 0.338 (+11.2% relative), while ToolGraph+DPO reaches 0.355 (+16.8% over the baseline), with the DPO gain concentrated in airline and retail. Fine-grained diagnostics further show that roughly half of telecom trajectories exhaust the step budget before action execution and that chosen reward positivity is the most useful checkpoint signal across our 16 evaluated DPO configurations.
+
+论文作者: Jiaqiang Tang
+
+提交时间: 2026-06-22 09:56:44
+
+论文链接: http://arxiv.org/abs/2606.23112v1
+
+==================================================
+==================================================
+
+论文名称: DiT-Reward: Generative Representations for Text-to-Image Reward Modeling
+
+论文摘要: Can representations learned for image generation also support the evaluation of generated images? We study text-to-image reward prediction as a downstream task of generative representation learning. To this end, we introduce DiT-Reward, which converts a pretrained text-to-image Diffusion Transformer into a reward model by processing near-clean image latents and aggregating text-conditioned image representations across transformer layers. Under the same training data mixture as HPSv3, DiT-Reward outperforms HPSv3 on all four evaluated preference benchmarks, reaching 85.6% on HPDv2 and 77.6% on HPDv3. When the generative backbone is frozen, a lightweight learned head can still extract meaningful preference predictions from its representations. Probing across depth further reveals that downstream reward performance is strongest in the middle-to-late layers and benefits from combining representations across different stages. We also observe consistent positive scaling with generative backbone capacity. Finally, when used to optimize Stable Diffusion 3.5 Large with Flow-GRPO, DiT-Reward outperforms HPSv3 along the matched training trajectory, with particularly clear gains in realism. Direct latent scoring also achieves a 1.65x inference speedup over HPSv3 with comparable peak memory. These results show that pretrained generative DiTs provide transferable representations for reward modeling and policy optimization.
+
+论文作者: Yuanming Yang, Guoqing Ma, Bo Wang, Yuan Zhang, Wei Tang, Chenyi Li, Haoyang Huang, Nan Duan
+
+提交时间: 2026-06-22 17:19:58
+
+论文链接: http://arxiv.org/abs/2606.23626v1
+
+==================================================
+==================================================
+
+论文名称: CFPO: Counterfactual Policy Optimization for Multimodal Reasoning
+
+论文摘要: Large Vision-Language Models (LVLMs) have demonstrated remarkable capabilities in multimodal reasoning. However, prevailing reinforcement learning (RL) paradigms lack explicit counterfactual enhancement and causal learning mechanisms. This fundamental deficiency results in severe grounding failures, manifesting as a tendency to ignore visual evidence in favor of language priors or exhibiting hallucination drift during long chain-of-thought reasoning. To address this root cause, we propose CounterFactual Policy Optimization (CFPO), a novel framework that enforces causal consistency between visual perception and textual reasoning. CFPO introduces a cross-modal counterfactual enhancement mechanism, which regularizes the policy by maximizing the discrepancy between the model's predictions and those from a counterfactual state where critical visual cues are suppressed. This approach seamlessly integrates with standard algorithms like GRPO and DAPO without requiring external reward models or additional supervision. Extensive experiments demonstrate that CFPO significantly improves reasoning fidelity, achieving consistent gains of 3.17%-6.25% over standard RL baselines and 1.32%-2.13% over the state-of-the-art perception-aware method (PAPO). Code is available at https://github.com/Raven-July/CFPO.
+
+论文作者: Zhangyuan Yu, Wanran Sun, Guangjing Yang, Xiaohu Wu, Qicheng Lao
+
+提交时间: 2026-06-22 11:51:51
+
+论文链接: http://arxiv.org/abs/2606.23206v1
+
+==================================================
+==================================================
+
+论文名称: EvoRubrics: Dynamic Rubrics as Rewards via Adversarial Co-Evolution for LLM Reinforcement Learning
+
+论文摘要: Rubric-based rewards offer interpretable and fine-grained optimization signals for reinforcement learning in open-ended tasks where verifiable answers are unavailable. However, pre-constructed rubrics remain static throughout training, creating a fundamental mismatch with the evolving policy: fixed criteria gradually lose discriminative power as the model improves, leading to reward saturation and potential hacking. Recent dynamic rubric methods partially address this but rely on external frontier models or ground-truth answers, and update rubrics only at coarse granularity. We propose EvoRubrics, a co-evolutionary RL framework where a Policy LLM and a Rubric Generator jointly improve through adversarial interaction within each training step. As the policy improves under the rubric generator's guidance, the rubric generator adapts its criteria to remain discriminative and informative, enabling evaluation to track the policy in real time and naturally inducing an automatic curriculum. Experiments show that EvoRubrics consistently outperforms static and dynamic rubric baselines across benchmarks. The learned Rubric Generator further generalizes as a transferable reward model. Notably, even a fully self-supervised variant without any external supervision achieves meaningful gains, suggesting that co-evolution between generation and evaluation alone can provide sufficiently rich learning signals. Our code is publicly available at https://anonymous.4open.science/r/EvoRubrics-2155/.
+
+论文作者: Hongxin Ding, Baixiang Huang, Yue Fang, Weibin Liao, Zheng Li, Jinyang Zhang, Zhijing Wu, Junfeng Zhao, Yasha Wang
+
+提交时间: 2026-06-22 08:46:23
+
+论文链接: http://arxiv.org/abs/2606.23038v1
+
+==================================================
+==================================================
+
+论文名称: RECALL: Recovery Experience Collection for Active Lifelong Learning in Vision-Language-Action Models
+
+论文摘要: Vision-Language-Action (VLA) models are commonly fine-tuned through passive imitation learning, where additional demonstrations are collected for tasks where the policy performs poorly. This approach incurs several downsides: it requires the robot to fail before data collection is triggered, provides little guidance about which states require supervision, and wastes demonstrator effort on redundant parts of the task where the policy already performs well. In this paper, we propose an active, continual learning paradigm for VLAs. We demonstrate that active, uncertainty-guided data collection leads to more efficient fine-tuning than when using passively-collected demonstrations. However, we also find that fine-tuning only on actively-collected recovery data leads to catastrophic forgetting. We evaluate techniques for continual learning, including replay-based data mixing and elastic weight consolidation, and identify tradeoffs between plasticity to uncertainty-guided recovery data and retention of previously learned behaviors. Overall, our work contributes an empirical study of active continual learning for autoregressive VLAs, establishing that uncertainty-guided recovery demonstrations can improve adaptation efficiency while also revealing open challenges when targeted new data is incorporated into large robot policies.
+
+论文作者: Ulas Berk Karli, Tesca Fitzgerald
+
+提交时间: 2026-06-22 17:12:50
+
+论文链接: http://arxiv.org/abs/2606.23617v1
+
+==================================================
+==================================================
+
+论文名称: Attacking the Trusted Imagination: Oracle-Level Integrity Attacks on Imagine-then-Act World Models
+
+论文摘要: Many recent vision-language-action (VLA) policies adopt an imagine-then-act design. A world-action model (WAM) first imagines a short future as a latent trajectory z~, on which the action is then conditioned. We identify this trusted imagination, rather than the reactive policy, as the exposed attack surface. A downstream oracle, such as a safety gate, a visual model-predictive-control (MPC) planner, or an imagine-then-check verifier, consumes z~ as a prediction of the future. The robustness of the policy therefore does not entail the robustness of systems that rely on the WAM. The underlying phenomenon is an asymmetry. Corrupting the imagination is easy, since it requires only displacing z~ from its natural-future manifold. Steering it precisely is hard, since it must reach a specified on-manifold target. We adopt a capability-based threat model with an L-infinity-bounded observation perturbation. The attacker applies projected gradient descent through the fully differentiable observation-to-imagination map. The same off-manifold property motivates a parameter-free denoiser detector. We evaluate three targets: RynnVLA-002, LingBot-VA, and LaDi-WM. Untargeted corruption is roughly 60x stronger than random and is detected at AUC 1.0. Targeted control remains bounded. An adaptive attacker evades detection only by forgoing corruption. The reactive policy remains robust to corrupted imagination. A native imagination-driven MPC, however, exhibits the first adversary-specific task failure (at epsilon=0.01, success 0.70 versus 0.05; Fisher p < 10^-4).
+
+论文作者: Linghan Chen, Kaiyan Ji, Minyu Guo
+
+提交时间: 2026-06-22 07:45:34
+
+论文链接: http://arxiv.org/abs/2606.22966v1
+
+==================================================
+==================================================
+
+论文名称: Intend, Reflect, Refine: An Adaptive Multimodal Reflection Framework for Autonomous Driving
+
+论文摘要: Recent Vision-Language-Action (VLA) models have advanced end-to-end autonomous driving by incorporating reasoning for better interpretability and planning quality. However, most existing approaches directly generate the final trajectory without explicitly examining its future consequences, which limits their reliability in complex and dynamic environments. To address this limitation, we propose IRR-Drive (Intend, Reflect, Refine), an adaptive multimodal reflection framework for autonomous driving. Specifically, to tightly couple high-level reasoning with physical constraints, IRR-Drive first generates a preliminary textual intention and anticipates potential interactions by predicting future semantic bird's-eye view (BEV) representations. This dual-modality (Text + BEV) reflection space explicitly models anticipated scene evolution, enabling the model to rigorously self-correct and refine its initial intent before generating the final trajectory. Furthermore, to balance planning performance and computational efficiency, we construct reflection-oriented training data and design an adaptive reflection reward, enabling the model to adaptively select its reasoning mode according to scene complexity. Instead of using reasoning primarily as an auxiliary interpretation, IRR-Drive directly integrates an adaptive reflection mechanism into the planning framework, enabling grounded, decision-aware trajectory correction that is driven by scene complexity. Our method achieves state-of-the-art performance on the NAVSIM benchmark in both PDMS and EPDMS. Extensive experiments demonstrate the effectiveness of our multimodal reflection framework and validate the efficacy of the proposed adaptive reflection strategy.
+
+论文作者: Zisheng Chen, Yuping Qiu, Jianhua Han, Tao Tang, Xiuwei Chen, Likui Zhang, Ying-Cong Chen, Hang Xu, Xiaodan Liang
+
+提交时间: 2026-06-22 06:53:58
+
+论文链接: http://arxiv.org/abs/2606.22913v1
+
+==================================================
+==================================================
+
+论文名称: Semantic Browsing: Controllable Diversity for Image Generation
+
+论文摘要: Modern text-to-image models excel in visual fidelity and prompt adherence. However, this strict adherence comes at the cost of diversity: generated samples tend to collapse into a single visual interpretation. Existing methods to improve diversity produce outputs driven by incidental variations rather than meaningful design choices. This motivates a new variant of the diversity task where structure is enforced on the generated samples. We introduce a method for controlled diversity that enables Semantic Browsing, where users can navigate structured image galleries and experience creative exploration through a systematic traversal of meaningful, interpretable axes of variation. Achieving this level of semantic control requires a deep understanding of the scene. We exploit the fact that recent text-to-image models are trained on elaborated captions, effectively decoupling semantic decision-making from pixel generation. This enables a paradigm shift: instead of relying on stochastic variation within the text-to-image model, we induce diversity directly at the text level. By leveraging rich textual representations, we allow a Vision Language Model (VLM) to operate on the full scene context. To overcome the generic outputs typical of standard VLMs, we employ an agentic workflow that explicitly enforces structured variation attuned to the original prompt. We demonstrate that our method produces diverse and navigable design spaces where every variation corresponds to a specific, user-understandable semantic decision.
+
+论文作者: Sara Dorfman, Maya Vishnevsky, Omer Dahary, Or Patashnik, Daniel Cohen-Or
+
+提交时间: 2026-06-22 17:59:17
+
+论文链接: http://arxiv.org/abs/2606.23679v1
+
+==================================================
+==================================================
+
+论文名称: CADRE: Stable, Parameter Efficient Adaptation of Medical Vision Language Models with Bounded Forgetting and Prior Drift
+
+论文摘要: Medical vision-language models (VLMs) such as BiomedCLIP generalize broadly, but adapting them to a clinical service is as much a safety problem as an accuracy one. Updating a deployed model for a new imaging modality can fail silently in two ways that harm patients: it can forget modalities it already handled (catastrophic forgetting), and it can drift from its trustworthy pretrained prior toward modality-specific shortcuts. We study parameter-efficient continual adaptation through these two properties rather than leaderboard accuracy, presenting CADRE: a frozen-backbone framework combining low-rank adaptation (LoRA) with an online, self-scaling, similarity-aware elastic weight consolidation term that bounds retained-competence loss, and an anchor-to-prior penalty bounding embedding drift from the frozen prior. Two short guarantees, a bound on total consolidation mass and a scale-invariance property, remove the scale-related sources of vanilla EWC's order fragility. Using breast cancer across three maximally dissimilar modalities (histopathology, ultrasound, chest radiography) as a controlled cross-modality stress test, under a multi-seed, multi-order protocol with paired significance testing and training approximately 0.23% of parameters, CADRE attains the highest accuracy, SPQ, and backward transfer and the lowest forgetting among adapting methods, reducing forgetting roughly sevenfold versus the strongest regularized baseline (0.075 to 0.011; paired p=0.023) and achieving positive backward transfer where every baseline is negative. We frame these as stability properties aligned with clinical-safety desiderata, not a deployment guarantee; robustness to distribution shift and adversarial inputs is out of scope.
+
+论文作者: Amrita Singh, Rishabh Jha
+
+提交时间: 2026-06-22 15:34:32
+
+论文链接: http://arxiv.org/abs/2606.23487v1
+
+==================================================
+==================================================
+
+论文名称: FlowTrain: Flow-Based Decoupled Training for Industrial-Grade Vision-Language Models
+
+论文摘要: Industrial-grade distributed training of vision-language models (VLMs) remains far less efficient than that of unimodal LLMs. Existing solutions either follow a monolithic design that assigns uniform parallelism to heterogeneous modules or adopt a disaggregated deployment that separates modules while executing them as a batch-synchronized pipeline. In this paper, we highlight that the above solutions are still not sufficient, and VLM training can be further decoupled. To this end, we present FlowTrain, a flow-based decoupled training framework that reformulates VLM training as a producer-consumer dataflow coordinated through a unified memory pool. The encoder and backbone can progress independently over a global virtual address space. Since this execution decoupling fundamentally changes the optimization objective of allocation and scheduling, FlowTrain further introduces a heterogeneous parallel allocator that assigns module-specific parallelism strategies by solving a throughput matching problem. The dynamic packing scheduler is used to construct balanced microbatches at runtime according to the actual LLM-side computation cost. Extensive experiments on real-world workloads show that FlowTrain achieves over 50% MFU and up to 1.7x throughput improvement, narrowing the efficiency gap to LLM-only training.
+
+论文作者: Zhida Jiang, Zhaolong Xing, Yang Pei, Xiaolong Chen, Yuanhang Xiao, Chengzhi Huang, Xiyu Liu, Haopeng Liu, Qingyuan Sang, Lingfeng Zhou, Jiaxing Wang, Zicheng Zhang, Wenzhe Wang, Xinyu Liu, Yan Li, Zhen Chen, Ke Zhang
+
+提交时间: 2026-06-22 09:33:44
+
+论文链接: http://arxiv.org/abs/2606.23087v1
+
+==================================================
+==================================================
+
+论文名称: SingGuard: A Policy-Adaptive Multimodal LLM Guardrail with Dynamic Reasoning
+
+论文摘要: Vision-language models (VLMs) are increasingly deployed in consumer, medical, financial, and enterprise applications. This broad deployment expands the safety surface: risks can arise from multimodal question answering, assistant responses, and cross-modal composition, while moderation policies may vary across products, regions, and deployment stages. Most existing guardrails either rely on fixed taxonomies or target only a narrow set of interaction settings, which limits their adaptability when safety rules change at deployment time. We present \textbf{SingGuard}, a policy-adaptive multimodal guardrail model family for safety assessment in multimodal conversations. SingGuard treats the active policy as a runtime input: given natural-language rules, it checks the target content against the active policy rule by rule and predicts both the safety label and the triggered rule. To balance efficiency and interpretability, SingGuard supports fast, hybrid, and slow inference regimes along a fast-to-slow reasoning spectrum, ranging from direct safety judgments to policy-grounded deliberation. We further optimize this behavior with fast--slow decoupled reinforcement learning. We also introduce \textbf{SingGuard-Bench}, a multimodal guardrail benchmark with 56{,}340 examples spanning 80+ fine-grained risk types across multimodal QA, adversarial attack, and dynamic-rule evaluation settings, including cross-modal joint-risk cases where each modality is harmless in isolation but their composition implies unsafe intent. Across six benchmark families (35 datasets), SingGuard achieves state-of-the-art average F1 in every family. Dynamic-rule evaluation further shows improved policy-following accuracy from 0.6465 to 0.7415 under runtime policy shifts. Our code is available at https://github.com/inclusionAI/Sing-Guard.
+
+论文作者:  SingGuard Team
+
+提交时间: 2026-06-22 05:37:43
+
+论文链接: http://arxiv.org/abs/2606.22873v1
+
+==================================================
+==================================================
+
+论文名称: SkyJEPA: Learning Long-Horizon World Models for Zero-Shot Sim-to-Real Control of Quadrotors
+
+论文摘要: Accurate dynamics models are critical for informed decision-making in robotic systems, particularly for agile aerial vehicles operating under uncertainty. Neural network dynamics models are attractive for capturing complex nonlinear effects, but existing predictive approaches struggle with long-horizon forecasting because their autoregressive rollout mechanism amplifies errors over time. Joint Embedding Predictive Architectures (JEPAs) offer a compelling alternative by modeling dynamics in latent space, yet prior JEPA-style methods for robot navigation have been studied primarily for kinematic-level planning, with limited investigation in high-frequency control. In this work, we introduce the JEPA-style model for real-time quadrotor control. The proposed approach combines a latent dynamics model with a novel physics-inspired prober that maps frozen latents to interpretable state, enabling physically grounded long-horizon prediction. Additionally, we combine the learned model with a sampling-based optimal control solution to take advantage of its predictive capabilities for real-time control on embedded hardware. Finally, to reduce the dependence on expensive and unsafe real-world data collection, we develop a structured pipeline for automated dataset generation. Extensive open-loop and outdoor closed-loop experiments demonstrate accurate prediction, robust zero-shot sim-to-real transfer, and strong generalization across diverse operating conditions.
+
+论文作者: Pratyaksh Rao, Wancong Zhang, Randall Balestriero, Yann LeCun, Giuseppe Loianno
+
+提交时间: 2026-06-22 15:00:59
+
+论文链接: http://arxiv.org/abs/2606.23444v1
+
+==================================================
+==================================================
+
+论文名称: P-JEPA: Procedural Video Representation Learning via Joint Embedding Predictive Architecture
+
+论文摘要: The increasing maturity of embodied AI platforms has driven a growing interest in procedural video representation learning to support intelligent assistance systems for complex, multi-step tasks. Leveraging large-scale latent predictive training, video foundation models capture video dynamics, enabling downstream tasks such as activity understanding, spatiotemporal localization, and predictive control. However, procedural videos include actions with long-range dependencies that these models do not support, due to the quadratic complexity of self-attention. Distinct actions, for example, may be visually similar despite appearing at different points in the procedure, such as turning the stove on versus off. Here, we propose a backbone-agnostic approach that learns long-duration video representations by reducing the problem to a dense, frame-aligned action space and predicting pooled masked latent vectors. This approach allows our Procedural Joint Embedding Predictive Architecture (P-JEPA) to ingest videos over 30 minutes long, enabling effective long-form understanding of procedural steps. We evaluate P-JEPA using features extracted with VJEPA2.1, TSM, and I3D over the EgoExo4D, EgoProceL, and Assembly101 datasets, finding that it consistently improves linear separability, streaming inference, and temporal action segmentation performance, achieving state-of-the-art results on EgoExo4D fine-grained action classification while using an order of magnitude fewer parameters than LLM-based methods and running in real time.
+
+论文作者: Felix Tristram, Stefano Gasperini, Benjamin Killeen, Marcel Walch, Christian Benz, Nassir Navab, Ghazal Ghazaei
+
+提交时间: 2026-06-22 12:38:36
+
+论文链接: http://arxiv.org/abs/2606.23256v1
+
+==================================================
+==================================================
+
+论文名称: Learning Process Rewards via Success Visitation Matching for Efficient RL
+
+论文摘要: In many modern applications of reinforcement learning (RL), the natural reward for a task of interest is inherently sparse: a reward of 0 is given everywhere except when the task is completed, when a reward of +1 is given. Training a policy to maximize such a sparse reward requires solving a challenging credit assignment problem, leading to slow or ineffective RL improvement. We propose a simple approach to transform a sparse outcome reward into a dense process reward. Our approach relies on training a discriminator to distinguish between previous successful and unsuccessful episodes, and using this discriminator to incentivize the RL-learned policy to match the state-action visitations of successful episodes, while avoiding those of unsuccessful episodes. By incentivizing the policy to match the visitations over all states, not just those that correspond to task success, this reward provides dense feedback on whether progress is being made towards task completion, and, we show, provably achieves this without changing the optimal policy. Focusing on finetuning of robotic control policies, we demonstrate that our approach leads to significantly faster RL finetuning performance on both simulated and real-world manipulation tasks, as compared to simply maximizing the sparse outcome reward.
+
+论文作者: Raymond Tsao, Andrew Wagenmaker, Sergey Levine
+
+提交时间: 2026-06-22 17:30:24
+
+论文链接: http://arxiv.org/abs/2606.23640v1
+
+==================================================
+==================================================
+
+论文名称: Time Series Classification through Diffeomorphic Time Warping (DiffTW)
+
+论文摘要: Time series classification involves learning a mapping from a continuous, temporally ordered sequence of real-valued observations to a discrete response variable, like class labels. This task is fundamental in domains, including health monitoring, where the temporal structure of data is critical for accurate prediction. Dynamic Time Warping (DTW) is a standard technique for measuring similarity between sequences varying in time or speed. However, DTW is restricted to discrete point matching. To move beyond pairwise alignment, we propose a theoretical framework that learns mappings between real-valued functions. These mappings approximate the flow associated with the characteristic curves of a linear transport equation with a space-dependent velocity field, providing a diffeomorphic transformation between two time series. Using the method of characteristics, we transform this partial differential equation into ordinary differential equations (ODEs) modeling system dynamics. The objective function used to learn these ODEs derives from the fundamental theorem of calculus. To enable flexible, expressive representations of the velocity field, we utilize reproducing kernel Hilbert spaces and optimal control methods. Our method, Diffeomorphic Time Warping (DiffTW), provides a theoretically grounded dissimilarity measure. Using a 1-nearest neighbor classifier, DiffTW outperforms DTW on 60 of 86 datasets.
+
+论文作者: Vicky Geneva Haney, Kamel Lahouel, Victor Rielly, Bruno M. Jedynak
+
+提交时间: 2026-06-22 15:18:24
+
+论文链接: http://arxiv.org/abs/2606.23472v1

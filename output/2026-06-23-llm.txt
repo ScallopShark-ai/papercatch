@@ -1,0 +1,211 @@
+# arXiv 论文每日总结 - 2026-06-23
+# 共 16 篇论文
+# 由 Gemini 大模型自动生成
+
+==================================================
+==================================================
+
+【第 1 篇】
+
+论文名称: Can LLMs Reliably Self-Report Adversarial Prefills, and How?
+
+论文链接: http://arxiv.org/abs/2606.23671v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606232258388749540758268d9d66LDRb4mIMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 2 篇】
+
+论文名称: Self-Evolution for Multi-Turn Tool-Calling Agents via Divergence-Point Preference Learning
+
+论文链接: http://arxiv.org/abs/2606.23112v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606232258508181052028268d9d6scQQtgSAMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 3 篇】
+
+论文名称: DiT-Reward: Generative Representations for Text-to-Image Reward Modeling
+
+论文链接: http://arxiv.org/abs/2606.23626v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606232259026128743098268d9d6E6ASqwq1Master)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 4 篇】
+
+论文名称: CFPO: Counterfactual Policy Optimization for Multimodal Reasoning
+
+论文链接: http://arxiv.org/abs/2606.23206v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606232259143300199288268d9d66SqV0pctMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 5 篇】
+
+论文名称: EvoRubrics: Dynamic Rubrics as Rewards via Adversarial Co-Evolution for LLM Reinforcement Learning
+
+论文链接: http://arxiv.org/abs/2606.23038v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606232259261252753128268d9d6sF09i8U7Master)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 6 篇】
+
+论文名称: RECALL: Recovery Experience Collection for Active Lifelong Learning in Vision-Language-Action Models
+
+论文链接: http://arxiv.org/abs/2606.23617v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606232259379208400238268d9d69z2G1f2AMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 7 篇】
+
+论文名称: Attacking the Trusted Imagination: Oracle-Level Integrity Attacks on Imagine-then-Act World Models
+
+论文链接: http://arxiv.org/abs/2606.22966v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606232259497437467288268d9d6PkM4E24bMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 8 篇】
+
+论文名称: Intend, Reflect, Refine: An Adaptive Multimodal Reflection Framework for Autonomous Driving
+
+论文链接: http://arxiv.org/abs/2606.22913v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606232300012457394158268d9d6mA7XvGDxMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 9 篇】
+
+论文名称: Semantic Browsing: Controllable Diversity for Image Generation
+
+论文链接: http://arxiv.org/abs/2606.23679v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606232300132297956518268d9d6ab6c6ATJMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 10 篇】
+
+论文名称: CADRE: Stable, Parameter Efficient Adaptation of Medical Vision Language Models with Bounded Forgetting and Prior Drift
+
+论文链接: http://arxiv.org/abs/2606.23487v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606232300247250405248268d9d6s3SdVHQ6Master)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 11 篇】
+
+论文名称: FlowTrain: Flow-Based Decoupled Training for Industrial-Grade Vision-Language Models
+
+论文链接: http://arxiv.org/abs/2606.23087v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606232300366006885048268d9d67up2kRPNMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 12 篇】
+
+论文名称: SingGuard: A Policy-Adaptive Multimodal LLM Guardrail with Dynamic Reasoning
+
+论文链接: http://arxiv.org/abs/2606.22873v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606232300481559968058268d9d6WbKwmJ6RMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 13 篇】
+
+论文名称: SkyJEPA: Learning Long-Horizon World Models for Zero-Shot Sim-to-Real Control of Quadrotors
+
+论文链接: http://arxiv.org/abs/2606.23444v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606232300597999869048268d9d6w3gLpMO9Master)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 14 篇】
+
+论文名称: P-JEPA: Procedural Video Representation Learning via Joint Embedding Predictive Architecture
+
+论文链接: http://arxiv.org/abs/2606.23256v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606232301114282278698268d9d6uQ168y8pMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 15 篇】
+
+论文名称: Learning Process Rewards via Success Visitation Matching for Efficient RL
+
+论文链接: http://arxiv.org/abs/2606.23640v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606232301228747592758268d9d6MX3yuE1VMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 16 篇】
+
+论文名称: Time Series Classification through Diffeomorphic Time Warping (DiffTW)
+
+论文链接: http://arxiv.org/abs/2606.23472v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606232301344829869678268d9d6hBS3n2iwMaster)', 'type': 'new_api_error'}}]
