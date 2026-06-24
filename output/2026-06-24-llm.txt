@@ -1,0 +1,146 @@
+# arXiv 论文每日总结 - 2026-06-24
+# 共 11 篇论文
+# 由 Gemini 大模型自动生成
+
+==================================================
+==================================================
+
+【第 1 篇】
+
+论文名称: Themis: An explainable AI-enabled framework for Reinforcement Learning with Human Feedback
+
+论文链接: http://arxiv.org/abs/2606.24622v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606242259139951252748268d9d6Te3cWj2XMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 2 篇】
+
+论文名称: InSight: Self-Guided Skill Acquisition via Steerable VLAs
+
+论文链接: http://arxiv.org/abs/2606.24884v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B2026062422592638094108268d9d6zZ871B9aMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 3 篇】
+
+论文名称: G$^3$VLA: Geometric inductive bias for Vision-Language-Action Models
+
+论文链接: http://arxiv.org/abs/2606.24472v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606242259377997004168268d9d6wQwtbgXCMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 4 篇】
+
+论文名称: The Latent Bridge: A Continuous Slow-Fast Channel for Real-Time Game Agents
+
+论文链接: http://arxiv.org/abs/2606.24470v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606242259497380948118268d9d6QPYTUGMAMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 5 篇】
+
+论文名称: PHANTOM: A Large-Scale Dataset of Multimodal Adversarial Attacks for Vision-Language Models
+
+论文链接: http://arxiv.org/abs/2606.24388v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606242300023430801908268d9d6WcC8Y0MzMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 6 篇】
+
+论文名称: Open-Vocabulary BEV Segmentation with 3D-Aware Geometric Constraints
+
+论文链接: http://arxiv.org/abs/2606.24353v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B20260624230014738729348268d9d6Ww0gZmFtMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 7 篇】
+
+论文名称: A Benchmark for Hallucination Detection in VLMs for Gastrointestinal Endoscopy
+
+论文链接: http://arxiv.org/abs/2606.24115v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606242300261284223178268d9d6tADGVqpnMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 8 篇】
+
+论文名称: NoContactNoWorries: Estimating Contact through Vision and Proprioception for In-Hand Dexterous Manipulation
+
+论文链接: http://arxiv.org/abs/2606.24450v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606242300381448018808268d9d6CJ4aWLxOMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 9 篇】
+
+论文名称: Agentic AI for Bilevel Long-Term Optimization of Policy-Driven Physical Layer Systems
+
+论文链接: http://arxiv.org/abs/2606.24416v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606242300502797909248268d9d6G1IZqS6BMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 10 篇】
+
+论文名称: AutoSpec: Safety Rule Evolution for LLM Agents via Inductive Logic Programming
+
+论文链接: http://arxiv.org/abs/2606.24245v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606242301044563419598268d9d6gjKym4P0Master)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 11 篇】
+
+论文名称: Autonomous Video Generation with Counterfactual Controllability for Self-Evolving World Models
+
+论文链接: http://arxiv.org/abs/2606.24152v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606242301164263674748268d9d6q5t1GcuMMaster)', 'type': 'new_api_error'}}]
