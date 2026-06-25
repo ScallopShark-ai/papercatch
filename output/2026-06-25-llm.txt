@@ -1,0 +1,250 @@
+# arXiv 论文每日总结 - 2026-06-25
+# 共 19 篇论文
+# 由 Gemini 大模型自动生成
+
+==================================================
+==================================================
+
+【第 1 篇】
+
+论文名称: The Unfireable Safety Kernel: Execution-Time AI Alignment for AI Agents and Other Escapable AI Systems
+
+论文链接: http://arxiv.org/abs/2606.26057v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606252306418908039628268d9d6jeIzuQRtMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 2 篇】
+
+论文名称: Cliff Tokens: Identifying Single-Token Failure Triggers in LLM Mathematical Reasoning
+
+论文链接: http://arxiv.org/abs/2606.25524v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606252306539819305188268d9d6EuzC1HnmMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 3 篇】
+
+论文名称: Neglected Free Lunch from Post-training: Progress Advantage for LLM Agents
+
+论文链接: http://arxiv.org/abs/2606.26080v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606252307059935660468268d9d6oOGQuBqOMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 4 篇】
+
+论文名称: OPERA: Aligning Open-Ended Reasoning via Objective Perplexity-based Reinforcement Learning
+
+论文链接: http://arxiv.org/abs/2606.25757v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606252307181075166288268d9d6AFGt5WGPMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 5 篇】
+
+论文名称: Learning Action Priors for Cross-embodiment Robot Manipulation
+
+论文链接: http://arxiv.org/abs/2606.26095v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B20260625230730819695758268d9d67peI4LyVMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 6 篇】
+
+论文名称: FORCE: Efficient VLA Reinforcement Fine-Tuning via Value-Calibrated Warm-up and Self-Distillation
+
+论文链接: http://arxiv.org/abs/2606.26006v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606252307421722721928268d9d6S649KMPhMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 7 篇】
+
+论文名称: ROAD-VLA: Robust Online Adaptation via Self-Distillation for Vision-Language-Action Models
+
+论文链接: http://arxiv.org/abs/2606.25800v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606252307537824229308268d9d6hW11C4RvMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 8 篇】
+
+论文名称: How Robust is OCR-Reasoning? Evaluating OCR-Reasoning Robustness of Vision-Language Models under Visual Perturbations
+
+论文链接: http://arxiv.org/abs/2606.26041v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606252308057347902158268d9d6GJBiaKSSMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 9 篇】
+
+论文名称: Edges Before Embeddings: A Confidence-Aware Blur Gate for Vision-Language Pipelines
+
+论文链接: http://arxiv.org/abs/2606.25838v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606252308175977603118268d9d6bynIlbaRMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 10 篇】
+
+论文名称: Uncertainty Quantification for Computer-Use Agents: A Benchmark across Vision-Language Models and GUI Grounding Datasets
+
+论文链接: http://arxiv.org/abs/2606.25760v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B20260625230830503724648268d9d6QgS1QPoBMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 11 篇】
+
+论文名称: Steering Vision-Language Models with Joint Sparse Autoencoders
+
+论文链接: http://arxiv.org/abs/2606.25657v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606252308419870026558268d9d623WBDQG9Master)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 12 篇】
+
+论文名称: HG-Bench: A Benchmark for Multi-Page Handwritten Answer-Region Grounding in Automated Homework Assessment
+
+论文链接: http://arxiv.org/abs/2606.25491v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606252308535532610458268d9d6zntgc5ndMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 13 篇】
+
+论文名称: Brevity is the Soul of Inference Efficiency: Inducing Concision in VLMs via Data Curation
+
+论文链接: http://arxiv.org/abs/2606.25432v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606252309053514373918268d9d667P8TcuZMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 14 篇】
+
+论文名称: Beyond Visual Forensics: Auditing Multimodal Robustness for Synthetic Medical Image Detection
+
+论文链接: http://arxiv.org/abs/2606.25375v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606252309173350604088268d9d6ncPmsQlcMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 15 篇】
+
+论文名称: Physics Question Scene Graph: Fine-grained Evaluation of Physical Plausibility in Text-to-Video Generation
+
+论文链接: http://arxiv.org/abs/2606.25306v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606252309294974052748268d9d6MFBIt6QZMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 16 篇】
+
+论文名称: Multilingual Hematology Visual Question Answering Dataset
+
+论文链接: http://arxiv.org/abs/2606.25246v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606252309418057446658268d9d6A1f9OkHvMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 17 篇】
+
+论文名称: Beyond One-Size-Fits-All: Diagnosis-Driven Online Reinforcement Learning with Offline Priors
+
+论文链接: http://arxiv.org/abs/2606.25527v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606252309541880120348268d9d6lqMyk2wDMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 18 篇】
+
+论文名称: AI Coaching for Accelerating Human Skill Development with Reinforcement Learning
+
+论文链接: http://arxiv.org/abs/2606.25337v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606252310062771958088268d9d6KcBqus1fMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 19 篇】
+
+论文名称: Power-Budgeted Underwater Vehicle Control via Constrained Reinforcement Learning
+
+论文链接: http://arxiv.org/abs/2606.25680v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606252310183022372148268d9d6afdc34CzMaster)', 'type': 'new_api_error'}}]
