@@ -1,0 +1,237 @@
+# arXiv 论文每日总结 - 2026-06-26
+# 共 18 篇论文
+# 由 Gemini 大模型自动生成
+
+==================================================
+==================================================
+
+【第 1 篇】
+
+论文名称: Designing Reward Signals for Portable Query Generation: A Case Study in Industrial Semantic Job Search
+
+论文链接: http://arxiv.org/abs/2606.27291v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B2026062622584282038408268d9d6pnomHV2FMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 2 篇】
+
+论文名称: Paved with True Intents: Intent-Aware Training Improves LLM Safety Classification Across Training Regimes
+
+论文链接: http://arxiv.org/abs/2606.27210v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606262258536777206038268d9d6uw8nxGulMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 3 篇】
+
+论文名称: AIGP: An LLM-Based Framework for Long-Term Value Alignment in E-Commerce Pricing
+
+论文链接: http://arxiv.org/abs/2606.26787v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606262259058200097868268d9d6QmFNPpQSMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 4 篇】
+
+论文名称: Improving General Role-Playing Agents via Psychology-Grounded Reasoning and Role-Aware Policy Optimization
+
+论文链接: http://arxiv.org/abs/2606.27025v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606262259174730173798268d9d6KXmhH1sKMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 5 篇】
+
+论文名称: GEOALIGN: Geometric Rollout Curation for Robust LLM Reinforcement Learning
+
+论文链接: http://arxiv.org/abs/2606.26917v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606262259293956839908268d9d6bGZ7bDu8Master)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 6 篇】
+
+论文名称: Advancing Omnimodal Embodied Agents from Isolated Skills to Everyday Physical Autonomy
+
+论文链接: http://arxiv.org/abs/2606.27251v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606262259413408097188268d9d6Jsg0hHASMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 7 篇】
+
+论文名称: Learning to Fold: prizewinning solution at LeHome Challenge 2026 (1st place online, 2nd offline)
+
+论文链接: http://arxiv.org/abs/2606.27163v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606262259533491885258268d9d6hqiTA0g6Master)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 8 篇】
+
+论文名称: Automating Potential-based Reward Shaping with Vision Language Model Guidance
+
+论文链接: http://arxiv.org/abs/2606.27180v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606262300051401884248268d9d6FDTjgQHoMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 9 篇】
+
+论文名称: GAVEL: Grounded Caption Error Verification and Localization
+
+论文链接: http://arxiv.org/abs/2606.26923v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606262300171007525798268d9d68RwOng2CMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 10 篇】
+
+论文名称: TAVR-VLM: Risk-Conditioned Causal Grounding for Hallucination-Resistant Report Generation
+
+论文链接: http://arxiv.org/abs/2606.26874v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606262300291779450168268d9d6st0hsKnDMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 11 篇】
+
+论文名称: From Hallucination to Grounding: Diagnosing Visual Spatial Intelligence via CRISP
+
+论文链接: http://arxiv.org/abs/2606.26535v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606262300409116665738268d9d6FOZthwJMMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 12 篇】
+
+论文名称: IDEA: Insensitive to Dynamics Mismatch via Effect Alignment for Sim-to-Real Transfer in Multi-Agent Control
+
+论文链接: http://arxiv.org/abs/2606.26575v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606262300528315532398268d9d6GzStmHHpMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 13 篇】
+
+论文名称: E-TTS: A New Embodied Test-Time Scaling Framework for Robotic Manipulation
+
+论文链接: http://arxiv.org/abs/2606.27268v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606262301046434699598268d9d6knQYKk78Master)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 14 篇】
+
+论文名称: DMuon: Efficient Distributed Muon Training with Near-Adam Overhead
+
+论文链接: http://arxiv.org/abs/2606.27153v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606262301162103996778268d9d6e2nIxqYzMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 15 篇】
+
+论文名称: Look-Before-Move: Narrative-Grounded World Visual Attention in Dynamic 3D Story Worlds
+
+论文链接: http://arxiv.org/abs/2606.26964v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606262301278238479878268d9d6EMLAD8FEMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 16 篇】
+
+论文名称: Confidence-Aware Tool Orchestration for Robust Video Understanding
+
+论文链接: http://arxiv.org/abs/2606.26904v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606262301396656947648268d9d6AnZo6eLLMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 17 篇】
+
+论文名称: Do Safety Guardrails Need to Reason? LeanGuard: A Fast and Light Approach for Robust Moderation
+
+论文链接: http://arxiv.org/abs/2606.26686v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606262301517058521248268d9d64DtVNOnXMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 18 篇】
+
+论文名称: Learning Motion Feasibility from Point Clouds in Cluttered Environments
+
+论文链接: http://arxiv.org/abs/2606.26700v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202606262302032972660888268d9d6Znq6CPxtMaster)', 'type': 'new_api_error'}}]
