@@ -1,0 +1,185 @@
+# arXiv 论文每日总结 - 2026-07-01
+# 共 14 篇论文
+# 由 Gemini 大模型自动生成
+
+==================================================
+==================================================
+
+【第 1 篇】
+
+论文名称: TreeAgent: A Generalizable Multi-Agent Framework for Automated Bias Labeling in Forestry via Compiled Expert Rules and Vision-Language Models
+
+论文链接: http://arxiv.org/abs/2606.31976v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202607012349199409864188268d9d6JubgtOleMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 2 篇】
+
+论文名称: Z-1: Efficient Reinforcement Learning for Vision-Language-Action Models
+
+论文链接: http://arxiv.org/abs/2606.31846v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202607012349314843519838268d9d6z2VdqzwFMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 3 篇】
+
+论文名称: Seeing Is Not Sharing: Some Vision-Language Models Overestimate Common Ground in Asymmetric Dialogue
+
+论文链接: http://arxiv.org/abs/2606.31719v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202607012349435397589118268d9d6QojFXCqxMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 4 篇】
+
+论文名称: Arena-T2I Hard: Benchmarking and Improving Faithfulness with Dependency-Aware Checklist
+
+论文链接: http://arxiv.org/abs/2606.31711v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202607012349551736167858268d9d6vGKGOLILMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 5 篇】
+
+论文名称: WorldRoamBench: An Open-World Benchmark for Long-Horizon Stability of Interactive World Models
+
+论文链接: http://arxiv.org/abs/2606.31672v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202607012350068627218078268d9d6VVIXYw55Master)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 6 篇】
+
+论文名称: Token-Sparse Medical Multimodal Reasoning via Dual-Stream Reinforcement Learning
+
+论文链接: http://arxiv.org/abs/2606.31599v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202607012350188347992178268d9d6EsM7Rp42Master)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 7 篇】
+
+论文名称: Localized Conformal Prediction for Image Classification with Vision-Language Models
+
+论文链接: http://arxiv.org/abs/2606.31577v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202607012350307854026478268d9d6SFqlXX5iMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 8 篇】
+
+论文名称: Surprise as a Signal for Plasticity and Metacognition
+
+论文链接: http://arxiv.org/abs/2606.31495v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202607012350426954533588268d9d6HkMqqv7wMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 9 篇】
+
+论文名称: Visual Semantic Entropy: Do Vision Language Models Recognize Visual Ambiguity?
+
+论文链接: http://arxiv.org/abs/2606.31407v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202607012350542547719038268d9d6JqCfNyHkMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 10 篇】
+
+论文名称: ReGRPO: Reflection-Augmented Policy Optimization for Tool-Using Agents
+
+论文链接: http://arxiv.org/abs/2606.31392v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B2026070123510671634978268d9d6ABuNNLZ8Master)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 11 篇】
+
+论文名称: 3D HAMSTER: Bridging Planning and Control in Hierarchical Vision Language Action Models through 3D Trajectory Guidance
+
+论文链接: http://arxiv.org/abs/2606.31329v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202607012351179162004898268d9d61EHRMUtMMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 12 篇】
+
+论文名称: Agentic RAG-VLM: Affordance-Aware Retrieval-Augmented Generation with Self-Reflective Planning for Robotic Grasping
+
+论文链接: http://arxiv.org/abs/2606.31200v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202607012351299515767898268d9d6J9kvwnxQMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 13 篇】
+
+论文名称: PruneGround: Plug-and-play Spatial Pruning for 3D Visual Grounding
+
+论文链接: http://arxiv.org/abs/2606.31148v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202607012351415814595698268d9d6LQVmlkuXMaster)', 'type': 'new_api_error'}}]
+
+==================================================
+==================================================
+
+【第 14 篇】
+
+论文名称: A Modular Vision-Language-Action Robotics Framework for Indoor Environments
+
+论文链接: http://arxiv.org/abs/2606.31144v1
+
+--- Gemini 总结 ---
+
+[总结失败: Error code: 500 - {'error': {'code': 'invalid_request', 'message': 'Database error, please contact the administrator (request id: B202607012351533145858038268d9d6PuNRECL3Master)', 'type': 'new_api_error'}}]
